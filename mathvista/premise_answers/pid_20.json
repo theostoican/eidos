@@ -1,0 +1,18 @@
+{
+  "pid": "20",
+  "question": "Is the sum of smallest two bar is greater then the largest bar?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "ground_truth": "No",
+  "original_prediction": "Yes",
+  "premise_prediction": "Yes",
+  "now_correct": false,
+  "fixed": false,
+  "finished": true,
+  "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premises:\n1. The bar for Czechia is the longest, followed by Paraguay, and then Laos, which is the shortest.\n2. The smallest bar represents Laos with a value of 9.29% (2002), the second smallest is Paraguay at 12.51%, and the largest is Czechia at 21.37%.\n3. The bar for Laos is the shortest, followed by Paraguay, and then Czechia is the longest. The sum of the lengths of the bars for Laos and Paraguay appears to be less than the length of the bar for Czechia.\n4. The bar for Czechia is labeled 21.37%, the bar for Paraguay is labeled 12.51%, and the bar for Laos is labeled 9.29% (2002).\n5. The bar for Laos is labeled with \"9.29% (2002)\", which may mislead one to think it's a different year's data, potentially affecting the comparison if not carefully considered.\n6. The bar for Laos is labeled with a value from 2002, while the other bars represent data from 2003, suggesting potential inconsistency in the time frame of the data presented.\n7. The bar for Laos is labeled with \"9.29% (2002)\", indicating that the data point may not correspond to the same year as the other bars, which could introduce uncertainty when comparing values across different time periods.\n8. The chart displays three horizontal bars representing government expenditure on secondary education as a percentage of GDP per capita for Czechia, Paraguay, and Laos, with corresponding numerical values labeled at the end of each bar.\n9. The chart displays three horizontal bars representing government expenditure percentages for Czechia (21.37%), Paraguay (12.51%), and Laos (9.29% in 2002), with numerical values explicitly labeled at the end of each bar.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+  "response": "To determine if the sum of the smallest two bars is greater than the largest bar, we need to compare the values:\n\n- The smallest bar is Laos with a value of 9.29%.\n- The second smallest bar is Paraguay with a value of 12.51%.\n- The largest bar is Czechia with a value of 21.37%.\n\nNow, let's calculate the sum of the smallest two bars:\n\\[ 9.29\\% + 12.51\\% = 21.80\\% \\]\n\nNext, we compare this sum to the largest bar:\n\\[ 21.80\\% > 21.37\\% \\]\n\nSince 21.80% is greater than 21.37%, the sum of the smallest two bars is indeed greater than the largest bar.\n\nTherefore, the correct answer is:\n(A) Yes"
+}

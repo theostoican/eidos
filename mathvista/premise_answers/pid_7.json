@@ -1,0 +1,21 @@
+{
+  "pid": "7",
+  "question": "What time is shown? Answer by typing a time word, not a number. It is (_) after eight.",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "choices": [
+    "half",
+    "quarter",
+    "o'clock",
+    "quarter to",
+    "quarter past"
+  ],
+  "ground_truth": "quarter",
+  "original_prediction": "quarter past",
+  "premise_prediction": "quarter past",
+  "now_correct": false,
+  "fixed": false,
+  "finished": true,
+  "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premises:\n1. The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n2. The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n3. The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n4. The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n5. The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3, which could mislead someone into thinking it's exactly 8:15 instead of slightly after.\n6. The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n7. The hour hand is pointing between 8 and 9, while the minute hand is pointing directly at 3, indicating a quarter past the hour.\n8. The clock shows the hour hand pointing just past the 8 and the minute hand pointing directly at the 3.\n9. The clock face displays numbers 1 through 12, with the hour hand pointing between 8 and 9, and the minute hand pointing at 3, indicating a specific time.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+  "response": "The hour hand is just past the 8, and the minute hand is pointing directly at the 3. This indicates that it is 15 minutes past the hour, which is commonly referred to as \"quarter past.\"\n\nTherefore, the correct answer is:\n\n(E) quarter past\n\nFinal Answer: E"
+}

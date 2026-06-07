@@ -1,0 +1,18 @@
+{
+  "pid": "27",
+  "question": "What is the age gap between these two people in image?",
+  "ground_truth": "11",
+  "wrong_prediction": "23.0",
+  "category": "general-vqa",
+  "premises": {
+    "1_salient": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age gap.",
+    "2_subtle": "Visual premise: The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger.",
+    "3_spatial": "Visual premise: The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger, suggesting a significant age difference between them.",
+    "4_ocr": "Visual premise: The image shows two men in formal attire, one holding a certificate and medal, with no visible text or symbols indicating their ages or birth years.",
+    "5_distractor": "Visual premise: The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger, suggesting a significant age difference.",
+    "6_alternative": "Visual premise: The image shows two men in formal attire, one holding a certificate and medal, suggesting a ceremonial event. The man on the left appears older with gray hair, while the man on the right has darker hair and a more youthful appearance.",
+    "7_uncertainty": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, but their exact ages are not discernible from visual details alone.",
+    "8_people": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, suggesting a formal award ceremony setting.",
+    "9_digits": "Visual premise: The image shows two men in formal attire, one holding a certificate and medal, with no visible numerical data or age indicators present."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pid": "42",
+  "question": "What is the age gap between these two people in image?",
+  "ground_truth": "8",
+  "wrong_prediction": "0.0",
+  "category": "general-vqa",
+  "premises": {
+    "1_salient": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hairline.",
+    "2_subtle": "Visual premise: The woman has long, flowing red hair and is wearing a white sleeveless top, while the man has short brown hair and is dressed in a white shirt with a blue collar visible underneath. Both individuals appear to be smiling warmly at the camera, suggesting a close relationship or event.",
+    "3_spatial": "Visual premise: The man is positioned slightly behind and to the right of the woman, with his arm around her shoulder, suggesting a close physical relationship. The woman’s head is tilted toward him, and both are smiling directly at the camera, indicating a posed photograph likely taken at a public event or gathering.",
+    "4_ocr": "Visual premise: The image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling at the camera. No visible text, labels, or numerical indicators are present in the image that could provide information about their ages or age gap.",
+    "5_distractor": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging. This could mislead someone into assuming a significant age gap, though their expressions and body language suggest they are close in age.",
+    "6_alternative": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, suggesting he may be older.",
+    "7_uncertainty": "Visual premise: The image shows two individuals embracing, but their facial features and expressions do not provide clear indicators of their specific ages or age difference.",
+    "8_people": "Visual premise: The image shows a man and a woman embracing; both appear to be adults in their 30s or 40s, with no obvious age difference visible between them.",
+    "9_digits": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pid": "60",
+  "question": "What is the age gap between these two people in image?",
+  "ground_truth": "22",
+  "wrong_prediction": "0.0",
+  "category": "general-vqa",
+  "premises": {
+    "1_salient": "Visual premise: The woman appears to be in her 20s or 30s, while the man appears to be in his 50s or 60s, suggesting a significant age gap.",
+    "2_subtle": "Visual premise: The man appears to have a receding hairline and more pronounced facial features, while the woman has youthful skin and styled hair, suggesting an age difference.",
+    "3_spatial": "Visual premise: The man appears older with a receding hairline and more mature facial features, while the woman has youthful features and styled hair typical of a younger adult.",
+    "4_ocr": "Visual premise: The image shows two individuals in period costumes, with one appearing to be an older man and the other a younger woman, engaged in a dramatic scene.",
+    "5_distractor": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and more mature facial features compared to her youthful appearance.",
+    "6_alternative": "Visual premise: The woman appears to be in her late 20s or early 30s, while the man seems older, possibly in his 50s or 60s, based on facial features and posture.",
+    "7_uncertainty": "Visual premise: The man appears to be older than the woman, but their exact ages cannot be determined from the image due to the lack of clear facial details and the black-and-white nature of the photograph.",
+    "8_people": "Visual premise: The image shows a man and a woman in period costumes, with the man appearing older and balding, while the woman has styled hair and a youthful appearance.",
+    "9_digits": "Visual premise: The image shows two individuals in theatrical costumes, with no visible numerical data or age indicators present."
+  }
+}

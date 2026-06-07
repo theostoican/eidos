@@ -1,0 +1,88 @@
+{
+  "pid": "20",
+  "question": "Is the sum of smallest two bar is greater then the largest bar?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "ground_truth": "No",
+  "original_prediction": "Yes",
+  "correct_modes": [],
+  "fixed_by_any": false,
+  "per_premise": {
+    "1_salient": {
+      "premise": "Visual premise: The bar for Czechia is the longest, followed by Paraguay, and then Laos, which is the shortest.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe bar for Czechia is the longest, followed by Paraguay, and then Laos, which is the shortest.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we need to compare the values:\n\n- Largest bar: Czechia = 21.37%\n- Second largest: Paraguay = 12.51%\n- Smallest: Laos = 9.29% (2002)\n\nSum of the smallest two bars:\n12.51% + 9.29% = 21.80%\n\nCompare with the largest bar:\n21.80% > 21.37%\n\nSo, yes — the sum of the smallest two bars is greater than the largest bar.\n\nAnswer: A"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The smallest bar represents Laos with a value of 9.29% (2002), the second smallest is Paraguay at 12.51%, and the largest is Czechia at 21.37%.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe smallest bar represents Laos with a value of 9.29% (2002), the second smallest is Paraguay at 12.51%, and the largest is Czechia at 21.37%.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we use the values provided:\n\n- Laos (smallest): 9.29%\n- Paraguay (second smallest): 12.51%\n- Czechia (largest): 21.37%\n\nSum of the smallest two:\n9.29 + 12.51 = 21.80%\n\nCompare with the largest bar:\n21.80% > 21.37%\n\nTherefore, the sum of the smallest two bars is indeed greater than the largest bar.\n\nFinal Answer: A"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The bar for Laos is the shortest, followed by Paraguay, and then Czechia is the longest. The sum of the lengths of the bars for Laos and Paraguay appears to be less than the length of the bar for Czechia.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe bar for Laos is the shortest, followed by Paraguay, and then Czechia is the longest. The sum of the lengths of the bars for Laos and Paraguay appears to be less than the length of the bar for Czechia.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided:\n\n1.  **Identify the values:**\n    *   Largest bar (Czechia): 21.37%\n    *   Second largest bar (Paraguay): 12.51%\n    *   Smallest bar (Laos): 9.29%\n\n2.  **Calculate the sum of the smallest two bars:**\n    *   Sum = Laos + Paraguay\n    *   Sum = 9.29% + 12.51%\n    *   Sum = 21.80%\n\n3.  **Compare the sum to the largest bar:**\n    *   Is 21.80% greater than 21.37%?\n    *   Yes, 21.80% > 21.37%.\n\nTherefore, the sum of the smallest two bars is greater than the largest bar.\n\n(A) Yes"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The bar for Czechia is labeled 21.37%, the bar for Paraguay is labeled 12.51%, and the bar for Laos is labeled 9.29% (2002).",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe bar for Czechia is labeled 21.37%, the bar for Paraguay is labeled 12.51%, and the bar for Laos is labeled 9.29% (2002).\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we first identify the values:\n\n- Largest bar: Czechia = 21.37%\n- Second largest: Paraguay = 12.51%\n- Smallest: Laos = 9.29%\n\nNow, sum the two smallest bars:\n\n12.51% + 9.29% = **21.80%**\n\nCompare this to the largest bar:\n\n21.80% > 21.37%\n\nSo, yes — the sum of the smallest two bars (Paraguay and Laos) is greater than the largest bar (Czechia).\n\nFinal Answer: **A**"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The bar for Laos is labeled with \"9.29% (2002)\", which may mislead one to think it's a different year's data, potentially affecting the comparison if not carefully considered.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe bar for Laos is labeled with \"9.29% (2002)\", which may mislead one to think it's a different year's data, potentially affecting the comparison if not carefully considered.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we first identify the values:\n\n- Czechia: 21.37% (largest)\n- Paraguay: 12.51%\n- Laos: 9.29% (smallest)\n\nSum of the two smallest bars (Paraguay + Laos):\n\n12.51% + 9.29% = **21.80%**\n\nCompare this to the largest bar (Czechia):  \n21.80% > 21.37%\n\nTherefore, the sum of the smallest two bars **is greater** than the largest bar.\n\nNote: The label “9.29% (2002)” for Laos may suggest outdated data, but since the chart includes it as part of the comparison and no other Laos data is provided, we use the given value for consistency with the visual premise.\n\nFinal Answer: A"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The bar for Laos is labeled with a value from 2002, while the other bars represent data from 2003, suggesting potential inconsistency in the time frame of the data presented.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe bar for Laos is labeled with a value from 2002, while the other bars represent data from 2003, suggesting potential inconsistency in the time frame of the data presented.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we first identify the values:\n\n- Czechia: 21.37% (largest)\n- Paraguay: 12.51%\n- Laos: 9.29% (smallest)\n\nSum of the two smallest bars (Paraguay + Laos):  \n12.51 + 9.29 = **21.80**\n\nCompare to the largest bar (Czechia):  \n21.80 > 21.37 → **Yes**, the sum is greater.\n\nNote: The visual premise mentions that Laos’ data is from 2002 while others are from 2003 — but since the question asks us to use the values as presented in the chart (without adjusting for time), we proceed with the given numbers.\n\nFinal Answer: A"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The bar for Laos is labeled with \"9.29% (2002)\", indicating that the data point may not correspond to the same year as the other bars, which could introduce uncertainty when comparing values across different time periods.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe bar for Laos is labeled with \"9.29% (2002)\", indicating that the data point may not correspond to the same year as the other bars, which could introduce uncertainty when comparing values across different time periods.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we first identify the values:\n\n- Largest bar: Czechia = 21.37%\n- Second largest: Paraguay = 12.51%\n- Smallest: Laos = 9.29% (noted as from 2002, but we use the value as given for comparison)\n\nSum of the two smallest bars:\n9.29% + 12.51% = **21.80%**\n\nCompare to the largest bar:\n21.80% > 21.37%\n\nTherefore, the sum of the smallest two bars **is greater** than the largest bar.\n\nEven though Laos’s data is from 2002 and others may be from a different year (as implied by the title “1974–2014, 2003”), the question asks us to compare the values as presented in the chart — not to adjust for time differences. So we proceed with the numbers shown.\n\nFinal Answer: **A**"
+    },
+    "8_people": {
+      "premise": "Visual premise: The chart displays three horizontal bars representing government expenditure on secondary education as a percentage of GDP per capita for Czechia, Paraguay, and Laos, with corresponding numerical values labeled at the end of each bar.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe chart displays three horizontal bars representing government expenditure on secondary education as a percentage of GDP per capita for Czechia, Paraguay, and Laos, with corresponding numerical values labeled at the end of each bar.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we first identify the values:\n\n- Czechia: 21.37% (largest)\n- Paraguay: 12.51%\n- Laos: 9.29% (smallest)\n\nNow, sum the two smallest:\n\n12.51% + 9.29% = **21.80%**\n\nCompare to the largest bar (Czechia):  \n21.80% > 21.37%\n\nSo, yes — the sum of the smallest two bars is greater than the largest bar.\n\n**Answer: A**"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The chart displays three horizontal bars representing government expenditure percentages for Czechia (21.37%), Paraguay (12.51%), and Laos (9.29% in 2002), with numerical values explicitly labeled at the end of each bar.",
+      "prediction": "Yes",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nIs the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No\n\nVisual premise:\nThe chart displays three horizontal bars representing government expenditure percentages for Czechia (21.37%), Paraguay (12.51%), and Laos (9.29% in 2002), with numerical values explicitly labeled at the end of each bar.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine whether the sum of the smallest two bars is greater than the largest bar, we first identify the values:\n\n- Czechia: 21.37% (largest)\n- Paraguay: 12.51%\n- Laos: 9.29% (smallest)\n\nSum of the smallest two bars (Paraguay + Laos):\n\n12.51 + 9.29 = **21.80**\n\nCompare this to the largest bar (Czechia): 21.37\n\nSince 21.80 > 21.37, the sum of the smallest two bars **is greater** than the largest bar.\n\nTherefore, the correct answer is:\n\n(A) Yes"
+    }
+  }
+}

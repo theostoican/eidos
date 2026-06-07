@@ -1,0 +1,85 @@
+{
+  "pid": "53",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "1",
+  "original_prediction": "8.0",
+  "correct_modes": [],
+  "fixed_by_any": false,
+  "per_premise": {
+    "1_salient": {
+      "premise": "Visual premise: The man appears to have a more mature facial structure and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to have a more mature facial structure and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The description notes his \"more mature facial structure\" and \"slightly grayer hair,\" while the woman has \"smoother skin and no visible signs of aging.\" This suggests an age difference of approximately 5 to 10 years.\n\nTherefore, a reasonable integer estimate for the age gap is:\n\n5"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The man appears to have a more mature facial structure and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to have a more mature facial structure and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The description notes his \"more mature facial structure\" and \"slightly grayer hair,\" while the woman has \"smoother skin and no visible signs of aging.\" This suggests an age difference of approximately 5 to 10 years.\n\nTherefore, a reasonable integer estimate for the age gap is:\n\n5"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The man appears to be slightly older than the woman, based on his more mature facial features and hairstyle compared to her youthful appearance.",
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be slightly older than the woman, based on his more mature facial features and hairstyle compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be slightly older than the woman. A reasonable estimate for this age difference, consistent with their appearances in the image, is approximately 3 years.\n\n3"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The image shows two individuals, a man and a woman, standing close together in what appears to be an indoor setting with curtains in the background. The man is wearing a dark red shirt and has short, light brown hair, while the woman is dressed in a white blouse with her dark hair pulled back. Both individuals appear to be adults, but their exact ages are not discernible from the image alone.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals, a man and a woman, standing close together in what appears to be an indoor setting with curtains in the background. The man is wearing a dark red shirt and has short, light brown hair, while the woman is dressed in a white blouse with her dark hair pulled back. Both individuals appear to be adults, but their exact ages are not discernible from the image alone.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, both individuals appear to be young adults. The man has a youthful appearance with short, light brown hair and a clean-shaven face. The woman also appears to be in her early twenties, with her dark hair pulled back and a youthful facial structure. There are no significant signs of aging or distinct differences in their physical maturity that would suggest a large age gap. They appear to be of a similar generation.\n\nTherefore, the estimated age gap between them is 0 years.\n\n0"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The man appears slightly older than the woman, but both are young adults with no clear indicators of a significant age difference.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears slightly older than the woman, but both are young adults with no clear indicators of a significant age difference.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, which states that \"both are young adults with no clear indicators of a significant age difference,\" the most logical integer answer for the age gap is 0.\n\n0"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The man appears slightly older than the woman, with more mature facial features and hair texture, suggesting a possible age difference of a few years.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears slightly older than the woman, with more mature facial features and hair texture, suggesting a possible age difference of a few years.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, which states that the man appears slightly older with more mature features, suggesting a difference of a few years, the most reasonable integer estimate for the age gap is 2 years.\n\n2"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The image shows two individuals whose facial features and expressions are clearly visible, but there is no explicit visual indicator (such as birth dates, context clues, or textual information) to determine their exact ages or age gap.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals whose facial features and expressions are clearly visible, but there is no explicit visual indicator (such as birth dates, context clues, or textual information) to determine their exact ages or age gap.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, both individuals appear to be young adults. Their facial features, skin texture, and overall appearance suggest they are of a similar age, likely within the same decade. There are no clear visual indicators to suggest a significant age difference between them.\n\nTherefore, the most reasonable estimate for the age gap is 0 years.\n\n0"
+    },
+    "8_people": {
+      "premise": "Visual premise: The man appears to be in his late 20s to early 30s, while the woman appears to be in her late 20s to early 30s, suggesting they are likely of similar age.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be in his late 20s to early 30s, while the woman appears to be in her late 20s to early 30s, suggesting they are likely of similar age.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, both individuals appear to be in their late 20s to early 30s. This suggests they are of a similar age range. Therefore, the age gap between them is likely minimal, estimated at approximately 0 to 5 years. Given the context of them being co-stars in a film from the 1960s (likely *The Night of the Iguana*), where Paul Newman and Maria Schell were cast, their actual age difference was about 4 years (Newman was born in 1925, Schell in 1928).\n\nThe supported visual premise indicates they are of similar age, so the most reasonable integer answer for the age gap is:\n\n0"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The image shows two individuals, a man and a woman, standing close together in what appears to be an indoor setting with curtains in the background. There are no visible digits, numbers, or any quantitative indicators in the image that could be used to determine their ages or age gap.",
+      "prediction": "None",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals, a man and a woman, standing close together in what appears to be an indoor setting with curtains in the background. There are no visible digits, numbers, or any quantitative indicators in the image that could be used to determine their ages or age gap.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, it is impossible to determine the specific ages of the individuals or the age gap between them. Their facial features and expressions do not provide enough information to make an accurate assessment.\n\nTherefore, the age gap cannot be determined from the image."
+    }
+  }
+}

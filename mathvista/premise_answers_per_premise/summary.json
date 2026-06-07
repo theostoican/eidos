@@ -1,0 +1,21 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "n_cases": 10,
+  "n_premises_per_case": 9,
+  "n_cases_fixed_by_any": 2,
+  "per_mode_correct_counts": {
+    "1_salient": 0,
+    "2_subtle": 1,
+    "3_spatial": 1,
+    "4_ocr": 0,
+    "5_distractor": 1,
+    "6_alternative": 0,
+    "7_uncertainty": 1,
+    "8_people": 2,
+    "9_digits": 0
+  },
+  "fixed_pids": [
+    "27",
+    "50"
+  ]
+}
