@@ -1,0 +1,13 @@
+{
+  "pid": "60",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "general-vqa",
+  "ground_truth": "22",
+  "prediction": "0.0",
+  "correct": false,
+  "finished": true,
+  "response": "The image shows two individuals in what appears to be a theatrical or staged scene. The woman is dressed in an elaborate period gown, and the man is wearing a polka-dotted outfit with bare feet, suggesting a comedic or stylized role. However, there is no visible information — such as birth dates, historical context, or identifiable names — that would allow us to determine their actual ages or age gap.\n\nSince the question requires an integer answer and we have no factual basis to compute an age difference, the only logically defensible response is:\n\n**0**\n\nThis reflects that without additional data, we cannot assign any specific age gap — and thus, the minimal or neutral value is 0.\n\n0"
+}

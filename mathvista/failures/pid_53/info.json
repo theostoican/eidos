@@ -1,0 +1,13 @@
+{
+  "pid": "53",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "general-vqa",
+  "ground_truth": "1",
+  "prediction": "8.0",
+  "correct": false,
+  "finished": true,
+  "response": "The image shows **Paul Newman** and **Joanne Woodward**, who were married from 1958 to 1971. They are famously known for being a real-life couple with a very small age gap.\n\n- Paul Newman was born on **January 26, 1925**\n- Joanne Woodward was born on **November 27, 1933**\n\nAge gap = 1933 - 1925 = **8 years**\n\n(Note: Since Paul was born in January and Joanne in November, he was already 8 years old when she was born — so the gap is exactly 8 years.)\n\nFinal Answer:\n**8**"
+}

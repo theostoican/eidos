@@ -1,0 +1,13 @@
+{
+  "pid": "19",
+  "question": "what is the highest amount this class measures?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "general-vqa",
+  "ground_truth": "400",
+  "prediction": "600.0",
+  "correct": false,
+  "finished": true,
+  "response": "The beaker is labeled “600ml” and has measurement markings up to 400, but the total capacity is indicated as 600ml. The question asks for the **highest amount this class measures** — meaning the maximum volume it can hold or measure.\n\nEven though the visible scale only goes to 400, the beaker is designed to hold up to 600ml (as stated on the label). So the highest amount it measures is **600**.\n\nFinal Answer:  \n600"
+}

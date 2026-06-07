@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+nbrun.log
+_pid*.png
+.hf_home/

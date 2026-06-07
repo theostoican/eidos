@@ -1,0 +1,13 @@
+{
+  "pid": "37",
+  "question": "What is the limit as x approaches -1?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "math-targeted-vqa",
+  "ground_truth": "3",
+  "prediction": "2.0",
+  "correct": false,
+  "finished": true,
+  "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $.\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the **left** (i.e., values slightly less than -1), the function is increasing and approaching the open circle at $ (-1, 2) $.\n- As $ x $ approaches -1 from the **right** (i.e., values slightly greater than -1), the function continues along the same curve and also approaches the same open circle at $ (-1, 2) $.\n\nEven though there is a **solid dot** at $ (-1, 3) $, that represents the **actual value** of the function at $ x = -1 $, i.e., $ g(-1) = 3 $. But the **limit** does not care about the value *at* the point — only what happens *near* it.\n\nSince both left-hand and right-hand limits approach **2**, we conclude:\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\n---\n\n**Final Answer:**\n2"
+}
