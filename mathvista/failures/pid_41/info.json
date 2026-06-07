@@ -1,0 +1,13 @@
+{
+  "pid": "41",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "general-vqa",
+  "ground_truth": "7",
+  "prediction": "13.0",
+  "correct": false,
+  "finished": true,
+  "response": "To determine the age gap between the two individuals in the image, we need to identify them and find their birth years.\n\nThe individuals are:\n- On the left: **Dmitry Medvedev** (former President of Russia) — born on September 14, 1965.\n- On the right: **Rex Tillerson** (former U.S. Secretary of State) — born on October 23, 1952.\n\nNow calculate the difference:\n\n2025 - 1965 = 60 (Medvedev’s age as of 2025)\n2025 - 1952 = 73 (Tillerson’s age as of 2025)\n\nAge gap = 73 - 60 = **13 years**\n\nAlternatively, directly:  \n1965 - 1952 = **13 years**\n\nSo, the age gap is 13 years.\n\n13"
+}

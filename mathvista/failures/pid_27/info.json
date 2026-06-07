@@ -1,0 +1,13 @@
+{
+  "pid": "27",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "general-vqa",
+  "ground_truth": "11",
+  "prediction": "23.0",
+  "correct": false,
+  "finished": true,
+  "response": "To determine the age gap between the two individuals in the image:\n\n- The person on the right is **Barack Obama**, who was born on **August 4, 1961**.\n- The person on the left is **Kofi Annan**, who was born on **April 8, 1938**.\n\nNow, calculate the difference:\n\n**1961 - 1938 = 23 years**\n\nSo, Kofi Annan is approximately 23 years older than Barack Obama.\n\nFinal Answer:\n23"
+}

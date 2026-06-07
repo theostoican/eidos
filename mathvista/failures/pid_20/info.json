@@ -1,0 +1,16 @@
+{
+  "pid": "20",
+  "question": "Is the sum of smallest two bar is greater then the largest bar?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "category": "general-vqa",
+  "ground_truth": "No",
+  "prediction": "Yes",
+  "correct": false,
+  "finished": true,
+  "response": "Let's extract the values from the bar chart:\n\n- **Czechia**: 21.37%\n- **Paraguay**: 12.51%\n- **Laos**: 9.29% (note: labeled as 2002, but we’ll use the value given)\n\nThe **smallest two bars** are:\n- Laos: 9.29%\n- Paraguay: 12.51%\n\nSum = 9.29 + 12.51 = **21.80%**\n\nThe **largest bar** is Czechia: **21.37%**\n\nNow compare:  \n**21.80% > 21.37%** → Yes, the sum of the smallest two bars is greater than the largest bar.\n\n✅ Correct answer: **(A) Yes**\n\nA"
+}

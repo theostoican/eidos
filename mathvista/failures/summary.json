@@ -1,0 +1,19 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "n_samples": 60,
+  "finished_accuracy": 0.7333333333333333,
+  "n_truncated_skipped": 7,
+  "n_failures": 10,
+  "failure_pids": [
+    "7",
+    "19",
+    "20",
+    "27",
+    "37",
+    "41",
+    "42",
+    "50",
+    "53",
+    "60"
+  ]
+}

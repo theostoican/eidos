@@ -1,0 +1,19 @@
+{
+  "pid": "7",
+  "question": "What time is shown? Answer by typing a time word, not a number. It is (_) after eight.",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "choices": [
+    "half",
+    "quarter",
+    "o'clock",
+    "quarter to",
+    "quarter past"
+  ],
+  "category": "math-targeted-vqa",
+  "ground_truth": "quarter",
+  "prediction": "quarter past",
+  "correct": false,
+  "finished": true,
+  "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which is 15 minutes past the hour. So, it is **quarter past** eight.\n\nCorrect answer: **(E) quarter past**\n\nE"
+}

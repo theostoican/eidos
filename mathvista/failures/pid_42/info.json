@@ -1,0 +1,13 @@
+{
+  "pid": "42",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "category": "general-vqa",
+  "ground_truth": "8",
+  "prediction": "0.0",
+  "correct": false,
+  "finished": true,
+  "response": "To determine the age gap between the two people in the image, we need to identify who they are.\n\nThe individuals in the photo are:\n\n- **Alyson Hannigan** (the woman with red hair)\n- **David Spade** (the man embracing her)\n\nThey were both born in the same year: **1974**.\n\n- Alyson Hannigan: Born April 25, 1974\n- David Spade: Born July 22, 1974\n\nSince they were born in the same year, the age gap is **0 years**.\n\nFinal Answer:\n0"
+}
