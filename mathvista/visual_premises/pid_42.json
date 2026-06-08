@@ -13,6 +13,16 @@
     "6_alternative": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, suggesting he may be older.",
     "7_uncertainty": "Visual premise: The image shows two individuals embracing, but their facial features and expressions do not provide clear indicators of their specific ages or age difference.",
     "8_people": "Visual premise: The image shows a man and a woman embracing; both appear to be adults in their 30s or 40s, with no obvious age difference visible between them.",
-    "9_digits": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown."
+    "9_digits": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown.",
+    "10_point_on_curve": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.",
+    "11_value_curve_reaches": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.",
+    "12_marker_on_vs_off": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+    "13_trace_to_x": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+    "14_read_y_by_ticks": "Visual premise: The image shows two individuals, a man and a woman, embracing each other. The man appears to be slightly older than the woman based on visible facial features such as wrinkles and hairline.",
+    "15_curve_height": "Visual premise: The man appears to be older than the woman, as indicated by his more mature facial features and hairstyle compared to her youthful appearance.",
+    "16_two_points_pick_curve": "Visual premise: The man appears to be older than the woman based on facial features such as wrinkles and hairline.",
+    "17_settle_value": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hair.",
+    "18_coordinate_on_curve": "Visual premise: The man appears to be older than the woman based on facial features and hairline.",
+    "19_approach_height": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hair."
   }
 }

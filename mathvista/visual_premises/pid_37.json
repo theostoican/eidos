@@ -13,6 +13,16 @@
     "6_alternative": "Visual premise: The graph shows a continuous curve approaching x = -1 from both sides, with no break or jump at that point, suggesting the left-hand and right-hand limits are equal.",
     "7_uncertainty": "Visual premise: The graph shows a hole at x = -1, indicating that g(-1) is undefined, but the function approaches a specific y-value from both sides near x = -1.\n\nSource of visual uncertainty: The exact y-coordinate of the hole at x = -1 cannot be precisely determined due to the lack of grid lines or numerical labels on the axes, making it ambiguous whether the limit is exactly 2 or slightly above/below.",
     "8_people": "Visual premise: The graph shows a function g(x) with an open circle at x = -1, indicating the function is undefined there, and the curve approaches the same y-value from both sides near x = -1.",
-    "9_digits": "Visual premise: The graph shows a function g(x) with a hole at x = -1, indicating that the function is undefined at that point, but the limit as x approaches -1 can be determined by observing the y-values of the curve near x = -1 from both sides."
+    "9_digits": "Visual premise: The graph shows a function g(x) with a hole at x = -1, indicating that the function is undefined at that point, but the limit as x approaches -1 can be determined by observing the y-values of the curve near x = -1 from both sides.",
+    "10_point_on_curve": "Visual premise: The graph shows a hole at x = -1 on the curve, indicating that the function is undefined at that point, but the limit can still be determined by observing the y-value the curve approaches as x gets close to -1 from both sides.",
+    "11_value_curve_reaches": "Visual premise: The graph shows a hole at x = -1, indicating that the function is undefined at that point, but the curve approaches a specific y-value from both sides as x gets close to -1.",
+    "12_marker_on_vs_off": "Visual premise: The open circle at x = -1 lies on the curve and corresponds to y = 2, indicating the function approaches this value as x approaches -1 from both sides.",
+    "13_trace_to_x": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, which is 2, as indicated by the open circle at (-1, 2) on the graph.",
+    "14_read_y_by_ticks": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets close to -1.",
+    "15_curve_height": "Visual premise: The curve approaches a y-value of 2 as x approaches -1 from both the left and right sides, despite the open circle at that point.",
+    "16_two_points_pick_curve": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value indicated by the open circle at x = -1.",
+    "17_settle_value": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, indicated by the open circle at approximately y = 2.",
+    "18_coordinate_on_curve": "Visual premise: The graph shows a hole at x = -1, indicating that the function is undefined there, but the curve approaches a specific y-value from both sides as x gets close to -1.",
+    "19_approach_height": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1."
   }
 }

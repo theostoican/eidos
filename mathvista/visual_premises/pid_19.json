@@ -13,6 +13,16 @@
     "6_alternative": "Visual premise: The beaker is labeled with volume markings up to 400 ml, but the total capacity is indicated as 600 ml.",
     "7_uncertainty": "Visual premise: The beaker is labeled \"600ml\" but the visible measurement markings only go up to 400ml, with no indication of what the full 600ml capacity looks like when filled.",
     "8_people": "Visual premise: The beaker is labeled \"600ml\" and has measurement markings up to 400ml, indicating its maximum measurable volume.",
-    "9_digits": "Visual premise: The beaker has volume markings labeled 100, 200, 300, and 400, with the highest marked value being 400 ml."
+    "9_digits": "Visual premise: The beaker has volume markings labeled 100, 200, 300, and 400, with the highest marked value being 400 ml.",
+    "10_point_on_curve": "Visual premise: The beaker has measurement markings up to 400 ml, with the highest marked value being 400.",
+    "11_value_curve_reaches": "Visual premise: The beaker has measurement markings labeled in milliliters (ml), with the highest visible marking being 400 ml.",
+    "12_marker_on_vs_off": "Visual premise: The beaker is marked with volume measurements up to 600ml, as indicated by the text \"600ml\" near the top of the scale.",
+    "13_trace_to_x": "Visual premise: The beaker is marked with volume measurements up to 400 ml, as indicated by the highest numbered tick on its side.",
+    "14_read_y_by_ticks": "Visual premise: The beaker has markings indicating its capacity, with the highest mark labeled as 600ml.",
+    "15_curve_height": "Visual premise: The beaker has measurement markings up to 400 ml, indicating its maximum measurable volume.",
+    "16_two_points_pick_curve": "Visual premise: The beaker is labeled with volume markings up to 400 mL, and the text \"600ml\" appears near the top of the container, suggesting its total capacity.",
+    "17_settle_value": "Visual premise: The beaker has measurement markings up to 400 ml, with the highest marked line indicating 400 ml.",
+    "18_coordinate_on_curve": "Visual premise: The beaker has measurement markings up to 400 ml, indicating its maximum measurable volume.",
+    "19_approach_height": "Visual premise: The beaker has measurement markings up to 400 ml, with the highest visible mark being 400."
   }
 }

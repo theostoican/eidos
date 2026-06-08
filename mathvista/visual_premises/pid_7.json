@@ -13,6 +13,16 @@
     "6_alternative": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
     "7_uncertainty": "Visual premise: The hour hand is pointing between 8 and 9, while the minute hand is pointing directly at 3, indicating a quarter past the hour.",
     "8_people": "Visual premise: The clock shows the hour hand pointing just past the 8 and the minute hand pointing directly at the 3.",
-    "9_digits": "Visual premise: The clock face displays numbers 1 through 12, with the hour hand pointing between 8 and 9, and the minute hand pointing at 3, indicating a specific time."
+    "9_digits": "Visual premise: The clock face displays numbers 1 through 12, with the hour hand pointing between 8 and 9, and the minute hand pointing at 3, indicating a specific time.",
+    "10_point_on_curve": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "11_value_curve_reaches": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "12_marker_on_vs_off": "Visual premise: The hour hand is pointing between 8 and 9, and the minute hand is pointing directly at 3, indicating a quarter past the hour.",
+    "13_trace_to_x": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "14_read_y_by_ticks": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "15_curve_height": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "16_two_points_pick_curve": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "17_settle_value": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "18_coordinate_on_curve": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "19_approach_height": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3."
   }
 }

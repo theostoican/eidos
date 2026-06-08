@@ -13,6 +13,16 @@
     "6_alternative": "Visual premise: The woman appears to be in her late 20s or early 30s, while the man seems older, possibly in his 50s or 60s, based on facial features and posture.",
     "7_uncertainty": "Visual premise: The man appears to be older than the woman, but their exact ages cannot be determined from the image due to the lack of clear facial details and the black-and-white nature of the photograph.",
     "8_people": "Visual premise: The image shows a man and a woman in period costumes, with the man appearing older and balding, while the woman has styled hair and a youthful appearance.",
-    "9_digits": "Visual premise: The image shows two individuals in theatrical costumes, with no visible numerical data or age indicators present."
+    "9_digits": "Visual premise: The image shows two individuals in theatrical costumes, with no visible numerical data or age indicators present.",
+    "10_point_on_curve": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+    "11_value_curve_reaches": "Visual premise: The image shows two individuals in period costumes, with one appearing older and balding, while the other is younger with styled hair and a full dress.",
+    "12_marker_on_vs_off": "Visual premise: The man appears to be older than the woman, as indicated by his receding hairline and more mature facial features compared to her youthful appearance.",
+    "13_trace_to_x": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+    "14_read_y_by_ticks": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and more mature facial features compared to her youthful appearance.",
+    "15_curve_height": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+    "16_two_points_pick_curve": "Visual premise: The man appears to be older than the woman, as indicated by his receding hairline and more mature facial features compared to her youthful appearance.",
+    "17_settle_value": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+    "18_coordinate_on_curve": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+    "19_approach_height": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance."
   }
 }

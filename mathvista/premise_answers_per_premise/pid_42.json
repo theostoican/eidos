@@ -80,6 +80,86 @@
       "finished": true,
       "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThere are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "Based on the visual evidence in the image, it is impossible to determine the exact age gap between the two individuals. Their facial features and expressions do not provide sufficient information to accurately estimate their ages or the difference between them.\n\nTherefore, the age gap cannot be determined from the image."
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, which states that one individual appears slightly older based on facial features and hairline, we can infer a small age difference. The man has a more mature appearance with a receding hairline compared to the woman, who has full hair and a youthful face. This suggests an age gap of approximately 5 to 10 years. Given the context of such relationships and the subtle differences, a reasonable integer estimate for the age gap is 5 years.\n\n5"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, which states that one individual appears slightly older based on facial features and hairline, we can infer a small age difference. The man has a more mature appearance with a receding hairline compared to the woman, who has full hair and a youthful face. This suggests an age gap of approximately 5 to 10 years. Given the context of such relationships and the subtle differences, a reasonable integer estimate for the age gap is 5 years.\n\n5"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The differences in facial features such as skin texture and hairline suggest an age gap.\n\nTherefore, the estimated age gap between these two people is **5** years."
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The differences in facial features such as skin texture and hairline suggest an age gap.\n\nTherefore, the estimated age gap between these two people is **5** years."
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The image shows two individuals, a man and a woman, embracing each other. The man appears to be slightly older than the woman based on visible facial features such as wrinkles and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals, a man and a woman, embracing each other. The man appears to be slightly older than the woman based on visible facial features such as wrinkles and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, which states that the man appears to be slightly older than the woman, and observing their facial features (such as the man's hairline and potential wrinkles), a reasonable estimate for the age gap is 5 years.\n\nFinal Answer: 5"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his more mature facial features and hairstyle compared to her youthful appearance.",
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his more mature facial features and hairstyle compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The man's more mature facial features and hairstyle contrast with the woman's youthful appearance.\n\nTherefore, the age gap between these two people is at least 1 year.\n\n1"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The man appears to be older than the woman based on facial features such as wrinkles and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman based on facial features such as wrinkles and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. Estimating their ages from the image, the man looks to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 years.\n\n5"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hair.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by differences in facial features and hair.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. Estimating their ages from the image, the man looks to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 years.\n\n5"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The man appears to be older than the woman based on facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman based on facial features and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise that the man appears older than the woman, and considering their likely ages in this context (the man resembles actor David Boreanaz, who was born in 1969, and the woman resembles actress Alyson Hannigan, who was born in 1974), the age gap is approximately 5 years.\n\n5"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hair.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by differences in facial features and hair.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. Estimating their ages from the image, the man looks to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 years.\n\n5"
     }
   }
 }

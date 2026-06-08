@@ -1,0 +1,7 @@
+{
+  "excluded": {
+    "20": "Bar chart: smallest two bars 9.29%+12.51%=21.80% > largest 21.37%, so 'Yes' is correct; gold 'No' is wrong.",
+    "50": "Food web: arrow runs predatory insects -> large roach (roach eat insects); fewer roach => insects increase. Model 'increase' correct; gold 'decrease' wrong."
+  },
+  "note": "Cases where the MathVista gold label is wrong and the model's original answer was correct; removed from the failure-analysis set."
+}

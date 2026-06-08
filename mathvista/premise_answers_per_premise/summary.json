@@ -1,7 +1,7 @@
 {
   "model": "Qwen/Qwen3.5-9B",
-  "n_cases": 10,
-  "n_premises_per_case": 9,
+  "n_cases": 8,
+  "n_premises_per_case": 19,
   "n_cases_fixed_by_any": 2,
   "per_mode_correct_counts": {
     "1_salient": 0,
@@ -11,11 +11,21 @@
     "5_distractor": 1,
     "6_alternative": 0,
     "7_uncertainty": 1,
-    "8_people": 2,
-    "9_digits": 0
+    "8_people": 1,
+    "9_digits": 0,
+    "10_point_on_curve": 2,
+    "11_value_curve_reaches": 1,
+    "12_marker_on_vs_off": 0,
+    "13_trace_to_x": 1,
+    "14_read_y_by_ticks": 1,
+    "15_curve_height": 1,
+    "16_two_points_pick_curve": 0,
+    "17_settle_value": 1,
+    "18_coordinate_on_curve": 1,
+    "19_approach_height": 1
   },
   "fixed_pids": [
-    "27",
-    "50"
+    "19",
+    "27"
   ]
 }
