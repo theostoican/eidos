@@ -1,0 +1,15 @@
+{
+  "pid": "27",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "11",
+  "original_prediction": "23.0",
+  "premise_prediction": "2.0",
+  "now_correct": false,
+  "fixed": false,
+  "finished": true,
+  "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premises:\n1. The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age gap.\n2. The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger.\n3. The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger, suggesting a significant age difference between them.\n4. The image shows two men in formal attire, one holding a certificate and medal, with no visible text or symbols indicating their ages or birth years.\n5. The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger, suggesting a significant age difference.\n6. The image shows two men in formal attire, one holding a certificate and medal, suggesting a ceremonial event. The man on the left appears older with gray hair, while the man on the right has darker hair and a more youthful appearance.\n7. The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, but their exact ages are not discernible from visual details alone.\n8. The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, suggesting a formal award ceremony setting.\n9. The image shows two men in formal attire, one holding a certificate and medal, with no visible numerical data or age indicators present.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+  "response": "Based on the visual evidence, the man on the left is the former Norwegian Prime Minister Jens Stoltenberg, and the man on the right is the former US President Barack Obama.\n\n1.  **Jens Stoltenberg** was born on March 13, 1959.\n2.  **Barack Obama** was born on August 4, 1961.\n\nTo calculate the age gap:\n*   From August 4, 1961, to March 13, 1959, is a difference of approximately 2 years and 5 months.\n*   Therefore, Jens Stoltenberg is about 2 years older than Barack Obama.\n\nThe age gap between these two people is 2 years.\n\n2"
+}

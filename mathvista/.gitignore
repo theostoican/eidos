@@ -4,3 +4,4 @@ __pycache__/
 nbrun.log
 _pid*.png
 .hf_home/
+*.log

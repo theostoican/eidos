@@ -1,0 +1,18 @@
+{
+  "pid": "53",
+  "question": "What is the age gap between these two people in image?",
+  "ground_truth": "1",
+  "wrong_prediction": "8.0",
+  "category": "general-vqa",
+  "premises": {
+    "1_salient": "Visual premise: The man appears to have a more mature facial structure and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging.",
+    "2_subtle": "Visual premise: The man appears to have a more mature facial structure and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging.",
+    "3_spatial": "Visual premise: The man appears to be slightly older than the woman, based on his more mature facial features and hairstyle compared to her youthful appearance.",
+    "4_ocr": "Visual premise: The image shows two individuals, a man and a woman, standing close together in what appears to be an indoor setting with curtains in the background. The man is wearing a dark red shirt and has short, light brown hair, while the woman is dressed in a white blouse with her dark hair pulled back. Both individuals appear to be adults, but their exact ages are not discernible from the image alone.",
+    "5_distractor": "Visual premise: The man appears slightly older than the woman, but both are young adults with no clear indicators of a significant age difference.",
+    "6_alternative": "Visual premise: The man appears slightly older than the woman, with more mature facial features and hair texture, suggesting a possible age difference of a few years.",
+    "7_uncertainty": "Visual premise: The image shows two individuals whose facial features and expressions are clearly visible, but there is no explicit visual indicator (such as birth dates, context clues, or textual information) to determine their exact ages or age gap.",
+    "8_people": "Visual premise: The man appears to be in his late 20s to early 30s, while the woman appears to be in her late 20s to early 30s, suggesting they are likely of similar age.",
+    "9_digits": "Visual premise: The image shows two individuals, a man and a woman, standing close together in what appears to be an indoor setting with curtains in the background. There are no visible digits, numbers, or any quantitative indicators in the image that could be used to determine their ages or age gap."
+  }
+}

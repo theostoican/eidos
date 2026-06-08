@@ -1,0 +1,18 @@
+{
+  "pid": "50",
+  "question": "Based on the food web, what would likely happen if the number of large roach would decrease?",
+  "ground_truth": "The population of predatory insects would decrease.",
+  "wrong_prediction": "The population of predatory insects would increase.",
+  "category": "general-vqa",
+  "premises": {
+    "1_salient": "Visual premise: The diagram shows a direct arrow from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are a food source for large roach.",
+    "2_subtle": "Visual premise: The arrow from predatory insects (lestids) points to large roach, indicating that large roach consume predatory insects.",
+    "3_spatial": "Visual premise: The arrow from predatory insects (lestids) points to large roach, indicating that large roach consume predatory insects; therefore, a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+    "4_ocr": "Visual premise: The diagram shows an arrow pointing from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are a food source for large roach.",
+    "5_distractor": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume these insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+    "6_alternative": "Visual premise: The diagram shows a direct arrow from predatory insects (lestids) to large roach, indicating that large roach consume these insects.\n\nAlternative interpretation: Rather than viewing this as a simple predator-prey relationship, one could interpret the diagram as representing a competitive exclusion scenario where large roach and steelhead both compete for the same prey (roch fry and stickleback fry), so a decrease in large roach might indirectly benefit steelhead by reducing competition, even though no direct predation link is shown between them.",
+    "7_uncertainty": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+    "8_people": "Visual premise: The diagram shows a food web where large roach are preyed upon by steelhead, and they consume predatory insects (lestids), which in turn feed on tuft-weaving chironomids.",
+    "9_digits": "Visual premise: The diagram shows a directional arrow from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are consumed by large roach, and no other organism is shown consuming large roach in this food web."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "pid": "42",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "8",
+  "original_prediction": "0.0",
+  "correct_modes": [],
+  "fixed_by_any": false,
+  "per_premise": {
+    "1_salient": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by differences in facial features and hairline.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. Estimating their ages from the image, the man looks to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 years.\n\n5"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The woman has long, flowing red hair and is wearing a white sleeveless top, while the man has short brown hair and is dressed in a white shirt with a blue collar visible underneath. Both individuals appear to be smiling warmly at the camera, suggesting a close relationship or event.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe woman has long, flowing red hair and is wearing a white sleeveless top, while the man has short brown hair and is dressed in a white shirt with a blue collar visible underneath. Both individuals appear to be smiling warmly at the camera, suggesting a close relationship or event.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, both individuals appear to be young adults. The woman has a youthful appearance with her red hair and smile, and the man also looks to be in his late 20s or early 30s. There are no significant physical indicators (such as wrinkles, gray hair, or differences in posture) that would suggest a large age difference between them. They appear to be of a similar generation.\n\nTherefore, the most reasonable estimate for the age gap is 0 years.\n\n0"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The man is positioned slightly behind and to the right of the woman, with his arm around her shoulder, suggesting a close physical relationship. The woman’s head is tilted toward him, and both are smiling directly at the camera, indicating a posed photograph likely taken at a public event or gathering.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man is positioned slightly behind and to the right of the woman, with his arm around her shoulder, suggesting a close physical relationship. The woman’s head is tilted toward him, and both are smiling directly at the camera, indicating a posed photograph likely taken at a public event or gathering.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man appears to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 to 10 years.\n\nGiven the context of a posed photograph at a public event, it is highly probable that they are a couple. In such relationships, an age difference of around 5 years is common. Therefore, the most likely integer answer for the age gap is 5.\n\n5"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling at the camera. No visible text, labels, or numerical indicators are present in the image that could provide information about their ages or age gap.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling at the camera. No visible text, labels, or numerical indicators are present in the image that could provide information about their ages or age gap.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, it is impossible to determine the specific ages of the individuals or the age gap between them. Their facial features and expressions are not sufficient to provide an accurate age estimation.\n\nTherefore, the age gap cannot be determined from the image.\n\n0"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging. This could mislead someone into assuming a significant age gap, though their expressions and body language suggest they are close in age.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to have more mature facial features and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging. This could mislead someone into assuming a significant age gap, though their expressions and body language suggest they are close in age.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, while the man's slightly grayer hair and more mature features might suggest an age difference, their expressions and body language indicate they are close in age. Therefore, the most reasonable integer estimate for the age gap is 0 years.\n\n0"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, suggesting he may be older.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to have more mature facial features and slightly grayer hair compared to the woman, suggesting he may be older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The description notes his \"more mature facial features and slightly grayer hair.\"\n\nIn the image, the man is David Boreanaz and the woman is Alyson Hannigan. They are a real-life couple who have been together since 2000. David Boreanaz was born in 1969, and Alyson Hannigan was born in 1974.\n\nThe age gap between them is 5 years.\n\n5"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The image shows two individuals embracing, but their facial features and expressions do not provide clear indicators of their specific ages or age difference.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals embracing, but their facial features and expressions do not provide clear indicators of their specific ages or age difference.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, it is not possible to determine the specific ages or the age gap between the two individuals. Their facial features and expressions do not provide clear indicators of their specific ages or age difference.\n\n0"
+    },
+    "8_people": {
+      "premise": "Visual premise: The image shows a man and a woman embracing; both appear to be adults in their 30s or 40s, with no obvious age difference visible between them.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows a man and a woman embracing; both appear to be adults in their 30s or 40s, with no obvious age difference visible between them.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, which states that \"both appear to be adults in their 30s or 40s, with no obvious age difference visible between them,\" we can infer that their ages are very similar.\n\nTherefore, the age gap between them is approximately 0 years.\n\n0"
+    },
+    "9_digits": {
+      "premise": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown.",
+      "prediction": "None",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThere are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, it is impossible to determine the exact age gap between the two individuals. Their facial features and expressions do not provide sufficient information to accurately estimate their ages or the difference between them.\n\nTherefore, the age gap cannot be determined from the image."
+    }
+  }
+}

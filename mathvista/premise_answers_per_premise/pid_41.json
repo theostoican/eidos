@@ -1,0 +1,85 @@
+{
+  "pid": "41",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "7",
+  "original_prediction": "13.0",
+  "correct_modes": [],
+  "fixed_by_any": false,
+  "per_premise": {
+    "1_salient": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson** was born in 1952.\n*   **Dmitry Rogozin** was born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dmitry Rogozin:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson** was born in 1952.\n*   **Dmitry Rogozin** was born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, but no visible text, numbers, or age indicators are present to determine their ages.",
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, but no visible text, numbers, or age indicators are present to determine their ages.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Romeo Popescu** (on the left), the former Prime Minister of Romania.\n2.  **Rex Tillerson** (on the right), the former United States Secretary of State.\n\nTo determine the age gap, we need to find their birth years:\n\n*   **Romeo Popescu** was born on **October 1, 1951**.\n*   **Rex Tillerson** was born on **February 23, 1952**.\n\nThe difference between their birth years is 1 year. Since Popescu was born in October and Tillerson in February, Popescu is older.\n\nTherefore, the age gap between them is 1 year.\n\n1"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dmitry Rogozin:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dmitry Rogozin:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The image shows two men shaking hands in a formal setting, with flags of the United States and Romania in the background. One man appears to be older with gray hair, while the other has younger, brown hair. However, exact ages cannot be determined from the image alone due to lack of specific age indicators or context.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men shaking hands in a formal setting, with flags of the United States and Romania in the background. One man appears to be older with gray hair, while the other has younger, brown hair. However, exact ages cannot be determined from the image alone due to lack of specific age indicators or context.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dacian Cioloș). Rex Tillerson was born in 1952, and Dacian Cioloș was born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "8_people": {
+      "premise": "Visual premise: The image shows two men in formal suits shaking hands in a diplomatic setting, flanked by U.S. and Romanian flags, suggesting they are government officials or diplomats. One man appears to be in his 50s with graying hair, while the other appears slightly younger, possibly in his 40s, based on facial features and hair color.",
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal suits shaking hands in a diplomatic setting, flanked by U.S. and Romanian flags, suggesting they are government officials or diplomats. One man appears to be in his 50s with graying hair, while the other appears slightly younger, possibly in his 40s, based on facial features and hair color.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the accompanying description:\n\n- The man on the right (Rex Tillerson) appears to be in his 50s.\n- The man on the left (Dacian Cioloș) appears to be slightly younger, possibly in his 40s.\n\nThe description suggests an age difference of approximately 10 years.\n\nTherefore, the estimated age gap is 10 years.\n\n10"
+    },
+    "9_digits": {
+      "premise": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals or any numerical data related to their age gap.",
+      "prediction": "None",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThere are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals or any numerical data related to their age gap.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, it is not possible to determine the exact age gap between the two individuals. Their appearances suggest they are both middle-aged, but without specific information or labels, any numerical answer would be a guess.\n\nTherefore, the age gap cannot be determined from the image."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pid": "41",
+  "question": "What is the age gap between these two people in image?",
+  "ground_truth": "7",
+  "wrong_prediction": "13.0",
+  "category": "general-vqa",
+  "premises": {
+    "1_salient": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+    "2_subtle": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+    "3_spatial": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+    "4_ocr": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, but no visible text, numbers, or age indicators are present to determine their ages.",
+    "5_distractor": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+    "6_alternative": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+    "7_uncertainty": "Visual premise: The image shows two men shaking hands in a formal setting, with flags of the United States and Romania in the background. One man appears to be older with gray hair, while the other has younger, brown hair. However, exact ages cannot be determined from the image alone due to lack of specific age indicators or context.",
+    "8_people": "Visual premise: The image shows two men in formal suits shaking hands in a diplomatic setting, flanked by U.S. and Romanian flags, suggesting they are government officials or diplomats. One man appears to be in his 50s with graying hair, while the other appears slightly younger, possibly in his 40s, based on facial features and hair color.",
+    "9_digits": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals or any numerical data related to their age gap."
+  }
+}
