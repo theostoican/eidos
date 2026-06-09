@@ -13,6 +13,16 @@
     "6_alternative": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
     "7_uncertainty": "Visual premise: The image shows two men shaking hands in a formal setting, with flags of the United States and Romania in the background. One man appears to be older with gray hair, while the other has younger, brown hair. However, exact ages cannot be determined from the image alone due to lack of specific age indicators or context.",
     "8_people": "Visual premise: The image shows two men in formal suits shaking hands in a diplomatic setting, flanked by U.S. and Romanian flags, suggesting they are government officials or diplomats. One man appears to be in his 50s with graying hair, while the other appears slightly younger, possibly in his 40s, based on facial features and hair color.",
-    "9_digits": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals or any numerical data related to their age gap."
+    "9_digits": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals or any numerical data related to their age gap.",
+    "10_point_on_curve": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+    "11_value_curve_reaches": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+    "12_marker_on_vs_off": "Visual premise: The two men are dressed in formal business attire and are shaking hands in front of national flags, suggesting a diplomatic or official meeting context.",
+    "13_trace_to_x": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+    "14_read_y_by_ticks": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background.",
+    "15_curve_height": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+    "16_two_points_pick_curve": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+    "17_settle_value": "Visual premise: The two men are standing side by side in formal attire, with one appearing visibly older based on gray hair and facial features compared to the other.",
+    "18_coordinate_on_curve": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+    "19_approach_height": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting."
   }
 }

@@ -5,9 +5,9 @@ from datasets import load_dataset
 from transformers import AutoProcessor, AutoModelForImageTextToText
 
 MODEL_ID    = "Qwen/Qwen3.5-9B"
-LOSS_DIR    = "/root/mathvista_qwen/failures"            # original wrong-answer cases
-PREMISE_DIR = "/root/mathvista_qwen/visual_premises"     # 8 premises per case (pid_*.json)
-OUT_DIR     = "/root/mathvista_qwen/premise_answers_per_premise"
+LOSS_DIR    = "failures"                       # original wrong-answer cases (repo-relative)
+PREMISE_DIR = "visual_premises"                # 19 premises per case (pid_*.json)
+OUT_DIR     = "premise_answers_per_premise"
 MAX_NEW     = int(os.environ.get("MAX_NEW", "1024"))
 
 # ---------------- answer extraction / scoring (same logic as run_eval.py) ----------------

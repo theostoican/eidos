@@ -80,6 +80,86 @@
       "finished": true,
       "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThere are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals or any numerical data related to their age gap.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "Based on the visual evidence in the image, it is not possible to determine the exact age gap between the two individuals. Their appearances suggest they are both middle-aged, but without specific information or labels, any numerical answer would be a guess.\n\nTherefore, the age gap cannot be determined from the image."
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The two men are dressed in formal business attire and are shaking hands in front of national flags, suggesting a diplomatic or official meeting context.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe two men are dressed in formal business attire and are shaking hands in front of national flags, suggesting a diplomatic or official meeting context.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the two individuals are:\n\n1.  **Rumen Radev** (on the left), the President of Bulgaria. He was born in 1963.\n2.  **Rex Tillerson** (on the right), the former U.S. Secretary of State. He was born in 1952.\n\nThe age gap between them is calculated as follows:\n1963 - 1952 = 11 years.\n\n11"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background.",
+      "prediction": "12.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Romeo Popescu** (on the left), who is the Romanian Minister of Foreign Affairs.\n2.  **Rex Tillerson** (on the right), who was the United States Secretary of State at the time this photo was taken.\n\nTo determine the age gap, we need their birth years:\n\n*   **Romeo Popescu** was born in **1964**.\n*   **Rex Tillerson** was born in **1952**.\n\nThe difference between their birth years is $1964 - 1952 = 12$ years.\n\nTherefore, the age gap between them is 12 years.\n\n12"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson** was born in 1952.\n*   **Dmitry Rogozin** was born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson** was born in 1952.\n*   **Dmitry Rogozin** was born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The two men are standing side by side in formal attire, with one appearing visibly older based on gray hair and facial features compared to the other.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe two men are standing side by side in formal attire, with one appearing visibly older based on gray hair and facial features compared to the other.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence, the man on the right (Rex Tillerson) has gray hair and appears older than the man on the left (Dmitry Rogozin), who has dark hair.\n\n*   **Rex Tillerson** was born on February 24, 1952.\n*   **Dmitry Rogozin** was born on June 30, 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
     }
   }
 }

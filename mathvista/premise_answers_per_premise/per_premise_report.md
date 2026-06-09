@@ -1,9 +1,9 @@
 # Per-premise re-answering of MathVista loss cases
 
-Model: `Qwen/Qwen3.5-9B` | 10 cases | one prompt **per premise** (9 per case)
-Cases fixed by at least one premise: **2/10**
+Model: `Qwen/Qwen3.5-9B` | 8 cases | one prompt **per premise** (19 per case)
+Cases fixed by at least one premise: **2/8**
 
-Per-mode correct counts: `1_salient`=0, `2_subtle`=1, `3_spatial`=1, `4_ocr`=0, `5_distractor`=1, `6_alternative`=0, `7_uncertainty`=1, `8_people`=2, `9_digits`=0
+Per-mode correct counts: `1_salient`=0, `2_subtle`=1, `3_spatial`=1, `4_ocr`=0, `5_distractor`=1, `6_alternative`=0, `7_uncertainty`=1, `8_people`=1, `9_digits`=0, `10_point_on_curve`=2, `11_value_curve_reaches`=1, `12_marker_on_vs_off`=0, `13_trace_to_x`=1, `14_read_y_by_ticks`=1, `15_curve_height`=1, `16_two_points_pick_curve`=0, `17_settle_value`=1, `18_coordinate_on_curve`=1, `19_approach_height`=1
 
 ## pid 7  (GT: `quarter` | orig wrong: `quarter past`)
 **Q:** What time is shown? Answer by typing a time word, not a number. It is (_) after eight.
@@ -20,10 +20,20 @@ fixed by: none
 | 7_uncertainty | `quarter past` |  |
 | 8_people | `quarter past` |  |
 | 9_digits | `quarter past` |  |
+| 10_point_on_curve | `quarter past` |  |
+| 11_value_curve_reaches | `quarter past` |  |
+| 12_marker_on_vs_off | `quarter past` |  |
+| 13_trace_to_x | `quarter past` |  |
+| 14_read_y_by_ticks | `quarter past` |  |
+| 15_curve_height | `quarter past` |  |
+| 16_two_points_pick_curve | `quarter past` |  |
+| 17_settle_value | `quarter past` |  |
+| 18_coordinate_on_curve | `quarter past` |  |
+| 19_approach_height | `quarter past` |  |
 
 ## pid 19  (GT: `400` | orig wrong: `600.0`)
 **Q:** what is the highest amount this class measures?
-fixed by: none
+fixed by: ['10_point_on_curve', '13_trace_to_x', '17_settle_value', '19_approach_height']
 
 | mode | answer | correct |
 |------|--------|---------|
@@ -36,26 +46,20 @@ fixed by: none
 | 7_uncertainty | `600.0` |  |
 | 8_people | `600.0` |  |
 | 9_digits | `600.0` |  |
-
-## pid 20  (GT: `No` | orig wrong: `Yes`)
-**Q:** Is the sum of smallest two bar is greater then the largest bar?
-fixed by: none
-
-| mode | answer | correct |
-|------|--------|---------|
-| 1_salient | `Yes` |  |
-| 2_subtle | `Yes` |  |
-| 3_spatial | `Yes` |  |
-| 4_ocr | `Yes` |  |
-| 5_distractor | `Yes` |  |
-| 6_alternative | `Yes` |  |
-| 7_uncertainty | `Yes` |  |
-| 8_people | `Yes` |  |
-| 9_digits | `Yes` |  |
+| 10_point_on_curve | `400.0` | ✅ |
+| 11_value_curve_reaches | `600.0` |  |
+| 12_marker_on_vs_off | `600.0` |  |
+| 13_trace_to_x | `400.0` | ✅ |
+| 14_read_y_by_ticks | `600.0` |  |
+| 15_curve_height | `600.0` |  |
+| 16_two_points_pick_curve | `600.0` |  |
+| 17_settle_value | `400.0` | ✅ |
+| 18_coordinate_on_curve | `600.0` |  |
+| 19_approach_height | `400.0` | ✅ |
 
 ## pid 27  (GT: `11` | orig wrong: `23.0`)
 **Q:** What is the age gap between these two people in image?
-fixed by: ['2_subtle', '3_spatial', '5_distractor', '7_uncertainty', '8_people']
+fixed by: ['2_subtle', '3_spatial', '5_distractor', '7_uncertainty', '8_people', '10_point_on_curve', '11_value_curve_reaches', '14_read_y_by_ticks', '15_curve_height', '18_coordinate_on_curve']
 
 | mode | answer | correct |
 |------|--------|---------|
@@ -68,6 +72,16 @@ fixed by: ['2_subtle', '3_spatial', '5_distractor', '7_uncertainty', '8_people']
 | 7_uncertainty | `11.0` | ✅ |
 | 8_people | `11.0` | ✅ |
 | 9_digits | `31.0` |  |
+| 10_point_on_curve | `11.0` | ✅ |
+| 11_value_curve_reaches | `11.0` | ✅ |
+| 12_marker_on_vs_off | `31.0` |  |
+| 13_trace_to_x | `27.0` |  |
+| 14_read_y_by_ticks | `11.0` | ✅ |
+| 15_curve_height | `11.0` | ✅ |
+| 16_two_points_pick_curve | `31.0` |  |
+| 17_settle_value | `31.0` |  |
+| 18_coordinate_on_curve | `11.0` | ✅ |
+| 19_approach_height | `31.0` |  |
 
 ## pid 37  (GT: `3` | orig wrong: `2.0`)
 **Q:** What is the limit as x approaches -1?
@@ -84,6 +98,16 @@ fixed by: none
 | 7_uncertainty | `2.0` |  |
 | 8_people | `2.0` |  |
 | 9_digits | `2.0` |  |
+| 10_point_on_curve | `2.0` |  |
+| 11_value_curve_reaches | `2.0` |  |
+| 12_marker_on_vs_off | `2.0` |  |
+| 13_trace_to_x | `2.0` |  |
+| 14_read_y_by_ticks | `2.0` |  |
+| 15_curve_height | `2.0` |  |
+| 16_two_points_pick_curve | `2.0` |  |
+| 17_settle_value | `2.0` |  |
+| 18_coordinate_on_curve | `2.0` |  |
+| 19_approach_height | `2.0` |  |
 
 ## pid 41  (GT: `7` | orig wrong: `13.0`)
 **Q:** What is the age gap between these two people in image?
@@ -100,6 +124,16 @@ fixed by: none
 | 7_uncertainty | `11.0` |  |
 | 8_people | `10.0` |  |
 | 9_digits | `None` |  |
+| 10_point_on_curve | `11.0` |  |
+| 11_value_curve_reaches | `11.0` |  |
+| 12_marker_on_vs_off | `11.0` |  |
+| 13_trace_to_x | `11.0` |  |
+| 14_read_y_by_ticks | `12.0` |  |
+| 15_curve_height | `11.0` |  |
+| 16_two_points_pick_curve | `11.0` |  |
+| 17_settle_value | `11.0` |  |
+| 18_coordinate_on_curve | `11.0` |  |
+| 19_approach_height | `11.0` |  |
 
 ## pid 42  (GT: `8` | orig wrong: `0.0`)
 **Q:** What is the age gap between these two people in image?
@@ -116,22 +150,16 @@ fixed by: none
 | 7_uncertainty | `0.0` |  |
 | 8_people | `0.0` |  |
 | 9_digits | `None` |  |
-
-## pid 50  (GT: `The population of predatory insects would decrease.` | orig wrong: `The population of predatory insects would increase.`)
-**Q:** Based on the food web, what would likely happen if the number of large roach would decrease?
-fixed by: ['8_people']
-
-| mode | answer | correct |
-|------|--------|---------|
-| 1_salient | `The population of predatory insects woul` |  |
-| 2_subtle | `The population of predatory insects woul` |  |
-| 3_spatial | `The population of predatory insects woul` |  |
-| 4_ocr | `The population of predatory insects woul` |  |
-| 5_distractor | `The population of predatory insects woul` |  |
-| 6_alternative | `The population of predatory insects woul` |  |
-| 7_uncertainty | `The population of predatory insects woul` |  |
-| 8_people | `The population of predatory insects woul` | ✅ |
-| 9_digits | `The population of predatory insects woul` |  |
+| 10_point_on_curve | `5.0` |  |
+| 11_value_curve_reaches | `5.0` |  |
+| 12_marker_on_vs_off | `5.0` |  |
+| 13_trace_to_x | `5.0` |  |
+| 14_read_y_by_ticks | `5.0` |  |
+| 15_curve_height | `1.0` |  |
+| 16_two_points_pick_curve | `5.0` |  |
+| 17_settle_value | `5.0` |  |
+| 18_coordinate_on_curve | `5.0` |  |
+| 19_approach_height | `5.0` |  |
 
 ## pid 53  (GT: `1` | orig wrong: `8.0`)
 **Q:** What is the age gap between these two people in image?
@@ -148,6 +176,16 @@ fixed by: none
 | 7_uncertainty | `0.0` |  |
 | 8_people | `0.0` |  |
 | 9_digits | `None` |  |
+| 10_point_on_curve | `0.0` |  |
+| 11_value_curve_reaches | `0.0` |  |
+| 12_marker_on_vs_off | `2.0` |  |
+| 13_trace_to_x | `2.0` |  |
+| 14_read_y_by_ticks | `0.0` |  |
+| 15_curve_height | `0.0` |  |
+| 16_two_points_pick_curve | `2.0` |  |
+| 17_settle_value | `2.0` |  |
+| 18_coordinate_on_curve | `0.0` |  |
+| 19_approach_height | `0.0` |  |
 
 ## pid 60  (GT: `22` | orig wrong: `0.0`)
 **Q:** What is the age gap between these two people in image?
@@ -164,3 +202,13 @@ fixed by: none
 | 7_uncertainty | `0.0` |  |
 | 8_people | `15.0` |  |
 | 9_digits | `0.0` |  |
+| 10_point_on_curve | `20.0` |  |
+| 11_value_curve_reaches | `30.0` |  |
+| 12_marker_on_vs_off | `10.0` |  |
+| 13_trace_to_x | `20.0` |  |
+| 14_read_y_by_ticks | `25.0` |  |
+| 15_curve_height | `20.0` |  |
+| 16_two_points_pick_curve | `10.0` |  |
+| 17_settle_value | `20.0` |  |
+| 18_coordinate_on_curve | `20.0` |  |
+| 19_approach_height | `20.0` |  |

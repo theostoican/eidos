@@ -86,6 +86,86 @@
       "finished": true,
       "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe clock face displays numbers 1 through 12, with the hour hand pointing between 8 and 9, and the minute hand pointing at 3, indicating a specific time.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "The hour hand is between 8 and 9, and the minute hand is pointing at 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nTherefore, the correct answer is:\n\n(E) quarter past\n\nFinal Answer: E"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The hour hand is pointing between 8 and 9, and the minute hand is pointing directly at 3, indicating a quarter past the hour.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing between 8 and 9, and the minute hand is pointing directly at 3, indicating a quarter past the hour.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is between 8 and 9, and the minute hand is pointing at 3, which represents 15 minutes past the hour. This means it is a quarter past eight.\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nVisual premise:\nThe hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
     }
   }
 }

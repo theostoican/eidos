@@ -5,8 +5,8 @@ from PIL import Image
 from transformers import AutoProcessor, AutoModelForImageTextToText
 
 MODEL_ID  = "Qwen/Qwen3.5-9B"
-LOSS_DIR  = "/root/mathvista_qwen/failures"          # the wrong-answer cases mined earlier
-OUT_DIR   = "/root/mathvista_qwen/visual_premises"
+LOSS_DIR  = "failures"          # the wrong-answer cases mined earlier (repo-relative)
+OUT_DIR   = "visual_premises"
 MAX_NEW   = int(os.environ.get("MAX_NEW", "320"))
 
 # ---- base instruction (given) + 8 focus modes that diversify the premise ----
@@ -27,6 +27,17 @@ MODES = {
     "7_uncertainty": "Identify a source of visual uncertainty or ambiguity (occlusion, low resolution, overlapping marks, unclear arrow direction, etc.) that could affect the answer.",
     "8_people":      "If there are people in the image, focus on who they could be (likely identity, role, age, or relationship based on visual cues such as clothing, setting, and appearance). If there are no people, say so.",
     "9_digits":      "Focus on digits/numbers visible in the image and their relationship to the surrounding objects: do the digits count or quantify something in the image (e.g. labels, counts, tallies, axis values), and what do they refer to? Perhaps axes on a chart? If so, count them.",
+    # ---- graph-reading modes (target curve/axis misreads, e.g. limit-from-graph questions) ----
+    "10_point_on_curve":      "When a point is marked on a plotted curve or line, read its y-value by counting tick marks up from the x-axis and report that number.",
+    "11_value_curve_reaches": "Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis, and state the number.",
+    "12_marker_on_vs_off":    "Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and report the y-coordinate of the one that lies on the curve.",
+    "13_trace_to_x":          "Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.",
+    "14_read_y_by_ticks":     "Read the relevant y-coordinate by counting y-axis ticks from zero up to the point's height, and report the explicit number.",
+    "15_curve_height":        "Report the height (y-value) of the curve at the relevant location as a number read off the axis, not as a qualitative description.",
+    "16_two_points_pick_curve": "If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and report that point's y-value.",
+    "17_settle_value":        "If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis and report the number.",
+    "18_coordinate_on_curve": "Give the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.",
+    "19_approach_height":     "Read the y-height the curve approaches at the target x by counting ticks up from the x-axis, and report that number.",
 }
 
 def build_prompt(question, mode_instruction):

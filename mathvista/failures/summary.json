@@ -1,19 +1,21 @@
 {
   "model": "Qwen/Qwen3.5-9B",
   "n_samples": 60,
-  "finished_accuracy": 0.7333333333333333,
+  "finished_accuracy": 0.7666666666666667,
   "n_truncated_skipped": 7,
-  "n_failures": 10,
+  "n_failures": 8,
   "failure_pids": [
     "7",
     "19",
-    "20",
     "27",
     "37",
     "41",
     "42",
-    "50",
     "53",
     "60"
-  ]
+  ],
+  "excluded_ground_truth_errors": {
+    "20": "Bar chart: smallest two bars 9.29%+12.51%=21.80% > largest 21.37%, so 'Yes' is correct; gold 'No' is wrong.",
+    "50": "Food web: arrow runs predatory insects -> large roach (roach eat insects); fewer roach => insects increase. Model 'increase' correct; gold 'decrease' wrong."
+  }
 }

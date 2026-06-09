@@ -80,6 +80,86 @@
       "finished": true,
       "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals in theatrical costumes, with no visible numerical data or age indicators present.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "Based on the visual evidence in the image, it is impossible to determine the specific age gap between the two individuals. The photograph is a black and white image of actors in costume, likely from a film or stage production. Without external information identifying the actors and their roles, their actual ages cannot be ascertained from the image alone.\n\nTherefore, the age gap cannot be determined.\n\n0"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and facial features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a full head of hair and a youthful face, suggesting she is likely in her 20s or early 30s.\n- The man is balding and has more pronounced facial lines, suggesting he is likely in his 40s or 50s.\n\nA reasonable estimate for the age gap between them would be around 20 years.\n\n20"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The image shows two individuals in period costumes, with one appearing older and balding, while the other is younger with styled hair and a full dress.",
+      "prediction": "30.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two individuals in period costumes, with one appearing older and balding, while the other is younger with styled hair and a full dress.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, the man appears to be an older adult, likely in his 50s or 60s, while the woman appears to be a young adult, likely in her 20s. A reasonable estimate for the age gap between them is approximately 30 years.\n\n30"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his receding hairline and more mature facial features compared to her youthful appearance.",
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his receding hairline and more mature facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The man's receding hairline and mature facial features contrast with the woman's youthful appearance. In theatrical productions, it is common for actors to be cast in roles that are slightly older or younger than their actual age to fit the character. However, without specific information about the actors' ages or the production, we can only estimate based on their appearances.\n\nGiven the visual cues, a reasonable estimate for the age gap between the two people in the image is 10 years.\n\nFinal Answer: 10"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and facial features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a full head of hair and a youthful face, suggesting she is likely in her 20s or early 30s.\n- The man is balding and has more pronounced facial lines, suggesting he is likely in his 40s or 50s.\n\nA reasonable estimate for the age gap between them would be around 20 years.\n\n20"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and more mature facial features compared to her youthful appearance.",
+      "prediction": "25.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and more mature facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and mature features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a youthful face and is dressed in a costume that suggests a young character.\n- The man has a balding head and a more weathered face, indicating he is significantly older.\n\nIn theatrical productions, it is common for actors to play characters with a significant age difference. A typical age gap for such a pairing, where one is a young woman and the other is an older man, is often around 20 to 30 years. Given the distinct difference in their appearances, an age gap of approximately 25 years is a reasonable estimate.\n\nTherefore, the age gap between these two people is estimated to be 25 years.\n\n25"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and facial features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a full head of hair and a youthful face, suggesting she is likely in her 20s or early 30s.\n- The man is balding and has more pronounced facial lines, suggesting he is likely in his 40s or 50s.\n\nA reasonable estimate for the age gap between them would be around 20 years.\n\n20"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his receding hairline and more mature facial features compared to her youthful appearance.",
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his receding hairline and more mature facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual premise provided, the man appears to be older than the woman. The man's receding hairline and mature facial features contrast with the woman's youthful appearance. In theatrical productions, it is common for actors to be cast in roles that are slightly older or younger than their actual age to fit the character. However, without specific information about the actors' ages or the production, we can only estimate based on their appearances.\n\nGiven the visual cues, a reasonable estimate for the age gap between the two people in the image is 10 years.\n\nFinal Answer: 10"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and facial features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a full head of hair and a youthful face, suggesting she is likely in her 20s or early 30s.\n- The man is balding and has more pronounced facial lines, suggesting he is likely in his 40s or 50s.\n\nA reasonable estimate for the age gap between them would be around 20 years.\n\n20"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and facial features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a full head of hair and a youthful face, suggesting she is likely in her 20s or early 30s.\n- The man is balding and has more pronounced facial lines, suggesting he is likely in his 40s or 50s.\n\nA reasonable estimate for the age gap between them would be around 20 years.\n\n20"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.",
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe man appears to be older than the woman, as indicated by his balding head and facial features compared to her youthful appearance.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence provided in the image and the premise that the man appears older due to his balding head and facial features compared to the woman's youthful appearance, we can estimate their relative ages.\n\n- The woman has a full head of hair and a youthful face, suggesting she is likely in her 20s or early 30s.\n- The man is balding and has more pronounced facial lines, suggesting he is likely in his 40s or 50s.\n\nA reasonable estimate for the age gap between them would be around 20 years.\n\n20"
     }
   }
 }
