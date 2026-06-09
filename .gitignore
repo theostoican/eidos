@@ -1,0 +1,6 @@
+.hf_home/
+.venv-backups/
+mmk12_out/nbconvert*.log
+mmmu_pro_out/nbconvert*.log
+__pycache__/
+*.pyc
