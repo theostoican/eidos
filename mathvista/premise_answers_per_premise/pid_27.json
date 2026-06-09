@@ -14,9 +14,9 @@
     "8_people",
     "10_point_on_curve",
     "11_value_curve_reaches",
-    "14_read_y_by_ticks",
     "15_curve_height",
-    "18_coordinate_on_curve"
+    "18_coordinate_on_curve",
+    "20_hole_on_curve"
   ],
   "fixed_by_any": true,
   "per_premise": {
@@ -125,12 +125,12 @@
       "response": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama** (on the right), who is holding the Nobel Peace Prize certificate and medal.\n2.  **Johan Galtung** (on the left), who is presenting the award.\n\nTo determine the age gap, we can look at their birth years:\n\n*   **Barack Obama** was born on August 4, 1961.\n*   **Johan Galtung** was born on February 12, 1934.\n\nThe difference in their birth years is $1961 - 1934 = 27$ years.\n\nTherefore, the age gap between them is 27 years.\n\n27"
     },
     "14_read_y_by_ticks": {
-      "premise": "Visual premise: The image shows two men, one appearing older with gray hair and the other younger with dark hair, both dressed formally in suits.",
-      "prediction": "11.0",
-      "correct": true,
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age gap.",
+      "prediction": "27.0",
+      "correct": false,
       "finished": true,
-      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men, one appearing older with gray hair and the other younger with dark hair, both dressed formally in suits.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
-      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n*   1961 (Obama's birth year) - 1950 (Jagland's birth year) = 11 years.\n\nTherefore, the age gap between the two people in the image is 11 years.\n\n11"
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age gap.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama** (on the right), who is holding the Nobel Peace Prize certificate and medal.\n2.  **Johan Galtung** (on the left), who is the Norwegian sociologist and peace researcher who presented the prize to Obama.\n\nTo determine the age gap, we need their birth years:\n\n*   Barack Obama was born on August 4, 1961.\n*   Johan Galtung was born on February 12, 1934.\n\nThe difference in their birth years is:\n$1961 - 1934 = 27$ years.\n\nTherefore, the age gap between them is 27 years.\n\n27"
     },
     "15_curve_height": {
       "premise": "Visual premise: The image shows two men standing side by side, with one holding a certificate and medal, suggesting a formal event or ceremony.",
@@ -171,6 +171,14 @@
       "finished": true,
       "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that suggest an age difference.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama** (on the right), who is holding the Nobel Peace Prize certificate and medal.\n2.  **Johan Galtung** (on the left), who is presenting the award.\n\nTo determine the age gap, we can look at their birth years:\n\n*   **Barack Obama** was born on August 4, 1961.\n*   **Johan Galtung** was born on February 12, 1930.\n\nThe difference in their birth years is $1961 - 1930 = 31$ years.\n\nTherefore, the age gap between them is 31 years.\n\n31"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The image shows two men, one appearing significantly older with gray hair and the other younger with dark hair, both dressed formally in suits.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Question:\nWhat is the age gap between these two people in image? (Unit: years)\n\nVisual premise:\nThe image shows two men, one appearing significantly older with gray hair and the other younger with dark hair, both dressed formally in suits.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n*   1961 (Obama's birth year) - 1950 (Jagland's birth year) = 11 years.\n\nTherefore, the age gap between the two people in the image is 11 years.\n\n11"
     }
   }
 }

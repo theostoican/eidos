@@ -23,6 +23,7 @@
     "16_two_points_pick_curve": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
     "17_settle_value": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
     "18_coordinate_on_curve": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
-    "19_approach_height": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3."
+    "19_approach_height": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+    "20_hole_on_curve": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3."
   }
 }
