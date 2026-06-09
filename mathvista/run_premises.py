@@ -32,12 +32,14 @@ MODES = {
     "11_value_curve_reaches": "Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis, and state the number.",
     "12_marker_on_vs_off":    "Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and report the y-coordinate of the one that lies on the curve.",
     "13_trace_to_x":          "Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.",
-    "14_read_y_by_ticks":     "Read the relevant y-coordinate by counting y-axis ticks from zero up to the point's height, and report the explicit number.",
+    "14_read_y_by_ticks":     "Count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart. Do not stop early or undercount. Report that tick count as its y-value.",
     "15_curve_height":        "Report the height (y-value) of the curve at the relevant location as a number read off the axis, not as a qualitative description.",
     "16_two_points_pick_curve": "If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and report that point's y-value.",
     "17_settle_value":        "If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis and report the number.",
     "18_coordinate_on_curve": "Give the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.",
     "19_approach_height":     "Read the y-height the curve approaches at the target x by counting ticks up from the x-axis, and report that number.",
+    # curve/hole-specific tick counter (recovers limit-from-graph misreads, e.g. pid_37)
+    "20_hole_on_curve":       "Count the y-axis tick marks one at a time starting from the x-axis (0), going up to the height of the open circle or marked point that lies on the curve. Do not stop early. Report that exact tick count as its y-value.",
 }
 
 def build_prompt(question, mode_instruction):

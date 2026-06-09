@@ -10,7 +10,8 @@
     "10_point_on_curve",
     "13_trace_to_x",
     "17_settle_value",
-    "19_approach_height"
+    "19_approach_height",
+    "20_hole_on_curve"
   ],
   "fixed_by_any": true,
   "per_premise": {
@@ -119,12 +120,12 @@
       "response": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. The highest marked measurement on the side of the beaker is 400 ml.\n\nTherefore, the highest amount this class measures, based on the visible markings, is 400.\n\n400"
     },
     "14_read_y_by_ticks": {
-      "premise": "Visual premise: The beaker has markings indicating its capacity, with the highest mark labeled as 600ml.",
+      "premise": "Visual premise: The beaker has volume markings labeled from 100 to 400 ml, with the highest labeled mark at 400 ml.",
       "prediction": "600.0",
       "correct": false,
       "finished": true,
-      "prompt": "Question:\nwhat is the highest amount this class measures?\n\nVisual premise:\nThe beaker has markings indicating its capacity, with the highest mark labeled as 600ml.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
-      "response": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400ml. However, the capacity of the beaker is 600ml, which means it can hold up to 600ml of liquid. The highest amount it measures is therefore 600ml.\n\n600"
+      "prompt": "Question:\nwhat is the highest amount this class measures?\n\nVisual premise:\nThe beaker has volume markings labeled from 100 to 400 ml, with the highest labeled mark at 400 ml.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The beaker in the image is labeled as a 600 ml beaker, but the visible volume markings only go up to 400 ml. The question asks for the highest amount this class (beaker) measures, which refers to its maximum capacity as indicated by its label.\n\nTherefore, the highest amount this beaker measures is 600 ml.\n\n600"
     },
     "15_curve_height": {
       "premise": "Visual premise: The beaker has measurement markings up to 400 ml, indicating its maximum measurable volume.",
@@ -165,6 +166,14 @@
       "finished": true,
       "prompt": "Question:\nwhat is the highest amount this class measures?\n\nVisual premise:\nThe beaker has measurement markings up to 400 ml, with the highest visible mark being 400.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. The highest visible mark on the scale is 400, which corresponds to the maximum measurable volume indicated by the graduations.\n\nTherefore, the highest amount this class measures is 400.\n\n400"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The beaker has volume markings labeled from 100 to 400 ml, with the highest marked value being 400 ml.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Question:\nwhat is the highest amount this class measures?\n\nVisual premise:\nThe beaker has volume markings labeled from 100 to 400 ml, with the highest marked value being 400 ml.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "The beaker in the image is labeled as a 600 ml beaker, but the visible volume markings only go up to 400 ml. The question asks for the highest amount this class (beaker) measures, which refers to the maximum marked value on the scale.\n\nAccording to the visual premise:\n> The beaker has volume markings labeled from 100 to 400 ml, with the highest marked value being 400 ml.\n\nTherefore, the highest measured value indicated on the beaker is 400 ml.\n\n400"
     }
   }
 }

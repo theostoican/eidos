@@ -1,9 +1,9 @@
 # Per-premise re-answering of MathVista loss cases
 
-Model: `Qwen/Qwen3.5-9B` | 8 cases | one prompt **per premise** (19 per case)
-Cases fixed by at least one premise: **2/8**
+Model: `Qwen/Qwen3.5-9B` | 8 cases | one prompt **per premise** (20 per case)
+Cases fixed by at least one premise: **3/8**
 
-Per-mode correct counts: `1_salient`=0, `2_subtle`=1, `3_spatial`=1, `4_ocr`=0, `5_distractor`=1, `6_alternative`=0, `7_uncertainty`=1, `8_people`=1, `9_digits`=0, `10_point_on_curve`=2, `11_value_curve_reaches`=1, `12_marker_on_vs_off`=0, `13_trace_to_x`=1, `14_read_y_by_ticks`=1, `15_curve_height`=1, `16_two_points_pick_curve`=0, `17_settle_value`=1, `18_coordinate_on_curve`=1, `19_approach_height`=1
+Per-mode correct counts: `1_salient`=0, `2_subtle`=1, `3_spatial`=1, `4_ocr`=0, `5_distractor`=1, `6_alternative`=0, `7_uncertainty`=1, `8_people`=1, `9_digits`=0, `10_point_on_curve`=2, `11_value_curve_reaches`=1, `12_marker_on_vs_off`=0, `13_trace_to_x`=1, `14_read_y_by_ticks`=0, `15_curve_height`=1, `16_two_points_pick_curve`=0, `17_settle_value`=1, `18_coordinate_on_curve`=1, `19_approach_height`=1, `20_hole_on_curve`=3
 
 ## pid 7  (GT: `quarter` | orig wrong: `quarter past`)
 **Q:** What time is shown? Answer by typing a time word, not a number. It is (_) after eight.
@@ -30,10 +30,11 @@ fixed by: none
 | 17_settle_value | `quarter past` |  |
 | 18_coordinate_on_curve | `quarter past` |  |
 | 19_approach_height | `quarter past` |  |
+| 20_hole_on_curve | `quarter past` |  |
 
 ## pid 19  (GT: `400` | orig wrong: `600.0`)
 **Q:** what is the highest amount this class measures?
-fixed by: ['10_point_on_curve', '13_trace_to_x', '17_settle_value', '19_approach_height']
+fixed by: ['10_point_on_curve', '13_trace_to_x', '17_settle_value', '19_approach_height', '20_hole_on_curve']
 
 | mode | answer | correct |
 |------|--------|---------|
@@ -56,10 +57,11 @@ fixed by: ['10_point_on_curve', '13_trace_to_x', '17_settle_value', '19_approach
 | 17_settle_value | `400.0` | ✅ |
 | 18_coordinate_on_curve | `600.0` |  |
 | 19_approach_height | `400.0` | ✅ |
+| 20_hole_on_curve | `400.0` | ✅ |
 
 ## pid 27  (GT: `11` | orig wrong: `23.0`)
 **Q:** What is the age gap between these two people in image?
-fixed by: ['2_subtle', '3_spatial', '5_distractor', '7_uncertainty', '8_people', '10_point_on_curve', '11_value_curve_reaches', '14_read_y_by_ticks', '15_curve_height', '18_coordinate_on_curve']
+fixed by: ['2_subtle', '3_spatial', '5_distractor', '7_uncertainty', '8_people', '10_point_on_curve', '11_value_curve_reaches', '15_curve_height', '18_coordinate_on_curve', '20_hole_on_curve']
 
 | mode | answer | correct |
 |------|--------|---------|
@@ -76,16 +78,17 @@ fixed by: ['2_subtle', '3_spatial', '5_distractor', '7_uncertainty', '8_people',
 | 11_value_curve_reaches | `11.0` | ✅ |
 | 12_marker_on_vs_off | `31.0` |  |
 | 13_trace_to_x | `27.0` |  |
-| 14_read_y_by_ticks | `11.0` | ✅ |
+| 14_read_y_by_ticks | `27.0` |  |
 | 15_curve_height | `11.0` | ✅ |
 | 16_two_points_pick_curve | `31.0` |  |
 | 17_settle_value | `31.0` |  |
 | 18_coordinate_on_curve | `11.0` | ✅ |
 | 19_approach_height | `31.0` |  |
+| 20_hole_on_curve | `11.0` | ✅ |
 
 ## pid 37  (GT: `3` | orig wrong: `2.0`)
 **Q:** What is the limit as x approaches -1?
-fixed by: none
+fixed by: ['20_hole_on_curve']
 
 | mode | answer | correct |
 |------|--------|---------|
@@ -108,6 +111,7 @@ fixed by: none
 | 17_settle_value | `2.0` |  |
 | 18_coordinate_on_curve | `2.0` |  |
 | 19_approach_height | `2.0` |  |
+| 20_hole_on_curve | `3.0` | ✅ |
 
 ## pid 41  (GT: `7` | orig wrong: `13.0`)
 **Q:** What is the age gap between these two people in image?
@@ -128,12 +132,13 @@ fixed by: none
 | 11_value_curve_reaches | `11.0` |  |
 | 12_marker_on_vs_off | `11.0` |  |
 | 13_trace_to_x | `11.0` |  |
-| 14_read_y_by_ticks | `12.0` |  |
+| 14_read_y_by_ticks | `0.0` |  |
 | 15_curve_height | `11.0` |  |
 | 16_two_points_pick_curve | `11.0` |  |
 | 17_settle_value | `11.0` |  |
 | 18_coordinate_on_curve | `11.0` |  |
 | 19_approach_height | `11.0` |  |
+| 20_hole_on_curve | `11.0` |  |
 
 ## pid 42  (GT: `8` | orig wrong: `0.0`)
 **Q:** What is the age gap between these two people in image?
@@ -154,12 +159,13 @@ fixed by: none
 | 11_value_curve_reaches | `5.0` |  |
 | 12_marker_on_vs_off | `5.0` |  |
 | 13_trace_to_x | `5.0` |  |
-| 14_read_y_by_ticks | `5.0` |  |
+| 14_read_y_by_ticks | `0.0` |  |
 | 15_curve_height | `1.0` |  |
 | 16_two_points_pick_curve | `5.0` |  |
 | 17_settle_value | `5.0` |  |
 | 18_coordinate_on_curve | `5.0` |  |
 | 19_approach_height | `5.0` |  |
+| 20_hole_on_curve | `0.0` |  |
 
 ## pid 53  (GT: `1` | orig wrong: `8.0`)
 **Q:** What is the age gap between these two people in image?
@@ -186,6 +192,7 @@ fixed by: none
 | 17_settle_value | `2.0` |  |
 | 18_coordinate_on_curve | `0.0` |  |
 | 19_approach_height | `0.0` |  |
+| 20_hole_on_curve | `0.0` |  |
 
 ## pid 60  (GT: `22` | orig wrong: `0.0`)
 **Q:** What is the age gap between these two people in image?
@@ -212,3 +219,4 @@ fixed by: none
 | 17_settle_value | `20.0` |  |
 | 18_coordinate_on_curve | `20.0` |  |
 | 19_approach_height | `20.0` |  |
+| 20_hole_on_curve | `25.0` |  |

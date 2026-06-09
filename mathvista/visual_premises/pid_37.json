@@ -18,11 +18,12 @@
     "11_value_curve_reaches": "Visual premise: The graph shows a hole at x = -1, indicating that the function is undefined at that point, but the curve approaches a specific y-value from both sides as x gets close to -1.",
     "12_marker_on_vs_off": "Visual premise: The open circle at x = -1 lies on the curve and corresponds to y = 2, indicating the function approaches this value as x approaches -1 from both sides.",
     "13_trace_to_x": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, which is 2, as indicated by the open circle at (-1, 2) on the graph.",
-    "14_read_y_by_ticks": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets close to -1.",
+    "14_read_y_by_ticks": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1.",
     "15_curve_height": "Visual premise: The curve approaches a y-value of 2 as x approaches -1 from both the left and right sides, despite the open circle at that point.",
     "16_two_points_pick_curve": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value indicated by the open circle at x = -1.",
     "17_settle_value": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, indicated by the open circle at approximately y = 2.",
     "18_coordinate_on_curve": "Visual premise: The graph shows a hole at x = -1, indicating that the function is undefined there, but the curve approaches a specific y-value from both sides as x gets close to -1.",
-    "19_approach_height": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1."
+    "19_approach_height": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1.",
+    "20_hole_on_curve": "Visual premise: The open circle on the curve at x = -1 aligns with the third tick mark above the x-axis on the y-axis."
   }
 }

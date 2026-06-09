@@ -18,11 +18,12 @@
     "11_value_curve_reaches": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, suggesting a formal award ceremony.",
     "12_marker_on_vs_off": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that suggest an age difference.",
     "13_trace_to_x": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age difference.",
-    "14_read_y_by_ticks": "Visual premise: The image shows two men, one appearing older with gray hair and the other younger with dark hair, both dressed formally in suits.",
+    "14_read_y_by_ticks": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age gap.",
     "15_curve_height": "Visual premise: The image shows two men standing side by side, with one holding a certificate and medal, suggesting a formal event or ceremony.",
     "16_two_points_pick_curve": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that suggest an age difference.",
     "17_settle_value": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that may suggest an age difference.",
     "18_coordinate_on_curve": "Visual premise: The image shows two men, one appearing significantly older with gray hair and the other with dark hair, both dressed formally in suits.",
-    "19_approach_height": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that suggest an age difference."
+    "19_approach_height": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that suggest an age difference.",
+    "20_hole_on_curve": "Visual premise: The image shows two men, one appearing significantly older with gray hair and the other younger with dark hair, both dressed formally in suits."
   }
 }

@@ -6,8 +6,10 @@
   "choices": null,
   "ground_truth": "3",
   "original_prediction": "2.0",
-  "correct_modes": [],
-  "fixed_by_any": false,
+  "correct_modes": [
+    "20_hole_on_curve"
+  ],
+  "fixed_by_any": true,
   "per_premise": {
     "1_salient": {
       "premise": "Visual premise: As x approaches -1 from both the left and right sides, the graph of g(x) approaches the same y-value, indicated by the open circle at approximately y = 2.",
@@ -114,12 +116,12 @@
       "response": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function values approach 2.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function values also approach 2.\n- There is an open circle at $ (-1, 2) $, indicating that $ g(-1) $ is not defined or not equal to 2 — but this does **not** affect the limit.\n- The solid dot above at $ (-1, 3) $ represents the actual value of the function at $ x = -1 $, if defined — again, irrelevant for the limit.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
     },
     "14_read_y_by_ticks": {
-      "premise": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets close to -1.",
+      "premise": "Visual premise: The graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1.",
       "prediction": "2.0",
       "correct": false,
       "finished": true,
-      "prompt": "Question:\nWhat is the limit as x approaches -1?\n\nVisual premise:\nThe graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets close to -1.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
-      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of the value of the function *at* $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the curve approaches $ y = 2 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the curve also approaches $ y = 2 $.\n- There is a **hole** at $ x = -1 $, meaning $ g(-1) $ is undefined — but that does not affect the limit.\n- The solid dot above the hole indicates that $ g(-1) $ is defined and equals some other value (likely 3 or 4, based on grid), but again, this is irrelevant for the limit.\n\nSince the left-hand limit and right-hand limit both equal 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+      "prompt": "Question:\nWhat is the limit as x approaches -1?\n\nVisual premise:\nThe graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- There is a **hole** at $ x = -1 $, meaning the function is not defined there.\n- However, as $ x $ approaches $ -1 $ from both the left and the right, the curve approaches the same y-value.\n- The visual premise states: “the curve approaching y = 2 from both sides as x gets closer to -1.”\n\nThis means:\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nEven though $ g(-1) $ is undefined (or possibly defined as the solid dot above, which would be irrelevant for the limit), the **limit** depends only on the values approaching $ x = -1 $, not the value at $ x = -1 $.\n\nThus, the limit is 2.\n\n2"
     },
     "15_curve_height": {
       "premise": "Visual premise: The curve approaches a y-value of 2 as x approaches -1 from both the left and right sides, despite the open circle at that point.",
@@ -160,6 +162,14 @@
       "finished": true,
       "prompt": "Question:\nWhat is the limit as x approaches -1?\n\nVisual premise:\nThe graph shows a hole at x = -1, with the curve approaching y = 2 from both sides as x gets closer to -1.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
       "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- There is a **hole** at $ x = -1 $, meaning the function is not defined there.\n- However, as $ x $ approaches $ -1 $ from both the left and the right, the curve approaches the same y-value.\n- The visual premise states: “the curve approaching y = 2 from both sides as x gets closer to -1.”\n\nThis means:\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nEven though $ g(-1) $ is undefined (or possibly defined as the solid dot above, which would be irrelevant for the limit), the **limit** depends only on the values approaching $ x = -1 $, not the value at $ x = -1 $.\n\nThus, the limit is 2.\n\n2"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The open circle on the curve at x = -1 aligns with the third tick mark above the x-axis on the y-axis.",
+      "prediction": "3.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Question:\nWhat is the limit as x approaches -1?\n\nVisual premise:\nThe open circle on the curve at x = -1 aligns with the third tick mark above the x-axis on the y-axis.\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nNow answer the question using the supported visual premise.\nProvide the final answer clearly.",
+      "response": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of the value of the function at that point.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the curve approaches the open circle at $ y = 3 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the curve also approaches the same open circle at $ y = 3 $.\n- The open circle indicates that $ g(-1) $ is **not** defined to be 3 — in fact, there’s a solid dot at $ (-1, 4) $, which means $ g(-1) = 4 $, but this does **not** affect the limit.\n\nSince the left-hand limit and right-hand limit both approach 3, the two-sided limit exists and equals 3.\n\nThus, the limit as $ x \\to -1 $ is:\n\n**3**\n\n3"
     }
   }
 }
