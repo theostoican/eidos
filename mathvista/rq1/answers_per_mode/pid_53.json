@@ -1,0 +1,157 @@
+{
+  "pid": "53",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "1",
+  "original_prediction": "8.0",
+  "correct_modes": [
+    "8_people",
+    "11_value_curve_reaches",
+    "16_two_points_pick_curve"
+  ],
+  "fixed_by_any": true,
+  "per_mode": {
+    "1_salient": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on the most salient, immediately obvious visual evidence.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can observe the following:\n\n- The man (Paul Newman) appears to be in his late 20s or early 30s. His features are mature but still show youthful energy.\n- The woman (Michelle Mercier) appears to be in her late 20s or early 30s as well. Her face is also mature, with defined features and no obvious signs of being significantly older or younger than him.\n\nThere is no clear visual indication of a significant age difference between them. They appear to be of a similar generation and likely within a few years of each other.\n\nTherefore, the most reasonable estimate for the age gap is 0 years.\n\n0"
+    },
+    "2_subtle": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on small, fine-grained, or easily missed details.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n- The man (Paul Newman) appears to be in his late 20s or early 30s.\n- The woman (Michelle Mercier) appears to be in her late 20s or early 30s as well.\n\nTheir facial features, skin texture, and overall appearance suggest they are very close in age. There is no significant visual indicator of a large age gap. In fact, they appear to be peers, likely within a few years of each other.\n\nGiven that this is a still from the 1960 film \"The Hustler,\" where Paul Newman was 27 and Michelle Mercier was 24 at the time of filming, the actual age gap is 3 years.\n\nTherefore, based on both visual estimation and historical context, the age gap is:\n\n3"
+    },
+    "3_spatial": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on spatial relations: relative position, alignment, order, direction, overlap, or connections between elements.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can analyze the apparent ages of the two individuals:\n\n- The man on the left appears to be in his late 20s or early 30s. His facial features, such as the definition of his jawline and the slight stubble, suggest he is a young adult.\n- The woman on the right also appears to be in her late 20s or early 30s. Her skin is smooth, and her overall appearance is that of a young adult.\n\nThere are no obvious signs of significant age difference between them. They appear to be contemporaries, likely within a few years of each other. In film stills from this era (likely 1950s or 1960s based on the style), actors of similar age were often cast together for romantic leads.\n\nTherefore, the most reasonable estimate for the age gap is 0 years, meaning they appear to be the same age.\n\n0"
+    },
+    "4_ocr": {
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus only on text and symbols: OCR-readable labels, axis ticks, legends, units, symbols, and numbers.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two actors: Paul Newman (left) and Maria Schell (right), from the 1961 film *The Hustler*. \n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on May 23, 1932.\n\nAge gap = 1932 - 1925 = 7 years.\n\nFinal Answer: 7"
+    },
+    "5_distractor": {
+      "prediction": "6.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on a possible distractor or misleading cue that could tempt a wrong answer.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two actors: Paul Newman (left) and Maria Schell (right), from the 1958 film *The Hustler*.\n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on April 22, 1931.\n\nAge gap = 1931 - 1925 = 6 years.\n\nHowever, note that in the image, they appear to be in their late 20s or early 30s — consistent with their ages during filming (Newman was ~33, Schell was ~27). But the question asks for the age gap between “these two people” — which we interpret as the actors themselves, not their characters.\n\nThus, the actual age difference is 6 years.\n\nBut wait — let’s double-check:  \nPaul Newman: 1925  \nMaria Schell: 1931  \n→ 1931 - 1925 = 6 years.\n\nSo the age gap is 6 years.\n\nHowever, there’s a possible distractor: someone might misidentify the actors or confuse them with other famous pairs, or assume the characters’ ages differ more. Also, visually, the woman appears slightly younger, which aligns with the 6-year gap.\n\nFinal Answer:  \n6"
+    },
+    "6_alternative": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Consider an alternative interpretation of the image that differs from the most obvious reading.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can observe that both individuals appear to be in their late 20s or early 30s. The man has a slightly more mature facial structure and perhaps a bit more visible aging (e.g., slight lines around eyes), while the woman appears slightly younger but still within a similar age bracket.\n\nIn film stills like this — which appears to be from a classic movie (possibly “The Night of the Iguana” or similar era) — actors were often cast with minimal age gaps for dramatic effect, especially in romantic or tense scenes.\n\nGiven typical casting practices of the time and visual cues, it’s reasonable to estimate an age gap of approximately **2 years** — perhaps the man is 2–3 years older, but not significantly so.\n\nFinal Answer:  \n2"
+    },
+    "7_uncertainty": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Account for a source of visual uncertainty or ambiguity (occlusion, low resolution, overlapping marks, unclear arrow direction, etc.) that could affect the answer.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two individuals: a man in the background wearing a dark red shirt, and a woman in the foreground wearing a light-colored collared shirt. Both appear to be adults, likely in their 20s or 30s based on facial features and skin texture. However, there is no clear visual indicator (such as birth dates, context clues, or explicit labels) that would allow for an accurate determination of their exact ages.\n\nAdditionally, the image has moderate resolution and some blurring, particularly around the edges and in the background, which may obscure fine details that could help estimate age more precisely. The lighting and shadows also contribute to ambiguity in facial detail.\n\nSince no definitive information is available to calculate an exact age gap, and the question requires an integer answer, we must acknowledge that this value cannot be determined from the image alone.\n\nHowever, if forced to provide an estimate based on visual appearance — assuming they are peers in age (which is common in film stills unless otherwise indicated) — the most reasonable assumption is that there is little to no age gap.\n\nFinal Answer: 0"
+    },
+    "8_people": {
+      "prediction": "1.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If there are people in the image, consider who they could be (likely identity, role, age, or relationship based on visual cues such as clothing, setting, and appearance).\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual cues in the image:\n\n- The man appears to be in his late 20s to early 30s, with a mature but youthful face and short, styled hair typical of mid-20th century actors.\n- The woman appears to be in her late 20s to early 30s as well, with a similar level of maturity and style.\n- Their physical appearances are very close in age — both show signs of being young adults, likely within a few years of each other.\n- In film contexts (this appears to be from a classic Hollywood movie), such pairings often feature actors of similar age, especially in romantic or dramatic roles.\n\nThere is no clear visual evidence of a significant age gap. They appear to be roughly the same age, perhaps differing by 1–2 years at most.\n\nGiven that the question asks for an integer answer and based on visual estimation:\n\n**1**"
+    },
+    "9_digits": {
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on digits/numbers visible in the image and their relationship to the surrounding objects: do the digits count or quantify something (labels, counts, tallies, axis values), and what do they refer to? Perhaps axes on a chart? If so, count them.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two actors: Paul Newman and Maria Schell, from the 1961 film *The Hustler*. \n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on June 22, 1932.\n\nAge gap = 1932 - 1925 = 7 years.\n\nHowever, since Maria Schell was born in June and Paul Newman in January, as of June 22, 1932, Paul Newman was already 7 years and 5 months older. So the age gap is still 7 years (integer).\n\nFinal Answer: 7"
+    },
+    "10_point_on_curve": {
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: When a point is marked on a plotted curve or line, read its y-value by counting tick marks up from the x-axis and use that number.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can identify the two individuals as actors Paul Newman and Maria Schell from the 1958 film *The Hustler*.\n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on May 23, 1932.\n\nCalculating the age gap:\n\n1932 - 1925 = 7 years\n\nMaria Schell was 7 years younger than Paul Newman.\n\nFinal Answer: 7"
+    },
+    "11_value_curve_reaches": {
+      "prediction": "1.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two actors: Paul Newman (left) and Maria Schell (right), from the 1958 film *The Hustler*.\n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on May 22, 1926.\n\nAge gap = 1926 - 1925 = 1 year.\n\nHowever, since Maria Schell was born in May and Paul Newman in January, at the time of filming (1958), Paul Newman was already 33 years old, and Maria Schell was 32 — so she was one year younger.\n\nThus, the age gap is **1 year**.\n\nFinal Answer:\n1"
+    },
+    "12_marker_on_vs_off": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and use the y-coordinate of the one that lies on the curve.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can make an educated estimate of the age gap between the two individuals.\n\n- The man in the background appears to be in his late 20s or early 30s. He has a mature facial structure but still retains some of the features of youth.\n- The woman in the foreground appears to be in her late 20s or early 30s as well. Her features are also mature, and she does not appear significantly older or younger than the man.\n\nConsidering their similar appearances and the context of the film (likely from the 1960s), it is reasonable to conclude that they are of a similar age. Therefore, the age gap between them is likely very small.\n\nAn integer answer that best fits this observation is 0.\n\n0"
+    },
+    "13_trace_to_x": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can observe the two individuals:\n\n- The man (on the left) appears to be in his late 20s or early 30s.\n- The woman (on the right) appears to be in her late 20s or early 30s as well.\n\nBoth actors are likely portraying characters of similar age. In fact, this is a still from the 1960 film *The Victors*, starring Paul Newman and Jean Seberg. At the time of filming:\n\n- Paul Newman was born in 1925 → age 35 in 1960.\n- Jean Seberg was born in 1938 → age 22 in 1960.\n\nSo the actual age gap between them at the time of filming was **13 years**.\n\nHowever, the question asks us to “trace along the plotted curve” — but there is no plotted curve in the image. This suggests that perhaps the question is misaligned with the image content, or it’s a template error.\n\nBut since the instruction says: “Focus: Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.” — and there is no such curve — we must assume that the intended answer is based on visual estimation or known facts.\n\nGiven that the question expects an integer answer and likely refers to the real-life age difference between the actors in the scene, and since Paul Newman (35) and Jean Seberg (22) had a 13-year age gap, the answer should be:\n\n**13**\n\nBut wait — let’s double-check: Is the question asking for the age gap *in the image* (i.e., how old they appear), or the actual age gap between the people (actors)?\n\nThe phrasing: “What is the age gap between these two people in image?” — could mean either. But since it says “people in image”, and not “characters”, and given that the hint mentions tracing a curve (which doesn’t exist), it’s possible this is a trick or error.\n\nAlternatively, if we interpret “people in image” as the characters portrayed, then visually:\n\n- The man looks about 30–35.\n- The woman looks about 25–30.\n\nStill, the most accurate answer based on real-world knowledge of the actors and the film is 13 years.\n\nSince the problem insists on an integer and provides no curve, I will go with the factual age gap between the actors at the time of the photo.\n\nFinal Answer:\n13"
+    },
+    "14_read_y_by_ticks": {
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart. Do not stop early or undercount. Use that tick count as its y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image provided is a still from a film, showing two actors: Paul Newman and Maria Schell. Based on historical records:\n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on June 22, 1930.\n\nAs of the time this scene was filmed (likely around 1958–1960), their ages would have been approximately:\n\n- Paul Newman: ~33–35 years old\n- Maria Schell: ~28–30 years old\n\nThe age gap between them is therefore about 5 years.\n\nHowever, the question includes an unusual instruction about counting y-axis tick marks — but there is no chart or graph in the image. The image is a photograph of two people, not a data visualization.\n\nGiven that the instruction to count y-axis tick marks cannot be fulfilled (no chart exists), and assuming the intent is to answer the actual question — “What is the age gap between these two people?” — we proceed with factual knowledge.\n\nFinal Answer:\n5"
+    },
+    "15_curve_height": {
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Treat the height (y-value) of the curve at the relevant location as a number read off the axis, not a qualitative description.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two actors: Paul Newman (left) and Michelle Pfeiffer (right). However, this is not accurate — upon closer inspection, the woman in the image is actually **Michelle Pfeiffer**? No, that’s incorrect.\n\nActually, looking at the image:\n\n- The man is **Paul Newman**.\n- The woman is **Michelle Pfeiffer**? No — wait, this is from the movie *The Sting*? No, Paul Newman was in *The Sting*, but the woman here is not Michelle Pfeiffer.\n\nWait — let’s correct that.\n\nThis image is from the 1968 film *The Thomas Crown Affair*, starring **Steve McQueen** (not Paul Newman) and **Faye Dunaway**.\n\nBut the man in the image does not look like Steve McQueen. He looks more like **Paul Newman**.\n\nActually, after careful visual identification:\n\nThis is **Paul Newman** and **Michelle Pfeiffer**? No — Michelle Pfeiffer was born in 1958, Paul Newman in 1925 — too big a gap, and she wasn’t in films with him in the 60s.\n\nWait — let’s re-express:\n\nThe correct identification:\n\nThis image is from the 1967 film *The Hustler*, starring **Paul Newman** and **Piper Laurie**.\n\nYes — Piper Laurie played Minnie Gamp, and Paul Newman played Fast Eddie Felson.\n\nSo:\n\n- Paul Newman was born on January 26, 1925.\n- Piper Laurie was born on June 11, 1932.\n\nAge gap = 1932 - 1925 = **7 years**.\n\nBut wait — in the image, the woman appears to be older than Piper Laurie? Or is it someone else?\n\nActually, no — in *The Hustler*, Piper Laurie is the character Minnie, and she is older than Paul Newman’s character. But in the image, the woman looks younger than Paul Newman? That doesn’t match.\n\nWait — perhaps I’m misidentifying.\n\nLet me check another possibility.\n\nAnother famous film with Paul Newman and a woman who looks like this: *The Honeymoon Machine*? No.\n\nActually, upon second thought — this image is from the 1968 film *The Thomas Crown Affair*, but the man is **Steve McQueen**, not Paul Newman.\n\nSteve McQueen was born August 24, 1930.\n\nFaye Dunaway was born January 14, 1941.\n\nAge gap = 1941 - 1930 = **11 years**.\n\nBut the man in the image does not resemble Steve McQueen — he has a different facial structure.\n\nWait — let’s look again.\n\nActually, I think I’ve been overcomplicating.\n\nAfter cross-referencing known images:\n\nThis image is from the 1967 film *The Hustler*, and the actors are:\n\n- **Paul Newman** (born 1925)\n- **Piper Laurie** (born 1932)\n\nAge difference: 1932 - 1925 = **7 years**.\n\nBut in the image, the woman (Piper Laurie) is shown as an older woman, which matches her role as Minnie Gamp, who is older than Fast Eddie.\n\nHowever, in the image, she appears to be in her 30s, and Paul Newman in his 40s — which would make sense if the scene is set later in the film.\n\nBut let’s confirm birth years:\n\nPaul Newman: 1925  \nPiper Laurie: 1932  \n→ Age gap: 7 years.\n\nAlternatively, if it’s *The Thomas Crown Affair*:\n\nSteve McQueen: 1930  \nFaye Dunaway: 1941  \n→ Age gap: 11 years.\n\nBut the man in the image is not Steve McQueen — he has a softer face, more like Paul Newman.\n\nUpon final verification via image recognition (in mind):\n\nThis is indeed **Paul Newman** and **Piper Laurie** from *The Hustler* (1961).\n\nBirth years:\n\nPaul Newman: 1925  \nPiper Laurie: 1932  \nDifference: 7 years.\n\nTherefore, the age gap is **7 years**.\n\nFinal Answer:\n7"
+    },
+    "16_two_points_pick_curve": {
+      "prediction": "1.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and use that point's y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can observe that the man appears to be in his late 20s or early 30s, while the woman appears to be in her late 20s or early 30s as well. Their facial features, skin texture, and overall appearance suggest they are roughly the same age — likely within 1–2 years of each other.\n\nThere is no clear visual evidence (such as wrinkles, gray hair, or significant differences in maturity) to indicate a larger age gap. In fact, this is a still from the 1960 film *The Victors*, starring Paul Newman and Jean Seberg. Paul Newman was born in 1925, and Jean Seberg was born in 1938 — making her 13 years younger than him.\n\nHowever, the question asks us to look at the image carefully and infer based on visual cues — not external knowledge. Visually, without knowing their identities, one might reasonably estimate them to be close in age — perhaps 1–2 years apart.\n\nBut since the hint says: “If two marked points share the same x-position...” — which doesn’t apply here (no marked points are given), we must rely solely on visual estimation.\n\nGiven that both appear to be young adults with similar facial structures and lack of aging signs, the most reasonable visual estimate is that they are about **1 year** apart in age.\n\nFinal Answer:  \n1"
+    },
+    "17_settle_value": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can observe the physical appearance of both individuals:\n\n- The man (on the left) appears to be in his late 20s to early 30s — likely around 30–35 years old.\n- The woman (on the right) appears slightly younger, perhaps in her mid-to-late 20s — maybe around 25–30 years old.\n\nHowever, this is a still from a film — specifically, it’s from the 1960 movie *The Victors*, starring Paul Newman and Jean Seberg.\n\nIn reality:\n- Paul Newman was born on January 26, 1925.\n- Jean Seberg was born on April 18, 1938.\n\nThat makes an actual age gap of **13 years** (Newman is older).\n\nEven though in the film they may appear close in age due to casting or styling, the real-world age difference is 13 years.\n\nSince the question asks for the age gap between “these two people” — implying the real individuals depicted — we use their actual birth years.\n\nFinal Answer:  \n13"
+    },
+    "18_coordinate_on_curve": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Use the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two individuals: a man and a woman. Based on visual cues such as facial features, hair, and overall appearance, the woman appears to be in her late 20s or early 30s, while the man appears to be in his late 20s or early 30s as well. There is no clear indication of a significant age difference — they appear to be roughly the same generation.\n\nIn many classic films from the 1950s–60s (which this image resembles), actors playing romantic leads were often within 1–5 years of each other in age. Without exact birth dates, we must estimate based on visual evidence.\n\nGiven their similar maturity levels and styling, it’s reasonable to estimate an age gap of approximately **2 years** — perhaps the woman is slightly older or younger, but not by much.\n\nFinal Answer:  \n2"
+    },
+    "19_approach_height": {
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-height the curve approaches at the target x by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two actors: Paul Newman (left) and Maria Schell (right). They appeared together in the 1958 film *The Hustler*.\n\n- Paul Newman was born on January 26, 1925.\n- Maria Schell was born on June 22, 1932.\n\nAge gap = 1932 - 1925 = 7 years.\n\nAt the time of filming (1958), Paul Newman was 33 and Maria Schell was 26 — still a 7-year difference.\n\nFinal Answer:\n7"
+    },
+    "20_hole_on_curve": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time starting from the x-axis (0), going up to the height of the open circle or marked point that lies on the curve. Do not stop early. Use that exact tick count as its y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two individuals: a man and a woman. Based on visual cues such as facial features, hair, and overall appearance, the man appears to be in his late 20s to early 30s, while the woman appears to be in her late 20s to early 30s as well. There is no clear indication of a significant age difference — they appear to be roughly the same generation.\n\nWithout exact birth dates or additional context, we cannot determine an exact numerical age gap. However, since the question requires an integer answer and implies that one can be inferred from the image, and given their similar appearances, the most reasonable assumption is that there is little to no age gap.\n\nThus, the estimated age gap is:\n\n0"
+    }
+  }
+}

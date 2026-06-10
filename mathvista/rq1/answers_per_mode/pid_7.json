@@ -1,0 +1,159 @@
+{
+  "pid": "7",
+  "question": "What time is shown? Answer by typing a time word, not a number. It is (_) after eight.",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "choices": [
+    "half",
+    "quarter",
+    "o'clock",
+    "quarter to",
+    "quarter past"
+  ],
+  "ground_truth": "quarter",
+  "original_prediction": "quarter past",
+  "correct_modes": [],
+  "fixed_by_any": false,
+  "per_mode": {
+    "1_salient": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on the most salient, immediately obvious visual evidence.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time shown is **quarter past** eight.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "2_subtle": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on small, fine-grained, or easily missed details.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time shown is **quarter past** eight.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "3_spatial": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on spatial relations: relative position, alignment, order, direction, overlap, or connections between elements.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The hour hand is pointing just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour.\n\nSo, the time shown is **quarter past eight**.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "4_ocr": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus only on text and symbols: OCR-readable labels, axis ticks, legends, units, symbols, and numbers.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes (a quarter) past the hour.\n\nSo, it is **quarter past** eight.\n\nCorrect choice: **(E)**\n\nE"
+    },
+    "5_distractor": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on a possible distractor or misleading cue that could tempt a wrong answer.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time is **quarter past eight**.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "6_alternative": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Consider an alternative interpretation of the image that differs from the most obvious reading.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time is “quarter past eight.”\n\nCorrect choice: (E) quarter past\n\nE"
+    },
+    "7_uncertainty": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Account for a source of visual uncertainty or ambiguity (occlusion, low resolution, overlapping marks, unclear arrow direction, etc.) that could affect the answer.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time is “quarter past eight.”\n\nCorrect choice: (E) quarter past\n\nE"
+    },
+    "8_people": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If there are people in the image, consider who they could be (likely identity, role, age, or relationship based on visual cues such as clothing, setting, and appearance).\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time is “quarter past eight.”\n\nCorrect choice: (E) quarter past\n\nE"
+    },
+    "9_digits": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on digits/numbers visible in the image and their relationship to the surrounding objects: do the digits count or quantify something (labels, counts, tallies, axis values), and what do they refer to? Perhaps axes on a chart? If so, count them.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, the time is **quarter past eight**.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "10_point_on_curve": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: When a point is marked on a plotted curve or line, read its y-value by counting tick marks up from the x-axis and use that number.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes (a quarter past).\n\nSo, the time is **quarter past** eight.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "11_value_curve_reaches": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes (a quarter) past the hour.\n\nSo, the time is **quarter past** eight.\n\nCorrect choice: **(E)**\n\nE"
+    },
+    "12_marker_on_vs_off": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and use the y-coordinate of the one that lies on the curve.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, it is **quarter past** eight.\n\nCorrect choice: **(E)**\n\nE"
+    },
+    "13_trace_to_x": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which is 15 minutes past the hour. So, it is **quarter past** eight.\n\nCorrect answer: **(E) quarter past**\n\nE"
+    },
+    "14_read_y_by_ticks": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart. Do not stop early or undercount. Use that tick count as its y-value.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which is 15 minutes past the hour. So, it is \"quarter past\" eight.\n\nCorrect answer: (E) quarter past\n\nE"
+    },
+    "15_curve_height": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Treat the height (y-value) of the curve at the relevant location as a number read off the axis, not a qualitative description.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes (a quarter) past the hour.\n\nSo, the time is **quarter past eight**.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "16_two_points_pick_curve": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and use that point's y-value.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, it is **quarter past** eight.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "17_settle_value": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, it is **quarter past** eight.\n\nCorrect choice: **(E) quarter past**\n\nE"
+    },
+    "18_coordinate_on_curve": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Use the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which is 15 minutes past the hour. So, it is **quarter past** eight.\n\nCorrect answer: **(E) quarter past**\n\nE"
+    },
+    "19_approach_height": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-height the curve approaches at the target x by counting ticks up from the x-axis.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which is 15 minutes past the hour. So, it is **quarter past** eight.\n\nCorrect answer: **(E) quarter past**\n\nE"
+    },
+    "20_hole_on_curve": {
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time starting from the x-axis (0), going up to the height of the open circle or marked point that lies on the curve. Do not stop early. Use that exact tick count as its y-value.\n\nQuestion:\nWhat time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past\n\nHint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\n\nProvide the final answer clearly.",
+      "response": "The clock shows the hour hand just past 8 and the minute hand pointing at 3, which represents 15 minutes — or a quarter past the hour.\n\nSo, it is **quarter past** eight.\n\nCorrect choice: **(E)**\n\nE"
+    }
+  }
+}
