@@ -36,3 +36,11 @@ python run_single_prompt_per_mode.py        # or: MAX_NEW=768 python run_single_
 
 "Fixed" = at least one mode's single-call answer matches the gold label that the
 unguided baseline missed.
+
+## Visualize the results
+
+[`single_prompt_analysis.ipynb`](single_prompt_analysis.ipynb) (Colab/Jupyter, no GPU —
+the RQ1 analogue of [`../rq2/premise_analysis.ipynb`](../rq2/premise_analysis.ipynb))
+reads the saved outputs and shows, per case, the image + question, the prompt template,
+and every mode's answer, then the accuracy aggregations and a per-case **RQ1 vs RQ2**
+comparison. Executed with outputs embedded; in Colab the first cell clones the repo.
