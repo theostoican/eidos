@@ -1,0 +1,155 @@
+{
+  "pid": "42",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "8",
+  "original_prediction": "0.0",
+  "correct_modes": [
+    "18_coordinate_on_curve"
+  ],
+  "fixed_by_any": true,
+  "per_mode": {
+    "1_salient": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on the most salient, immediately obvious visual evidence.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n- The woman has long, reddish hair and appears to be in her late 20s or early 30s.\n- The man has short, dark hair and also appears to be in his late 20s or early 30s.\n- Their facial features, skin texture, and overall appearance suggest they are very close in age — likely within 1–2 years of each other.\n- There is no obvious age gap; they appear to be peers, possibly colleagues or friends at an event.\n\nGiven that the question asks for an integer answer and the most salient visual evidence points to them being nearly the same age, the best estimate is:\n\n**0**\n\nThis reflects that there is no discernible age gap based on visual cues alone.\n\nFinal Answer:  \n0"
+    },
+    "2_subtle": {
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on small, fine-grained, or easily missed details.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n- The man appears to be in his late 30s or early 40s, with mature facial features and short, styled hair.\n- The woman has a youthful appearance, with smooth skin and a more youthful facial structure, suggesting she is likely in her late 20s or early 30s.\n\nWhile exact ages cannot be determined from a photograph, the visible age difference suggests a gap of approximately 5 to 10 years. Given that they are posing together in what appears to be a professional or semi-professional setting (possibly an event or photoshoot), it’s reasonable to infer they may be colleagues or partners with a modest age difference.\n\nA commonly accepted estimate for such a pairing based on appearance would be around **7 years**.\n\nFinal Answer:  \n7"
+    },
+    "3_spatial": {
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on spatial relations: relative position, alignment, order, direction, overlap, or connections between elements.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n- The woman has long, reddish hair and appears to be in her late 20s or early 30s.\n- The man has short, dark hair and also appears to be in his late 20s or early 30s.\n- Their facial features, skin texture, and overall appearance suggest they are of a similar age range.\n- There is no obvious visual indicator (such as significant differences in wrinkles, posture, or style) that would suggest a large age gap.\n- In many public appearances, this couple (who are known to be Alyson Hannigan and David Arquette) have been reported to have an age gap of approximately 1 year, with the man being slightly older.\n\nGiven the context and visual cues, the most reasonable integer estimate for the age gap is:\n\n1"
+    },
+    "4_ocr": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus only on text and symbols: OCR-readable labels, axis ticks, legends, units, symbols, and numbers.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two people embracing, but there is no visible text, symbols, labels, or any OCR-readable information that indicates their ages or birth years. Therefore, it is impossible to determine the age gap between them based solely on the visual content and the requirement to focus only on text and symbols.\n\nHowever, if we assume this is a known public image (e.g., from a red carpet event), and if we were to use external knowledge:\n\n- The woman appears to be Alyson Hannigan (born May 25, 1974).\n- The man appears to be David Arquette (born August 8, 1971).\n\nAge gap = 1974 - 1971 = 3 years.\n\nBut since the instruction says: “Focus only on text and symbols: OCR-readable labels...”, and there are none in the image, strictly speaking, the answer cannot be derived from the image alone.\n\nYet, given the context of the question expecting an integer answer and likely referring to real-world identities, and assuming the hint allows for inference when no text is present (as none exists), we proceed with the known age difference.\n\nFinal Answer: 3"
+    },
+    "5_distractor": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on a possible distractor or misleading cue that could tempt a wrong answer.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can observe that both individuals appear to be adults of similar age. The woman has reddish hair and is smiling while being embraced by a man with short dark hair. Both are dressed casually in white tops, and their facial features suggest they are likely in their late 20s to early 30s.\n\nThere is no visible indication of a significant age difference — no gray hair, wrinkles, or other markers that would suggest one is much older than the other. In fact, they appear to be peers, possibly colleagues or friends at an event.\n\nSince the question asks for an integer answer representing the age gap, and based on visual estimation, the most reasonable conclusion is that there is **no significant age gap** — meaning the difference is likely less than 5 years, and possibly zero.\n\nHowever, since the question requires an integer and implies a specific numerical answer, and given that in many such contexts (especially celebrity or public figure photos), if no clear age gap is visible, the expected answer is often **0** — indicating they are approximately the same age.\n\nFinal Answer:  \n0"
+    },
+    "6_alternative": {
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Consider an alternative interpretation of the image that differs from the most obvious reading.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we see a man and a woman embracing. The woman has long red hair and appears to be in her late 20s or early 30s. The man, with short dark hair, appears slightly older — perhaps mid-30s. Based on visual cues (facial features, skin texture, overall appearance), it’s reasonable to estimate that the man is about 5–7 years older than the woman.\n\nHowever, since the question asks for an integer answer and implies there may be an “alternative interpretation” differing from the most obvious reading, we should consider whether this could be a staged photo, actors playing roles, or even a fictional scenario where age gaps are exaggerated or reversed.\n\nBut without external context (like names, event details, or known identities), we must rely solely on visual estimation. In such cases, the most defensible integer estimate based on typical aging signs is **5 years**.\n\nFinal Answer:  \n5"
+    },
+    "7_uncertainty": {
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Account for a source of visual uncertainty or ambiguity (occlusion, low resolution, overlapping marks, unclear arrow direction, etc.) that could affect the answer.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two individuals embracing — a woman with red hair and a man with short brown hair. Both appear to be adults, likely in their 30s or 40s based on facial features, skin texture, and overall appearance. However, there is no explicit information (such as birth dates, context clues like event type, or textual metadata) that allows for an accurate determination of their exact ages.\n\nMoreover, the image has moderate resolution and some occlusion (e.g., the man’s face partially overlaps the woman’s shoulder), which may slightly affect age estimation precision. But more importantly, without external data, any age gap calculation would be speculative.\n\nSince the question requires an integer answer and we must account for visual uncertainty, the most honest response is that the age gap cannot be determined from the image alone. However, if forced to provide an integer based on visual estimation (assuming they are close in age, as suggested by their similar expressions and physical maturity), a reasonable guess might be 0–5 years.\n\nBut strictly speaking, due to lack of definitive evidence, the correct answer under the constraint of providing an integer is:\n\n0\n\nThis reflects the possibility they are peers, while acknowledging the inherent ambiguity.\n\nFinal Answer: 0"
+    },
+    "8_people": {
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If there are people in the image, consider who they could be (likely identity, role, age, or relationship based on visual cues such as clothing, setting, and appearance).\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on visual cues in the image:\n\n- The woman has long, reddish hair and appears to be in her late 20s to early 30s.\n- The man has short, dark hair and also appears to be in his late 20s to early 30s.\n- Their physical appearances are very similar in terms of maturity and age — both look like young adults, likely within a few years of each other.\n- They are posing closely together, smiling, which suggests a close personal relationship (possibly romantic partners or siblings), but no clear indicator of a significant age gap.\n- Without exact birth dates or additional context, we must estimate based on appearance.\n\nGiven that both appear to be roughly the same age — perhaps differing by 1–2 years at most — the most reasonable integer estimate for the age gap is:\n\n**1**"
+    },
+    "9_digits": {
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on digits/numbers visible in the image and their relationship to the surrounding objects: do the digits count or quantify something (labels, counts, tallies, axis values), and what do they refer to? Perhaps axes on a chart? If so, count them.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two people embracing — a woman with red hair and a man with short brown hair. Both are smiling and appear to be in their 30s or 40s, but there are no visible digits, numbers, labels, charts, or any quantitative indicators in the image that would allow us to determine their ages or the age gap between them.\n\nSince the question asks for an integer answer based on visible digits/numbers and their relationship to objects (e.g., counting, labeling, axes), and no such elements exist in the image, it is impossible to derive an age gap from visual data.\n\nHowever, if we interpret the question as asking for an estimated age gap based on appearance (noting that this is speculative and not grounded in visible numbers), we might estimate:\n\n- The woman appears slightly younger than the man.\n- A reasonable guess might be around 5–10 years.\n\nBut since the instructions emphasize answering based on **visible digits/numbers** and their quantification role — and none are present — the only logically consistent answer under those constraints is that **no age gap can be determined from the image**.\n\nYet, the hint requires an integer answer. Given that, and assuming the question expects an estimate despite the lack of numerical data, and considering common public knowledge (if these are celebrities — they resemble actors like Alyson Hannigan and David Spade, who were born in 1974 and 1964 respectively, making a 10-year gap), we could infer:\n\n**10**\n\nBut strictly speaking, without visible numbers, this is an assumption.\n\nGiven the constraint to provide an integer and the likely intent behind the question (even if flawed), I will go with:\n\n10"
+    },
+    "10_point_on_curve": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: When a point is marked on a plotted curve or line, read its y-value by counting tick marks up from the x-axis and use that number.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can identify the two individuals as:\n\n- The woman: Alyson Hannigan (known for *Buffy the Vampire Slayer*, *How I Met Your Mother*, etc.)\n- The man: David Arquette (actor, known for *Scream*, *Happy Gilmore*, etc.)\n\nThey were married from 2000 to 2004.\n\nAs of 2024:\n\n- Alyson Hannigan was born on April 24, 1974 → age 50\n- David Arquette was born on August 8, 1971 → age 53\n\nAge gap = 53 - 50 = **3 years**\n\nFinal Answer:\n3"
+    },
+    "11_value_curve_reaches": {
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two people embracing — a woman with red hair and a man with short brown hair. Based on visual appearance, the woman appears to be in her late 20s or early 30s, while the man appears slightly older, perhaps in his mid-30s. However, without explicit identification or biographical data, we cannot determine exact ages.\n\nBut note: The question includes an unusual instruction:\n\n> Focus: Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis.\n\nThis suggests that there should be a graph or plot associated with this question — but no such graph is provided in the input. There is only a photograph.\n\nGiven that:\n- No plot is visible.\n- The question asks for an integer age gap.\n- The hint implies reading a value from a curve (which doesn’t exist here).\n\nIt’s possible this is a trick or misaligned question — perhaps from a dataset where images are paired with graphs, but only the image was provided.\n\nHowever, if we assume this is a real-world photo of known individuals:\n\nThe woman resembles **Alyson Hannigan** (born 1974), and the man resembles **David Spade** (born 1964). If that’s the case, the age gap would be 10 years.\n\nAlternatively, if it’s **Alyson Hannigan** and **David Arquette** (born 1971), the gap is 1 year.\n\nBut looking closely at the man — he resembles **David Spade**, and the woman resembles **Alyson Hannigan**. They were married from 2000 to 2004. Age gap: 10 years.\n\nSince the question requires an integer answer and no graph is available, and given common celebrity pairings matching this image, the most reasonable inference is:\n\n**10**\n\nFinal Answer:\n10"
+    },
+    "12_marker_on_vs_off": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and use the y-coordinate of the one that lies on the curve.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals as actress Alyson Hannigan and actor David Arquette.\n\n-   **Alyson Hannigan** was born on December 25, 1974.\n-   **David Arquette** was born on August 8, 1971.\n\nTo calculate the age gap between them:\n1.  Calculate the difference in their birth years: 1974 - 1971 = 3 years.\n2.  Since Alyson Hannigan's birthday (December) is after David Arquette's birthday (August), she is not yet 3 years older than him at the time of the photo (which appears to be taken around late 2004 or early 2005). However, the question asks for the age gap, which is typically the absolute difference in their ages.\n3.  The absolute difference in their ages is 3 years.\n\nTherefore, the age gap between these two people is 3 years.\n\n3"
+    },
+    "13_trace_to_x": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can identify the two individuals as:\n\n- The woman: Alyson Hannigan (known for *Buffy the Vampire Slayer*, *How I Met Your Mother*, etc.)\n- The man: David Arquette (actor, known for *Scream*, *Happy Gilmore*, etc.)\n\nThey were married from 2000 to 2004.\n\nAs of 2024:\n- Alyson Hannigan was born on April 24, 1974 → age 50\n- David Arquette was born on August 8, 1971 → age 53\n\nAge gap = 53 - 50 = **3 years**\n\nFinal Answer:\n3"
+    },
+    "14_read_y_by_ticks": {
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart. Do not stop early or undercount. Use that tick count as its y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two people embracing — a woman with red hair and a man with short brown hair. Both appear to be adults, likely in their 30s or 40s based on facial features and context (possibly at a public event). However, there is no chart, graph, or y-axis tick marks visible in the image. The instruction to “count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart” cannot be followed because no such chart exists in the image.\n\nTherefore, the question as framed — asking for an age gap based on counting y-axis ticks — is not applicable to this image.\n\nBut since the question explicitly asks for an integer answer representing the age gap between the two people, and given that we can only estimate visually:\n\n- The woman appears slightly younger than the man.\n- A reasonable visual estimate would place the age gap around 5–10 years.\n- Without exact birth dates, we cannot give a precise number.\n\nHowever, if forced to provide an integer answer based on typical celebrity pairings (this looks like Alyson Hannigan and David Spade, who are real-life friends/colleagues; David Spade was born in 1964, Alyson Hannigan in 1974 → age gap = 10 years), then:\n\n**10**\n\nFinal Answer:  \n10"
+    },
+    "15_curve_height": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Treat the height (y-value) of the curve at the relevant location as a number read off the axis, not a qualitative description.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals as actress Alyson Hannigan and actor David Arquette.\n\n-   **Alyson Hannigan** was born on December 25, 1974.\n-   **David Arquette** was born on August 8, 1971.\n\nTo calculate the age gap:\n1.  Calculate the difference in their birth years: $1974 - 1971 = 3$ years.\n2.  Since Alyson Hannigan's birthday (December) is after David Arquette's birthday (August), she is not yet 3 years older than him at the time of this photo (which appears to be taken around late 2004 or early 2005). However, the question asks for the age gap, which is typically expressed as the absolute difference in their ages.\n\nThe absolute difference in their ages is 3 years.\n\n3"
+    },
+    "16_two_points_pick_curve": {
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and use that point's y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image:\n\n- The man appears to be in his late 30s or early 40s.\n- The woman appears to be in her late 20s or early 30s.\n\nA reasonable estimate for the age gap between them is approximately **5 to 10 years**.\n\nSince the question asks for an integer answer, and based on typical appearances of these individuals (who are actors from the early 2000s — the man is likely David Boreanaz, born 1969; the woman is likely Alyson Hannigan, born 1974), the actual age gap is **5 years**.\n\nFinal Answer:  \n5"
+    },
+    "17_settle_value": {
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can make an educated estimate of the age gap between the two individuals.\n\n- The man appears to be in his late 30s or early 40s.\n- The woman appears to be in her late 20s or early 30s.\n\nA reasonable estimate for the age difference between them is approximately 5 to 10 years. Given that they are posing together in a friendly, affectionate manner, it is plausible that they are a couple, which often implies a smaller age gap. A difference of around 5 years is a common and realistic scenario.\n\nTherefore, the estimated age gap is 5 years.\n\n5"
+    },
+    "18_coordinate_on_curve": {
+      "prediction": "8.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Use the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can estimate the ages of the two individuals.\n\n- The man appears to be in his late 30s or early 40s.\n- The woman appears to be in her late 20s or early 30s.\n\nA reasonable estimate for the age gap between them is approximately 5 to 10 years. Given their appearances, a gap of around 7-8 years is plausible.\n\nHowever, since the question asks for an integer answer and provides a hint about using coordinates (which is not applicable to this type of question), it's likely looking for a specific, commonly known fact or a very clear visual estimation.\n\nLooking at the faces more closely:\n- The man has some visible signs of aging like crow's feet and deeper lines.\n- The woman's skin appears smoother, suggesting she is younger.\n\nA common age gap in such celebrity couples (this appears to be Heather Graham and David Spade) is often around 5-10 years. Without external knowledge, a safe integer estimate based on visual cues would be **7** years.\n\nBut let's reconsider the hint. The hint mentions \"Use the (x, y) of the point where the curve meets the question's x-value\". This is confusing because the question is about age gap, not a function. It's possible the hint is misplaced or refers to a different context.\n\nGiven that, and focusing on the image:\n\nThe man looks about 8-10 years older than the woman. Let's go with **8** as a reasonable integer estimate.\n\nFinal Answer: 8"
+    },
+    "19_approach_height": {
+      "prediction": "3.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-height the curve approaches at the target x by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals as actress Alyson Hannigan and actor David Arquette.\n\n-   **Alyson Hannigan** was born on December 25, 1974.\n-   **David Arquette** was born on August 8, 1971.\n\nTo calculate the age gap:\n1.  Calculate the difference in their birth years: $1974 - 1971 = 3$ years.\n2.  Since Alyson Hannigan's birthday (December) is after David Arquette's birthday (August), she is still 3 years younger than him at the time of the photo (assuming the photo was taken after August 8, 1974, which is evident from their adult appearances).\n\nTherefore, the age gap between them is 3 years.\n\n3"
+    },
+    "20_hole_on_curve": {
+      "prediction": "4.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time starting from the x-axis (0), going up to the height of the open circle or marked point that lies on the curve. Do not stop early. Use that exact tick count as its y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the image, we can identify the two individuals as Alyson Hannigan and David Arquette. Based on publicly known information:\n\n- Alyson Hannigan was born on December 25, 1974.\n- David Arquette was born on August 8, 1971.\n\nCalculating the age gap:\n\nAs of a reference date (e.g., 2023), Alyson Hannigan is approximately 48 years old, and David Arquette is approximately 52 years old.\n\nThe difference is:  \n52 - 48 = 4 years.\n\nThus, the age gap between them is 4 years.\n\n4"
+    }
+  }
+}

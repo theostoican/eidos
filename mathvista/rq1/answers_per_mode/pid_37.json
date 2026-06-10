@@ -1,0 +1,155 @@
+{
+  "pid": "37",
+  "question": "What is the limit as x approaches -1?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "3",
+  "original_prediction": "2.0",
+  "correct_modes": [
+    "14_read_y_by_ticks"
+  ],
+  "fixed_by_any": true,
+  "per_mode": {
+    "1_salient": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on the most salient, immediately obvious visual evidence.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Looking at the graph of $ g(x) $:\n\n- As $ x $ approaches -1 from the **left** (i.e., values slightly less than -1), the function is increasing and approaching the open circle at $ x = -1 $. The y-value at that open circle appears to be **2**.\n- As $ x $ approaches -1 from the **right** (i.e., values slightly greater than -1), the function continues along the same curve and also approaches the same open circle at $ y = 2 $.\n\nEven though there is a solid dot at $ (-1, 3) $, that represents the **function value** $ g(-1) = 3 $, but the **limit** as $ x \\to -1 $ depends only on the behavior of the function near $ x = -1 $, not at $ x = -1 $.\n\nSince both left-hand and right-hand limits approach **2**, we conclude:\n\n> $ \\lim_{x \\to -1} g(x) = 2 $\n\nFinal Answer:  \n2"
+    },
+    "2_subtle": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on small, fine-grained, or easily missed details.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $.\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the **left** (i.e., values slightly less than -1), the function is increasing and approaching a point.\n- As $ x $ approaches -1 from the **right** (i.e., values slightly greater than -1), the function continues smoothly from the left side — there’s no jump or break in the curve at $ x = -1 $.\n- The open circle at $ x = -1 $ indicates that the function is **not defined** at that exact point, but the limit depends only on the approach, not the value at the point.\n- The solid dot above the open circle at $ x = -1 $ represents the actual function value at some other point (perhaps a different x-value misaligned visually, or just indicating a removable discontinuity with a redefined point elsewhere — but irrelevant for the limit).\n\nFrom the graph, as $ x \\to -1 $, the y-values approach **2**.\n\nYou can see that the curve passes through or approaches the point $ (-1, 2) $, even though it's an open circle there.\n\nThus, the limit is:\n\n**2**\n\n2"
+    },
+    "3_spatial": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on spatial relations: relative position, alignment, order, direction, overlap, or connections between elements.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, from both the left and the right.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the **left** (i.e., values slightly less than -1), the function is increasing and approaching the open circle at $ x = -1 $. The y-value at that open circle appears to be **2**.\n- As $ x $ approaches -1 from the **right** (i.e., values slightly greater than -1), the function continues along the same curve and also approaches the same open circle — again, y = 2.\n\nEven though there is a solid dot (a point) at $ x = -1 $, $ y = 3 $, this represents the **function value** $ g(-1) = 3 $, but **not** the limit. The limit depends only on the behavior *near* $ x = -1 $, not *at* $ x = -1 $.\n\nSince the left-hand limit and right-hand limit both approach **2**, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "4_ocr": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus only on text and symbols: OCR-readable labels, axis ticks, legends, units, symbols, and numbers.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as x approaches -1, we examine the behavior of the function g(x) near x = -1.\n\nFrom the graph:\n\n- As x approaches -1 from the left (x → -1⁻), the function values approach 2.\n- As x approaches -1 from the right (x → -1⁺), the function values also approach 2.\n- There is an open circle at (-1, 2), indicating that g(-1) is not defined at that point — but the limit does not require the function to be defined at the point, only that the left and right limits agree.\n\nTherefore, even though there’s a hole at x = -1, the limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "5_distractor": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on a possible distractor or misleading cue that could tempt a wrong answer.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as x approaches -1, we need to look at the behavior of the function g(x) near x = -1 — specifically, from both the left and the right.\n\nFrom the graph:\n\n- As x approaches -1 from the left (x → -1⁻), the function is increasing and appears to approach y = 2.\n- As x approaches -1 from the right (x → -1⁺), the function also approaches y = 2 — note that there is an open circle at (-1, 2), meaning the function is not defined at x = -1, but the limit still exists if both sides agree.\n\nThe solid dot above at approximately (-1, 3) is a **distractor** — it represents the value of the function at some other point or perhaps a different function’s value, but it does **not** affect the limit as x approaches -1. The limit depends only on the values of g(x) *near* x = -1, not at x = -1.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "6_alternative": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Consider an alternative interpretation of the image that differs from the most obvious reading.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **not** at $ x = -1 $.\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function is increasing and approaching a certain y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function continues smoothly along the same curve — there’s no jump or break *at* x = -1 in the main curve.\n- The open circle at $ x = -1 $ indicates that the function is **not defined** at that exact point, but the limit depends only on the approach, not the value at the point.\n- The solid dot above the open circle represents a separate point (perhaps a different function value or an isolated point), but it does **not** affect the limit as $ x \\to -1 $, since limits are about approaching, not being at.\n\nVisually, as $ x \\to -1 $, the function approaches the y-value corresponding to the open circle. Counting grid units:\n\n- The x-axis has ticks every 1 unit.\n- The y-axis also has ticks every 1 unit.\n- At $ x = -1 $, the open circle is located at $ y = 2 $.\n\nTherefore, even though $ g(-1) $ is undefined (or possibly defined as 3, if the solid dot is at (-1,3)), the **limit** as $ x \\to -1 $ is determined by the trend of the curve approaching that point — which is 2.\n\nFinal Answer:\n2"
+    },
+    "7_uncertainty": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Account for a source of visual uncertainty or ambiguity (occlusion, low resolution, overlapping marks, unclear arrow direction, etc.) that could affect the answer.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To determine the limit as x approaches -1, we examine the behavior of the function g(x) near x = -1 from both the left and right sides.\n\nFrom the graph:\n- As x approaches -1 from the left (x → -1⁻), the function values approach a certain y-value.\n- As x approaches -1 from the right (x → -1⁺), the function values also approach the same y-value — there is no jump or hole at x = -1 itself that affects the limit (note: the open circle is at x = -1, but the limit does not depend on the value *at* x = -1, only on the approach).\n\nLooking closely at the graph, as x gets closer to -1 from either side, the curve approaches the point where y = 2. The open circle at x = -1 indicates that g(-1) is undefined (or possibly defined elsewhere — in fact, there’s a solid dot above, suggesting g(-1) might be defined as 3, but again, that doesn’t affect the limit).\n\nThe key point: **limit** cares about approaching, not the actual value at the point.\n\nSo, limₓ→₋₁ g(x) = 2.\n\nFinal Answer:\n2"
+    },
+    "8_people": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If there are people in the image, consider who they could be (likely identity, role, age, or relationship based on visual cues such as clothing, setting, and appearance).\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $ from both the left and right sides.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the **left** (i.e., values slightly less than -1), the function is increasing and appears to approach a specific y-value.\n- As $ x $ approaches -1 from the **right** (i.e., values slightly greater than -1), the function continues smoothly — there’s no jump or break at $ x = -1 $ in the curve itself.\n\nNote: There is an open circle at $ x = -1 $, which indicates that $ g(-1) $ is **not defined** at that point. However, the **limit** does not depend on the value of the function *at* the point — only on what happens *near* it.\n\nLooking closely at the graph:\n\n- The curve approaches the same y-value from both sides as $ x \\to -1 $.\n- That y-value appears to be **2** (counting grid lines: each tick is 1 unit; the point just below the open circle is at y=2).\n\nAlso note: There is a solid dot above the open circle — this likely represents the actual value of the function at some other point (perhaps a removable discontinuity filled elsewhere), but since we’re taking the limit as $ x \\to -1 $, we ignore the isolated point.\n\nThus, the left-hand limit and right-hand limit both equal 2.\n\nTherefore, the limit exists and equals:\n\n**2**\n\n2"
+    },
+    "9_digits": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on digits/numbers visible in the image and their relationship to the surrounding objects: do the digits count or quantify something (labels, counts, tallies, axis values), and what do they refer to? Perhaps axes on a chart? If so, count them.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $ from both sides.\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function is increasing and appears to approach a specific y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function also approaches the same y-value — there’s a “hole” at $ x = -1 $, but the curve is continuous from both sides up to that point.\n\nThe open circle at $ x = -1 $ indicates that the function is not defined at $ x = -1 $, but the limit exists if the left-hand and right-hand limits are equal.\n\nFrom the grid:\n\n- The x-axis has tick marks; assuming each tick is 1 unit, then $ x = -1 $ is one unit left of the y-axis.\n- At $ x = -1 $, the open circle is located at $ y = 2 $ (counting up from x-axis: 0, 1, 2).\n- The solid dot above it is at $ y = 3 $, which likely represents the actual function value at some other point (perhaps $ x = -1 $ is assigned 3, but that doesn’t affect the limit).\n\nSince the function approaches $ y = 2 $ from both sides as $ x \\to -1 $, the limit is 2.\n\nFinal Answer:\n2"
+    },
+    "10_point_on_curve": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: When a point is marked on a plotted curve or line, read its y-value by counting tick marks up from the x-axis and use that number.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we look at the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $ (since there’s an open circle there — meaning the function is not defined or has a hole at that point).\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (values less than -1), the curve is rising and approaching the open circle.\n- As $ x $ approaches -1 from the right (values greater than -1), the curve also approaches the same open circle.\n- The open circle is located at $ x = -1 $, and by counting tick marks up from the x-axis, it appears to be at **y = 2**.\n\nEven though there is a solid dot above it (at y=3), that represents the actual function value at some other point — but for the **limit**, we care about what the function approaches, not what it equals at that point.\n\nSo, since both sides approach y = 2, the limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "11_value_curve_reaches": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $ (since there’s an open circle there — indicating a hole).\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the left (negative side), the curve is rising and approaches the point just below the open circle.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same point — the open circle.\n- The open circle is located at $ x = -1 $, and counting ticks up from the x-axis: it’s at **y = 2**.\n\nEven though the function is not defined at $ x = -1 $ (open circle), the **limit** exists if the left-hand and right-hand limits are equal — which they are here.\n\nSo,\n\n> $ \\lim_{x \\to -1} g(x) = 2 $\n\nFinal Answer:  \n2"
+    },
+    "12_marker_on_vs_off": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and use the y-coordinate of the one that lies on the curve.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To evaluate the limit as $ x \\to -1 $, we look at the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $ (since there’s an open circle there — indicating a hole).\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (negative side), the curve is approaching the point with y-coordinate **2**.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same point — the open circle at $ (-1, 2) $.\n- The solid dot at $ (-1, 3) $ is **not** on the curve; it’s just a point plotted separately, likely to indicate that $ g(-1) = 3 $, but since it’s not connected to the curve, it doesn’t affect the limit.\n\nThe limit depends only on the values of $ g(x) $ as $ x $ gets arbitrarily close to -1, regardless of what happens *at* x = -1.\n\nSince both sides approach y = 2, the limit exists and equals 2.\n\nFinal Answer:  \n**2**"
+    },
+    "13_trace_to_x": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $ (since there’s an open circle there — meaning the function is not defined or has a removable discontinuity at that point).\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the **left** (values slightly less than -1), the curve is approaching the same y-value as when approaching from the **right**.\n- The open circle at $ x = -1 $ is located at $ y = 2 $.\n- The solid dot above it (at $ x = -1 $, $ y = 3 $) represents the actual function value if defined, but for **limits**, we ignore the point at $ x = -1 $ and only care about the trend as we get close to it.\n\nSince both left-hand and right-hand limits approach $ y = 2 $, the two-sided limit exists and equals 2.\n\n---\n\nFinal Answer:  \n**2**"
+    },
+    "14_read_y_by_ticks": {
+      "prediction": "3.0",
+      "correct": true,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart. Do not stop early or undercount. Use that tick count as its y-value.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as x approaches -1, we examine the behavior of the function g(x) near x = -1.\n\nLooking at the graph:\n\n- As x approaches -1 from the left (x → -1⁻), the function is increasing and appears to approach a certain y-value.\n- As x approaches -1 from the right (x → -1⁺), the function also approaches the same y-value — there’s a “hole” at that point, but the curve is continuous around it except for the open circle.\n\nThe open circle at x = -1 indicates that g(-1) is not defined (or defined differently), but the **limit** depends on what the function approaches, not the value at the point.\n\nNow, counting the y-axis tick marks from the x-axis (y=0) up to the height of the open circle at x = -1:\n\n- The x-axis is y = 0.\n- Moving up: first tick is y = 1, second is y = 2, third is y = 3.\n\nThe open circle at x = -1 is located at the **third tick mark above the x-axis**, so its y-value is 3.\n\nTherefore, the limit as x approaches -1 is 3.\n\nFinal Answer:\n3"
+    },
+    "15_curve_height": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Treat the height (y-value) of the curve at the relevant location as a number read off the axis, not a qualitative description.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **ignoring** the isolated dot (which is not on the curve and likely represents a removable discontinuity or unrelated point).\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the left (negative side), the curve is rising and appears to approach a specific y-value.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same y-value — there’s a “hole” at $ x = -1 $, but the curve is continuous around it except at that exact point.\n- The hole is located at $ x = -1 $, and visually, the y-coordinate of that hole is **2** (counting grid lines: origin is (0,0), each tick is 1 unit; the hole is two units up).\n\nSince the left-hand limit and right-hand limit both approach the same value (2), the two-sided limit exists and equals 2.\n\nNote: The isolated dot above the hole (at approximately (-1, 3)) does **not** affect the limit — limits depend only on the behavior of the function *near* the point, not *at* the point.\n\nThus, the limit as $ x \\to -1 $ is:\n\n**2**"
+    },
+    "16_two_points_pick_curve": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and use that point's y-value.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we need to examine the behavior of the function $ g(x) $ near $ x = -1 $, **not** the value at $ x = -1 $ (since limits are about approaching, not necessarily being defined at the point).\n\nLooking at the graph:\n\n- At $ x = -1 $, there is an **open circle** on the curve — this indicates that the function is **not defined** at $ x = -1 $, or at least the point is excluded.\n- However, the curve approaches this open circle from both the left and the right. That means the **left-hand limit** and **right-hand limit** both approach the same y-value at that open circle.\n- The open circle is located at $ y = 2 $ (counting grid lines: origin is (0,0), so moving up 2 units gives y=2).\n- There is also a **solid dot** above it at $ x = -1 $, $ y = 3 $, but that represents the actual function value $ g(-1) = 3 $. But for the **limit**, we ignore the solid dot — we care about where the curve is heading as x approaches -1.\n\nSo, even though $ g(-1) = 3 $, the **limit** as $ x \\to -1 $ is determined by the curve’s approach, which is toward the open circle at $ y = 2 $.\n\nTherefore, the limit is:\n\n**2**\n\n2"
+    },
+    "17_settle_value": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $ from both the left and the right.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the **left** (i.e., values slightly less than -1), the curve is rising and appears to approach the open circle at $ x = -1 $.\n- As $ x $ approaches -1 from the **right** (i.e., values slightly greater than -1), the curve also approaches the same open circle at $ x = -1 $.\n\nThe open circle at $ x = -1 $ indicates that the function is **not defined** at that point, but the **limit** depends on what value the function approaches — not whether it’s defined there.\n\nLooking at the y-coordinate of the open circle at $ x = -1 $, it aligns with **y = 2** on the vertical axis.\n\nEven though there is a solid dot above (at approximately (-1, 3)), that represents the actual function value if defined — but for the **limit**, we care about the approaching value, which is the open circle.\n\nThus, the limit as $ x \\to -1 $ is **2**.\n\nFinal Answer:  \n2"
+    },
+    "18_coordinate_on_curve": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Use the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as x approaches -1, we look at the behavior of the function g(x) near x = -1.\n\nFrom the graph:\n\n- As x approaches -1 from the left (x → -1⁻), the curve is approaching a point just below y = 2 — specifically, it appears to be approaching y = 2.\n- As x approaches -1 from the right (x → -1⁺), the curve also approaches the same point — again, y = 2.\n- There is an open circle at (-1, 2), indicating that g(-1) is not defined there, but the limit depends on the values approaching x = -1, not the value at x = -1.\n- The solid dot above at approximately (-1, 3) is irrelevant for the limit — it’s just a point not on the curve.\n\nSince both left-hand and right-hand limits approach y = 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "19_approach_height": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-height the curve approaches at the target x by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, **ignoring** any isolated points (like the solid dot at $ x = -1 $, which is not part of the curve).\n\nLooking at the graph:\n\n- As $ x $ approaches -1 from the left (negative side), the curve rises and approaches a certain y-value.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same y-value — there’s a “hole” (open circle) at that point, indicating the function is undefined there, but the limit still exists if both sides agree.\n\nCounting ticks up from the x-axis to the open circle at $ x = -1 $:\n\n- The x-axis has tick marks every 1 unit.\n- The open circle at $ x = -1 $ is located at **y = 2** (two ticks above the x-axis).\n\nEven though there is a solid dot at $ (-1, 3) $, that does **not** affect the limit — it only affects the function value at that point. The limit depends on the approach, not the actual value.\n\nThus, the limit as $ x \\to -1 $ is **2**.\n\nFinal Answer:  \n2"
+    },
+    "20_hole_on_curve": {
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time starting from the x-axis (0), going up to the height of the open circle or marked point that lies on the curve. Do not stop early. Use that exact tick count as its y-value.\n\nQuestion:\nWhat is the limit as x approaches -1?\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "To find the limit as x approaches -1, we need to examine the behavior of the function g(x) near x = -1.\n\nLooking at the graph:\n\n- The function has a hole (open circle) at x = -1.\n- The open circle is located at y = 2 (counting tick marks from x-axis up: 1, 2 — so two tick marks above x-axis).\n- As x approaches -1 from both left and right, the function values approach the same point — the open circle at (-1, 2).\n- Even though the function is not defined at x = -1 (due to the open circle), the limit exists and equals the y-value that the function approaches.\n\nTherefore, the limit as x approaches -1 is 2.\n\nFinal Answer:\n2"
+    }
+  }
+}

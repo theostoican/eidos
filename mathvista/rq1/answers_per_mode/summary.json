@@ -1,0 +1,36 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "approach": "single_prompt_per_mode",
+  "n_cases": 8,
+  "n_modes": 20,
+  "n_cases_fixed_by_any": 5,
+  "per_mode_correct_counts": {
+    "1_salient": 0,
+    "2_subtle": 0,
+    "3_spatial": 1,
+    "4_ocr": 1,
+    "5_distractor": 1,
+    "6_alternative": 0,
+    "7_uncertainty": 1,
+    "8_people": 3,
+    "9_digits": 1,
+    "10_point_on_curve": 1,
+    "11_value_curve_reaches": 3,
+    "12_marker_on_vs_off": 1,
+    "13_trace_to_x": 1,
+    "14_read_y_by_ticks": 2,
+    "15_curve_height": 0,
+    "16_two_points_pick_curve": 2,
+    "17_settle_value": 1,
+    "18_coordinate_on_curve": 2,
+    "19_approach_height": 1,
+    "20_hole_on_curve": 1
+  },
+  "fixed_pids": [
+    "19",
+    "27",
+    "37",
+    "42",
+    "53"
+  ]
+}

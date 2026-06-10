@@ -1,0 +1,153 @@
+{
+  "pid": "41",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "choices": null,
+  "ground_truth": "7",
+  "original_prediction": "13.0",
+  "correct_modes": [],
+  "fixed_by_any": false,
+  "per_mode": {
+    "1_salient": {
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on the most salient, immediately obvious visual evidence.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n1.  The man on the right (Rex Tillerson) has white hair and visible signs of aging, such as wrinkles. He appears to be in his late 60s or early 70s.\n2.  The man on the left (Dmitry Rogozin) has dark hair and a smoother complexion, appearing significantly younger. He appears to be in his late 40s or early 50s.\n\nThe most salient visual evidence is the stark difference in their hair color and facial features, which indicates a significant age gap. A reasonable estimate based on these visual cues is approximately 20 years.\n\n20"
+    },
+    "2_subtle": {
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on small, fine-grained, or easily missed details.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n- The man on the left is **Mark Rutte**, the Prime Minister of the Netherlands. He was born on **27 April 1967**.\n- The man on the right is **Rex Tillerson**, who served as the U.S. Secretary of State. He was born on **23 January 1952**.\n\nTo calculate the age gap:\n\n**1967 - 1952 = 15 years**\n\nTherefore, the age gap between them is approximately **15 years**.\n\n15"
+    },
+    "3_spatial": {
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on spatial relations: relative position, alignment, order, direction, overlap, or connections between elements.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image:\n\n- The man on the right (Rex Tillerson) has white hair and appears to be in his late 60s or early 70s.\n- The man on the left (Dmitry Rogozin) has brown hair and appears to be in his late 40s or early 50s.\n\nA reasonable estimate for the age gap between them is approximately 20 years.\n\n20"
+    },
+    "4_ocr": {
+      "prediction": "26.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus only on text and symbols: OCR-readable labels, axis ticks, legends, units, symbols, and numbers.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image:\n\n1.  The person on the left is **Volodymyr Zelenskyy**, the President of Ukraine. He was born on **January 25, 1978**.\n2.  The person on the right is **Rex Tillerson**, the former U.S. Secretary of State. He was born on **February 23, 1952**.\n\nTo calculate the age gap:\n*   1978 - 1952 = 26 years\n\nTherefore, the age gap between these two people is **26** years.\n\n26"
+    },
+    "5_distractor": {
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on a possible distractor or misleading cue that could tempt a wrong answer.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n1.  The man on the left is **Mark Rutte**, the Prime Minister of the Netherlands. He was born on **29 April 1967**.\n2.  The man on the right is **Rex Tillerson**, who served as the 67th United States Secretary of State. He was born on **23 January 1952**.\n\nTo calculate the age gap between them:\n*   Rex Tillerson's birth year: 1952\n*   Mark Rutte's birth year: 1967\n\nThe difference is 1967 - 1952 = 15 years.\n\nTherefore, the age gap between these two people is 15 years.\n\n15"
+    },
+    "6_alternative": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Consider an alternative interpretation of the image that differs from the most obvious reading.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The two individuals in the image are:\n\n- On the left: **Dmitry Medvedev**, former President of Russia (born August 14, 1965)\n- On the right: **Rex Tillerson**, former U.S. Secretary of State (born January 23, 1952)\n\nCalculating the age gap:\n\n2025 - 1965 = 60 years (Medvedev’s age as of 2025)  \n2025 - 1952 = 73 years (Tillerson’s age as of 2025)\n\nAge gap = 73 - 60 = **13 years**\n\nHowever, note that Tillerson passed away on March 25, 2025 — so if we consider the time of the photo (which appears to be from around 2017–2018), let’s recalculate based on actual meeting date.\n\nThis photo was taken on **March 22, 2018**, during Tillerson’s visit to Moscow.\n\nAt that time:\n\n- Medvedev: 2018 - 1965 = **53 years old**\n- Tillerson: 2018 - 1952 = **66 years old**\n\nAge gap = 66 - 53 = **13 years**\n\n✅ Final Answer: **13**"
+    },
+    "7_uncertainty": {
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Account for a source of visual uncertainty or ambiguity (occlusion, low resolution, overlapping marks, unclear arrow direction, etc.) that could affect the answer.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can make an educated estimate of the age gap between the two individuals.\n\n- The man on the right (Rex Tillerson) has white hair and visible signs of aging, suggesting he is in his late 60s or early 70s.\n- The man on the left (Dmitry Kozak) has brown hair and appears to be in his late 40s or early 50s.\n\nEstimating their ages as approximately 70 and 50 years old respectively, the age gap would be around 20 years.\n\n20"
+    },
+    "8_people": {
+      "prediction": "18.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If there are people in the image, consider who they could be (likely identity, role, age, or relationship based on visual cues such as clothing, setting, and appearance).\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual cues in the image:\n\n- The man on the left (Dmitry Kozak, Ukrainian Minister of Foreign Affairs at the time) appears to be in his late 40s or early 50s.\n- The man on the right (Rex Tillerson, U.S. Secretary of State at the time) appears to be in his late 60s or early 70s.\n\nEstimating their ages:\n- Dmitry Kozak: ~50 years old\n- Rex Tillerson: ~68 years old\n\nThe age gap is approximately 18 years.\n\n18"
+    },
+    "9_digits": {
+      "prediction": "21.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Focus on digits/numbers visible in the image and their relationship to the surrounding objects: do the digits count or quantify something (labels, counts, tallies, axis values), and what do they refer to? Perhaps axes on a chart? If so, count them.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image:\n\n1.  **Identify the individuals:** The two men shaking hands are **Radosław Sikorski** (on the left) and **Rex Tillerson** (on the right).\n2.  **Determine their birth years:**\n    *   Radosław Sikorski was born on **April 18, 1973**.\n    *   Rex Tillerson was born on **October 23, 1952**.\n3.  **Calculate the age gap:**\n    *   1973 - 1952 = 21 years.\n\nThe age gap between these two people is 21 years.\n\n21"
+    },
+    "10_point_on_curve": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: When a point is marked on a plotted curve or line, read its y-value by counting tick marks up from the x-axis and use that number.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n- The man on the left is **Dmitry Medvedev**, the President of Russia. He was born on September 14, 1965.\n- The man on the right is **Rex Tillerson**, who served as the U.S. Secretary of State. He was born on October 23, 1952.\n\nTo calculate the age gap:\n\n- Rex Tillerson was born in 1952.\n- Dmitry Medvedev was born in 1965.\n\nAge gap = 1965 - 1952 = **13 years**\n\n(Note: Since Medvedev was born in September and Tillerson in October, if the photo was taken before October 23, 1965, the gap would be 13 years; after that date, it would still be 13 years until Tillerson’s next birthday. But since we’re calculating based on birth years only for an integer answer, 13 is correct.)\n\nFinal Answer:\n13"
+    },
+    "11_value_curve_reaches": {
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-value the plotted curve reaches at the x-position the question is about, counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two men shaking hands in a formal setting, with U.S. and Romanian flags in the background. The individuals are:\n\n- On the left: **Dacian Cioloș**, former Prime Minister of Romania (born 1963).\n- On the right: **Rex Tillerson**, former U.S. Secretary of State (born 1952).\n\nCalculating the age gap:\n\n1963 - 1952 = **11 years**\n\nThus, the age gap between them is 11 years.\n\n11"
+    },
+    "12_marker_on_vs_off": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Distinguish markers that lie ON the plotted curve from markers drawn OFF the curve, and use the y-coordinate of the one that lies on the curve.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n- The man on the left is **Dmitry Medvedev**, the President of Russia. He was born on September 14, 1965.\n- The man on the right is **Rex Tillerson**, who served as the U.S. Secretary of State. He was born on October 23, 1952.\n\nTo calculate the age gap between them:\n\n- Rex Tillerson was born in 1952.\n- Dmitry Medvedev was born in 1965.\n\nThe difference in their birth years is:\n\n**1965 - 1952 = 13 years**\n\nTherefore, the age gap between these two people is approximately **13 years**.\n\n13"
+    },
+    "13_trace_to_x": {
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Trace along the plotted curve to the x-value the question asks about and read the y-coordinate there off the y-axis ticks.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two men shaking hands in a formal setting, with U.S. and Romanian flags in the background. The man on the left is **Mark Rutte**, former Prime Minister of the Netherlands (though he is not Dutch — this is likely a misattribution; actually, the man on the left is **Dacian Cioloș**, former Prime Minister of Romania). The man on the right is **Rex Tillerson**, former U.S. Secretary of State.\n\nHowever, based on visual identification:\n\n- The man on the **left** is **Dacian Cioloș**, born **1963** → age ~60–61 as of 2024.\n- The man on the **right** is **Rex Tillerson**, born **1952** → age ~72 as of 2024.\n\nAge gap = 72 - 61 = **11 years**\n\nBut wait — let’s double-check identities.\n\nActually, looking more carefully:\n\nThe man on the **left** is **Dacian Cioloș** (Romanian PM, born 1963).\n\nThe man on the **right** is **Rex Tillerson** (born 1952).\n\nSo age difference: 1963 - 1952 = **11 years**\n\nBut the question says “trace along the plotted curve” — there is no plotted curve in the image. This suggests the question may be from a context where a graph was provided alongside the image, but here only the photo is given.\n\nSince no curve is visible, and the instruction to trace a curve cannot be followed, we must rely on known facts.\n\nAlternatively, perhaps the question is misphrased, and it's asking for the age gap between the two individuals shown.\n\nGiven that:\n\n- Dacian Cioloș: born **1963**\n- Rex Tillerson: born **1952**\n\nAge gap = **11 years**\n\nFinal Answer:\n11"
+    },
+    "14_read_y_by_ticks": {
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time from the x-axis (0) up to the exact height of the relevant marker on the chart. Do not stop early or undercount. Use that tick count as its y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two men shaking hands in a formal setting, with flags of the United States and Romania in the background. The individuals are:\n\n- On the left: Dacian Cioloș (former Prime Minister of Romania)\n- On the right: Rex Tillerson (former U.S. Secretary of State)\n\nHowever, the question asks for an age gap based on a chart with y-axis tick marks — but there is no chart in the image. The image is a photograph of two people, not a data visualization.\n\nTherefore, the premise of the question — counting y-axis tick marks to determine an age gap — does not apply to this image.\n\nBut since the instruction says to provide an integer answer at the end, and assuming we must infer from known public data:\n\n- Dacian Cioloș was born in 1963 → age ~61 (as of 2024)\n- Rex Tillerson was born in 1952 → age ~72 (as of 2024)\n\nAge gap = 72 - 61 = 11 years\n\nBut again — this is not derived from any chart or tick marks.\n\nGiven the constraints, and if forced to give an integer answer based on real-world knowledge (since no chart exists), the age gap is approximately 11 years.\n\nFinal Answer:\n11"
+    },
+    "15_curve_height": {
+      "prediction": "12.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Treat the height (y-value) of the curve at the relevant location as a number read off the axis, not a qualitative description.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n1.  The man on the left is **Bogdan Petrescu**, the President of Romania. He was born on **October 1, 1964**.\n2.  The man on the right is **Rex Tillerson**, who served as the U.S. Secretary of State. He was born on **January 23, 1952**.\n\nTo calculate the age gap between them:\n\n*   Rex Tillerson's birth year: 1952\n*   Bogdan Petrescu's birth year: 1964\n\nThe difference in their birth years is 1964 - 1952 = 12 years.\n\nTherefore, the age gap between these two people is approximately 12 years.\n\n12"
+    },
+    "16_two_points_pick_curve": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If two marked points share the same x-position, identify which one the curve actually passes through (or bends toward) and use that point's y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n- The man on the left is **Dmitry Medvedev**, the President of Russia. He was born on September 14, 1965.\n- The man on the right is **Rex Tillerson**, who served as the U.S. Secretary of State. He was born on October 23, 1952.\n\nTo calculate the age gap between them:\n\n- Rex Tillerson's birth year: 1952\n- Dmitry Medvedev's birth year: 1965\n\nAge gap = 1965 - 1952 = **13 years**\n\nTherefore, the age gap between these two people is 13 years.\n\n13"
+    },
+    "17_settle_value": {
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: If the curve flattens, levels off, or settles near the target x, read the y-value of that level off the axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual evidence in the image, we can identify the two individuals:\n\n1.  The man on the left is **Mark Rutte**, the Prime Minister of the Netherlands. He was born on **29 April 1967**.\n2.  The man on the right is **Rex Tillerson**, who served as the United States Secretary of State. He was born on **23 January 1952**.\n\nTo calculate the age gap between them:\n*   Rex Tillerson's birth year: 1952\n*   Mark Rutte's birth year: 1967\n\nThe difference is 1967 - 1952 = 15 years.\n\nTherefore, the age gap between these two people is approximately 15 years.\n\n15"
+    },
+    "18_coordinate_on_curve": {
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Use the (x, y) of the point where the curve meets the question's x-value, reading the y by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two men shaking hands in a formal setting, with flags of the United States and Romania in the background. The man on the left appears to be younger than the man on the right.\n\nBased on visual estimation:\n- The man on the left (likely a Romanian official) appears to be in his late 40s or early 50s.\n- The man on the right (likely a U.S. official, possibly Rex Tillerson or similar) appears to be in his late 60s or early 70s.\n\nA reasonable age gap estimate would be around 15–20 years.\n\nHowever, since the question asks for an integer answer and requires using a point where “the curve meets the question’s x-value” — but there is no curve or graph provided in the image — this part of the instruction seems misapplied or based on a misunderstanding.\n\nGiven that, and focusing only on the actual question: “What is the age gap between these two people in image?” — and assuming we are to estimate from appearance:\n\nThe most plausible integer answer based on visual cues is:\n\n**15**\n\nThis reflects a typical age difference between a mid-50s and early-70s individual.\n\nFinal Answer:\n15"
+    },
+    "19_approach_height": {
+      "prediction": "13.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Read the y-height the curve approaches at the target x by counting ticks up from the x-axis.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "Based on the visual information in the image, we can identify the two individuals:\n\n- The man on the left is **Dmitry Medvedev**, the President of Russia. He was born on September 14, 1965.\n- The man on the right is **Rex Tillerson**, who served as the U.S. Secretary of State. He was born on October 23, 1952.\n\nTo calculate the age gap:\n\n- As of the time this photo was likely taken (around 2017–2018), Medvedev was approximately 52 years old.\n- Tillerson was approximately 65 years old.\n\nThe difference is:  \n**65 - 52 = 13 years**\n\nEven if we use exact birth dates and assume the photo was taken in early 2018:\n- Medvedev: 52 years, 4 months\n- Tillerson: 65 years, 3 months  \n→ Age gap ≈ 12 years and 11 months → rounds to **13 years**\n\nThus, the age gap between them is **13 years**.\n\n13"
+    },
+    "20_hole_on_curve": {
+      "prediction": "20.0",
+      "correct": false,
+      "finished": true,
+      "prompt": "Look at the image carefully and answer the question.\nFocus: Count the y-axis tick marks one at a time starting from the x-axis (0), going up to the height of the open circle or marked point that lies on the curve. Do not stop early. Use that exact tick count as its y-value.\n\nQuestion:\nWhat is the age gap between these two people in image? (Unit: years)\n\nHint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\n\nProvide the final answer clearly.",
+      "response": "The image shows two men shaking hands in a formal setting, with flags of the United States and Romania visible. The man on the left appears to be younger than the man on the right. Based on visual estimation:\n\n- The man on the left (likely a Romanian official) appears to be in his late 40s or early 50s.\n- The man on the right (likely a U.S. official, possibly Rex Tillerson based on appearance) appears to be in his late 60s or early 70s.\n\nEstimating an age gap of approximately 20–25 years.\n\nHowever, since the question requires an integer answer and no exact birth dates are provided, we must rely on visual approximation. A reasonable estimate based on facial features and typical aging signs is about 20 years.\n\nFinal Answer: 20"
+    }
+  }
+}
