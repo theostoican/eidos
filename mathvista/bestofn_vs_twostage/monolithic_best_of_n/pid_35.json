@@ -1,0 +1,40 @@
+{
+  "pid": "35",
+  "question": "如图，AB是⊙O的直径，EF，EB是⊙O的弦，点E是FEB的中点，EF与AB交于点C，连接OF，若∠AOF＝40°，则∠F的度数是（）",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "math-targeted-vqa",
+  "ground_truth": "35°",
+  "greedy_pred": "40°",
+  "greedy_finished": false,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 7,
+  "n_valid_samples": 13,
+  "sample_preds": [
+    "55°",
+    "35°",
+    "55°",
+    "35°",
+    "55°",
+    "55°",
+    "35°",
+    "55°",
+    "55°",
+    "55°",
+    "35°",
+    "55°",
+    "35°"
+  ],
+  "n_sample_correct": 5,
+  "answer_counts": {
+    "num:55.0": 8,
+    "num:35.0": 5
+  },
+  "n_distinct_answers": 2,
+  "top_answer": "55°",
+  "top_share": 0.615,
+  "oracle_hit": true,
+  "vote_winner": "55°",
+  "vote_correct": false
+}

@@ -1,0 +1,27 @@
+{
+  "pid": "10",
+  "question": "Which object comes next?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "math-targeted-vqa",
+  "ground_truth": "E",
+  "greedy_pred": "E",
+  "greedy_finished": false,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 19,
+  "n_valid_samples": 1,
+  "sample_preds": [
+    "B"
+  ],
+  "n_sample_correct": 0,
+  "answer_counts": {
+    "txt:b": 1
+  },
+  "n_distinct_answers": 1,
+  "top_answer": "B",
+  "top_share": 1.0,
+  "oracle_hit": false,
+  "vote_winner": "B",
+  "vote_correct": false
+}

@@ -1,0 +1,157 @@
+{
+  "pid": "42",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "ground_truth": "8",
+  "fixed_by_any": false,
+  "correct_modes": [],
+  "n_distinct_answers": 6,
+  "top_answer": "0.0",
+  "top_share": 0.4,
+  "n_valid": 20,
+  "vote_winner": "0.0",
+  "vote_correct": false,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. Estimating their ages from the image, the man looks to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 years.\n\n5"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The woman has long, flowing red hair and is wearing a white sleeveless top, while the man has short brown hair and is dressed in a white shirt with a blue collar visible underneath. Both individuals appear to be smiling warmly at the camera, suggesting a close relationship or event.",
+      "prediction": "12.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, the man appears to be older than the woman. He has short, styled brown hair and a more mature facial structure, while the woman has long red hair and a younger appearance.\n\nEstimating their ages from the photograph:\n- The man appears to be in his late 30s or early 40s (e.g., 40-45 years old).\n- The woman appears to be in her late 20s or early 30s (e.g., 28-32 years old).\n\nTherefore, the age gap between them is approximately **10 to 15 years**.\n\n12"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The man is positioned slightly behind and to the right of the woman, with his arm around her shoulder, suggesting a close physical relationship. Both individuals are smiling directly at the camera, indicating they are aware of being photographed together.",
+      "prediction": "12.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, the man appears to be older than the woman. He has short, dark hair with some graying at the temples and a more mature facial structure. The woman has long red hair and a younger appearance.\n\nEstimating their ages from the photograph:\n- The man appears to be in his late 30s or early 40s (e.g., 40-45 years old).\n- The woman appears to be in her late 20s or early 30s (e.g., 28-32 years old).\n\nA reasonable estimate for the age gap between them is approximately 10 to 15 years. Given the visual cues, an integer value of **12** years is a plausible estimate for the age difference.\n\n12"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling at the camera. No explicit age indicators or numerical data are visible in the image.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, both individuals appear to be young adults. The man has short, styled hair and a youthful face, while the woman has long red hair and also appears to be in her early twenties. Their physical appearances are very similar, suggesting they are likely of the same generation. Without specific identification or external data, it is impossible to determine an exact age gap from the image alone. However, based on their comparable youthful features, the most reasonable estimate for the age gap is 0 years.\n\n0"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, who has smoother skin and no visible signs of aging. This could mislead someone into assuming a significant age gap, though their expressions and body language suggest they are close in age.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, while the man's slightly grayer hair and more mature features might suggest an age difference, their expressions and body language indicate they are close in age. Therefore, the most reasonable integer estimate for the age gap is 0 years.\n\n0"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The man appears to have more mature facial features and slightly grayer hair compared to the woman, suggesting he may be older.",
+      "prediction": "7.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. The description notes his \"more mature facial features and slightly grayer hair.\" This suggests an age difference of approximately 5 to 10 years. A reasonable integer estimate for this gap is 7 years.\n\n7"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The image shows two individuals embracing, but their facial features and expressions do not provide clear indicators of their specific ages or age difference.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, it is not possible to determine the specific ages or the age gap between the two individuals. Their facial features and expressions do not provide clear indicators of their specific ages or age difference.\n\n0"
+    },
+    "8_people": {
+      "premise": "Visual premise: The image shows a man and a woman embracing; both appear to be adults in their 30s or 40s, with no obvious age difference visible between them.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, which states that \"both appear to be adults in their 30s or 40s, with no obvious age difference visible between them,\" we can infer that their ages are very similar.\n\nTherefore, the age gap between them is approximately 0 years.\n\n0"
+    },
+    "9_digits": {
+      "premise": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate age or any numerical data related to the people shown.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, it is impossible to determine the specific ages of the individuals. Therefore, an exact numerical age gap cannot be calculated.\n\nHowever, based on their physical appearance, they appear to be of a similar age, likely within the same generation. A reasonable estimate for the age gap between them would be **0** years."
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, which states that one individual appears slightly older based on facial features and hairline, we can infer a small age difference. The man has a more mature appearance with a receding hairline compared to the woman, who has smoother skin and no visible signs of aging. This suggests an age gap of approximately 5 to 10 years. Given the context of their relationship (likely romantic partners), a common age gap in such scenarios is around 5 years. Therefore, the most reasonable integer estimate for the age gap is:\n\n5"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hair.",
+      "prediction": "10.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, the man appears to be older than the woman. The man has more mature facial features and hair, while the woman has a younger appearance. A reasonable estimate for the age gap between them is approximately 10 years.\n\n10"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. The differences in facial features such as skin texture and hairline suggest an age gap.\n\nThe man is David Boreanaz, who was born in 1969.\nThe woman is Alyson Hannigan, who was born in 1974.\n\nThe age gap between them is 5 years.\n\n5"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. The differences in facial features such as skin texture and hairline suggest an age gap.\n\nThe man is David Boreanaz, who was born in 1969.\nThe woman is Alyson Hannigan, who was born in 1974.\n\nThe age gap between them is 5 years.\n\n5"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling at the camera.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, both individuals appear to be young adults. The man has short, styled hair and a youthful face, while the woman has long red hair and also appears to be in her early twenties. There are no significant physical indicators (such as wrinkles, gray hair, or differences in posture) that would suggest a large age difference between them. They appear to be of a similar generation.\n\nTherefore, the most reasonable estimate for the age gap is 0 years.\n\n0"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by his more mature facial features and hairstyle compared to her youthful appearance.",
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. The man's more mature facial features and hairstyle contrast with the woman's youthful appearance.\n\nTherefore, the age gap between these two people is at least 1 year.\n\n1"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features such as skin texture and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. The differences in facial features such as skin texture and hairline suggest an age gap.\n\nThe man is David Boreanaz, who was born in 1969.\nThe woman is Alyson Hannigan, who was born in 1974.\n\nThe age gap between them is 5 years.\n\n5"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling at the camera.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, both individuals appear to be young adults. The man has short, styled hair and a youthful face, while the woman has long red hair and also appears to be in her early twenties. There are no significant physical indicators (such as wrinkles, gray hair, or differences in posture) that would suggest a large age difference between them. They appear to be of a similar generation.\n\nTherefore, the most reasonable estimate for the age gap is 0 years.\n\n0"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing slightly older based on facial features and hairline.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, which states that one individual appears slightly older based on facial features and hairline, we can infer a small age difference. The man has a more mature appearance with a receding hairline compared to the woman, who has smoother skin and no visible signs of aging. This suggests an age gap of approximately 5 to 10 years. Given the context of their relationship (likely romantic partners), a common age gap in such scenarios is around 5 years. Therefore, the most reasonable integer estimate for the age gap is:\n\n5"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The man appears to be older than the woman, as indicated by differences in facial features and hair.",
+      "prediction": "5.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, the man appears to be older than the woman. Estimating their ages from the image, the man looks to be in his late 30s or early 40s, while the woman appears to be in her late 20s or early 30s. A reasonable estimate for the age gap between them is approximately 5 years.\n\n5"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The image shows two individuals embracing, with one appearing to be an adult male and the other an adult female, both smiling and dressed in formal attire.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, both individuals appear to be young adults. The man has short, styled hair and a youthful face, while the woman has long red hair and also appears to be in her early twenties. There are no significant signs of aging or distinct differences in their physical maturity that would suggest a large age difference. They appear to be peers.\n\nTherefore, the estimated age gap between them is 0 years.\n\n0"
+    }
+  }
+}

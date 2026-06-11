@@ -1,0 +1,157 @@
+{
+  "pid": "41",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "ground_truth": "7",
+  "fixed_by_any": false,
+  "correct_modes": [],
+  "n_distinct_answers": 5,
+  "top_answer": "11.0",
+  "top_share": 0.579,
+  "n_valid": 19,
+  "vote_winner": "11.0",
+  "vote_correct": false,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "12.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n- The man on the right has fully gray hair and more pronounced facial lines.\n- The man on the left has brown hair and a smoother complexion.\n\nThis suggests an age gap of approximately 10 to 15 years. A reasonable integer estimate for the age gap is 12 years.\n\n12"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dmitry Rogozin:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more visible facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "12.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n- The man on the right has fully gray hair and more pronounced facial lines.\n- The man on the left has brown hair and a smoother complexion.\n\nThis suggests an age gap of approximately 10 to 15 years. A reasonable integer estimate for the age gap is 12 years.\n\n12"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, but no visible text, numbers, or age indicators are present to determine their ages.",
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Romeo Popescu** (on the left), the former Prime Minister of Romania.\n2.  **Rex Tillerson** (on the right), the former United States Secretary of State.\n\nTo determine the age gap, we need to find their birth years:\n\n*   **Romeo Popescu** was born on **October 1, 1951**.\n*   **Rex Tillerson** was born on **February 23, 1952**.\n\nThe difference between their birth years is 1 year. Since Popescu was born in October and Tillerson in February, Popescu is older.\n\nTherefore, the age gap between them is 1 year.\n\n1"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dmitry Rogozin:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The man on the right has noticeably grayer hair and more pronounced facial lines compared to the man on the left, suggesting he is older.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dmitry Rogozin).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dmitry Rogozin:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The image shows two men shaking hands in a formal setting, with flags of the United States and Romania visible in the background. One man appears to be older with gray hair, while the other has younger, brown hair. However, exact ages cannot be determined from the image alone due to lack of specific age indicators or context.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dacian Cioloș). Rex Tillerson was born in 1952, and Dacian Cioloș was born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "8_people": {
+      "premise": "Visual premise: The image shows two men in formal suits shaking hands in a diplomatic setting, flanked by U.S. and Romanian flags, suggesting they are government officials or diplomats. One man appears slightly older with gray hair, while the other has darker, younger-looking hair.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be older than the man on the left (Dacian Cioloș).\n\n*   **Rex Tillerson:** Born in 1952.\n*   **Dacian Cioloș:** Born in 1963.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "9_digits": {
+      "premise": "Visual premise: There are no visible digits, numbers, labels, or quantifying elements in the image that indicate the ages of the two individuals.",
+      "prediction": "None",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, it is not possible to determine the exact age gap between the two individuals. Their appearances suggest they are both middle-aged adults, but without specific information or labels, an accurate calculation cannot be made.\n\nTherefore, the age gap is unknown."
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The two men are standing side by side in formal attire, shaking hands in front of American and Romanian flags, with one man appearing visibly older with gray hair and the other with younger brown hair.",
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be in his late 60s, while the man on the left (Dacian Cioloș) appears to be in his late 40s or early 50s.\n\nTherefore, the estimated age gap between them is approximately 15 years.\n\n15"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands in front of American and Romanian flags, with no visible indicators of their ages or birth dates.",
+      "prediction": "1.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Romeo Popescu** (on the left), the former Prime Minister of Romania.\n2.  **Rex Tillerson** (on the right), the former United States Secretary of State.\n\nTo determine the age gap, we need their birth years:\n\n*   **Romeo Popescu** was born on **October 1, 1951**.\n*   **Rex Tillerson** was born on **February 23, 1952**.\n\nThe difference between their birth years is 1 year. Since Popescu was born in October and Tillerson in February, Popescu is older.\n\nThe age gap between them is **1** year.\n\n1"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The two men are standing side by side in formal attire, shaking hands in front of flags, with one man appearing visibly older with gray hair and the other with darker, younger-looking hair.",
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be in his late 60s, while the man on the left (Dmitry Rogozin) appears to be in his late 40s or early 50s.\n\nTherefore, the estimated age gap between them is approximately 15 years.\n\n15"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The two men are standing side by side in formal attire, shaking hands in front of American and Romanian flags, with one man appearing visibly older with gray hair and the other with darker, younger-looking hair.",
+      "prediction": "15.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right (Rex Tillerson) appears to be in his late 60s, while the man on the left (Dacian Cioloș) appears to be in his late 40s or early 50s.\n\nTherefore, the estimated age gap between them is approximately **15** years."
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The two men in the image appear to be of similar age, with no significant difference in their physical appearance that would suggest a large age gap.",
+      "prediction": "0.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual premise provided, which states that the two men appear to be of similar age with no significant difference in their physical appearance suggesting a large age gap, the estimated age difference is minimal.\n\nTherefore, the age gap between these two people is approximately 0 years.\n\n0"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire shaking hands, with flags of the United States and Romania in the background, suggesting a diplomatic or official meeting.",
+      "prediction": "11.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Rex Tillerson, who was born in 1952.\n2.  The man on the left is Dacian Cioloș, who was born in 1963.\n\nThe age gap between them is calculated as:\n$1963 - 1952 = 11$ years.\n\n11"
+    }
+  }
+}

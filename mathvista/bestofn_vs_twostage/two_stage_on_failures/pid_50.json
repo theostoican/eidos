@@ -1,0 +1,157 @@
+{
+  "pid": "50",
+  "question": "Based on the food web, what would likely happen if the number of large roach would decrease?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "ground_truth": "The population of predatory insects would decrease.",
+  "fixed_by_any": false,
+  "correct_modes": [],
+  "n_distinct_answers": 1,
+  "top_answer": "The population of predatory insects would increase.",
+  "top_share": 1.0,
+  "n_valid": 19,
+  "vote_winner": "The population of predatory insects would increase.",
+  "vote_correct": false,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The diagram shows a direct arrow from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are a food source for large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, there is a direct arrow pointing from \"Predatory insects (lestids)\" to \"Large roach.\" This indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, the predation pressure on predatory insects will be reduced. With fewer large roach to eat them, the population of predatory insects would likely increase due to the lack of a primary predator.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) points to large roach, indicating that large roach consume predatory insects.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, there will be fewer predators to eat the predatory insects. This reduction in predation pressure would likely lead to an increase in the population of predatory insects.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The arrow from \"Predatory insects (lestids)\" points to \"Large roach,\" indicating that predatory insects are consumed by large roach, and the arrow from \"Large roach\" points to \"Steelhead,\" showing that large roach are consumed by steelhead.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram:\n\n1.  **Analyze the relationship:** The arrow points from \"Predatory insects (lestids)\" to \"Large roach\". This indicates that large roach eat predatory insects.\n2.  **Apply the scenario:** If the population of large roach decreases, there will be fewer predators consuming the predatory insects.\n3.  **Determine the consequence:** With reduced predation pressure, the population of predatory insects is likely to increase due to a lack of food consumption.\n\nLet's evaluate the choices:\n*   (A) The population of steelheads would decrease. (Incorrect. While steelheads eat large roach, they also eat other things like roach fry and stickleback fry. A decrease in one food source doesn't guarantee a decrease in the predator's population).\n*   (B) The population of stickleback fry would increase. (Incorrect. There is no direct link between large roach and stickleback fry in this diagram).\n*   (C) The population of predatory insects would increase. (Correct. Fewer large roach means fewer insects are eaten, leading to an increase in the insect population).\n*   (D) The population of predatory insects would decrease. (Incorrect. This is the opposite of the expected outcome).\n\nThe correct answer is (C).\n\nC"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The diagram shows an arrow pointing from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are a food source for large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, there will be fewer predators eating the predatory insects. This reduction in predation pressure would likely lead to an increase in the population of predatory insects.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach are predators of these insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The diagram shows a direct arrow from predatory insects (lestids) to large roach, indicating that large roach consume these insects.\n\nAlternative interpretation: Rather than viewing this as a simple predator-prey relationship, the image could be read as depicting a competitive exclusion scenario where large roach and steelhead both rely on the same intermediate prey (roch fry and stickleback fry), so a decline in large roach might indirectly benefit steelhead by reducing competition for those fry — not because of direct predation, but due to resource release.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, there is a direct arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\". This indicates that large roach prey on predatory insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach are predators of these insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "8_people": {
+      "premise": "Visual premise: The diagram shows a food web where large roach are preyed upon by steelhead, and they consume predatory insects (lestids), which in turn feed on tuft-weaving chironomids.",
+      "prediction": "The population of predatory insects would decrease.",
+      "correct": false,
+      "finished": false,
+      "answer": "Based on the food web diagram:\n\n- Large roach are preyed upon by steelhead (arrow from large roach to steelhead).\n- Large roach consume predatory insects (lestids) (arrow from predatory insects to large roach).\n\nIf the number of large roach decreases:\n\n1. **Predatory insects (lestids)**: Since large roach eat them, a decrease in large roach means less predation on predatory insects. This would likely cause the population of predatory insects to **increase**.\n\n2. **Steelhead**: Since steelhead eat large roach, a decrease in large roach means less food for steelhead. This would likely cause the steelhead population to **decrease**.\n\nNow evaluating the choices:\n\n- (A) The population of steelheads would decrease. → **Correct**, as they lose a food source.\n- (B) The population of stickleback fry would increase. → No direct link; stickleback fry eat tuft-weaving chironomids, not affected by roach decline directly.\n- (C) The population of predatory insects would increase. → Also correct, as their predator (roach) declines.\n- (D) The population of predatory insects would decrease. → Incorrect, opposite of what should happen.\n\nWait — both (A) and (C) seem correct? But the question asks “what would likely happen” — implying one best answer. Let’s re-express:\n\nThe diagram shows:\n\n- Steelhead eat large roach → if roach ↓, steelhead ↓ → (A) is valid.\n- Large roach eat predatory insects → if roach ↓, predatory insects ↑ → (C) is also valid.\n\nBut looking again at the arrows:\n\nActually, the arrow from “Predatory insects (lestids)” points TO “Large roach”, meaning large roach eat predatory insects. So if large roach decrease, predatory insects are eaten less → their population increases → (C) is correct.\n\nAlso, arrow from “Large roach” to “Steelhead” means steelhead eat large roach → if large roach decrease, steelhead have less food → population decreases → (A) is also correct.\n\nThis suggests two correct answers? But multiple choice usually has one best answer.\n\nLet’s check the hint: “large roach are preyed upon by steelhead, and they consume predatory insects”\n\nSo both effects are real.\n\nBut perhaps the question expects us to pick the most direct consequence? Or maybe there's an error.\n\nWait — look at the options again:\n\n(A) Steelheads decrease — yes, due to loss of food.\n\n(C) Predatory insects increase — yes, due to loss of predator.\n\nBut in ecology, when a predator decreases, its prey often increases — that’s standard.\n\nSimilarly, when prey decreases, predator decreases.\n\nBoth are valid.\n\nHowever, perhaps the question is designed to test understanding of trophic cascades or direct effects.\n\nBut let’s see the answer choices — only one can be selected.\n\nPerhaps I misread the diagram.\n\nLooking back: The arrow from “Predatory insects” to “Large roach” means large roach eat predatory insects.\n\nArrow from “Large roach” to “Steelhead” means steelhead eat large roach.\n\nSo if large roach decrease:\n\n- Steelhead lose food → decrease → (A)\n- Predatory insects lose predator → increase → (C)\n\nBut option (C) says “predatory insects would increase” — which is correct.\n\nOption (A) says “steelheads would decrease” — also correct.\n\nThis is ambiguous.\n\nWait — perhaps the question is from a test where only one answer is expected, and we need to see which is more directly supported.\n\nAlternatively, maybe I made a mistake.\n\nAnother thought: In some food webs, if a species decreases, it might affect multiple levels, but the question might be testing the immediate effect.\n\nBut both are immediate.\n\nLet me check online or think differently.\n\nPerhaps the key is in the wording: “what would likely happen” — and in ecology, both are likely, but maybe the test expects (C) because it’s a release from predation.\n\nBut (A) is also direct.\n\nWait — look at the choices again:\n\n(A) Steelheads decrease — yes.\n\n(B) Stickleback fry increase — no, not directly related.\n\n(C) Predatory insects increase — yes.\n\n(D) Predatory insects decrease — no.\n\nSo (A) and (C) are both correct.\n\nBut perhaps in the context of the diagram, the steelhead also eat other things? The diagram shows steelhead eat large roach and roach fry and stickleback fry — so if large roach decrease, steelhead might switch to other prey, so their population might not"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The diagram shows a directional arrow from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are consumed by large roach, and no other organism is shown consuming large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow points from \"Predatory insects (lestids)\" to \"Large roach.\" This indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, there will be fewer predators to eat the predatory insects. With reduced predation pressure, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The arrow from \"Predatory insects (lestids)\" to \"Large roach\" indicates that predatory insects are a food source for large roach, so a decrease in large roach would likely reduce predation pressure on predatory insects, potentially increasing their population.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach prey on predatory insects.\n\nIf the population of large roach decreases, there will be fewer predators consuming the predatory insects. This reduction in predation pressure would likely lead to an increase in the population of predatory insects.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The diagram shows a direct arrow from \"Predatory insects (lestids)\" to \"Large roach\", indicating that predatory insects are a food source for large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, there is a direct arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\". This indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, the predation pressure on predatory insects will be reduced. With fewer large roach to eat them, the population of predatory insects would likely increase due to the reduced mortality rate.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach are predators of these insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach are predators of these insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The diagram shows a direct arrow from \"Predatory insects (lestids)\" to \"Large roach\", indicating that predatory insects are a food source for large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, there is a direct arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\". This indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, the predation pressure on predatory insects will be reduced. With fewer large roach to eat them, the population of predatory insects would likely increase due to the reduced mortality rate.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach are predators of these insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The arrow from \"Predatory insects (lestids)\" to \"Large roach\" indicates that predatory insects are a food source for large roach, so a decrease in large roach would likely reduce predation pressure on predatory insects, potentially increasing their population.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach prey on predatory insects.\n\nIf the population of large roach decreases, there will be fewer predators consuming the predatory insects. This reduction in predation pressure would likely lead to an increase in the population of predatory insects.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The arrow from predatory insects (lestids) to large roach indicates that large roach consume predatory insects, so a decrease in large roach would likely lead to an increase in the population of predatory insects due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach are predators of these insects.\n\nIf the population of large roach decreases, the predation pressure on the predatory insects will be reduced. With fewer predators to eat them, the population of predatory insects would likely increase.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The arrow from \"Predatory insects (lestids)\" to \"Large roach\" indicates that predatory insects are a food source for large roach, so a decrease in large roach would likely lead to an increase in predatory insect population due to reduced predation pressure.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, the arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\" indicates that large roach prey on predatory insects.\n\nIf the population of large roach decreases, the predation pressure on predatory insects will be reduced. This means fewer predatory insects will be eaten, which would likely lead to an increase in their population.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The diagram shows a direct arrow from \"Predatory insects (lestids)\" to \"Large roach,\" indicating that predatory insects are a food source for large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, there is a direct arrow pointing from \"Predatory insects (lestids)\" to \"Large roach.\" This indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, the predation pressure on predatory insects will be reduced. With fewer large roach to eat them, the population of predatory insects would likely increase due to the lack of a primary predator.\n\nTherefore, the correct choice is:\n(C) The population of predatory insects would increase.\n\nC"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The diagram shows a direct arrow from \"Predatory insects (lestids)\" to \"Large roach\", indicating that predatory insects are a food source for large roach.",
+      "prediction": "The population of predatory insects would increase.",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the food web diagram, there is a direct arrow pointing from \"Predatory insects (lestids)\" to \"Large roach\". This indicates that large roach consume predatory insects.\n\nIf the population of large roach decreases, the predation pressure on predatory insects will be reduced. With fewer large roach to eat them, the population of predatory insects would likely increase due to the reduced mortality rate.\n\nTherefore, the correct choice is:\n\n(C) The population of predatory insects would increase.\n\nC"
+    }
+  }
+}

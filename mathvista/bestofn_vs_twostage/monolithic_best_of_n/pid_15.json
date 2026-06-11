@@ -1,0 +1,41 @@
+{
+  "pid": "15",
+  "question": "Which organism with be most affected if algae was eliminated?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "general-vqa",
+  "ground_truth": "Common water flea",
+  "greedy_pred": "Tadpole",
+  "greedy_finished": false,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 5,
+  "n_valid_samples": 15,
+  "sample_preds": [
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea",
+    "Common water flea"
+  ],
+  "n_sample_correct": 15,
+  "answer_counts": {
+    "txt:common water flea": 15
+  },
+  "n_distinct_answers": 1,
+  "top_answer": "Common water flea",
+  "top_share": 1.0,
+  "oracle_hit": true,
+  "vote_winner": "Common water flea",
+  "vote_correct": true
+}

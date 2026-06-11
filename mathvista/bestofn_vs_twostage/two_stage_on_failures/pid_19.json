@@ -1,0 +1,164 @@
+{
+  "pid": "19",
+  "question": "what is the highest amount this class measures?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "ground_truth": "400",
+  "fixed_by_any": true,
+  "correct_modes": [
+    "3_spatial",
+    "10_point_on_curve",
+    "11_value_curve_reaches",
+    "13_trace_to_x",
+    "14_read_y_by_ticks",
+    "17_settle_value"
+  ],
+  "n_distinct_answers": 2,
+  "top_answer": "600.0",
+  "top_share": 0.7,
+  "n_valid": 20,
+  "vote_winner": "600.0",
+  "vote_correct": false,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The beaker is labeled with volume measurements up to 600ml, indicating its maximum measurable capacity.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400ml. However, the capacity of the beaker is 600ml, which means it can hold up to 600ml of liquid. The highest amount it measures is therefore 600ml.\n\n600"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The beaker has measurement markings up to 400 ml, with the label indicating it is a 600 ml capacity.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled as a \"600ml\" capacity, which indicates its maximum volume it can hold. Although the visible measurement markings only go up to 400 ml, the highest amount this beaker is designed to measure (its full capacity) is 600 ml.\n\nFinal Answer: 600"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The beaker has measurement markings labeled 100, 200, 300, and 400, with the 400 mark positioned at the top of the visible scale.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400. However, the highest marked measurement on the scale is 400. The question asks for the highest amount this class (beaker) measures, which refers to the maximum value indicated on its scale.\n\nTherefore, the highest amount this beaker measures according to its visible scale is 400.\n\n400"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The beaker is labeled \"600ml\" and has measurement markings up to 400ml.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker is labeled \"600ml\", which indicates its total capacity. Although the visible measurement markings only go up to 400ml, the highest amount it can measure (i.e., its maximum capacity) is 600ml.\n\n600"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The beaker is labeled \"600ml\" and has measurement markings up to 400ml, which might mislead someone into thinking the maximum measurable amount is 400ml rather than the full capacity of 600ml.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker is labeled \"600ml\", which indicates its total capacity. Although the measurement markings only go up to 400ml, the highest amount it can measure (i.e., its full capacity) is 600ml.\n\n600"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The beaker is labeled with volume markings up to 400 ml, but its total capacity is marked as 600 ml.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled as a \"600ml\" borosilicate glass beaker. Although the visible volume markings only go up to 400 ml, the total capacity of the beaker is 600 ml, as indicated by the text on the beaker itself.\n\nTherefore, the highest amount this beaker can measure (its total capacity) is 600 ml.\n\n600"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The beaker is labeled \"600ml\" but the visible measurement markings only go up to 400ml, with no indication of what the scale continues beyond that point.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker is labeled \"600ml\", which indicates its total capacity. Although the visible measurement markings only go up to 400ml, the highest amount it can measure (i.e., its maximum capacity) is 600ml.\n\n600"
+    },
+    "8_people": {
+      "premise": "Visual premise: The beaker is labeled \"600ml\" and has measurement markings up to 400ml, indicating its maximum measurable volume.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker is labeled \"600ml\", which indicates its total capacity. The measurement markings go up to 400ml, but the highest amount it can measure (i.e., its maximum measurable volume) is 600ml, as stated in the label.\n\nFinal Answer: 600"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The beaker has volume markings labeled 100, 200, 300, and 400, with the highest marked value being 400 ml.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker is labeled as a 600 ml beaker, which indicates its total capacity. Although the visible volume markings only go up to 400 ml, the highest amount it can measure (i.e., its full capacity) is 600 ml.\n\nFinal Answer: 600"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The beaker has measurement markings up to 400 ml, with the highest marked value being 400.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. The highest marked value on the scale is 400, which corresponds to the highest amount it measures according to the provided visual premise.\n\n400"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The beaker has measurement markings labeled from 100 to 400, with the highest labeled mark being 400.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "answer": "The beaker in the image is labeled with measurement markings from 100 to 400, and the highest labeled mark is 400. Additionally, the text on the beaker indicates it is a \"600ml\" beaker, which suggests its total capacity is 600 milliliters. However, the question specifically asks for the highest amount this class (beaker) measures, based on the visible markings. Since the highest marked value is 400, that is the highest measurable amount indicated by the scale.\n\nFinal Answer: 400"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The beaker is marked with volume measurements up to 600ml, as indicated by the text \"600ml\" near the top of the scale.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" near the top of the scale, indicating that it can measure up to 600 milliliters. The highest marked measurement on the scale is 400ml, but the capacity of the beaker is 600ml.\n\nTherefore, the highest amount this beaker measures is 600.\n\n600"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The beaker is marked with volume measurements up to 400 ml, as indicated by the highest labeled tick mark on its side.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "answer": "The beaker in the image is labeled with volume measurements up to 400 ml, as indicated by the highest tick mark on its side. The text \"600ml\" refers to the total capacity of the beaker, but the highest marked measurement for approximate volume is 400 ml.\n\nTherefore, the highest amount this class measures is 400.\n\n400"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The beaker has volume markings labeled from 100 to 400 ml, with the highest labeled mark at 400 ml.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "answer": "The beaker in the image is labeled as a 600 ml beaker, but the highest volume marking shown on its side is 400 ml. The question asks for the highest amount this class (beaker) measures, which refers to the maximum marked measurement visible on the beaker.\n\nBased on the visual premise provided:\n> \"The beaker has volume markings labeled from 100 to 400 ml, with the highest labeled mark at 400 ml.\"\n\nTherefore, the highest amount this beaker measures (as indicated by its markings) is 400 ml.\n\n400"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The beaker has measurement markings up to 400 ml, indicating its maximum measurable volume.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. However, the highest amount it can measure is indicated by its total capacity, which is 600 ml.\n\nFinal Answer: 600"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The beaker is labeled with volume markings up to 600ml, indicating its maximum measurable capacity.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has volume markings up to 400ml, but the total capacity is clearly stated as 600ml. Therefore, the highest amount this beaker can measure is 600ml.\n\n600"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The beaker has measurement markings up to 400 ml, with the highest marked value being 400.",
+      "prediction": "400.0",
+      "correct": true,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. The highest marked value on the scale is 400, which corresponds to the highest amount it measures according to the provided visual premise.\n\n400"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The beaker has measurement markings up to 400 ml, indicating its maximum measurable volume.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. However, the highest amount it can measure is indicated by its total capacity, which is 600 ml.\n\nFinal Answer: 600"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The beaker has measurement markings up to 400 ml, with the highest visible mark being 400.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled \"600ml\" and has measurement markings up to 400 ml. The highest visible mark is 400, but the capacity of the beaker is 600 ml. Therefore, the highest amount this beaker can measure is 600 ml.\n\n600"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The beaker has measurement markings labeled in milliliters (ml) along its side, with the highest visible marking being 400 ml.",
+      "prediction": "600.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The beaker in the image is labeled as a \"600ml\" borosilicate glass beaker. Although the visible measurement markings only go up to 400 ml, the highest amount it can measure is indicated by its capacity, which is 600 ml.\n\nFinal Answer: 600"
+    }
+  }
+}

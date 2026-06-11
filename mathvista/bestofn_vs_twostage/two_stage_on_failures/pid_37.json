@@ -1,0 +1,157 @@
+{
+  "pid": "37",
+  "question": "What is the limit as x approaches -1?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "ground_truth": "3",
+  "fixed_by_any": false,
+  "correct_modes": [],
+  "n_distinct_answers": 1,
+  "top_answer": "2.0",
+  "top_share": 1.0,
+  "n_valid": 20,
+  "vote_winner": "2.0",
+  "vote_correct": false,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The graph shows a continuous curve approaching the same y-value from both the left and right sides as x approaches -1, despite an open circle at that point.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function approaches a certain y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function approaches the **same** y-value.\n- There is an open circle at $ x = -1 $, indicating that the function is not defined at that point — but this does **not** affect the limit. The limit depends only on the behavior *near* the point, not *at* the point.\n- The solid dot above the open circle indicates the actual value of the function at $ x = -1 $, which is irrelevant for computing the limit.\n\nVisually, both sides approach the same y-value: **2**.\n\nThus,\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The graph shows a hole (open circle) at x = -1, indicating that the function is undefined at that point, but the curve approaches a specific y-value from both sides as x gets close to -1.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, not at $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (negative side), the curve approaches a specific y-value.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same y-value.\n- There is an open circle at $ x = -1 $, meaning the function is undefined there — but that does not affect the limit.\n- The solid dot above the open circle indicates a different value at $ x = -1 $, but again, this is irrelevant for the limit.\n\nVisually, both sides approach the same y-value: **2**.\n\nThus,\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: As x approaches -1 from both the left and right sides, the graph of g(x) approaches the same y-value, indicated by the open circle at approximately (-1, 2).",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function values approach 2.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function values also approach 2.\n- There is an open circle at $ (-1, 2) $, indicating that $ g(-1) $ is not defined or not equal to 2 — but this does **not** affect the limit.\n- The solid dot above at approximately $ (-1, 3) $ represents the actual value of the function at $ x = -1 $, if defined — but again, limits are about approaching, not the value at the point.\n\nSince both one-sided limits approach the same value (2), the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The graph shows a function g(x) with an open circle at x = -1, indicating the function is undefined there, and the curve approaches the same y-value from both sides as x gets close to -1.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of whether the function is defined at that point.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function values approach a certain y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function values also approach the same y-value.\n- There is an **open circle** at $ x = -1 $, meaning $ g(-1) $ is undefined — but this does not affect the limit.\n- The curve appears to approach the point $ (-1, 2) $ from both sides.\n\nTherefore, even though $ g(-1) $ is not defined, the **limit** exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The graph shows a hole at x = -1, indicating that g(-1) is undefined, but the function approaches the same y-value from both sides near x = -1.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- There is a **hole** at $ x = -1 $, meaning $ g(-1) $ is undefined.\n- However, as $ x $ approaches $ -1 $ from both the left and the right, the function values approach the same y-value.\n- Looking at the graph, the hole is located at the point $ (-1, 2) $. That is, the function approaches $ y = 2 $ as $ x \\to -1 $.\n\nTherefore, even though $ g(-1) $ is not defined, the **limit** exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The graph shows a continuous curve approaching x = -1 from both sides, with no break or jump at that point, suggesting the left-hand and right-hand limits are equal.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $ from both the left and right sides.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the curve is approaching a specific y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the curve also approaches the same y-value.\n- There is an open circle at $ x = -1 $, indicating that the function is not defined at that exact point — but this does **not** affect the limit. The limit depends on the behavior *near* the point, not *at* the point.\n- The solid dot above the open circle at $ x = -1 $ represents the actual value of the function at that point (if defined), but again, it doesn’t affect the limit.\n\nVisually, both sides of the graph approach the same y-value as $ x \\to -1 $. Looking at the grid:\n\n- At $ x = -1 $, the curve is approaching the point where $ y = 2 $ (since the open circle is at $ (-1, 2) $).\n\nTherefore, even though $ g(-1) $ may be defined as something else (the solid dot appears to be at $ (-1, 3) $), the **limit** as $ x \\to -1 $ is determined by the approaching values, which are both heading toward 2.\n\nFinal Answer:  \n2"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The graph shows a hole at x = -1, indicating that g(-1) is undefined, but the function approaches a specific y-value from both sides near x = -1.\n\nSource of visual uncertainty: The exact y-coordinate of the hole at x = -1 cannot be precisely determined due to the lack of grid lines or numerical labels on the axes, making it ambiguous whether the limit is exactly 2 or slightly above/below.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- There is a **hole** at $ x = -1 $, meaning $ g(-1) $ is undefined.\n- However, as $ x $ approaches -1 from both the left and the right, the function values approach the same y-value — specifically, the point where the hole is located.\n- The hole appears to be at the grid intersection corresponding to $ y = 2 $ (counting up 2 units from the x-axis).\n- Even though the function is not defined at $ x = -1 $, the **limit** depends only on the behavior *near* that point, not *at* that point.\n\nTherefore, since the function approaches $ y = 2 $ from both sides, we conclude:\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "8_people": {
+      "premise": "Visual premise: The graph shows a function g(x) with an open circle at x = -1, indicating the function is undefined there, and the curve approaches the same y-value from both sides near x = -1.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of whether the function is defined at that point.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function values approach a certain y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function values also approach the same y-value.\n- There is an **open circle** at $ x = -1 $, meaning $ g(-1) $ is undefined — but this does not affect the limit.\n- The curve appears to approach the point $ (-1, 2) $ from both sides.\n\nTherefore, even though $ g(-1) $ is not defined, the **limit** exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The graph shows a function g(x) with a hole at x = -1, indicating that the function is undefined at that point, but the limit as x approaches -1 can be determined by observing the y-values of the curve near x = -1 from both sides.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, from both the left and the right.\n\nFrom the graph:\n\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function values approach a certain y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function values also approach the same y-value.\n\nEven though there is a **hole** at $ x = -1 $ — meaning $ g(-1) $ is undefined — the **limit** still exists if the left-hand and right-hand limits are equal.\n\nLooking at the graph, both sides of the curve near $ x = -1 $ approach the point $ (-1, 2) $. The open circle at $ (-1, 2) $ confirms that the function does not have a value there, but the limit is still 2.\n\nThere is also a solid dot at $ (-1, 3) $, which indicates that $ g(-1) = 3 $, but this does **not** affect the limit — only the actual function value at that point.\n\nTherefore, the limit as $ x \\to -1 $ is:\n\n**2**\n\n2"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The graph shows a hole at x = -1 on the curve, indicating that the function is undefined at that point, but the limit can still be determined by observing the y-value the curve approaches as x gets close to -1 from both sides.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, not at $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the curve approaches a specific y-value.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the curve also approaches the same y-value.\n- There is a **hole** at $ x = -1 $, meaning the function is undefined there — but that does not affect the limit.\n- The hole is located at the point $ (-1, 2) $, since it lies on the grid line corresponding to $ y = 2 $.\n\nTherefore, even though $ g(-1) $ is undefined, the limit exists and equals the y-value the function approaches from both sides:  \n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The graph shows a hole at x = -1, indicating that the function is undefined at that point, but the curve approaches a specific y-value from both sides as x gets close to -1.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, not at $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (negative side), the curve approaches a specific y-value.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same y-value.\n- There is a **hole** at $ x = -1 $, meaning the function is undefined there — but that does not affect the limit.\n- The hole is located at the point $ (-1, 2) $, which means the function approaches $ y = 2 $ as $ x \\to -1 $.\n\nEven though $ g(-1) $ is undefined (or possibly defined elsewhere — note there’s a solid dot at $ (-1, 3) $, suggesting $ g(-1) = 3 $), the **limit** depends only on the values approaching $ x = -1 $, not the value at $ x = -1 $.\n\nThus,\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The open circle at x = -1 lies on the curve and corresponds to y = 2, indicating the function approaches this value as x approaches -1 from both sides.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of the value of the function *at* $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the curve approaches the point where $ y = 2 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the curve also approaches the same point where $ y = 2 $.\n- The open circle at $ x = -1 $, $ y = 2 $ indicates that the function is not defined at $ x = -1 $, or if it is, it’s not equal to 2 — but this does **not** affect the limit.\n- The solid dot above (at approximately $ x = -1 $, $ y = 3 $) represents the actual function value at $ x = -1 $, if defined — again, irrelevant for the limit.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, which is 2, as indicated by the open circle at (-1, 2) on the graph.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of the value of the function at that point.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function approaches the open circle at $ y = 2 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function also approaches the same open circle at $ y = 2 $.\n\nEven though there is a solid dot at $ (-1, 3) $, indicating that $ g(-1) = 3 $, the **limit** does not depend on the function’s value at the point — only on the behavior near it.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The graph shows a function g(x) with a hole at x = -1, and the curve approaches the same y-value from both sides as x gets close to -1. Counting the y-axis tick marks from the x-axis (0) up to the height of the open circle at x = -1 gives a y-value of 2.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- There is a **hole** (open circle) at $ x = -1 $, meaning $ g(-1) $ is undefined.\n- However, as $ x $ approaches $ -1 $ from both the left and the right, the function values approach the same y-value.\n- The open circle is located at $ y = 2 $, as indicated by counting up 2 units from the x-axis to the hole.\n\nTherefore, even though the function is not defined at $ x = -1 $, the **limit** exists and equals the y-value that the function approaches:\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The curve approaches a y-value of 2 as x approaches -1 from both the left and right sides, despite the open circle at that point.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, regardless of the value of the function at that point.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the curve approaches a y-value of 2.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the curve also approaches a y-value of 2.\n- There is an open circle at $ (-1, 2) $, indicating that $ g(-1) $ is not defined or not equal to 2 — but this does **not** affect the limit.\n- There is a solid dot above the open circle, likely indicating a different value assigned at $ x = -1 $, but again, limits are about approach, not the actual function value.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, indicated by the open circle at approximately (-1, 2).",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function approaches the open circle at $ y = 2 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function also approaches the same open circle at $ y = 2 $.\n\nEven though there is a solid dot at $ (-1, 3) $, that represents the actual value of the function at $ x = -1 $, i.e., $ g(-1) = 3 $. But the **limit** does not depend on the value *at* the point — only on the values *near* the point.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: As x approaches -1 from both the left and right, the function g(x) approaches the same y-value, indicated by the open circle at approximately y = 2.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To determine the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function approaches the open circle at $ y = 2 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function also approaches the same open circle at $ y = 2 $.\n\nEven though there is a solid dot at $ (-1, 3) $, that represents the actual value of the function at $ x = -1 $, i.e., $ g(-1) = 3 $. But the **limit** does not depend on the value *at* the point — only on the values *near* the point.\n\nSince both one-sided limits approach 2, the two-sided limit exists and equals 2.\n\nFinal Answer:  \n2"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The graph shows a hole at x = -1, indicating that the function is undefined at that point, but the curve approaches a specific y-value from both sides as x gets close to -1.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, not at $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (negative side), the curve approaches a specific y-value.\n- As $ x $ approaches -1 from the right (positive side), the curve also approaches the same y-value.\n- There is a **hole** at $ x = -1 $, meaning the function is undefined there — but that does not affect the limit.\n- The hole is located at the point $ (-1, 2) $, which means the function approaches $ y = 2 $ as $ x \\to -1 $.\n\nEven though $ g(-1) $ is undefined (or possibly defined elsewhere — note there’s a solid dot at $ (-1, 3) $, suggesting $ g(-1) = 3 $), the **limit** depends only on the values approaching $ x = -1 $, not the value at $ x = -1 $.\n\nThus,\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The curve approaches a y-value of 2 as x gets closer to -1 from both sides, indicated by the open circle at (-1, 2).",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "The graph shows that as $ x $ approaches -1 from both the left and the right, the function $ g(x) $ approaches the y-value of 2. The open circle at $(-1, 2)$ indicates that the function is not defined at $ x = -1 $, but the limit still exists and equals 2.\n\nTherefore, the limit as $ x $ approaches -1 is:\n\n2"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The open circle on the graph at x = -1 corresponds to a y-value of 2, as determined by counting two tick marks above the x-axis.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "To find the limit as $ x \\to -1 $, we examine the behavior of the function $ g(x) $ near $ x = -1 $, not at $ x = -1 $.\n\nFrom the graph:\n- As $ x $ approaches -1 from the left (i.e., values slightly less than -1), the function approaches the open circle at $ y = 2 $.\n- As $ x $ approaches -1 from the right (i.e., values slightly greater than -1), the function also approaches the same open circle at $ y = 2 $.\n\nEven though there is a solid dot at $ (-1, 3) $, that represents the actual value of the function at $ x = -1 $, i.e., $ g(-1) = 3 $. But the **limit** does not depend on the value *at* the point — only on the values *near* the point.\n\nSince both left-hand and right-hand limits approach 2, we conclude:\n\n$$\n\\lim_{x \\to -1} g(x) = 2\n$$\n\nFinal Answer:  \n2"
+    }
+  }
+}

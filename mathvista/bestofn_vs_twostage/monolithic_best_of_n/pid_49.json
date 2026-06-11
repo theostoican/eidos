@@ -1,0 +1,30 @@
+{
+  "pid": "49",
+  "question": "What is the sum of the digits on either end of the sign in the corner?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "category": "general-vqa",
+  "ground_truth": "0",
+  "greedy_pred": "None",
+  "greedy_finished": false,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 17,
+  "n_valid_samples": 3,
+  "sample_preds": [
+    "0.0",
+    "0.0",
+    "40.0"
+  ],
+  "n_sample_correct": 2,
+  "answer_counts": {
+    "num:0.0": 2,
+    "num:40.0": 1
+  },
+  "n_distinct_answers": 2,
+  "top_answer": "0.0",
+  "top_share": 0.667,
+  "oracle_hit": true,
+  "vote_winner": "0.0",
+  "vote_correct": true
+}

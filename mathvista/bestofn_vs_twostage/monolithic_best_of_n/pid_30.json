@@ -1,0 +1,23 @@
+{
+  "pid": "30",
+  "question": "As shown in the figure, the two chords AB and CD in the circle intersect at E, ∠D = 35.0, ∠AEC = 105.0, then ∠C = ()",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "math-targeted-vqa",
+  "ground_truth": "70°",
+  "greedy_pred": "85°",
+  "greedy_finished": false,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 20,
+  "n_valid_samples": 0,
+  "sample_preds": [],
+  "n_sample_correct": 0,
+  "answer_counts": {},
+  "n_distinct_answers": 0,
+  "top_answer": null,
+  "top_share": 0.0,
+  "oracle_hit": false,
+  "vote_winner": null,
+  "vote_correct": false
+}

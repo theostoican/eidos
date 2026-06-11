@@ -1,0 +1,37 @@
+{
+  "pid": "50",
+  "question": "Based on the food web, what would likely happen if the number of large roach would decrease?",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "general-vqa",
+  "ground_truth": "The population of predatory insects would decrease.",
+  "greedy_pred": "The population of predatory insects would increase.",
+  "greedy_finished": true,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 9,
+  "n_valid_samples": 11,
+  "sample_preds": [
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase.",
+    "The population of predatory insects would increase."
+  ],
+  "n_sample_correct": 0,
+  "answer_counts": {
+    "txt:the population of predatory insects would increase.": 11
+  },
+  "n_distinct_answers": 1,
+  "top_answer": "The population of predatory insects would increase.",
+  "top_share": 1.0,
+  "oracle_hit": false,
+  "vote_winner": "The population of predatory insects would increase.",
+  "vote_correct": false
+}

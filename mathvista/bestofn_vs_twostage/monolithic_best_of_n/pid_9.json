@@ -1,0 +1,42 @@
+{
+  "pid": "9",
+  "question": "如图是一株美丽的勾股树，其中所有四边形都是正方形，所有的三角形都是直角三角形，若正方形A、B的面积分别为5、3，则最大正方形C的面积是（）",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "math-targeted-vqa",
+  "ground_truth": "8",
+  "greedy_pred": "8",
+  "greedy_finished": true,
+  "greedy_correct": true,
+  "n_samples": 20,
+  "n_truncated": 4,
+  "n_valid_samples": 16,
+  "sample_preds": [
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8"
+  ],
+  "n_sample_correct": 16,
+  "answer_counts": {
+    "num:8.0": 16
+  },
+  "n_distinct_answers": 1,
+  "top_answer": "8",
+  "top_share": 1.0,
+  "oracle_hit": true,
+  "vote_winner": "8",
+  "vote_correct": true
+}

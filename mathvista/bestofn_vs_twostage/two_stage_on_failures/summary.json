@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "arm": "two_stage_modes_on_control_failures",
+  "n_failures": 8,
+  "n_modes": 20,
+  "failures_fixed_oracle": 2,
+  "failures_fixed_vote": 1,
+  "recovery_rate_oracle": 0.25,
+  "recovery_rate_vote": 0.125,
+  "mean_distinct": 2.75,
+  "mean_top_share": 0.797,
+  "fixed_pids": [
+    "19",
+    "27"
+  ]
+}
