@@ -1,0 +1,157 @@
+{
+  "pid": "7",
+  "question": "What time is shown? Answer by typing a time word, not a number. It is (_) after eight.",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "ground_truth": "quarter",
+  "fixed_by_any": false,
+  "correct_modes": [],
+  "n_distinct_answers": 1,
+  "top_answer": "quarter past",
+  "top_share": 1.0,
+  "n_valid": 20,
+  "vote_winner": "quarter past",
+  "vote_correct": false,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3, which could mislead someone into thinking it's exactly 8:15 instead of slightly after.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes. This means the time is 8:15, or \"quarter past eight.\"\n\nTherefore, the correct answer is:\n\n(E) quarter past\n\nFinal Answer: E"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The hour hand is pointing between 8 and 9, while the minute hand is pointing directly at 3, indicating a quarter past the hour.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is between 8 and 9, and the minute hand is pointing at 3, which represents 15 minutes past the hour. This means it is a quarter past eight.\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "8_people": {
+      "premise": "Visual premise: The clock shows the hour hand pointing just past the 8 and the minute hand pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes (a quarter) past the hour. Therefore, the time shown is \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The clock face displays numbers 1 through 12, with the hour hand pointing between 8 and 9, and the minute hand pointing at 3, indicating a specific time.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is between 8 and 9, and the minute hand is pointing at 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nTherefore, the correct answer is:\n\n(E) quarter past\n\nFinal Answer: E"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The hour hand is pointing between 8 and 9, and the minute hand is pointing directly at 3, indicating a quarter past the hour.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is between 8 and 9, and the minute hand is pointing at 3, which represents 15 minutes past the hour. This means it is a quarter past eight.\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The hour hand is pointing just past the 8, and the minute hand is pointing directly at the 3.",
+      "prediction": "quarter past",
+      "correct": false,
+      "finished": true,
+      "answer": "The hour hand is just past the 8, and the minute hand is pointing at the 3, which represents 15 minutes past the hour. This means the time is 8:15, or \"quarter past eight.\"\n\nThe correct answer is (E) quarter past.\n\nE"
+    }
+  }
+}

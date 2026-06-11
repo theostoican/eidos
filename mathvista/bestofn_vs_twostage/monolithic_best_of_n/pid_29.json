@@ -1,0 +1,42 @@
+{
+  "pid": "29",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "category": "general-vqa",
+  "ground_truth": "4",
+  "greedy_pred": "4.0",
+  "greedy_finished": true,
+  "greedy_correct": true,
+  "n_samples": 20,
+  "n_truncated": 4,
+  "n_valid_samples": 16,
+  "sample_preds": [
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0",
+    "4.0"
+  ],
+  "n_sample_correct": 16,
+  "answer_counts": {
+    "num:4.0": 16
+  },
+  "n_distinct_answers": 1,
+  "top_answer": "4.0",
+  "top_share": 1.0,
+  "oracle_hit": true,
+  "vote_winner": "4.0",
+  "vote_correct": true
+}

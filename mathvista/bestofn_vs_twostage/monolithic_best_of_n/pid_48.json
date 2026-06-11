@@ -1,0 +1,32 @@
+{
+  "pid": "48",
+  "question": "Find $m \\angle 3$.",
+  "qtype": "multi_choice",
+  "answer_type": "text",
+  "category": "math-targeted-vqa",
+  "ground_truth": "38",
+  "greedy_pred": "52",
+  "greedy_finished": false,
+  "greedy_correct": false,
+  "n_samples": 20,
+  "n_truncated": 15,
+  "n_valid_samples": 5,
+  "sample_preds": [
+    "38",
+    "38",
+    "52",
+    "38",
+    "38"
+  ],
+  "n_sample_correct": 4,
+  "answer_counts": {
+    "num:38.0": 4,
+    "num:52.0": 1
+  },
+  "n_distinct_answers": 2,
+  "top_answer": "38",
+  "top_share": 0.8,
+  "oracle_hit": true,
+  "vote_winner": "38",
+  "vote_correct": true
+}

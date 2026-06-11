@@ -1,0 +1,172 @@
+{
+  "pid": "27",
+  "question": "What is the age gap between these two people in image?",
+  "qtype": "free_form",
+  "answer_type": "integer",
+  "ground_truth": "11",
+  "fixed_by_any": true,
+  "correct_modes": [
+    "2_subtle",
+    "4_ocr",
+    "5_distractor",
+    "7_uncertainty",
+    "8_people",
+    "10_point_on_curve",
+    "11_value_curve_reaches",
+    "12_marker_on_vs_off",
+    "14_read_y_by_ticks",
+    "15_curve_height",
+    "16_two_points_pick_curve",
+    "18_coordinate_on_curve",
+    "19_approach_height",
+    "20_hole_on_curve"
+  ],
+  "n_distinct_answers": 5,
+  "top_answer": "11.0",
+  "top_share": 0.7,
+  "n_valid": 20,
+  "vote_winner": "11.0",
+  "vote_correct": true,
+  "per_mode": {
+    "1_salient": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age gap.",
+      "prediction": "30.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama** (on the right), who is holding the Nobel Peace Prize certificate and medal.\n2.  **Trygve Bratteli** (on the left), who is the former Prime Minister of Norway and was the chair of the Nobel Committee at the time.\n\nTo determine the age gap, we can look at their birth years:\n\n*   **Barack Obama** was born on August 4, 1961.\n*   **Trygve Bratteli** was born on January 1, 1931.\n\nThe difference in their birth years is $1961 - 1931 = 30$ years.\n\nTherefore, the age gap between them is 30 years.\n\n30"
+    },
+    "2_subtle": {
+      "premise": "Visual premise: The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence and historical records:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n$1961 - 1950 = 11$ years.\n\nThe age gap between these two people is 11 years.\n\n11"
+    },
+    "3_spatial": {
+      "premise": "Visual premise: The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger, suggesting an age difference.",
+      "prediction": "2.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the left is former Norwegian Prime Minister Jens Stoltenberg, and the man on the right is former US President Barack Obama.\n\n*   Jens Stoltenberg was born on March 13, 1959.\n*   Barack Obama was born on August 4, 1961.\n\nThe age gap between them is 2 years.\n\n2"
+    },
+    "4_ocr": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible text on the certificate indicating \"Barack H. Obama\" and \"Nobel Prize 2009.\"",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual premise provided:\n\n1.  **Identify the individuals:** The image shows Barack Obama (right) and Thorbjørn Jagland (left).\n2.  **Determine their birth years:**\n    *   Barack Obama was born on August 4, 1961.\n    *   Thorbjørn Jagland was born on June 18, 1950.\n3.  **Calculate the age gap:**\n    *   1961 - 1950 = 11 years.\n\nThe age gap between these two people is 11 years.\n\n11"
+    },
+    "5_distractor": {
+      "premise": "Visual premise: The man on the left has gray hair and appears older, while the man on the right has dark hair and appears younger, suggesting a significant age difference.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence and historical records:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n$1961 - 1950 = 11$ years.\n\nThe age gap between these two people is 11 years.\n\n11"
+    },
+    "6_alternative": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a certificate and medal, suggesting an award ceremony. The man on the left appears older with gray hair, while the man on the right has darker hair and a more youthful appearance.",
+      "prediction": "17.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the left is Jan Eliasson, who was born in 1944. The man on the right is Barack Obama, who was born in 1961.\n\nThe age gap between them is 17 years.\n\n17"
+    },
+    "7_uncertainty": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, but their exact ages are not discernible from visual details alone.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right is Barack Obama, who was born on August 4, 1961. The man on the left is Thorbjørn Jagland, who was born on June 18, 1950.\n\nTo calculate the age gap:\n1961 - 1950 = 11 years\n\nThe age gap between these two people is 11 years.\n\n11"
+    },
+    "8_people": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, suggesting a formal award ceremony setting.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right is Barack Obama, who was born in 1961. The man on the left is Thorbjørn Jagland, who was born in 1950.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "9_digits": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a certificate and medal, with no visible numerical data or age indicators present.",
+      "prediction": "31.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama:** The man on the right holding the Nobel Prize medal and diploma. He was born on August 4, 1961.\n2.  **Johan Galtung:** The man on the left, who is the Norwegian Nobel Committee chairman at the time. He was born on January 1, 1930.\n\nTo calculate the age gap between them:\n*   Johan Galtung's birth year: 1930\n*   Barack Obama's birth year: 1961\n\nThe difference in their birth years is $1961 - 1930 = 31$ years.\n\nTherefore, the age gap between these two people is 31 years.\n\n31"
+    },
+    "10_point_on_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, while the other claps; however, their exact ages are not visually discernible from the image alone.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right is Barack Obama, who was born in 1961. The man on the left is Thorbjørn Jagland, who was born in 1950.\n\nThe age gap between them is 11 years.\n\n11"
+    },
+    "11_value_curve_reaches": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, suggesting a formal award ceremony.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 1, 1950.\n\nTo calculate the age gap:\n*   Age of Barack Obama (at the time of the photo, approx. 2009): 2009 - 1961 = 48 years old.\n*   Age of Thorbjørn Jagland (at the time of the photo, approx. 2009): 2009 - 1950 = 59 years old.\n\nThe age gap is 59 - 48 = 11 years.\n\n11"
+    },
+    "12_marker_on_vs_off": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, indicating a formal award ceremony setting.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right is Barack Obama, who was born in 1961. The man on the left is Thorbjørn Jagland, who was born in 1950.\n\nThe age gap between them is calculated as:\n1961 - 1950 = 11 years.\n\n11"
+    },
+    "13_trace_to_x": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance suggesting an age difference.",
+      "prediction": "31.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama:** The man on the right holding the Nobel Prize medal and diploma. He was born on August 4, 1961.\n2.  **Johan Galtung:** The man on the left, who is the Norwegian Nobel Committee chairman at the time. He was born on January 1, 1930.\n\nTo calculate the age gap between them:\n*   Barack Obama's birth year: 1961\n*   Johan Galtung's birth year: 1930\n\nThe difference in their birth years is $1961 - 1930 = 31$ years.\n\nTherefore, the age gap between these two people is 31 years.\n\n31"
+    },
+    "14_read_y_by_ticks": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, indicating a formal award ceremony setting.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right is Barack Obama, who was born in 1961. The man on the left is Thorbjørn Jagland, who was born in 1950.\n\nThe age gap between them is calculated as:\n1961 - 1950 = 11 years.\n\n11"
+    },
+    "15_curve_height": {
+      "premise": "Visual premise: The image shows two men, one holding a Nobel Prize certificate and medal, while the other claps; both are dressed formally in suits.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n*   1961 (Obama's birth year) - 1950 (Jagland's birth year) = 11 years.\n\nTherefore, the age gap between the two people in the image is 11 years.\n\n11"
+    },
+    "16_two_points_pick_curve": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, while the other claps; however, no visual information (such as birth dates, age indicators, or contextual clues) is provided to determine their ages or age gap.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence, the man on the right is Barack Obama, who was born on August 4, 1961. The man on the left is Thorbjørn Jagland, who was born on June 18, 1950.\n\nTo calculate the age gap:\n1961 - 1950 = 11 years\n\nThe age gap between these two people is 11 years.\n\n11"
+    },
+    "17_settle_value": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, with visible differences in their physical appearance such as hair color and facial features that may suggest an age difference.",
+      "prediction": "30.0",
+      "correct": false,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image, we can identify the two individuals as:\n\n1.  **Barack Obama** (on the right), who is holding the Nobel Peace Prize certificate and medal.\n2.  **Trygve Bratteli** (on the left), who is the former Prime Minister of Norway and was the chair of the Nobel Committee at the time.\n\nTo determine the age gap, we can look at their birth years:\n\n*   **Barack Obama** was born on August 4, 1961.\n*   **Trygve Bratteli** was born on January 1, 1931.\n\nThe difference in their birth years is $1961 - 1931 = 30$ years.\n\nTherefore, the age gap between them is 30 years.\n\n30"
+    },
+    "18_coordinate_on_curve": {
+      "premise": "Visual premise: The image shows two men, one appearing significantly older with gray hair and the other younger with dark hair, both dressed formally in suits.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n*   1961 (Obama's birth year) - 1950 (Jagland's birth year) = 11 years.\n\nTherefore, the age gap between the two people in the image is 11 years.\n\n11"
+    },
+    "19_approach_height": {
+      "premise": "Visual premise: The image shows two men in formal attire, one holding a Nobel Prize certificate and medal, while the other claps. Both appear to be middle-aged or older based on their physical appearance.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence and historical context:\n\n1.  **Identify the individuals:** The man on the right is Barack Obama, who was awarded the Nobel Peace Prize in 2009. The man on the left is Thorbjørn Jagland, the Secretary-General of the Council of Europe at the time.\n2.  **Determine their ages in 2009:**\n    *   Barack Obama was born on August 4, 1961. In 2009, he was 47 or 48 years old.\n    *   Thorbjørn Jagland was born on January 14, 1950. In 2009, he was 58 or 59 years old.\n3.  **Calculate the age gap:**\n    *   Using the ages at the time of the award (2009): 59 (Jagland) - 48 (Obama) = 11 years.\n    *   Using the ages at the time of the award (2009): 58 (Jagland) - 47 (Obama) = 11 years.\n\nThe age gap between the two people in the image is 11 years.\n\n11"
+    },
+    "20_hole_on_curve": {
+      "premise": "Visual premise: The image shows two men, one appearing older with gray hair and the other younger with dark hair, both dressed formally in suits.",
+      "prediction": "11.0",
+      "correct": true,
+      "finished": true,
+      "answer": "Based on the visual evidence in the image:\n\n1.  The man on the right is Barack Obama. He was born on August 4, 1961.\n2.  The man on the left is Thorbjørn Jagland. He was born on June 18, 1950.\n\nTo calculate the age gap:\n*   1961 (Obama's birth year) - 1950 (Jagland's birth year) = 11 years.\n\nTherefore, the age gap between the two people in the image is 11 years.\n\n11"
+    }
+  }
+}

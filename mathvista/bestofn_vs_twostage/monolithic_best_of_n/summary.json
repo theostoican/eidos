@@ -1,0 +1,36 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "arm": "monolithic_best_of_n_no_focus",
+  "n_examples": 50,
+  "n_samples": 20,
+  "temperature": 0.8,
+  "top_p": 0.95,
+  "greedy_accuracy": 0.68,
+  "oracle_bestofN_accuracy": 0.84,
+  "majority_vote_accuracy": 0.74,
+  "n_failures": 8,
+  "failures_recovered_oracle": 4,
+  "failures_recovered_vote": 0,
+  "recovery_rate_oracle": 0.5,
+  "recovery_rate_vote": 0.0,
+  "recovered_pids_oracle": [
+    "19",
+    "27",
+    "37",
+    "42"
+  ],
+  "failure_pids": [
+    "19",
+    "20",
+    "27",
+    "37",
+    "41",
+    "42",
+    "50",
+    "7"
+  ],
+  "mean_top_share_failures": 0.665,
+  "mean_distinct_failures": 5.12,
+  "n_failures_fully_collapsed": 3,
+  "n_collapsed_and_unrecovered": 3
+}

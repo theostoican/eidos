@@ -1,0 +1,80 @@
+{
+  "7": {
+    "question": "What time is shown? Answer by typing a time word, not a number. It is (_) after eight.",
+    "query": "Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past",
+    "choices": [
+      "half",
+      "quarter",
+      "o'clock",
+      "quarter to",
+      "quarter past"
+    ],
+    "answer": "quarter",
+    "answer_type": "text",
+    "question_type": "multi_choice"
+  },
+  "19": {
+    "question": "what is the highest amount this class measures?",
+    "query": "Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: what is the highest amount this class measures?",
+    "choices": null,
+    "answer": "400",
+    "answer_type": "integer",
+    "question_type": "free_form"
+  },
+  "20": {
+    "question": "Is the sum of smallest two bar is greater then the largest bar?",
+    "query": "Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "answer_type": "text",
+    "question_type": "multi_choice"
+  },
+  "27": {
+    "question": "What is the age gap between these two people in image?",
+    "query": "Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "choices": null,
+    "answer": "11",
+    "answer_type": "integer",
+    "question_type": "free_form"
+  },
+  "37": {
+    "question": "What is the limit as x approaches -1?",
+    "query": "Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the limit as x approaches -1?",
+    "choices": null,
+    "answer": "3",
+    "answer_type": "integer",
+    "question_type": "free_form"
+  },
+  "41": {
+    "question": "What is the age gap between these two people in image?",
+    "query": "Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "choices": null,
+    "answer": "7",
+    "answer_type": "integer",
+    "question_type": "free_form"
+  },
+  "42": {
+    "question": "What is the age gap between these two people in image?",
+    "query": "Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "choices": null,
+    "answer": "8",
+    "answer_type": "integer",
+    "question_type": "free_form"
+  },
+  "50": {
+    "question": "Based on the food web, what would likely happen if the number of large roach would decrease?",
+    "query": "Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Based on the food web, what would likely happen if the number of large roach would decrease?\nChoices:\n(A) The population of steelheads would decrease.\n(B) The population of stickleback fry would increase.\n(C) The population of predatory insects would increase.\n(D) The population of predatory insects would decrease.",
+    "choices": [
+      "The population of steelheads would decrease.",
+      "The population of stickleback fry would increase.",
+      "The population of predatory insects would increase.",
+      "The population of predatory insects would decrease."
+    ],
+    "answer": "The population of predatory insects would decrease.",
+    "answer_type": "text",
+    "question_type": "multi_choice"
+  }
+}
