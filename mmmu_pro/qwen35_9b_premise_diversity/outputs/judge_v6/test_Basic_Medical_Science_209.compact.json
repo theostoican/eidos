@@ -1,0 +1,501 @@
+{
+  "id": "test_Basic_Medical_Science_209",
+  "subject": "Basic_Medical_Science",
+  "gold": "J",
+  "question": "This foramen is: <image 1> ",
+  "options": {
+    "A": "Optic Canal.",
+    "B": "Carotid Canal.",
+    "C": "Foramen Magnum.",
+    "D": "Foramen Spinosum.",
+    "E": "Foramen Rotundum.",
+    "F": "Jugular Foramen.",
+    "G": "Foramen Ovale.",
+    "H": "Foramen Lacerum.",
+    "I": "Internal Auditory Meatus.",
+    "J": "Stylomastoid Foramen."
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_Basic_Medical_Science_209_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "The yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "The yellow arrow points to a foramen located between the foramen rotundum and the foramen spinosum.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "A yellow arrow points to an oval-shaped foramen located in",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "A yellow arrow points to a foramen located in the greater wing of the sphenoid bone.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "The yellow arrow points to a large, oval-shaped foramen located lateral to the pterygoid plates.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "The yellow arrow points to a foramen located in the sphenoid bone of the skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "\"A yellow arrow points to a foramen",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "The yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "A yellow arrow points to a small foramen located lateral to the foramen ovale.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "The yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "The yellow arrow points to a foramen located in the occipital bone, lateral to the foramen magnum.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "A yellow arrow points to a foramen located posterior to the maxillary tuberosity.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "The yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "A yellow arrow points to a foramen located on the right side of the skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "The yellow arrow points to a foramen located lateral to the pterygoid plates.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "A yellow arrow points to a foramen located near the occipital condyle on the posterior skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "The yellow arrow points to a foramen located between the foramen rotundum and foramen spinosum.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "A yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "A yellow arrow points to a foramen located in the pterygoid process of the sphenoid bone.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "The yellow arrow points to a foramen located anterior to the jugular foramen.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "A yellow arrow points to a foramen located on the occipital bone, lateral to the jugular foramen.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "The yellow arrow points to a foramen located medial to the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "A yellow arrow points to a small foramen located medial to the jugular foramen.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "The arrow points to a large foramen located between the temporal and occipital bones.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "The yellow arrow points to a large, oval-shaped foramen situated in the middle cranial fossa.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "A yellow arrow points to a foramen located on the inferior aspect of the skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "A yellow arrow points to a foramen located in the greater wing of the sphenoid bone.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "A yellow arrow points to a foramen located in the middle cranial fossa.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "\"The arrow points to a foramen located lateral to the foramen rotundum.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "A yellow arrow points to a foramen located on the right side of the cranial base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "A yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "The yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "\"A yellow arrow points",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "The yellow arrow points to a foramen located on the left side of the skull base, medial to the ramus of the mandible.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "The yellow arrow points to a foramen situated on the occipital bone near the foramen magnum.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "The yellow arrow points to a foramen located lateral to the occipital condyle on the inferior surface of the skull.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "A yellow arrow points to an opening located on the medial aspect of the mandible's ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The arrow indicates a small foramen located between the carotid canal and the foramen ovale. (Wait, is it between them? Or medial to the carotid canal?)",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "The arrow points to an oval foramen situated posterior to the pterygoid plates in the left greater wing of the sphenoid.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "A yellow arrow points to an opening situated on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "\"A red arrow points to a specific opening (foramen) in the skull base.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "The yellow arrow points to a foramen located at the posterior aspect of the hard palate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "A yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "The arrow indicates a small foramen situated lateral to the foramen ovale.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "The yellow arrow points to a foramen located superior to the pterygoid hamulus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "A yellow arrow points to a foramen in the right petrous temporal bone.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "The foramen indicated by the yellow arrow is located medial to the foramen ovale (the hole with the red dot).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "<one short sentence...>\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "The yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "The arrow points to the jugular foramen.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "A yellow arrow points to an oval foramen located in the right sphenoid bone of the skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "The yellow arrow points to a foramen located in the middle cranial fossa.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "A yellow arrow points to a foramen located in the right occipital bone region of the skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "A yellow arrow points to a foramen located on the medial surface of the ramus of the mandible.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "The yellow arrow points to a small, distinct circular opening located on the left side of the skull base, near the junction of the temporal and occipital bones.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "The yellow arrow points to the sphenopalatine foramen.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "The yellow arrow points to a foramen located between the occipital and temporal bones.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "\"The yellow arrow points to a foramen located in the middle cranial fossa, adjacent to the foramen rotundum and spinosum.\" (Too many holes).",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "The yellow arrow points to a canal located anterior to the jugular foramen and medial to the mastoid process.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "The yellow arrow points to a foramen located near the pterygoid plates on the inferior skull base.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "A yellow arrow points to a foramen on the skull base located between the foramen rotundum and foramen spinosum.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "The yellow arrow points to a foramen located in the greater wing of the sphenoid bone on the inferior aspect of the skull.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "The foramen indicated by the arrow is located on the occipital bone, lateral to the foramen magnum and posterior to the carotid canal.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "A yellow arrow points to a foramen located on the medial surface of the mandibular ramus.",
+      "has_premise": true
+    }
+  ]
+}

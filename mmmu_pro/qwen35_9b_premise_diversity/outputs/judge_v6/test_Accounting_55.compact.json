@@ -1,0 +1,500 @@
+{
+  "id": "test_Accounting_55",
+  "subject": "Accounting",
+  "gold": "E",
+  "question": "Suppose a factor model is appropriate to describe the returns on a stock. The current expected return on the stock is 10.5 percent. Information about those factors is presented in the following chart:<image 1> What is the total return on this stock?",
+  "options": {
+    "A": "10.79%",
+    "B": "11.50%",
+    "C": "12.82%",
+    "D": "15.00%",
+    "E": "13.11%",
+    "F": "10.00%",
+    "G": "13.50%",
+    "H": "12.00%",
+    "I": "14.25%"
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_Accounting_55_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "The beta for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "The beta for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "The beta for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "The beta for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "The beta coefficient for the \"Growth in GNP\" factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "The beta for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "The beta coefficient for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "The actual value for Growth in GNP is 2.6%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "The chart lists the beta coefficients and actual values for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "The beta for Growth in GNP is 1.67 and the beta for Inflation is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "The beta coefficient for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "The beta coefficient for the 'Growth in GNP' factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "The table lists the beta, expected value, and actual value for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "The beta coefficient for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "The beta for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "The actual value of the Inflation factor is 4.8%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "The chart displays the beta, expected value, and actual value for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "The actual value for the Growth in GNP factor is 2.6%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "The beta for Growth in GNP is 1.67 and the beta for Inflation is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "The beta coefficient for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "The table lists the beta, expected value, and actual value for the factors of Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "The actual value for Inflation is 4.8.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "The table lists a beta of 1.67 for Growth in GNP and -1.09 for Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "The actual value for the Growth in GNP factor is 2.6%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "The beta for the \"Growth in GNP\" factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "The actual value for Growth in GNP is 2.6% and the expected value is 2.1%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "The table lists the beta ($\\beta$) coefficient for the \"Growth in GNP\" factor as 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "The beta coefficient for the 'Growth in GNP' factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "The chart lists the Beta for Growth in GNP as 1.67, with an expected value of 2.1% and an actual value of 2.6%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "The actual value for the Growth in GNP factor is 2.6%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The table provides the beta ($\\beta$), expected value, and actual value for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "The table lists the beta ($\\beta$), expected value, and actual value for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "The chart lists the beta, expected value, and actual value for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "\"The table indicates that the beta for Growth in GNP is 1.67,",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "The beta ($\\beta$) for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "The table shows a beta of 1.67 for the Growth in GNP factor and -1.09 for the Inflation factor.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "The actual value for the Growth in GNP factor is 2.6%.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "The beta for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "The beta coefficient for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "The table lists the beta ($\\beta$) coefficient for 'Growth in GNP' as 1.67 and for 'Inflation' as -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "The table lists the expected and actual values for the factors 'Growth in GNP' and 'Inflation'.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "The table lists the beta for Inflation as -1.09 and the actual value as 4.8.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "The beta for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "The beta for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "The chart lists the beta, expected value, and actual value for the factors Growth in GNP and Inflation.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "The beta for the Inflation factor is -1.09.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "The actual value for the Inflation factor is 4.8.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "The beta coefficient for the Growth in GNP factor is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "The table displays the $\\beta$, expected value, and actual value for the factors Growth in GNP and Inflation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "The beta for Growth in GNP is 1.67.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "The chart indicates that the beta ($\\beta$) for the 'Growth in GNP' factor is 1.67.",
+      "has_premise": true
+    }
+  ]
+}

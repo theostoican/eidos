@@ -1,0 +1,218 @@
+[
+  {
+    "id": "test_Accounting_55",
+    "subject": "Accounting",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Accounting_55.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Accounting_55_img1.png"
+    ]
+  },
+  {
+    "id": "test_Agriculture_19",
+    "subject": "Agriculture",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Agriculture_19.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Agriculture_19_img1.png"
+    ]
+  },
+  {
+    "id": "test_Art_139",
+    "subject": "Art",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Art_139.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Art_139_img1.png"
+    ]
+  },
+  {
+    "id": "test_Art_Theory_168",
+    "subject": "Art_Theory",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Art_Theory_168.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Art_Theory_168_img1.png"
+    ]
+  },
+  {
+    "id": "test_Basic_Medical_Science_209",
+    "subject": "Basic_Medical_Science",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Basic_Medical_Science_209.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Basic_Medical_Science_209_img1.png"
+    ]
+  },
+  {
+    "id": "test_Biology_132",
+    "subject": "Biology",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Biology_132.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Biology_132_img1.png"
+    ]
+  },
+  {
+    "id": "test_Chemistry_447",
+    "subject": "Chemistry",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Chemistry_447.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Chemistry_447_img1.png"
+    ]
+  },
+  {
+    "id": "test_Clinical_Medicine_114",
+    "subject": "Clinical_Medicine",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Clinical_Medicine_114.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Clinical_Medicine_114_img1.png"
+    ]
+  },
+  {
+    "id": "test_Computer_Science_226",
+    "subject": "Computer_Science",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Computer_Science_226.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Computer_Science_226_img1.png"
+    ]
+  },
+  {
+    "id": "test_Design_135",
+    "subject": "Design",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Design_135.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Design_135_img1.png"
+    ]
+  },
+  {
+    "id": "test_Diagnostics_and_Laboratory_Medicine_116",
+    "subject": "Diagnostics_and_Laboratory_Medicine",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Diagnostics_and_Laboratory_Medicine_116.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Diagnostics_and_Laboratory_Medicine_116_img1.png"
+    ]
+  },
+  {
+    "id": "test_Geography_144",
+    "subject": "Geography",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Geography_144.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Geography_144_img1.png"
+    ]
+  },
+  {
+    "id": "test_History_100",
+    "subject": "History",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_History_100.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_History_100_img1.png"
+    ]
+  },
+  {
+    "id": "test_Literature_11",
+    "subject": "Literature",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Literature_11.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Literature_11_img1.png"
+    ]
+  },
+  {
+    "id": "test_Manage_10",
+    "subject": "Manage",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Manage_10.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Manage_10_img1.png"
+    ]
+  },
+  {
+    "id": "test_Marketing_161",
+    "subject": "Marketing",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Marketing_161.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Marketing_161_img1.png"
+    ]
+  },
+  {
+    "id": "test_Materials_165",
+    "subject": "Materials",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Materials_165.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Materials_165_img1.png"
+    ]
+  },
+  {
+    "id": "test_Math_435",
+    "subject": "Math",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Math_435.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Math_435_img1.png"
+    ]
+  },
+  {
+    "id": "test_Music_299",
+    "subject": "Music",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Music_299.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Music_299_img1.png"
+    ]
+  },
+  {
+    "id": "test_Pharmacy_201",
+    "subject": "Pharmacy",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Pharmacy_201.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Pharmacy_201_img1.png"
+    ]
+  },
+  {
+    "id": "test_Psychology_105",
+    "subject": "Psychology",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Psychology_105.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Psychology_105_img1.png"
+    ]
+  },
+  {
+    "id": "test_Public_Health_152",
+    "subject": "Public_Health",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Public_Health_152.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Public_Health_152_img1.png"
+    ]
+  },
+  {
+    "id": "test_Sociology_102",
+    "subject": "Sociology",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/test_Sociology_102.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/test_Sociology_102_img1.png"
+    ]
+  },
+  {
+    "id": "validation_Economics_26",
+    "subject": "Economics",
+    "n_premises": 80,
+    "packet": "outputs/judge_v6/validation_Economics_26.json",
+    "image_paths": [
+      "/workspace/mmmupro_qwen3vl/outputs/images/validation_Economics_26_img1.png"
+    ]
+  }
+]

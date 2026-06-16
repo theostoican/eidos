@@ -1,0 +1,495 @@
+{
+  "id": "test_Pharmacy_201",
+  "subject": "Pharmacy",
+  "gold": "D",
+  "question": "A use-dilution test was used to evaluate two disinfectants against Salmonella choleraesuis. The results were as follows:<image 1>,Which disinfectant should be used against Staphylococcus?",
+  "options": {
+    "A": "Disinfectant A",
+    "B": "Disinfectant B Diluted with Distilled Water",
+    "C": "Disinfectant B Diluted with Tap Water",
+    "D": "All of them"
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_Pharmacy_201_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "The table header and text indicate the data is for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "The table header indicates the bacterial growth results are for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at all time intervals.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) for Salmonella choleraesuis at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "The table shows bacterial growth results for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "Disinfectant B diluted with distilled water resulted in no bacterial growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "The table displays results for Salmonella choleraesuis",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "\"Disinfectant B resulted in No Growth (NG) at 10 minutes of exposure.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "Disinfectant B diluted with distilled water shows No Growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "The table header indicates the test was performed on Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at all time intervals.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "\"Disinfectant B diluted with distilled water shows No Growth (NG) at 10 minutes.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at all time points.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 20 and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at all exposure times.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "The text indicates the test was performed against *Salmonella choleraesuis*, not *Staphylococcus*.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "Disinfect",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "The table presents data for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) for Salmonella choleraesuis at all time points.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "Disinfectant B diluted with distilled water resulted in no bacterial growth (NG) at all tested time intervals.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "Disinfectant B Diluted with Distilled Water resulted in 'NG' (No Growth) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "Disinfectant B Diluted with Distilled Water resulted in \"NG\" (No Growth) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "Disinfectant B diluted with Distilled Water shows No Growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "Disinfectant A results in No Growth (NG) at 30 minutes of",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "Disinfectant B Diluted with Distilled Water resulted in No Growth (NG) at 10 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "The table presents results for Salmonella, not Staphylococcus.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10, 20, and 30 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10, 20, and 30 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "The table header indicates the data is for *Salmonella choleraesuis*.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 20 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "Disinfectant B diluted with Distilled Water resulted in No Growth (NG) for Salmonella choleraesuis at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "Disinfectant B diluted with Distilled Water resulted in No Growth (NG) of the bacteria within 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10 minutes, while Disinfectant A showed Growth (G).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "Disinfectant B diluted with distilled water shows No Growth (NG) at 10 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "Disinfectant B diluted with distilled water resulted in no bacterial growth (NG) after 10 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The table displays results for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "The table header and top-left text identify the tested bacteria as *Salmonella choleraesuis*.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "Disinfect",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "Disinfectant B diluted with Distilled Water resulted in \"No Growth\" (NG) at all exposure times (10, 20, and 30 minutes).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "Disinfectant B Diluted with Distilled Water resulted in No Growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "The table displays bacterial growth results for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at all time points.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "Disinfectant B diluted with Distilled Water showed No Growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "Disinfectant B diluted with distilled water",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "\"Disinfectant B diluted with distilled water shows No Growth (NG) results at 10, 20, and 30 minutes.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "Disinfectant B diluted with distilled water results in no growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "\"Disinfectant B results in No Growth at 10 minutes.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at all measured time points.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "Disinfectant A shows No Growth (NG) at 30 minutes, indicating complete inhibition.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "The image displays a use-dilution test specifically for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "Disinfectant B Diluted with Distilled Water shows No Growth (NG) at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "Disinfectant B diluted with Distilled Water resulted in No Growth (NG) for *Salmonella choleraesuis* at 10, 20, and 30 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "Disinfectant B diluted with Distilled Water resulted in No Growth (NG) at 10 minutes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "\"Disinfectant B Diluted with Distilled Water shows No Growth (NG) at 10 minutes.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "Disinfectant B diluted with Dist",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "Disinfectant B diluted with distilled water resulted in no bacterial growth (NG) at 10 minutes of exposure.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "Disinfectant B diluted with Distilled Water resulted in No Growth (NG) for Salmonella choleraesuis at all tested time intervals (10, 20, and 30 minutes).",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "The table presents bacterial growth results for Salmonella choleraesuis.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "Disinfectant B diluted with distilled water resulted in no bacterial growth (NG) across all exposure times.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "Disinfectant B diluted with distilled water resulted in No Growth (NG) at the 10-minute exposure mark.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "Disinfectant B diluted with distilled water resulted in no growth (NG) after 10 minutes of exposure.",
+      "has_premise": true
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+[load] dataset MMMU/MMMU_Pro standard(10 options) ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[load] 24 questions
+[init] loading vLLM engine for Qwen/Qwen3.5-9B ...
+INFO 06-12 07:49:34 [utils.py:278] non-default args: {'trust_remote_code': True, 'dtype': 'bfloat16', 'max_model_len': 45056, 'gpu_memory_utilization': 0.95, 'max_num_batched_tokens': 4096, 'max_num_seqs': 32, 'disable_log_stats': True, 'limit_mm_per_prompt': {'image': 8, 'video': 0}, 'mm_processor_kwargs': {'max_pixels': 1048576}, 'model': 'Qwen/Qwen3.5-9B'}
+INFO 06-12 07:49:35 [model.py:617] Resolved architecture: Qwen3_5ForConditionalGeneration
+INFO 06-12 07:49:35 [model.py:1752] Using max model len 45056
+INFO 06-12 07:49:35 [scheduler.py:239] Chunked prefill is enabled with max_num_batched_tokens=4096.
+INFO 06-12 07:49:35 [vllm.py:977] Asynchronous scheduling is enabled.
+INFO 06-12 07:49:35 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[transformers] `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+WARNING 06-12 07:49:53 [system_utils.py:157] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+(EngineCore pid=3886) INFO 06-12 07:49:58 [core.py:112] Initializing a V1 LLM engine (v0.22.1) with config: model='Qwen/Qwen3.5-9B', speculative_config=None, tokenizer='Qwen/Qwen3.5-9B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=45056, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=Qwen/Qwen3.5-9B, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::qwen_gdn_attention_core', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [4096], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 64, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=3886) [transformers] `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(EngineCore pid=3886) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(EngineCore pid=3886) INFO 06-12 07:50:01 [parallel_state.py:1422] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.17.0.3:51597 backend=nccl
+(EngineCore pid=3886) INFO 06-12 07:50:01 [parallel_state.py:1735] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=3886) INFO 06-12 07:50:02 [topk_topp_sampler.py:45] Using FlashInfer for top-p & top-k sampling.
+(EngineCore pid=3886) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(EngineCore pid=3886) INFO 06-12 07:50:13 [gpu_model_runner.py:5037] Starting to load model Qwen/Qwen3.5-9B...
+(EngineCore pid=3886) INFO 06-12 07:50:13 [cuda.py:433] Using backend AttentionBackendEnum.FLASH_ATTN for vit attention
+(EngineCore pid=3886) INFO 06-12 07:50:13 [mm_encoder_attention.py:372] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+(EngineCore pid=3886) INFO 06-12 07:50:13 [qwen_gdn_linear_attn.py:228] Using Triton/FLA GDN prefill kernel (requested=auto, head_k_dim=None).
+(EngineCore pid=3886) INFO 06-12 07:50:13 [cuda.py:378] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=3886) INFO 06-12 07:50:13 [flash_attn.py:636] Using FlashAttention version 2
+(EngineCore pid=3886) INFO 06-12 07:50:14 [weight_utils.py:922] Filesystem type for checkpoints: OVERLAY. Checkpoint size: 17.98 GiB. Available RAM: 411.18 GiB.
+(EngineCore pid=3886) INFO 06-12 07:50:14 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (OVERLAY) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=3886) Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+(EngineCore pid=3886) Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:00<00:01,  2.18it/s]
+(EngineCore pid=3886) Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:01<00:01,  1.89it/s]
+(EngineCore pid=3886) Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:01<00:00,  1.79it/s]
+(EngineCore pid=3886) Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.87it/s]
+(EngineCore pid=3886) Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.88it/s]
+(EngineCore pid=3886) 
+(EngineCore pid=3886) INFO 06-12 07:50:17 [default_loader.py:397] Loading weights took 2.23 seconds
+(EngineCore pid=3886) INFO 06-12 07:50:17 [gpu_model_runner.py:5132] Model loading took 17.65 GiB memory and 3.438138 seconds
+(EngineCore pid=3886) INFO 06-12 07:50:17 [interface.py:649] Setting attention block size to 528 tokens to ensure that attention page size is >= mamba page size.
+(EngineCore pid=3886) INFO 06-12 07:50:17 [interface.py:673] Padding mamba page size by 0.76% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=3886) INFO 06-12 07:50:17 [gpu_model_runner.py:6136] Encoder cache will be initialized with a budget of 4096 tokens, and profiled with 4 image items of the maximum feature size.
+(EngineCore pid=3886) INFO 06-12 07:50:23 [backends.py:1089] Using cache directory: /root/.cache/vllm/torch_compile_cache/4f172deea8/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=3886) INFO 06-12 07:50:23 [backends.py:1148] Dynamo bytecode transform time: 5.20 s
+(EngineCore pid=3886) INFO 06-12 07:50:25 [backends.py:378] Cache the graph of compile range (1, 4096) for later use
+(EngineCore pid=3886) INFO 06-12 07:50:46 [backends.py:393] Compiling a graph for compile range (1, 4096) takes 22.78 s
+(EngineCore pid=3886) INFO 06-12 07:50:49 [decorators.py:708] saved AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/ac0fb4fc993c847460c8f3d9bf8d4919196979f58121208d2a3685ee66bd94cc/rank_0_0/model
+(EngineCore pid=3886) INFO 06-12 07:50:49 [monitor.py:53] torch.compile took 31.12 s in total
+(EngineCore pid=3886) INFO 06-12 07:51:43 [monitor.py:81] Initial profiling/warmup run took 54.38 s
+(EngineCore pid=3886) INFO 06-12 07:51:50 [gpu_model_runner.py:6279] Profiling CUDA graph memory: PIECEWISE=11 (largest=64), FULL=7 (largest=32)
+(EngineCore pid=3886) INFO 06-12 07:51:53 [gpu_model_runner.py:6365] Estimated CUDA graph memory: 0.15 GiB total
+(EngineCore pid=3886) INFO 06-12 07:51:53 [gpu_worker.py:466] Available KV cache memory: 3.73 GiB
+(EngineCore pid=3886) INFO 06-12 07:51:53 [gpu_worker.py:481] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.9500 is equivalent to --gpu-memory-utilization=0.9435 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.9565. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.
+(EngineCore pid=3886) INFO 06-12 07:51:53 [kv_cache_utils.py:1733] GPU KV cache size: 116,943 tokens
+(EngineCore pid=3886) INFO 06-12 07:51:53 [kv_cache_utils.py:1734] Maximum concurrency for 45,056 tokens per request: 2.60x
+(EngineCore pid=3886) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/11 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 3/11 [00:00<00:00, 24.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  55%|█████▍    | 6/11 [00:00<00:00, 25.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  82%|████████▏ | 9/11 [00:00<00:00, 25.64it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 11/11 [00:00<00:00, 25.09it/s]
+(EngineCore pid=3886) Capturing CUDA graphs (decode, FULL):   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  14%|█▍        | 1/7 [00:00<00:00,  6.67it/s]Capturing CUDA graphs (decode, FULL):  29%|██▊       | 2/7 [00:00<00:00,  6.62it/s]Capturing CUDA graphs (decode, FULL):  71%|███████▏  | 5/7 [00:00<00:00, 14.76it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 7/7 [00:00<00:00, 12.13it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 7/7 [00:00<00:00, 11.40it/s]
+(EngineCore pid=3886) INFO 06-12 07:51:55 [gpu_model_runner.py:6456] Graph capturing finished in 2 secs, took 0.12 GiB
+(EngineCore pid=3886) INFO 06-12 07:51:55 [gpu_worker.py:619] CUDA graph pool memory: 0.12 GiB (actual), 0.15 GiB (estimated), difference: 0.03 GiB (27.9%).
+(EngineCore pid=3886) INFO 06-12 07:51:55 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.
+(EngineCore pid=3886) INFO 06-12 07:51:55 [core.py:302] init engine (profile, create kv cache, warmup model) took 97.80 s (compilation: 31.12 s)
+(EngineCore pid=3886) INFO 06-12 07:51:55 [vllm.py:977] Asynchronous scheduling is enabled.
+(EngineCore pid=3886) INFO 06-12 07:51:55 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[init] engine ready in 141.2s
+[gen] generating for 24 questions (max_tokens=40960) ...
+Rendering conversations:   0%|          | 0/24 [00:00<?, ?it/s]INFO 06-12 07:52:00 [hf.py:488] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this.
+Rendering conversations:   4%|▍         | 1/24 [00:20<07:52, 20.56s/it](EngineCore pid=3886) WARNING 06-12 07:52:16 [jit_monitor.py:103] Triton kernel JIT compilation during inference: _zero_kv_blocks_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+Rendering conversations:  25%|██▌       | 6/24 [00:20<00:46,  2.57s/it](EngineCore pid=3886) WARNING 06-12 07:52:16 [jit_monitor.py:103] Triton kernel JIT compilation during inference: _compute_slot_mapping_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+Rendering conversations:  58%|█████▊    | 14/24 [00:20<00:08,  1.16it/s]Rendering conversations:  83%|████████▎ | 20/24 [00:21<00:02,  1.96it/s]Rendering conversations: 100%|██████████| 24/24 [00:21<00:00,  1.14it/s]
+Processed prompts:   0%|          | 0/24 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s](EngineCore pid=3886) WARNING 06-12 07:52:17 [jit_monitor.py:103] Triton kernel JIT compilation during inference: _bilinear_pos_embed_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=3886) WARNING 06-12 07:52:17 [jit_monitor.py:103] Triton kernel JIT compilation during inference: _causal_conv1d_fwd_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=3886) WARNING 06-12 07:52:18 [jit_monitor.py:103] Triton kernel JIT compilation during inference: _fused_post_conv_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=3886) WARNING 06-12 07:52:18 [jit_monitor.py:103] Triton kernel JIT compilation during inference: rotary_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=3886) WARNING 06-12 07:52:25 [jit_monitor.py:103] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+Processed prompts:   4%|▍         | 1/24 [00:26<10:10, 26.54s/it, est. speed input: 30.90 toks/s, output: 27.36 toks/s]Processed prompts:   8%|▊         | 2/24 [00:32<05:22, 14.66s/it, est. speed input: 30.66 toks/s, output: 52.32 toks/s]Processed prompts:  12%|█▎        | 3/24 [00:41<04:08, 11.84s/it, est. speed input: 34.45 toks/s, output: 74.31 toks/s]Processed prompts:  17%|█▋        | 4/24 [00:42<02:28,  7.42s/it, est. speed input: 42.71 toks/s, output: 105.98 toks/s]Processed prompts:  25%|██▌       | 6/24 [00:44<01:12,  4.03s/it, est. speed input: 65.21 toks/s, output: 165.73 toks/s]Processed prompts:  29%|██▉       | 7/24 [00:47<01:06,  3.94s/it, est. speed input: 69.79 toks/s, output: 186.97 toks/s]Processed prompts:  33%|███▎      | 8/24 [00:54<01:17,  4.82s/it, est. speed input: 69.17 toks/s, output: 198.08 toks/s]Processed prompts:  38%|███▊      | 9/24 [00:58<01:06,  4.42s/it, est. speed input: 92.00 toks/s, output: 222.16 toks/s]Processed prompts:  42%|████▏     | 10/24 [01:02<01:01,  4.39s/it, est. speed input: 118.65 toks/s, output: 243.27 toks/s]Processed prompts:  50%|█████     | 12/24 [01:08<00:45,  3.78s/it, est. speed input: 128.41 toks/s, output: 292.15 toks/s]Processed prompts:  54%|█████▍    | 13/24 [01:10<00:37,  3.37s/it, est. speed input: 128.02 toks/s, output: 320.94 toks/s]Processed prompts:  58%|█████▊    | 14/24 [01:51<02:10, 13.00s/it, est. speed input: 85.03 toks/s, output: 244.53 toks/s] Processed prompts:  62%|██████▎   | 15/24 [01:52<01:27,  9.70s/it, est. speed input: 90.86 toks/s, output: 283.40 toks/s]Processed prompts:  67%|██████▋   | 16/24 [02:17<01:52, 14.07s/it, est. speed input: 76.21 toks/s, output: 272.47 toks/s]Processed prompts:  71%|███████   | 17/24 [02:54<02:23, 20.56s/it, est. speed input: 64.74 toks/s, output: 257.22 toks/s]Processed prompts:  75%|███████▌  | 18/24 [02:56<01:31, 15.22s/it, est. speed input: 70.92 toks/s, output: 296.60 toks/s]Processed prompts:  79%|███████▉  | 19/24 [03:29<01:42, 20.41s/it, est. speed input: 61.36 toks/s, output: 292.84 toks/s]Processed prompts:  83%|████████▎ | 20/24 [04:30<02:09, 32.42s/it, est. speed input: 51.59 toks/s, output: 270.22 toks/s]Processed prompts:  88%|████████▊ | 21/24 [04:34<01:12, 24.10s/it, est. speed input: 52.30 toks/s, output: 309.58 toks/s]Processed prompts:  92%|█████████▏| 22/24 [04:45<00:40, 20.19s/it, est. speed input: 51.29 toks/s, output: 341.49 toks/s]Processed prompts:  96%|█████████▌| 23/24 [09:15<01:34, 94.43s/it, est. speed input: 27.39 toks/s, output: 221.76 toks/s]Processed prompts: 100%|██████████| 24/24 [14:12<00:00, 154.96s/it, est. speed input: 18.16 toks/s, output: 192.52 toks/s]Processed prompts: 100%|██████████| 24/24 [14:12<00:00, 154.96s/it, est. speed input: 18.16 toks/s, output: 192.52 toks/s]Processed prompts: 100%|██████████| 24/24 [14:12<00:00, 35.51s/it, est. speed input: 18.16 toks/s, output: 192.52 toks/s] 
+
+===== SUMMARY =====
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "n_questions": 24,
+  "accuracy": 0.7917,
+  "correct": 19,
+  "no_answer": 0,
+  "truncated_at_max": 1,
+  "gen_seconds": 873.3,
+  "questions_per_sec": 0.027,
+  "total_output_tokens": 164063,
+  "mean_output_tokens": 6836.0,
+  "median_output_tokens": 2657,
+  "max_output_tokens": 40960,
+  "decode_tokens_per_sec": 187.9
+}
+(EngineCore pid=3886) INFO 06-12 08:06:29 [core.py:1266] Shutdown initiated (timeout=0)
+(EngineCore pid=3886) INFO 06-12 08:06:29 [core.py:1289] Shutdown complete
+=== CALIB_DONE exit 0 ===

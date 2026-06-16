@@ -1,0 +1,501 @@
+{
+  "id": "test_Art_139",
+  "subject": "Art",
+  "gold": "C",
+  "question": "Who created <image 1>?",
+  "options": {
+    "A": "LEONARDO DA VINCI",
+    "B": "CAMILLE PISSARRO",
+    "C": "VINCENT WILLEM VAN GOGH",
+    "D": "ANDY WARHOL",
+    "E": "MICHELANGELO",
+    "F": "VALENTIN SEROV",
+    "G": "SALVADOR DALI",
+    "H": "PABLO PICASSO",
+    "I": "CLAUDE MONET",
+    "J": "REMBRANDT"
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_Art_139_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "The image is an etching titled \"Landscape with a Boat\" by Vincent van Gogh.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "The image is a monochromatic etching depicting a flooded landscape with a small boat and a dramatic, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "The image is an etching of a marshy landscape with a flooded foreground and a dramatic, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "The artwork features a dramatic, monochromatic landscape with heavy cross-hatching and a turbulent sky, stylistic elements strongly associated with Rembrandt van Rijn.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "The artwork is a monochromatic etching depicting a moody landscape with a flooded foreground and a dramatic, cloud-filled sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "The artwork is a monochromatic landscape etching featuring a marshy foreground, scattered trees, and a dramatic, cloud-filled sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "The artwork is a monochromatic etching depicting a river landscape with a dramatic sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "** The image displays a monochromatic landscape etching featuring a flooded terrain and dramatic clouds, characteristic of Rembrandt's style.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "The artwork is a monochromatic landscape etching featuring dramatic cloud formations and cross-hatching, characteristic of the style of Rembrandt van Rijn.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "The image displays a monochromatic etching of a flooded landscape with a dramatic, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "The artwork is an etching depicting a landscape with a boat and trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "The image is an etching depicting a river landscape with a boat and a cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "The artwork is a monochromatic landscape etching featuring a marshy foreground, a small boat on the water, and a dramatic, cloud-filled sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "A signature reading \"Vincent\" is visible in the bottom left corner of the artwork.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "The image depicts a monochromatic etching of a river landscape with a cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "The image depicts a monochromatic landscape print featuring a body of water and a small boat with a distinct blue figure or sail.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "The signature in the bottom left corner reads 'Vincent'.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "The artwork depicts a monochromatic landscape etching featuring a flooded meadow, scattered trees, and a heavily textured, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "The image depicts a landscape etching with a small boat and trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "The artwork features a monochromatic, hatched landscape style characteristic of Vincent van Gogh's early etchings.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "The artwork depicts a landscape with a body of water and trees, executed in a style of heavy cross-hatching typical of etchings.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "The image depicts the etching titled \"Wounded Trees at Montgeron\".",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "The artwork is a monochromatic etching featuring dense cross-hatching in the sky and water.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "The image is a monochromatic landscape etching featuring a dramatic sky and silhouetted trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "The artwork is a monochromatic landscape etching depicting a flooded meadow with trees and a dramatic sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "The artist's signature \"Vincent\" is visible in the bottom left corner of the etching.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "The artist's signature \"Constable\" is visible in the bottom left corner of the drawing.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "The artwork is a monochromatic etching of a landscape featuring water, trees, and a heavily textured sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "The artist's signature is visible in the bottom left corner.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "The artwork is a monochromatic etching depicting a marshy landscape with a small boat and a dramatic, cloud-filled sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "The artwork is a monochromatic etching depicting a Dutch landscape with a boat and a detailed, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "The bottom left corner of the etching contains the initials \"C D F\".",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "* The image displays a landscape with a distinctively cloudy sky and silhouetted trees along the water's edge.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "The artwork is an etching of a flooded meadow with a small boat, created by Vincent van Gogh.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "The artist's signature \"C. Pissarro\" is visible in the bottom left corner.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "A monogram or signature is visible in the bottom left corner of the artwork.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "The artist's monogram \"IJ\" is visible in the bottom left corner.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "The artwork is the etching \"Wetterekening, Midden-Holland\" (Wetter observation, Middle Holland).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "A signature is present in the bottom-left corner of the image.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "The image displays a monochromatic landscape drawing characterized by intricate cross-hatching and a dramatic, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "The artwork depicts a flooded landscape with a dramatic, cloudy sky and scattered trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "The image displays a landscape etching characterized by a dramatic, textured sky and a boat on a flooded field, stylistically matching the work of Vincent van Gogh.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "The artwork depicts a monochromatic landscape featuring a body of water, trees, and a heavily textured, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The bottom left corner of the image contains an inscription that reads \"Th\u00e9odore Rousseau\".",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "The image is a monochromatic etching depicting a river landscape with a turbulent sky and scattered trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "The image displays a black and white etching of a flooded landscape featuring scattered trees and a dramatic, cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "The image depicts a landscape featuring a small boat on the water.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "The image displays a pen-and-ink landscape featuring a river, scattered trees, and a dramatic, cloud-filled sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "The lower-left corner of the etching features a small inscription containing initials.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "The artwork is a black and white etching depicting a flooded landscape with a dramatic, hatched sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "The image is a black-and-white etching of a river scene featuring a small boat and a sky filled with rhythmic, hatched clouds.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "The image is a monochromatic landscape drawing featuring a river, trees, and a large, clouded sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "The artwork features a monochromatic landscape etching with a cloudy sky and a boat on water.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "The image depicts a river landscape with a ferry and sparse trees under a cloudy sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "A monogram consisting of the initials \"WV\" is visible in the bottom left corner of the painting.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "The image is an etching depicting a marshy landscape with a boat and bare trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "The bottom left corner of the artwork displays a monogram signature.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "The image is a monochromatic landscape drawing featuring a vast, cloudy sky over a marshy area with scattered trees.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "The bottom left corner of the image contains the artist's signature and monogram.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "The bottom-left corner contains a faint monogram or signature.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "The bottom-left corner of the image contains a visible signature.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "The artwork features the distinctive cross-hatching and atmospheric style typically associated with Vincent van Gogh.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "The bottom left corner of the artwork contains a signature written in the distinctive, spidery script of J.M.W. Turner.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "A small monogram signature is visible in the bottom left corner of the artwork.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "The artwork is a monochromatic landscape featuring a flooded meadow and trees rendered with dense cross-hatching.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "The image is a monochromatic ink drawing depicting a flooded marshland with a prominent, turbulent sky and dead trees in the foreground.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "The artwork is a monochromatic landscape painting featuring a river, trees, and a heavily clouded sky.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "A signature reading \"Vincent\" is visible in the bottom left corner.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "The image depicts a flooded landscape with sparse trees and a sky rendered in dense, horizontal cross-hatching strokes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "A signature or inscription is visible in the bottom left corner of the artwork.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "A signature consisting of initials is visible in the bottom left corner of the artwork.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "The image is a monochromatic landscape etching depicting a dam, a boat, and bare trees along a riverbank.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "The artist's signature is located in the bottom left corner.",
+      "has_premise": true
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+{
+  "id": "test_Literature_11",
+  "subject": "Literature",
+  "gold": "B",
+  "question": "Refer to the figure <image 1>, which term best describes the practice where members create the visual essence of a chapter on a three-foot strip of paper, discuss it, and then assemble the strips into the shape of sun rays?",
+  "options": {
+    "A": "Chapter Ray",
+    "B": "Story Ray",
+    "C": "Narrative Ray",
+    "D": "Magical Realism Ray",
+    "E": "Plot Ray",
+    "F": "Animal Fantasy Ray",
+    "G": "Folklore Ray",
+    "H": "Trickster Tale Ray",
+    "I": "Fiction Ray",
+    "J": "Fable Ray"
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_Literature_11_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "The image shows a cartoon sun with rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "The image displays a stylized sun with jagged rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "The image depicts a sun with triangular rays extending outward from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "The image shows a sun with rays extending outward from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "The image shows a cartoon sun with triangular rays extending outward from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "The image displays a cartoon sun with jagged rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "The image depicts a stylized sun with triangular rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "The image shows a cartoon sun with rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "The image shows a sun composed of distinct triangular rays radiating from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "The image features a cartoon sun with triangular rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "The image shows a yellow sun face surrounded by triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "The image displays a stylized sun with triangular rays radiating from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "The image features a cartoon sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "The image shows a cartoon sun with rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "The image shows a yellow sun with distinct rays extending outward from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "The image depicts a cartoon sun with jagged rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "The image shows a smiling sun surrounded by triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "The image displays a sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "The image features a cartoon sun with triangular spikes radiating outward like rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "The image displays a cartoon sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "The image features a stylized sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "The image shows a sun face surrounded by distinct rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "The image displays a cartoon sun with distinct rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "The image displays a cartoon sun with jagged rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "The image shows a yellow sun with triangular rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "The image depicts a stylized sun with radiating triangular spikes representing sun rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "The image displays a cartoon sun with radiating triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "The image depicts a stylized sun with triangular rays radiating outward from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "The image features a cartoon sun with triangular rays extending outward from its face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "The image depicts a cartoon sun with jagged rays radiating outward from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "The image depicts a stylized sun face surrounded by triangular rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "The image depicts a cartoon sun composed of triangular rays radiating outward from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "The image features a cartoon sun with a face and radiating yellow spikes representing sun rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "The image shows a central sun face surrounded by radiating triangular spikes that resemble sun rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "The image displays a cartoon sun with a face surrounded by radiating yellow spikes representing rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "The image features a cartoon sun surrounded by sharp, radiating triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "The image displays a sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "The image displays a cartoon sun with a smiling face and triangular rays radiating from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "The image displays a sun illustration composed of radiating triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "The image shows a sun composed of distinct, radiating rays that resemble strips of paper.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "The image displays a cartoon sun with a face surrounded by jagged rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "The image features a yellow sun with triangular rays extending outward from its circular center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "The image features a yellow sun with pointed rays radiating from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "The image features a graphic of a sun composed of radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "The image features a yellow sun with a face surrounded by triangular rays pointing outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "The image displays a stylized sun composed of radiating yellow rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "The image depicts a stylized sun with a smiling face and radiating yellow rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "The image displays a cartoon sun with a smiling face surrounded by radiating yellow rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "The image displays a cartoon sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "The image displays a stylized yellow sun with a smiling face and radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The image shows a cartoon sun surrounded by pointed rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "The image displays a cartoon sun with radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "The image shows a sun made up of numerous individual rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "The image depicts a stylized yellow sun with jagged rays radiating from the center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "The image displays a cartoon sun face surrounded by triangular rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "The image depicts a cartoon sun with jagged rays extending outward from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "The image displays a stylized yellow sun with a face, surrounded by radiating triangular spikes that resemble sun rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "The image shows a cartoon sun with a face and rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "The image shows a cartoon sun composed of a central face surrounded by radiating triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "The image depicts a yellow sun face surrounded by pointed rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "The image features a yellow sun face with triangular rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "The image depicts a yellow sun with jagged rays extending outward from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "The image displays a cartoon sun composed of triangular rays extending from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "The image depicts a cartoon sun with pointed rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "The image shows a cartoon sun with a face and numerous pointed yellow rays radiating outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "The image displays a yellow sun face surrounded by sharp, radiating spikes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "The image shows a cartoon sun with multiple yellow rays extending outward.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "The image displays a cartoon sun.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "The image depicts a stylized yellow sun with a smiling face and radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "The image displays a central circular face surrounded by radiating yellow triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "The image features a cartoon sun composed of radiating triangular rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "The image depicts a yellow sun with triangular rays radiating from the center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "The image features a smiling sun surrounded by radiating spike shapes representing rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "The image shows a yellow sun surrounded by sharp, radiating spikes that resemble rays of light.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "The image shows a cartoon sun face with a central yellow circle surrounded by yellow spikes resembling sun rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "The image displays a stylized sun with numerous triangular rays radiating outward from a central face.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "The image depicts a sun character surrounded by radiating yellow spikes.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "The image depicts a cartoon sun with jagged rays radiating from its center.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "The image depicts a stylized sun formed by radiating rays.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "The image displays a stylized sun composed of a central circular face and triangular rays extending outward.",
+      "has_premise": true
+    }
+  ]
+}

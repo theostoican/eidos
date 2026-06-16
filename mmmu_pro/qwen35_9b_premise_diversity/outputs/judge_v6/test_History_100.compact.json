@@ -1,0 +1,501 @@
+{
+  "id": "test_History_100",
+  "subject": "History",
+  "gold": "H",
+  "question": "The data in the table <image 1> best supports which of the following conclusions? ",
+  "options": {
+    "A": "Bubonic plague led to most deaths in plagues of the first millennium C.E.",
+    "B": "The Roman Empire was immune to most plagues.",
+    "C": "Plagues most severely affected the countryside.",
+    "D": "Plagues had no significant effect on the population of Constantinople.",
+    "E": "The Byzantine Empire dealt with more plagues than did the Roman Empire.",
+    "F": "The first millennium C.E. saw the least number of plague deaths.",
+    "G": "Plagues were more prevalent in urban areas than in the countryside.",
+    "H": "Constantinople was particularly vulnerable to bubonic plague",
+    "I": "Bubonic plague led to fewer deaths compared to other plagues.",
+    "J": "The Byzantine Empire was less affected by plagues compared to other empires."
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_History_100_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "The Justinian Plague had a peak mortality rate of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "The Justinian Plague had a peak mortality rate of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000-10,000 per day, which is significantly higher than the 2,000 per day listed for the Antonine Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "The table shows that the peak rate of mortality for the Justinian Plague was higher than for the Antonine Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "The table shows that the peak rate of mortality increased from the Antonine Plague to the Justinian Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "The peak rate of mortality for the Justinian Plague is 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "The peak rate of mortality for the Justinian Plague (5,000-10,000 per day) was higher than that of the Antonine Plague (2,000 per day).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "The Justinian Plague had a peak mortality rate of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "The peak rate of mortality for the Justinian Plague is 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "The peak rate of mortality for the Justinian Plague is listed as 5,000-10,000 per day, which is higher than the 2,000 per day recorded for the Antonine Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "The table lists the nature of the Antonine Plague as smallpox.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "The peak rate of mortality for the Justinian Plague (5,000-10,000 per day) is higher than that of the Antonine Plague (2,000 per day).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "The peak rate of mortality for the Justinian Plague (5,000\u201310,000 per day) is higher than the peak rate of mortality for the Antonine Plague (2,000 per day).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "The Peak Rate of Mortality increases significantly from the Antonine Plague to the Justinian Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "The Justinian Plague had a peak mortality rate of 5,000-10,000 per day, compared to 2,000 per day for the Antonine Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "The table lists the \"Nature of Disease\" for each plague, identifying the Antonine Plague as smallpox, the Cyprian Plague as measles or smallpox, and the Justinian Plague as bubonic plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "The peak rate of mortality for the Justinian Plague was 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "The peak rate of mortality for the Justinian Plague is higher than that of the Antonine Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "The Justinian Plague had a peak rate of mortality between 5,000 and 10,000 per day, which is the highest value listed in the table.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "The peak rate of mortality for the Justinian Plague (5,000\u201310,000 per day) is higher than that of the Antonine Plague (2,000 per day).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "The Justinian Plague had a peak mortality rate of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "The Peak Rate of Mortality for the Justinian Plague is listed as 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "The table lists the peak rate of mortality for the Antonine, Cyprian, and Justinian plagues as 2,000, 5,000, and 5,000-10,000 per day, respectively.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "The peak rate of mortality for the Justinian Plague (5,000\u201310,000 per day) was higher than that of the Antonine Plague (2,000 per day).",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "The peak rate of mortality for the Justinian Plague is listed as 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The Cyprian Plague occurred between the years 251-66 c.e.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "The Justinian Plague had a peak rate of mortality between 5,000 and 10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "The table lists the peak rate of mortality for the Antonine, Cyprian, and Justinian Plagues.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "The Justinian Plague had a peak rate of mortality between 5,000 and 10,000 people per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "The 'Nature of Disease' column lists 'bubonic plague' for the Justinian Plague.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "The Justinian Plague had a peak rate of mortality between 5,000 and 10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "The Justinian Plague had a peak rate of mortality ranging from 5,000 to 10,000 per day, which is higher than the other plagues listed.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day, which is higher than the rates for the previous two plagues listed.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "The Justinian Plague had a peak mortality rate of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "The Justinian Plague had a peak rate of mortality between 5,000 and 10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "The table shows that the Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "The Justinian Plague had the highest peak rate of mortality (5,000\u201310,000 per day) compared to the Antonine and Cyprian plagues.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "The table indicates that the Justinian Plague had a peak rate of mortality between 5,000 and 10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "The table shows the peak rate of mortality for the Antonine Plague was 2,000 per day and for the Justinian Plague was 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "The Justinian Plague had a peak rate of mortality between 5,000 and 10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "The nature of the disease associated with the Antonine Plague is listed as smallpox.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "The Justinian Plague is associated with a peak rate of mortality of 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "The Justinian Plague lists a peak rate of mortality between 5,000 and 10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000\u201310,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "The Justinian Plague had the highest peak rate of mortality, recorded at 5,000 to 10,000 deaths per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "The Justinian Plague had a peak rate of mortality of 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "The Peak Rate of Mortality for the Justinian Plague is listed as 5,000-10,000 per day.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "The peak rate of mortality for the Justinian Plague is recorded as 5,000\u201310,000 per day.",
+      "has_premise": true
+    }
+  ]
+}

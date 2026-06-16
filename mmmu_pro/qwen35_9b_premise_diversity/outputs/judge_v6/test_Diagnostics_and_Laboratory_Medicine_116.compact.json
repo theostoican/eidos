@@ -1,0 +1,501 @@
+{
+  "id": "test_Diagnostics_and_Laboratory_Medicine_116",
+  "subject": "Diagnostics_and_Laboratory_Medicine",
+  "gold": "F",
+  "question": "What is the major pathologic process in this lesion? <image 1>",
+  "options": {
+    "A": "Malignant",
+    "B": "Metaplastic",
+    "C": "Regenerative",
+    "D": "Neoplastic",
+    "E": "Inflammatory",
+    "F": "Proliferative",
+    "G": "Traumatic",
+    "H": "Dysplastic",
+    "I": "Infectious",
+    "J": "Degenerative"
+  },
+  "image_path": "/workspace/mmmupro_qwen3vl/outputs/images/test_Diagnostics_and_Laboratory_Medicine_116_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "premise": "A parasitic larva is surrounded by a thick fibrous capsule and chronic inflammatory cells.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "premise": "A large cross-section of a nematode is visible within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "premise": "A cross-section of a parasitic nematode is embedded within the inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "premise": "A cross-section of a parasitic worm is visible within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "premise": "A cross-section of a parasitic nematode larva is visible within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "premise": "A cross-section of a parasitic worm is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "premise": "A large, eosinophilic cross-section of a parasitic worm is embedded in the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "premise": "A cross-section of a parasitic worm is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "premise": "A cross-section of a parasitic worm is embedded within inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "premise": "A large, eosinophilic helminth is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "premise": "A large, eosinophilic nematode is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "premise": "A large, cross-sectioned parasitic worm is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "premise": "A cross-section of a helminth is embedded in tissue that is heavily infiltrated by inflammatory cells.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "premise": "A cross-section of a parasitic worm is visible within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "premise": "A large, eosinophilic, worm-like structure is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "premise": "The image shows a tissue section with a large, encapsulated cyst containing a larval nematode.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "premise": "The image shows a cross-section of a parasitic worm embedded in inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "premise": "A large parasitic egg with a thick shell is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "premise": "A cross-section of a nematode is visible within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "premise": "A large parasitic egg is embedded within the surrounding tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "premise": "A large, ovoid parasitic egg is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "premise": "A large, eosinophilic foreign body is surrounded by a dense chronic inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "premise": "A cross-section of a parasitic worm is visible embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "premise": "A nematode larva is embedded within the tissue, surrounded by a dense inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "premise": "A cross-section of a parasitic worm is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "premise": "A large nematode worm is embedded within the tissue wall.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "premise": "A cross-section of a parasitic nematode larva is present within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "premise": "A cross-section of a nematode larva is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "premise": "The image shows",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "premise": "An egg with a lateral spine is visible embedded in the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "premise": "A large parasitic egg is surrounded by a dense inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "premise": "A large, oval parasitic egg with a thick shell is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "premise": "A laminated, calcified structure resembling a phlebolith is visible.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "premise": "A large, eosinophilic nematode is embedded within inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "premise": "A large, lateral-spined helminthic egg is embedded within the tissue section.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "premise": "A large, eosinophilic parasitic egg is surrounded by a dense granulomatous inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "premise": "A large, eosinophilic parasitic egg is embedded within a granulomatous reaction in the ovarian tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "premise": "A cross-section of a nematode worm is visible embedded within the inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "premise": "A parasitic egg with a thick shell is surrounded by a dense granulomatous inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "premise": "A cross-section of a parasitic worm is embedded within the surrounding tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "premise": "Shelled parasitic eggs are embedded within the inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "premise": "A large, cross-section of a parasitic egg with a thick, striated shell is embedded within the tissue and surrounded by a heavy inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "premise": "A large parasitic egg is surrounded by a dense granulomatous inflammatory reaction.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "premise": "A cross-section of a larval nematode is visible within a cystic cavity surrounded by inflammatory cells.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "premise": "A cross-section of an adult parasitic worm is visible within the tissue section.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "premise": "The image shows a large, thick-shelled parasitic egg embedded within inflamed tissue adjacent to a lumen.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "premise": "A cross-section of a parasitic egg with lateral spines is visible within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "premise": "A cross-section of a parasitic egg with a thick, laminated shell is embedded within a dense inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "premise": "An adult nematode worm with distinct cuticular ridges and lateral alae is embedded within the lumen of the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "premise": "A large cross-section of a helminth (parasitic worm) is embedded within the inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "premise": "The tissue section contains large, oval structures with laminated shells consistent with parasitic eggs embedded within an inflammatory response.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "premise": "A large, calcified egg structure is surrounded by a dense granulomatous inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "premise": "",
+      "has_premise": false
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "premise": "A cross-section of a coiled parasitic worm larva is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "premise": "The image shows a large, oval parasite with a thick shell and internal hooks embedded within inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "premise": "A cross-section of a parasitic worm is visible embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "premise": "A large, eosinophilic, shell-like structure resembling a parasitic egg is embedded within the inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "premise": "A large parasite egg is embedded in the tissue and surrounded by a granulomatous inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "premise": "A large, thick-shelled parasitic egg is visible within a tissue section characterized by a dense inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "premise": "The tissue section shows cystic spaces containing eosinophilic concretions surrounded by a chronic inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "premise": "\"The image shows a cystic lesion with a laminated membrane and daughter cysts.\"",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "premise": "A large, thick-shelled parasitic egg is embedded within the tissue section.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "premise": "An eosinophilic, laminated parasitic larva is embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "premise": "A large, laminated parasitic egg is embedded within a tissue section surrounded by inflammation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "premise": "A cross-section of a parasitic worm is embedded within a lesion showing chronic inflammation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "premise": "A large, eosinophilic, crystalline foreign body is embedded within the connective tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "premise": "The image shows a tissue section containing a large cross-section of a nematode worm.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "premise": "A large, eosinophilic, calcified structure is surrounded by a dense infiltrate of inflammatory cells.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "premise": "Cross-sections of nematode worms are visible embedded within the tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "premise": "The image shows a large, laminated parasitic egg embedded within the tissue section.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "premise": "The image displays a cross-section of a parasitic larva surrounded by granulomatous inflammatory tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "premise": "A nematode larva is embedded within the tissue wall.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "premise": "Eosinophilic structures resembling a nematode and parasitic eggs are visible within the tissue section.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "premise": "A large, eosinophilic parasitic egg is embedded within a granulomatous inflammatory reaction.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "premise": "A cross-section of a nematode larva is embedded within inflamed tissue.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "premise": "Thick-shelled, anucleated structures resembling parasitic eggs are embedded within a dense area of chronic inflammation.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "premise": "A large parasitic egg is surrounded by a dense granulomatous inflammatory infiltrate.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "premise": "The histology shows a granulomatous inflammatory reaction surrounding a large, eosinophilic parasitic egg.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "premise": "A nematode larva is embedded within the wall of a cystic cavity.",
+      "has_premise": true
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "premise": "A large eosinophilic parasitic egg is embedded within the tissue.",
+      "has_premise": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "n_questions": 24,
+  "accuracy": 0.7917,
+  "correct": 19,
+  "no_answer": 0,
+  "truncated_at_max": 1,
+  "gen_seconds": 873.3,
+  "questions_per_sec": 0.027,
+  "total_output_tokens": 164063,
+  "mean_output_tokens": 6836.0,
+  "median_output_tokens": 2657,
+  "max_output_tokens": 40960,
+  "decode_tokens_per_sec": 187.9
+}
