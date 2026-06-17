@@ -366,12 +366,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 10,
-      "premise": "\"The table indicates that the beta for Growth in GNP is 1.67,",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 11,
       "premise": "The beta ($\\beta$) for the Growth in GNP factor is 1.67.",
       "has_premise": true
@@ -452,12 +446,6 @@
       "top_p": 1.0,
       "sample_idx": 8,
       "premise": "The beta for the Growth in GNP factor is 1.67.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 9,
-      "premise": "The chart lists the beta, expected value, and actual value for the factors Growth in GNP and Inflation.\"",
       "has_premise": true
     },
     {

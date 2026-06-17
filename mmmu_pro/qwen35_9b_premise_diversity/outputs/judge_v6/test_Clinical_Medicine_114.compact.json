@@ -421,12 +421,6 @@
     },
     {
       "top_p": 1.0,
-      "sample_idx": 3,
-      "premise": "* The pericardial cavity is filled with a",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
       "sample_idx": 4,
       "premise": "The pericardial cavity is filled with a large volume of dark, hemorrhagic fluid.",
       "has_premise": true
@@ -489,12 +483,6 @@
       "top_p": 1.0,
       "sample_idx": 14,
       "premise": "The pericardial cavity is distended with a large, dark, coagulated hematoma or clot.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 15,
-      "premise": "The pericardial sac contains a large volume of dark red, coagulated blood (hemopericardium).",
       "has_premise": true
     }
   ]

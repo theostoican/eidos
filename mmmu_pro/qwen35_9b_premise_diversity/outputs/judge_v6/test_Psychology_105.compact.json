@@ -25,26 +25,8 @@
     },
     {
       "top_p": 0.5,
-      "sample_idx": 1,
-      "premise": "The white triangle is not explicitly drawn with continuous lines.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 2,
       "premise": "The edges of the white triangle are formed by the boundaries with the surrounding black regions.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 3,
-      "premise": "The triangle is perceived despite the absence of explicit lines defining its edges.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 4,
-      "premise": "The image displays a white triangle inscribed within a black circle.",
       "has_premise": true
     },
     {
@@ -87,12 +69,6 @@
       "top_p": 0.5,
       "sample_idx": 11,
       "premise": "The white triangle is perceived as a distinct shape despite having no explicit black outlines.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 12,
-      "premise": "The black shapes are arranged to form the boundaries of a central white triangle.",
       "has_premise": true
     },
     {
@@ -181,12 +157,6 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 11,
-      "premise": "A white triangle is superimposed on a black circle.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 12,
       "premise": "The white triangle is defined by the surrounding black shapes rather than by explicit black lines drawn on the figure.",
       "has_premise": true
@@ -211,20 +181,8 @@
     },
     {
       "top_p": 0.9,
-      "sample_idx": 0,
-      "premise": "The black shapes are arranged to form the corners and sides of a central white triangle.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
       "sample_idx": 1,
       "premise": "The edges of the white triangle are implied rather than explicitly drawn.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 2,
-      "premise": "\"Three black circular segments are arranged around a central white area.\"",
       "has_premise": true
     },
     {
@@ -379,12 +337,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 12,
-      "premise": "A white triangle is centrally located within a black circular shape.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 13,
       "premise": "The edges of the white triangle are not explicitly drawn with black lines.",
       "has_premise": true
@@ -433,12 +385,6 @@
     },
     {
       "top_p": 1.0,
-      "sample_idx": 5,
-      "premise": "The white triangle is not outlined by a black line.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
       "sample_idx": 6,
       "premise": "The white triangle has no explicit outline but is bounded by the black background.",
       "has_premise": true
@@ -471,12 +417,6 @@
       "top_p": 1.0,
       "sample_idx": 11,
       "premise": "Black shapes surrounding a white area touch the vertices of the perceived triangle.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 12,
-      "premise": "\"Black shapes surround a central white region.\"",
       "has_premise": true
     },
     {

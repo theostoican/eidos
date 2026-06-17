@@ -331,12 +331,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 4,
-      "premise": "Point A is the highest point on the energy curve.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 5,
       "premise": "Point A is the highest point on the energy curve.",
       "has_premise": true

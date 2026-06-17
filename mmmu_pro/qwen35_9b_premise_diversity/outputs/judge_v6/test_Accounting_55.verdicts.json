@@ -293,11 +293,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 10,
-      "correct": true
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 11,
       "correct": true
     },
@@ -364,11 +359,6 @@
     {
       "top_p": 1.0,
       "sample_idx": 8,
-      "correct": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 9,
       "correct": true
     },
     {

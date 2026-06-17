@@ -36,18 +36,6 @@
     },
     {
       "top_p": 0.5,
-      "sample_idx": 4,
-      "premise": "The leftmost rock sample displays a grey, granular texture typical of Diorite.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 5,
-      "premise": "The left rock sample has a grey, speckled texture.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 6,
       "premise": "The rightmost rock displays a clear, coarse-grained texture with a mix of white, black, and grey minerals.",
       "has_premise": true
@@ -122,18 +110,6 @@
       "top_p": 0.7,
       "sample_idx": 2,
       "premise": "The middle rock sample displays a bluish-grey color with a speckled texture.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 3,
-      "premise": "The",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 4,
-      "premise": "The",
       "has_premise": true
     },
     {
@@ -228,12 +204,6 @@
     },
     {
       "top_p": 0.9,
-      "sample_idx": 4,
-      "premise": "The middle rock specimen is a medium-grey color with a granular texture.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
       "sample_idx": 5,
       "premise": "The central rock sample is a rectangular, grey, coarse-grained stone.",
       "has_premise": true
@@ -318,20 +288,8 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 3,
-      "premise": "\"The leftmost image shows a rough, irregular rock fragment with a medium-grey, speckled texture.\"",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 4,
       "premise": "The first rock displays a medium-grained texture with distinct light and dark mineral speckles.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 5,
-      "premise": "The middle rock exhibits a light grey, uniform granular texture.",
       "has_premise": true
     },
     {
@@ -356,12 +314,6 @@
       "top_p": 0.95,
       "sample_idx": 9,
       "premise": "The middle rock specimen is gray and has a speckled texture.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 10,
-      "premise": "The right image shows a speckled rock with dark and light minerals.",
       "has_premise": true
     },
     {

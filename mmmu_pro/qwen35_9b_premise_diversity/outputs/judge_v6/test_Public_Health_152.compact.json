@@ -199,12 +199,6 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 14,
-      "premise": "\"4/29 - patient is readmitted with complaints of acute incisional pain since the day before. Surgeon opens the wound into the fascial level...\"",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 15,
       "premise": "The patient had a positive MRSA screening test on the day of admission.",
       "has_premise": true
@@ -231,18 +225,6 @@
       "top_p": 0.9,
       "sample_idx": 3,
       "premise": "The timeline indicates the patient underwent surgery on 4/12 and was readmitted for acute incisional pain requiring wound reopening on 4/29.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 4,
-      "premise": "\"4/12 - patient undergoes total abdominal hysterectomy\" and \"4/29 - patient is readmitted with complaints of acute incisional pain\".",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 5,
-      "premise": "\"Patient had an active MRSA screening test positive on admission.\"",
       "has_premise": true
     },
     {
@@ -291,12 +273,6 @@
       "top_p": 0.9,
       "sample_idx": 13,
       "premise": "The patient underwent a total abdominal hysterectomy on 4/12 and was readmitted on 4/29 with acute incisional pain requiring the surgeon to open the wound.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 14,
-      "premise": "Culture results",
       "has_premise": true
     },
     {

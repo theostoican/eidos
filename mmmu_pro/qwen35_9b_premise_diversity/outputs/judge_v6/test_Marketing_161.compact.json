@@ -54,12 +54,6 @@
     },
     {
       "top_p": 0.5,
-      "sample_idx": 6,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 7,
       "premise": "The table displays the observed frequencies for five personality traits for Business and Social Science majors.",
       "has_premise": true
@@ -116,12 +110,6 @@
       "top_p": 0.7,
       "sample_idx": 0,
       "premise": "The table shows that Social Science majors have higher values than Business majors for all five personality traits listed.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 1,
-      "premise": "The sample size for Social Science majors is larger than for Business majors.\"",
       "has_premise": true
     },
     {
@@ -200,12 +188,6 @@
       "top_p": 0.7,
       "sample_idx": 14,
       "premise": "Social Science majors have higher observed frequencies than Business majors for all five personality traits.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 15,
-      "premise": "The table shows that 58 Business majors are Neurotic.",
       "has_premise": true
     },
     {

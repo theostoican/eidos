@@ -480,12 +480,6 @@
     },
     {
       "top_p": 1.0,
-      "sample_idx": 13,
-      "premise": "Relationship types are represented by diamond-shaped nodes labeled with text such as TEACHES or EMPLOYS.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
       "sample_idx": 14,
       "premise": "Cardinality constraints are expressed as pairs of numbers in parentheses on the lines connecting entities to relationship diamonds.",
       "has_premise": true

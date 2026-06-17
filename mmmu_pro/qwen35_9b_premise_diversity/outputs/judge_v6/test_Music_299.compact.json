@@ -13,39 +13,9 @@
   "premises": [
     {
       "top_p": 0.5,
-      "sample_idx": 0,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 1,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 2,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 3,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 4,
       "premise": "The fourth musical staff displays a key signature with five flat symbols.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 5,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.5,
@@ -55,57 +25,15 @@
     },
     {
       "top_p": 0.5,
-      "sample_idx": 7,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 8,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 9,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 10,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 11,
       "premise": "The fourth musical staff displays a key signature with five flat symbols.",
       "has_premise": true
     },
     {
       "top_p": 0.5,
-      "sample_idx": 12,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 13,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 14,
       "premise": "The fourth musical staff shows a treble clef with five flat symbols.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.5,
-      "sample_idx": 15,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.7,
@@ -121,63 +49,15 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 2,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 3,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 4,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 5,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 6,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 7,
       "premise": "The rightmost staff displays a treble clef with five flats in its key signature.",
       "has_premise": true
     },
     {
       "top_p": 0.7,
-      "sample_idx": 8,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 9,
       "premise": "The fourth staff displays a treble clef with a key signature consisting of four flats.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 10,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 11,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.7,
@@ -198,52 +78,10 @@
       "has_premise": true
     },
     {
-      "top_p": 0.7,
-      "sample_idx": 15,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 0,
-      "premise": "** The key signature of Bb minor consists of five flats: B, E, A, D, and G.",
-      "has_premise": true
-    },
-    {
       "top_p": 0.9,
       "sample_idx": 1,
       "premise": "The fourth staff shows a treble clef with a key signature of five flats.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 2,
-      "premise": "The fourth option shows a treble clef with flats on the B and E lines.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 3,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 4,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 5,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 6,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.9,
@@ -265,21 +103,9 @@
     },
     {
       "top_p": 0.9,
-      "sample_idx": 10,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.9,
       "sample_idx": 11,
       "premise": "The fourth option displays a treble clef staff with five flat symbols placed on the lines and spaces.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 12,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.9,
@@ -307,26 +133,8 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 1,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 2,
       "premise": "The fourth musical stave displays a key signature with five flats.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 3,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 4,
-      "premise": "The question asks for the key signature of B\u266d minor.",
       "has_premise": true
     },
     {
@@ -337,27 +145,9 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 6,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 7,
       "premise": "The fourth option displays a treble clef with five flat symbols.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 8,
-      "premise": "The fourth staff shows a treble clef accompanied by five flat symbols on the B, E, A, D, and G lines and spaces.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 9,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.95,
@@ -373,12 +163,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 12,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 13,
       "premise": "The fourth staff displays a treble clef accompanied by a key signature with five flat symbols.",
       "has_premise": true
@@ -387,24 +171,6 @@
       "top_p": 0.95,
       "sample_idx": 14,
       "premise": "The fourth musical staff shows a treble clef with five flat symbols.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 15,
-      "premise": "The key signature for Bb minor consists of five flats.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 0,
-      "premise": "\"The first option shows a grand staff with two flats in both the treble and bass clefs.\"",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 1,
-      "premise": "**",
       "has_premise": true
     },
     {
@@ -421,48 +187,6 @@
     },
     {
       "top_p": 1.0,
-      "sample_idx": 4,
-      "premise": "The fourth musical stave shows a key signature containing four flats. (Bb, Eb, Ab, Db). This matches the Bb minor scale.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 5,
-      "premise": "<one short sentence...>\".",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 6,
-      "premise": "\"The key signature for Bb minor consists of five flats: Bb, Eb, Ab, Db, and Gb.\" (This is a fact, is it visual? No).",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 7,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 8,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 9,
-      "premise": "The first clef shows a key signature with five flats.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 10,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 1.0,
       "sample_idx": 11,
       "premise": "The fourth musical staff displays a key signature containing five flats.",
       "has_premise": true
@@ -471,18 +195,6 @@
       "top_p": 1.0,
       "sample_idx": 12,
       "premise": "The fourth musical staff displays five flat symbols, while the other three staves display three flat symbols each.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 13,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 14,
-      "premise": "I need to find an option with 5 flats.",
       "has_premise": true
     },
     {

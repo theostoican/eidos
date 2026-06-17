@@ -9,6 +9,16 @@ incorrect; verdicts are later merged by judge_merge.py.
 import argparse, json, collections
 from pathlib import Path
 
+def premise_text(text):
+    """Extract the premise sentence the judge should score: text after the LAST
+    'Premise:' marker, first line only (see extract_premises.py). Falls back to
+    the full text if no marker is present (truncated generations)."""
+    if "Premise:" in text:
+        prem = text.split("Premise:")[-1].strip().split("\n")[0].strip()
+        if prem:
+            return prem
+    return text.strip()
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--premises", default="/workspace/mmmupro_qwen3vl/outputs/premises_v5.jsonl")
@@ -31,8 +41,10 @@ def main():
             "id": qid, "subject": q["subject"], "gold": q["gold"],
             "question": q["question"], "options": q["options"],
             "image_paths": q["image_paths"],
+            # The judge scores the EXTRACTED PREMISE only (not the <think> trace),
+            # so correctness measures the same object the diversity embedding does.
             "premises": [{"top_p": r["top_p"], "sample_idx": r["sample_idx"],
-                          "text": r["text"].strip()} for r in samp],
+                          "text": premise_text(r["text"])} for r in samp],
         }
         p = out / f"{qid}.json"
         json.dump(packet, open(p, "w"), indent=2)

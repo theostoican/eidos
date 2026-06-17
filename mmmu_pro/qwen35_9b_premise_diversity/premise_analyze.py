@@ -4,9 +4,24 @@
 
 verdicts file (jsonl): {"id":..., "top_p":..., "sample_idx":..., "correct": true/false}
 If absent, frac_correct is left null (diversity-only pass).
+
+Diversity is embedded over the EXTRACTED PREMISE (the single visual fact the model
+states on its `Premise:` line), not the full <think> trace — the same text the
+judge scores correctness on, so diversity and correctness measure the same object.
+See extract_premises.py for the extraction rule.
 """
 import argparse, json, collections, math
 import numpy as np
+
+def premise_text(text):
+    """The extracted premise: text after the LAST 'Premise:' marker, first line.
+    Falls back to the post-</think> answer tail if no marker is present
+    (only happens for truncated generations, which the clean set excludes)."""
+    if "Premise:" in text:
+        prem = text.split("Premise:")[-1].strip().split("\n")[0].strip()
+        if prem:
+            return prem
+    return final_answer_text(text)
 
 def final_answer_text(text):
     if "</think>" in text:
@@ -67,7 +82,7 @@ def main():
 
     from sentence_transformers import SentenceTransformer
     embedder = SentenceTransformer(args.embed_model, device="cuda")
-    texts = [final_answer_text(r["text"]) for r in rows]
+    texts = [premise_text(r["text"]) for r in rows]
     emb = embedder.encode(texts, batch_size=64, normalize_embeddings=False, show_progress_bar=False)
     eby = {id(r): emb[i] for i, r in enumerate(rows)}
 

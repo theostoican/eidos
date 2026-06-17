@@ -108,12 +108,6 @@
       "has_premise": true
     },
     {
-      "top_p": 0.5,
-      "sample_idx": 15,
-      "premise": "",
-      "has_premise": false
-    },
-    {
       "top_p": 0.7,
       "sample_idx": 0,
       "premise": "The statue depicts a figure wearing a draped tunic that covers the body.",
@@ -145,18 +139,6 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 5,
-      "premise": "The figure stands atop a decorative column.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 6,
-      "premise": "The figure is draped in a himation that covers the legs and falls to the feet.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 7,
       "premise": "The figure is wearing a draped garment that covers the lower torso and legs.",
       "has_premise": true
@@ -172,12 +154,6 @@
       "sample_idx": 9,
       "premise": "The figure is clothed in a long, pleated chiton that covers the body.",
       "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 10,
-      "premise": "",
-      "has_premise": false
     },
     {
       "top_p": 0.7,
@@ -217,32 +193,14 @@
     },
     {
       "top_p": 0.9,
-      "sample_idx": 1,
-      "premise": "The figure has a long, straight lock of hair hanging down the right side of the face.\"",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
       "sample_idx": 2,
       "premise": "The statue is draped in a chiton and wears an elaborate braided hairstyle.",
       "has_premise": true
     },
     {
       "top_p": 0.9,
-      "sample_idx": 3,
-      "premise": "The statue is draped in a garment with complex folds covering the torso and legs.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
       "sample_idx": 4,
       "premise": "The figure is depicted wearing a long, draped garment that covers the torso and legs.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 5,
-      "premise": "The figure is draped in a heavy, vertically-folded chiton.",
       "has_premise": true
     },
     {
@@ -427,20 +385,8 @@
     },
     {
       "top_p": 1.0,
-      "sample_idx": 4,
-      "premise": "The statue is depicted wearing a draped garment (chiton), distinct from the nudity of typical kouroi.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
       "sample_idx": 5,
       "premise": "The statue depicts a clothed male figure standing in a relaxed contrapposto pose.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 6,
-      "premise": "The statue stands on a decorated column.",
       "has_premise": true
     },
     {
@@ -483,12 +429,6 @@
       "top_p": 1.0,
       "sample_idx": 13,
       "premise": "The statue features a raised right arm and is clad in a himation with deep pleats.",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
-      "sample_idx": 14,
-      "premise": "The statue is draped in a",
       "has_premise": true
     },
     {

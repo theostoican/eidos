@@ -115,12 +115,6 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 0,
-      "premise": "The image shows a cross-section of a parasitic worm embedded in inflamed tissue.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 1,
       "premise": "A large parasitic egg with a thick shell is embedded within the tissue.",
       "has_premise": true
@@ -187,12 +181,6 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 12,
-      "premise": "The image shows",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 13,
       "premise": "An egg with a lateral spine is visible embedded in the tissue.",
       "has_premise": true
@@ -207,12 +195,6 @@
       "top_p": 0.7,
       "sample_idx": 15,
       "premise": "A large, oval parasitic egg with a thick shell is embedded within the tissue.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 0,
-      "premise": "A laminated, calcified structure resembling a phlebolith is visible.",
       "has_premise": true
     },
     {
@@ -331,12 +313,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 4,
-      "premise": "",
-      "has_premise": false
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 5,
       "premise": "A cross-section of a coiled parasitic worm larva is embedded within the tissue.",
       "has_premise": true
@@ -375,12 +351,6 @@
       "top_p": 0.95,
       "sample_idx": 11,
       "premise": "The tissue section shows cystic spaces containing eosinophilic concretions surrounded by a chronic inflammatory infiltrate.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 12,
-      "premise": "\"The image shows a cystic lesion with a laminated membrane and daughter cysts.\"",
       "has_premise": true
     },
     {

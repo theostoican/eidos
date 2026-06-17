@@ -204,12 +204,6 @@
       "has_premise": true
     },
     {
-      "top_p": 0.7,
-      "sample_idx": 15,
-      "premise": "The table lists the \"Nature of Disease\" for each plague, identifying the Antonine Plague as smallpox, the Cyprian Plague as measles or smallpox, and the Justinian Plague as bubonic plague.",
-      "has_premise": true
-    },
-    {
       "top_p": 0.9,
       "sample_idx": 0,
       "premise": "The table lists the peak rate of mortality for the Justinian Plague as 5,000\u201310,000 per day.",

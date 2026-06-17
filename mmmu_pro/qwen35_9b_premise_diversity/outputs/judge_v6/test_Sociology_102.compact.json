@@ -444,12 +444,6 @@
     },
     {
       "top_p": 1.0,
-      "sample_idx": 8,
-      "premise": "The image displays portraits of historical figures labeled with names such as Franklin and Voltaire. (I will mention specific names as examples but not a list).",
-      "has_premise": true
-    },
-    {
-      "top_p": 1.0,
       "sample_idx": 9,
       "premise": "The image displays portraits of historical figures with their names labeled below them, including Franklin, Voltaire, and Kant.",
       "has_premise": true

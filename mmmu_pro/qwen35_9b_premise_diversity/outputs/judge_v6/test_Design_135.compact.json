@@ -55,12 +55,6 @@
     },
     {
       "top_p": 0.5,
-      "sample_idx": 6,
-      "premise": "The mountains are depicted with a curved, prism-like shape.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 7,
       "premise": "The artist uses a winding wooden bridge to create a sense of depth and perspective.",
       "has_premise": true
@@ -91,12 +85,6 @@
     },
     {
       "top_p": 0.5,
-      "sample_idx": 12,
-      "premise": "The image contains multiple colors like blue, white, and brown.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.5,
       "sample_idx": 13,
       "premise": "The bridge recedes into the distance, creating a sense of depth.",
       "has_premise": true
@@ -111,12 +99,6 @@
       "top_p": 0.5,
       "sample_idx": 15,
       "premise": "The bridge curves into the distance, demonstrating the artist's use of perspective to create depth.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
-      "sample_idx": 0,
-      "premise": "The image displays a woodblock print with distinct layers of color.",
       "has_premise": true
     },
     {
@@ -175,12 +157,6 @@
     },
     {
       "top_p": 0.7,
-      "sample_idx": 10,
-      "premise": "The water is depicted in a deep, vibrant blue.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.7,
       "sample_idx": 11,
       "premise": "The artist employs a distinct, vibrant blue pigment for the water and shaded areas.",
       "has_premise": true
@@ -223,12 +199,6 @@
     },
     {
       "top_p": 0.9,
-      "sample_idx": 2,
-      "premise": "The artist used a stenciling technique to create the fine, repetitive lines of the bridge railing.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
       "sample_idx": 3,
       "premise": "The distinct separation of color fields, such as the blue water and white snow, demonstrates the use of multiple printing blocks.",
       "has_premise": true
@@ -237,12 +207,6 @@
       "top_p": 0.9,
       "sample_idx": 4,
       "premise": "The artist employs a vibrant blue color for the river water.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.9,
-      "sample_idx": 5,
-      "premise": "The road narrows as it recedes into the background, creating a vanishing point.",
       "has_premise": true
     },
     {
@@ -307,12 +271,6 @@
     },
     {
       "top_p": 0.95,
-      "sample_idx": 0,
-      "premise": "The bridge recedes into the distance.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
       "sample_idx": 1,
       "premise": "The water and snow-capped mountain are rendered in a distinct, vibrant blue color.",
       "has_premise": true
@@ -333,12 +291,6 @@
       "top_p": 0.95,
       "sample_idx": 4,
       "premise": "The artist employs a distinct blue pigment to render the water and mist.",
-      "has_premise": true
-    },
-    {
-      "top_p": 0.95,
-      "sample_idx": 5,
-      "premise": "The artist uses distinct, flat areas of blue and white separated by sharp lines to render the water and snow.",
       "has_premise": true
     },
     {
