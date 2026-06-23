@@ -1,0 +1,421 @@
+{
+  "id": "test_Biology_259",
+  "subject": "Biology",
+  "gold": "G",
+  "question": "Use the phylogenetic tree in <image 1>. Notice that the tree is not a true cladogram based on shared, derived characters, but on the time of divergence from a common ancestor. Which of the following statements about the above cladogram is the most accurate?",
+  "options": {
+    "A": "It depicts an unrooted phylogenetic tree.",
+    "B": "This is an example of an ultrametric tree.",
+    "C": "D is most likely extinct.",
+    "D": "The tree shows that A and B share the most recent common ancestor.",
+    "E": "Traits formed at 3 and 4 are considered plesiomorphies.",
+    "F": "D is the most primitive organism on the tree.",
+    "G": "A trait that formed at 5 is considered an autapomorphy.",
+    "H": "A and B are more closely related to each other than either is to C or D.",
+    "I": "The tree shows that C and D have the same evolutionary distance from A.",
+    "J": "B is as evolutionarily distant from C as A is from D."
+  },
+  "image_path": "outputs/images/test_Biology_259_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" with an upward arrow and the word \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom; the tree originates from a root node labeled \"4\" which branches into a rightward lineage containing a node labeled \"5\" leading to tip \"E\", and a leftward lineage leading to node \"3\", which branches into a leftward tip \"A\" and a rightward lineage leading to node \"2\", which branches into a leftward tip \"B\" and a rightward lineage leading to node \"1\", which finally branches into tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "text": "A hand-drawn phylogenetic tree is oriented with a vertical axis labeled \"Time\" with an arrow pointing upwards to \"Present\" and a horizontal axis at the bottom labeled \"5 Million Years\", depicting a branching structure where the root splits at node 4 into a right branch leading to taxon E (marked with a small '5'' symbol) and a left branch leading to node 3, which splits into a branch leading to taxon A and a branch leading to node 2, which splits into a branch leading to taxon B and a branch leading to node 1, which finally splits into taxa C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" featuring an upward-pointing arrow and the word \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom; the tree structure originates from a base line and splits at node 4, with the right branch leading to tip E (marked with node 5) and the left branch leading to node 3, which bifurcates into tip A and a branch leading to node 2, which bifurcates into tip B and a branch leading to node 1, which finally bifurcates into tips C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram on a white background with a vertical axis labeled \"Time\" and an upward arrow pointing to \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom, originating from a base node labeled \"4\" which branches into a rightward path leading to tip \"E\" (marked with node \"5'\") and a leftward path leading to node \"3\", from which a branch extends to tip \"A\" and the main line continues upward to node \"2\", which branches to tip \"B\" and continues to node \"1\", which finally branches to tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "text": "The image displays a phylogenetic tree diagram with a vertical axis labeled \"Time\" and an upward arrow pointing to \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom, originating from a root node labeled \"4\" that branches into a line marked \"5'\" leading to tip \"E\" and a line leading to node \"3\", which branches to tip \"A\" and node \"2\", which branches to tip \"B\" and node \"1\", which branches to tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "text": "A hand-drawn phylogenetic tree diagram displays evolutionary history with a vertical axis labeled \"Time\" pointing upward to \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom, originating from a common ancestor at the base and branching through numbered nodes (4, 3, 2, 1, 5) to terminal taxa labeled A, B, C, D, and E, where node 4 splits into a rightward branch leading to node 5 and then to E, and a leftward branch leading to node 3, which splits into a branch to A and a branch to node 2, which splits into a branch to B and a branch to node 1, which finally splits into branches to C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" with an upward arrow and \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom, featuring a branching structure where the base splits at node 4 into a branch leading to tip E (marked with '5') and a branch leading to node 3, which splits into tip A and node 2, which splits into tip B and node 1, which splits into tips C and D, with nodes 1, 2, 3, and 4 marking the divergence points."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis on the left labeled \"Time\" with an arrow pointing upwards to the word \"Present\" and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree structure originates from a central vertical line at the bottom and branches out, with the lowest node labeled \"4\" splitting into a right branch leading to node \"5\" and tip \"E\", and a left branch leading to node \"3\", which splits into a branch leading to tip \"A\" and a branch leading to node \"2\", which splits into a branch leading to tip \"B\" and a branch leading to node \"1\", which finally splits into branches leading to tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" with an arrow pointing up to \"Present\" and a horizontal axis labeled \"5 Million Years,\" originating from a central root that branches at node '4' into a rightward path leading through node '5' to tip 'E' and a leftward path leading to node '3', which branches to tip 'A' and an upward path to node '2', which branches to tip 'B' and an upward path to node '1', which finally branches to tips 'C' and 'D'."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled \"Time\" with an arrow pointing up to \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom; the tree originates from a central root leading to node 4, which branches into a rightward lineage passing through label 5 to terminal taxon E, and a leftward lineage leading to node 3, which splits into terminal taxon A and an upward lineage to node 2, which splits into terminal taxon B and an upward lineage to node 1, which finally splits into terminal taxa C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" with an upward arrow pointing to \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom left; the tree structure branches from a root at the bottom to terminal taxa labeled A, B, C, D, and E, with internal nodes numbered 1, 2, 3, 4, and 5, where node 4 is the deepest common ancestor splitting the lineage leading to E (which has the number 5 on its branch) from the lineage leading to A, B, C, and D; node 3 is the common ancestor of A, B, C, and D, splitting off A; node 2 is the common ancestor of B, C, and D, splitting off B; and node 1 is the common ancestor of C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled \"Time\" with an arrow pointing up to \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom; the tree structure originates from a central vertical line at the bottom and branches upward through four numbered nodes (4, 3, 2, 1) where node 4 is the deepest common ancestor splitting into a lineage leading to taxon E (marked with a tick labeled '5'' on the branch) and a lineage leading to node 3, which further splits into taxon A and node 2, which splits into taxon B and node 1, which finally splits into taxa C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis on the left labeled \"Time\" featuring an upward-pointing arrow and the word \"Present\" at the top, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree structure originates from a base node labeled \"4\", which splits into a rightward branch leading to terminal taxon \"E\" (marked with a number \"5\" on the branch) and an upward-left branch leading to node \"3\", from which a branch extends left to terminal taxon \"A\" and the main lineage continues upward-right to node \"2\", from which a branch extends left to terminal taxon \"B\" and the main lineage continues upward-right to node \"1\", which finally splits into terminal taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "text": "The image displays a hand-drawn phylogenetic tree plotted on a graph with a vertical axis labeled \"Time\" with an arrow pointing upward to the word \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom; the tree originates from a vertical line rising from the horizontal axis to a node labeled \"4\", which bifurcates into a right branch leading to a node labeled \"5\" and then to terminal taxon \"E\", and a left branch leading to a node labeled \"3\" where taxon \"A\" branches off, continuing upward to a node labeled \"2\" where taxon \"B\" branches off, and finally continuing to a node labeled \"1\" where taxa \"C\" and \"D\" branch off."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled 'Time' with an upward arrow pointing to the word 'Present' at the top left and a horizontal axis labeled '5 Million Years' at the bottom left, depicting a branching structure where the main trunk splits at node 4 into a rightward branch leading to tip E (marked with a small tick labeled '5'' along the branch) and a leftward branch leading to node 3, which bifurcates into a branch leading to tip A and a branch leading to node 2, which bifurcates into a branch leading to tip B and a branch leading to node 1, which finally bifurcates into branches leading to tips C and D."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" with an arrow pointing upward to the word \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom, featuring a branching structure that originates from a central vertical line and splits at node 4 into a right branch leading through node 5 to tip E and a left branch leading to node 3, which splits into tip A and a branch leading to node 2, where node 2 splits into tip B and a branch leading to node 1, which finally splits into tips C and D."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" with an upward arrow and \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom, where the tree originates from a central vertical line at node '4', branching right to node '5' and tip 'E', and left to node '3', which branches left to tip 'A' and continues to node '2', which branches left to tip 'B' and continues to node '1', which finally branches to tips 'C' and 'D'."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical Y-axis labeled \"Time\" with an upward arrow and the word \"Present\" at the top, and a horizontal X-axis labeled \"5 Million Years\" at the bottom left, featuring a branching structure originating from a vertical line at the bottom that splits at node 4 into a right branch leading to node 5' and tip E, and a left branch leading to node 3; node 3 splits into a left branch to tip A and an upper branch to node 2; node 2 splits into a left-upper branch to tip B and an upper branch to node 1; and node 1 splits into a left branch to tip C and a right branch to tip D."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" pointing upward to \"Present\" and a horizontal axis at the bottom labeled \"5 Million Years,\" featuring a branching structure originating from a base that splits at node '4' into a right lineage passing through node '5' to reach taxon 'E' and a left lineage passing through node '3', which branches to taxon 'A' and node '2', where node '2' branches to taxon 'B' and node '1', which finally branches to taxa 'C' and 'D'."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis on the left labeled \"Time\" with an upward arrow pointing to \"Present\" and a horizontal axis at the bottom labeled \"5 Million Years,\" featuring a branching structure rooted at the bottom center with internal nodes numbered 1, 2, 3, 4, and 5, and terminal taxa labeled A, B, C, D, and E, where node 4 represents the deepest common ancestor splitting into a lineage leading to taxon E (via node 5) and a lineage leading to node 3, which splits into taxon A and node 2, which in turn splits into taxon B and node 1, finally splitting into taxa C and D."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "text": "A hand-drawn phylogenetic tree diagram is oriented with a vertical y-axis labeled 'Time' and an arrow pointing up to the word 'Present' at the top left, and a horizontal x-axis labeled '5 Million Years' at the bottom left. The tree structure originates from a central root at the bottom and branches upward through nodes labeled with numbers. The deepest node, labeled '4', splits into a rightward branch leading to a point labeled '5' and then to terminal taxon 'E', and a leftward branch leading to node '3'. Node '3' splits into a leftward branch to terminal taxon 'A' and an upward-right branch to node '2'. Node '2' splits into an upward-left branch to terminal taxon 'B' and an upward-right branch to node '1'. Node '1' splits into a leftward branch to terminal taxon 'C' and a rightward branch to terminal taxon 'D'."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "text": "A hand-drawn phylogenetic tree displays a vertical axis labeled \"Time\" with an arrow pointing to \"Present\" at the top and a horizontal axis labeled \"5 Million Years\" at the bottom, featuring a root structure where a node labeled \"4\" bifurcates into a rightward branch leading through node \"5'\" to terminal tip \"E\" and a leftward branch leading to node \"3,\" which splits into a branch to terminal tip \"A\" and an upward branch to node \"2,\" from which a leftward branch leads to terminal tip \"B\" and a rightward branch leads to node \"1,\" which finally splits into terminal tips \"C\" and \"D.\""
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" pointing upward to \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom; the tree originates from a central vertical line at the bottom, branching at node 4 into a rightward branch that passes through node 5 to terminate at label E, and a leftward branch that passes through node 3 (where a branch extends left to label A) and continues upward to node 2 (where a branch extends left-up to label B) and continues upward to node 1 (where branches extend left-up to label C and right-up to label D)."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled \"Time\" with an upward arrow pointing to \"Present\" at the top and a horizontal baseline labeled \"5 Million Years\" at the bottom, originating from a root and branching upward through internal nodes labeled 4, 3, 2, and 1 to terminal taxa labeled A, B, C, D, and E, with an additional point labeled \"5\" marked on the branch leading to taxon E."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "text": "A hand-drawn phylogenetic tree features a vertical axis labeled 'Time' with an arrow pointing up towards 'Present' and a horizontal axis labeled '5 Million Years'; the tree originates from a root and branches at node 4 into a rightward lineage marked with '5'' leading to tip E, and a leftward lineage leading to node 3, which bifurcates into tip A and node 2, which bifurcates into tip B and node 1, which bifurcates into tips C and D."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical Y-axis labeled \"Time\" and an arrow pointing upward to the text \"Present\" at the top left, and a horizontal axis labeled \"5 Million Years\" at the bottom left, showing five terminal taxa labeled A, B, C, D, and E branching from internal nodes labeled 1, 2, 3, 4, and 5, where node 4 is the deepest common ancestor branching into lineage E (via node 5) and a larger clade (via node 3) that further splits into A and a subclade (via node 2) containing B and a subclade (via node 1) containing C and D."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" with an upward arrow pointing to \"Present\" at the top left and a horizontal axis labeled \"5 Million Years\" at the bottom left; the tree structure begins at the bottom, rising to a node labeled \"4\", from which a branch extends to the right containing an upward arrow and the label \"5'\" leading to terminal label \"E\", while a branch extends to the left to a node labeled \"3\", which splits into a branch leading to terminal label \"A\" and a branch leading to node \"2\", which splits into a branch leading to terminal label \"B\" and a branch leading to node \"1\", which splits into branches leading to terminal labels \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "text": "A hand-drawn phylogenetic tree is plotted on a graph with a vertical axis labeled \"Time\" with an upward arrow and \"Present\" at the top, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree originates from a vertical line rising from the x-axis to node 4, which branches into a rightward line passing a label \"5'\" to terminal taxon E, and a leftward line to node 3, which splits into a line to taxon A and a line to node 2, which splits into a line to taxon B and a line to node 1, which splits into terminal taxa C and D."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "text": "The image shows a hand-drawn phylogenetic tree with a vertical Y-axis labeled \"Time\" with an arrow pointing up to the word \"Present\" and a horizontal X-axis labeled \"5 Million Years\" at the bottom left; the tree structure originates from a central vertical line at the bottom, branching upwards and to the left and right at node 4, where the rightward branch contains a small label '5' before ending at tip E, while the leftward branch leads to node 3, which splits into a leftward branch ending at tip A and a rightward branch leading to node 2, which further splits into a leftward branch ending at tip B and a rightward branch leading to node 1, which finally splits into leftward and rightward branches ending at tips C and D respectively."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "text": "A hand-drawn phylogenetic tree is depicted with a vertical axis labeled \"Time\" with an arrow pointing upward to the label \"Present\" and a horizontal axis label \"5 Million Years\" at the bottom left, originating from a central root that ascends to node 4, where it bifurcates into a right branch containing a tick mark labeled \"5\" leading to terminal \"E\" and a left branch leading to node 3, which bifurcates into a branch leading to terminal \"A\" and an upward branch leading to node 2, which bifurcates into a branch leading to terminal \"B\" and an upward branch leading to node 1, which bifurcates into branches leading to terminals \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" featuring an upward-pointing arrow next to the word \"Present\" at the top left, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree originates from a vertical line at the bottom, splitting at node 4 into a rightward branch that passes through node 5' to terminate at taxon E, and a leftward branch that splits at node 3 to terminate at taxon A, while the remaining lineage continues upward to node 2 where taxon B branches off, and finally reaches node 1 where terminal taxa C and D branch off."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis on the left labeled \"Time\" with an upward-pointing arrow and the word \"Present\" at the top, and a horizontal axis at the bottom left labeled \"5 Million Years\"; the tree structure originates from a vertical line at the bottom that rises to a node labeled \"4\", where it splits into a rightward branch leading to a node labeled \"5\" and then to tip \"E\", and a leftward branch leading to a node labeled \"3\", which splits into a branch leading to tip \"A\" and a branch leading to a node labeled \"2\", which splits into a branch leading to tip \"B\" and a branch leading to a node labeled \"1\", which finally splits into branches leading to tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "text": "A hand-drawn phylogenetic diagram features a vertical axis on the left labeled \"Time\" with an upward arrow pointing to the word \"Present\" at the top, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree structure originates from the bottom center and rises to a junction labeled '4', which splits into a rightward branch passing through a point labeled '5' to end at taxon 'E', and a leftward branch leading to a junction labeled '3', which splits into a branch ending at taxon 'A' and a branch leading to a junction labeled '2', which splits into a branch ending at taxon 'B' and a branch leading to a junction labeled '1', which finally splits into branches ending at taxa 'C' and 'D'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "text": "The image shows a hand-drawn phylogenetic tree diagram featuring a vertical axis labeled \"Time\" with an upward arrow pointing to the text \"Present\" at the top, and a horizontal baseline at the bottom left labeled \"5 Million Years\"; the tree originates from a central vertical line that rises to node \"4\", where it splits into a rightward branch leading to tip \"E\" (which has a marker \"5'\" along the branch) and a leftward-upward branch leading to node \"3\"; at node \"3\", the lineage splits into a leftward branch leading to tip \"A\" and an upward-right branch leading to node \"2\"; at node \"2\", the lineage splits into a leftward branch leading to tip \"B\" and an upward-right branch leading to node \"1\"; at node \"1\", the tree bifurcates into a leftward branch leading to tip \"C\" and an upward-right branch leading to tip \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "text": "The image shows a hand-drawn phylogenetic tree plotted on a graph with a vertical Y-axis labeled \"Time\" with an upward arrow pointing to \"Present\" and a horizontal axis labeled \"5 Million Years\" at the bottom left; the tree originates from a central vertical line rising to node 4, which bifurcates into a branch extending rightward to tip E (marked with a tick labeled 5') and a branch extending leftward and upward to node 3, which bifurcates into a branch extending leftward to label A and a branch extending rightward and upward to node 2, which bifurcates into a branch extending leftward to label B and a branch extending rightward and upward to node 1, which finally bifurcates into branches extending to tips C and D."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" featuring an upward arrow and the label \"Present\" at the top, and a horizontal axis at the bottom with the text \"5 Million Years\" on the left. The tree structure originates from a base and diverges at internal nodes labeled \"4\", \"3\", \"2\", and \"1\". The primary split at node \"4\" branches into a rightward lineage leading to terminal tip \"E\" (marked with a tick labeled \"5'\") and a leftward lineage. The leftward lineage reaches node \"3\", which splits into a branch leading to tip \"A\" and a branch continuing to node \"2\". Node \"2\" splits into a branch leading to tip \"B\" and a branch continuing to node \"1\". Node \"1\" splits into branches leading to terminal tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram featuring a vertical Y-axis labeled \"Time\" with an upward-pointing arrow and the word \"Present\" at the top, and a horizontal base labeled \"5 Million Years,\" showing a root node labeled \"4\" that splits into a rightward lineage labeled \"5'\" with a branch arrow leading to taxon \"E\" and a leftward lineage that splits at node \"3\" into taxon \"B\" and a branch leading to node \"2,\" which further splits into taxon \"A\" and a branch leading to node \"1,\" which ultimately branches into taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical Y-axis labeled 'Time' and an upward arrow pointing to 'Present' at the top, and a horizontal X-axis at the bottom labeled '5 Million Years'. The tree originates from a base point and extends upwards. A central vertical line rises to a junction labeled '4', where it bifurcates. The right branch extends diagonally up-right to a point labeled '5' and then terminates at tip 'E'. The left branch extends diagonally up-left to a junction labeled '3', where a branch extends left to tip 'A'. The main lineage continues from '3' diagonally up-right to a junction labeled '2', where a branch extends left-up to tip 'B'. The lineage continues from '2' diagonally up-right to a junction labeled '1', where it splits into tips 'C' and 'D'. The tips are labeled A, B, C, D, and E, and the internal nodes or points are labeled 1, 2, 3, 4, and 5."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical Y-axis labeled \"Time\" with an arrow pointing up towards \"Present\" and a horizontal X-axis labeled \"5 Million Years\". The tree originates from a base line at the bottom. A vertical trunk rises from the center and splits at a node labeled '4' into two main branches: one extending rightward to a terminal labeled 'E' (marked with the number '5' on the branch) and one extending leftward and upward to a node labeled '3'. From node '3', a branch extends leftward to terminal 'A' and another extends upward to a node labeled '2'. From node '2', a branch extends leftward to terminal 'B' and another extends upward to a node labeled '1'. Finally, node '1' bifurcates into terminal branches leading to 'C' and 'D'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled 'Time' and 'Present' at the top, and a horizontal axis labeled '5 Million Years', showing a branching diagram where the root at the bottom splits at node '4' into a right branch leading through node '5'' to tip 'E' and a left branch leading to node '3', from which a branch goes to tip 'A' and the main line continues to node '2', which branches to tip 'B' and node '1', finally splitting into tips 'C' and 'D'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "text": "A phylogenetic tree diagram features a vertical axis labeled \"Present\" at the top and \"Time\" with an upward arrow, and a horizontal axis labeled \"5 Million Years\" at the bottom, originating from a root that branches at node 4 into a rightward branch leading to taxon E (marked with \"5'\") and a leftward branch leading to node 3; from node 3, a branch leads to taxon A on the left and node 2 on the right; from node 2, a branch leads to taxon B on the left and node 1 on the right; and from node 1, branches lead to taxa C and D."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "text": "The image displays a phylogenetic tree with a vertical axis labeled \"Time\" with an upward arrow pointing to \"Present\" and a horizontal axis label \"5 Million Years\" at the bottom, featuring a branching structure originating from a base node labeled \"4\" that splits into a rightward branch passing a label \"5\" leading to tip \"E\" and a leftward branch to node \"3\", from which a branch extends to tip \"A\" and another extends to node \"2\", from which a branch extends to tip \"B\" and another extends to node \"1\", which finally splits into tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" featuring an upward-pointing arrow and the word \"Present\" at the top, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree originates from a central vertical trunk that splits at a node labeled \"4\" into a right branch leading to a point labeled \"5\" and then to terminal taxon \"E\", and a left branch leading to a node labeled \"3\", which bifurcates into a branch leading to terminal taxon \"A\" and a branch leading to a node labeled \"2\", from which a branch leads to terminal taxon \"B\" and another branch leads to a node labeled \"1\", from which two branches emerge leading to terminal taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical Y-axis labeled \"Time\" featuring an upward arrow and the word \"Present\" at the top left, and a horizontal X-axis labeled \"5 Million Years\" at the bottom left; the tree structure originates from a central root node labeled \"4\" which branches into a rightward path leading to a node labeled \"5\" (with a small tick mark) and subsequently to terminal taxon \"E\", and a leftward path leading to node \"3\", from which a branch extends leftward to terminal taxon \"A\" and an upward branch leads to node \"2\", from which a branch extends leftward to terminal taxon \"B\" and an upward branch leads to node \"1\", which finally splits into terminal taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled 'Time' with an upward arrow pointing to 'Present' at the top and a horizontal baseline labeled '5 Million Years' at the bottom, originating a central lineage that splits at node 4 into a right branch leading to node 5 and then taxon E, and a left branch leading to node 3, which splits into taxon A and an upward branch leading to node 2, which in turn splits into taxon B and an upward branch leading to node 1, which finally splits into taxa C and D."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical Y-axis labeled 'Time' with an upward arrow and the word 'Present' at the top, and a horizontal baseline labeled '5 Million Years' at the bottom left, displaying a branching structure where the root rises to node 4, which bifurcates into a left branch leading to node 3 (which further bifurcates into a branch to tip A and a branch to node 2, which further bifurcates into a branch to tip B and a branch to node 1, which further bifurcates into branches to tips C and D) and a right branch leading to a tick mark labeled '5' (or 5') on the lineage to tip E."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "text": "A hand-drawn phylogenetic tree is depicted on a coordinate plane with a vertical Y-axis labeled 'Time' with an upward arrow and the label 'Present' at the top, and a horizontal X-axis with the label '5 Million Years' at the bottom left; the tree structure originates from the bottom center and rises to a junction labeled '4', from which a branch extends rightward through a tick mark labeled '5' to terminate at 'E', while another branch extends leftward to a junction labeled '3', from which a branch extends leftward to terminate at 'A' and the main line continues upward to a junction labeled '2', from which a branch extends leftward to terminate at 'B' and the main line continues upward to a junction labeled '1', which bifurcates into two terminal branches labeled 'C' and 'D'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "text": "A hand-drawn phylogenetic tree diagram is presented on a white background with a vertical axis on the left labeled \"Time\" featuring an upward-pointing arrow and the word \"Present\" at the top, and a label \"5 Million Years\" at the bottom left above a horizontal baseline; the tree originates from this baseline and ascends to a node labeled \"4\", which bifurcates into a rightward branch leading to a node labeled \"5'\" and then to taxon \"E\", and a leftward branch leading to a node labeled \"3\", which bifurcates into a leftward branch to taxon \"A\" and an upward-right branch to node \"2\", which bifurcates into a leftward branch to taxon \"B\" and an upward-right branch to node \"1\", which finally bifurcates into branches leading to taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "text": "A hand-drawn phylogenetic tree displays evolutionary relationships along a vertical axis labeled 'Time' with an upward arrow pointing to 'Present' and a horizontal baseline labeled '5 Million Years', featuring five terminal taxa labeled A, B, C, D, and E at the branch tips and four internal nodes labeled 1, 2, 3, and 4, arranged such that the root node 4 diverges into the lineage leading to E and the lineage leading to node 3, which further diverges into the lineage leading to A and the lineage leading to node 2, which diverges into the lineage leading to B and the lineage leading to node 1, which finally splits into the sister taxa C and D."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical Y-axis labeled 'Time' with an upward arrow pointing to the label 'Present' at the top, and a horizontal X-axis with the text '5 Million Years' at the bottom origin, showing a branching structure where five terminal taxa are labeled A, B, C, D, and E, connected to internal branching points labeled with the numbers 1, 2, 3, and 4, and an additional number '5' is situated on the branch leading to taxon E."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "text": "The image displays a hand-drawn phylogenetic tree plotted against a vertical axis labeled \"Time\" with an upward arrow and the word \"Present\" at the top, and a horizontal baseline at the bottom labeled \"5 Million Years,\" showing a branching structure originating from a base connected to a junction labeled \"4,\" which splits into a rightward branch containing a small mark resembling the number \"5\" leading to the terminal label \"E,\" and a leftward branch leading to a junction labeled \"3,\" from which a branch extends leftward to the terminal label \"A\" and another branch extends upward to a junction labeled \"2,\" from which a branch extends leftward to the terminal label \"B\" and another branch extends upward to a junction labeled \"1,\" which finally bifurcates into branches leading to the terminal labels \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis on the left labeled \"Time\" with an upward arrow pointing to the text \"Present\" and a horizontal axis at the bottom labeled \"5,Million Years\", illustrating the evolutionary divergence of five terminal taxa labeled A, B, C, D, and E, with internal nodes marked by the numbers 1, 2, 3, 4, and 5, where the tree originates from the bottom baseline and splits first at node 4 into a rightward branch leading through node 5 to terminal taxon E and a leftward branch that splits at node 3 to isolate terminal taxon A, further splits at node 2 to isolate terminal taxon B, and finally splits at node 1 to separate terminal taxa C and D."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical y-axis labeled \"Present\" at the top and \"Time\" with an upward-pointing arrow on the left, originating from a horizontal x-axis labeled \"5 Million Years\" at the bottom left. The tree structure begins with a vertical line rising from the baseline to a node labeled \"4\". From node \"4\", a branch extends upwards and to the left, passing near a node labeled \"3\", which splits into a branch leading to tip \"A\" and a branch continuing to node \"2\". Node \"2\" splits into a branch leading to tip \"B\" and a branch continuing to node \"1\", which finally splits into branches leading to tips \"C\" and \"D\". From node \"4\", a second branch extends upwards and to the right, bearing a label \"5'\" along its length, and terminates at a tip labeled \"E\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical Y-axis labeled \"Time\" with an upward arrow pointing to \"Present\" and a horizontal X-axis at the bottom labeled \"5 Million Years,\" depicting a branching evolutionary history that originates from the base, splits at node 4 into a rightward branch passing through node 5' to terminal E, and a leftward branch passing through node 3 where a branch extends to terminal A and the lineage continues through node 2, which splits into a branch to terminal B and a lineage continuing through node 1, which finally splits into terminals C and D."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram set against a coordinate system with a vertical y-axis labeled \"Present\" at the top and \"Time\" with an upward-pointing arrow, and a horizontal x-axis labeled \"5 Million Years\". The tree structure originates from a vertical line at the bottom. The lowest internal node is labeled 4, from which a branch extends rightward to node 5 and then to tip E, while the other branch extends leftward to node 3. Node 3 has a branch extending leftward to tip A and continues rightward to node 2. Node 2 has a branch extending leftward to tip B and continues rightward to node 1. Node 1 bifurcates with a branch extending leftward to tip C and a branch extending rightward to tip D. The terminal tips are labeled A, B, C, D, and E, and the internal branching points are numbered 1, 2, 3, 4, and 5."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis on the left labeled \"Time\" (written vertically) next to an upward-pointing arrow with the label \"Present\" at the top, and a horizontal axis at the bottom left labeled \"5. Million Years\". The tree structure originates from a central root at the bottom horizontal line. The lowest visible internal node is labeled \"4\". To the right of node \"4\", a branch extends upward containing a label \"5'\" before terminating at the terminal taxon \"E\". To the left of node \"4\", a branch extends to node \"3\". From node \"3\", a branch extends to the left to terminate at taxon \"A\", and another branch extends upward to node \"2\". From node \"2\", a branch extends to the upper left to terminate at taxon \"B\", and another branch extends to the upper right to node \"1\". From node \"1\", branches extend to terminate at taxon \"C\" to the left and taxon \"D\" to the right."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled \"Time\" with an upward arrow pointing to \"Present\" and a bottom-left label reading \"5 Million Years\", depicting a branching structure originating from a node labeled \"4\" that splits into a right branch leading to terminal label \"E\" (marked with a small arrow and the number \"5\") and a left branch leading to node \"3\", which further diverges into a left branch for label \"A\" and an upper branch for node \"2\", where node \"2\" splits into a left branch for label \"B\" and an upper branch for node \"1\", which finally splits into terminal labels \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "text": "A hand-drawn phylogenetic tree diagram featuring a vertical axis labeled \"Time\" with an arrow pointing upward to the text \"Present\" and a horizontal axis at the bottom labeled \"5 Million Years,\" depicting a branching structure that originates from a vertical stem and splits at a central node labeled \"4,\" with one branch extending diagonally rightward to a mark labeled \"5'\" and ending at taxon \"E,\" and the other branch extending diagonally leftward to node \"3,\" which splits into a branch leading to taxon \"A\" and a branch leading upward to node \"2,\" where the lineage splits into a branch leading to taxon \"B\" and a branch leading upward to node \"1,\" which finally splits into taxa \"C\" and \"D.\""
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "text": "A phylogenetic tree diagram displays a vertical axis labeled \"Time\" with an upward arrow pointing to the word \"Present\" at the top, and a horizontal axis labeled \"5 Million Years\" at the bottom; the branching structure starts from the bottom center, splitting at node \"4\" into a rightward branch marked \"5'\" terminating at \"E\" and a leftward branch leading to node \"3\", which divides into a branch to \"A\" and an upward branch to node \"2\", which in turn divides into a branch to \"B\" and an upward branch to node \"1\", finally splitting into branches ending at \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" with an upward arrow and the label \"Present\" at the top, and a horizontal baseline labeled \"5 Million Years\" at the bottom, featuring a branching structure originating from a base node labeled 4 that splits into a lineage leading to E (with a point marked 5 on its branch) and a lineage leading to a common ancestor at node 3, which further branches into lineage A and a lineage leading to node 2, where lineage B branches off and the remaining lineage leads to node 1, which finally splits into lineages C and D."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "text": "A hand-drawn phylogenetic tree diagram includes a vertical axis labeled 'Time' with an arrow pointing up towards 'Present' and a horizontal axis at the bottom labeled '5 Million Years', showing a branching structure rooted at node '4' that splits into a right branch leading to terminal 'E' (labeled with the number '5' and a small arrow along the branch) and a left branch leading to node '3', which divides into a branch for terminal 'A' and a branch continuing to node '2', which divides into a branch for terminal 'B' and a branch continuing to node '1', which finally divides into branches for terminals 'C' and 'D'."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "text": "A hand-drawn phylogenetic tree is shown with a vertical axis on the left labeled 'Present' at the top and 'Time' with an upward arrow, and a label '5 Million Years' at the bottom left; the tree begins at the bottom axis and rises to a central node labeled '4', which diverges into a right branch leading to node '5' and terminal label 'E', and a left branch leading to node '3', which has a branch leading to terminal label 'A' and an upper branch leading to node '2', which has a branch leading to terminal label 'B' and an upper branch leading to node '1', which finally diverges into branches leading to terminal labels 'C' and 'D'."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Present\" at the top and \"Time\" with an upward-pointing arrow on the left, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree originates from a central base leading up to an internal node labeled \"4\", from which a rightward branch extends to terminal node \"E\" (with a marker labeled \"5'\") and a leftward branch extends to an internal node labeled \"3\"; node \"3\" bifurcates into a leftward branch to terminal node \"A\" and an upward branch to an internal node labeled \"2\"; node \"2\" bifurcates into a leftward branch to terminal node \"B\" and an upward branch to an internal node labeled \"1\"; and finally, node \"1\" bifurcates into two upward branches leading to terminal nodes \"C\" and \"D\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled \"Time\" with an upward arrow pointing to the word \"Present\" at the top, and a horizontal baseline labeled \"5 Million Years\" at the bottom left; the tree structure originates from a vertical line rising to a node labeled \"4\", which bifurcates into a right branch leading to a dot labeled \"5\" on the lineage to tip \"E\" and a left branch leading to node \"3\", which splits into a branch to tip \"A\" and a branch leading up-left to node \"2\", which further splits into a branch to tip \"B\" and a branch leading up-right to node \"1\", which finally bifurcates into branches leading to tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram situated on a grid where the vertical axis is labeled \"Time\" with an upward arrow and \"Present\" at the top, while the horizontal axis at the bottom is labeled \"5 Million Years\"; the tree structure originates from the horizontal axis and features nodes labeled numerically as 1, 2, 3, 4, and 5', with the lineage for tip E originating from node 4, passing through node 5', and the lineage for the other taxa branching from node 4 (label 4) upwards and leftwards to node 3, which connects to tip A and node 2; node 2 branches to tip B (left) and node 1 (right), and node 1 branches to tips C (left) and D (right)."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis labeled \"Time\" and an upward arrow pointing to the word \"Present,\" and a horizontal axis at the bottom labeled \"5, Million Years,\" depicting a branching structure rooted near the x-axis with internal nodes labeled \"4,\" \"3,\" \"2,\" and \"1\" in ascending order from bottom to top, and a label \"5'\" on the branch leading to the top right, terminating in five tips labeled \"A,\" \"B,\" \"C,\" \"D,\" and \"E,\" where node \"4\" marks the deepest divergence splitting off the lineage to \"E\" (via \"5'\"), node \"3\" marks the divergence of \"A,\" node \"2\" marks the divergence of \"B,\" and node \"1\" marks the divergence of \"C\" and \"D.\""
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram with a vertical axis on the left labeled \"Time\" with an upward-pointing arrow and the word \"Present\" at the top, and a text label \"5 Million Years\" at the bottom left. The tree structure consists of branches connecting five terminal taxa labeled A, B, C, D, and E, and five numerical labels 1, 2, 3, 4, and 5. Node 4 is the lowest branching point, separating the rightward-leading lineage (containing point 5 and taxon E) from the rest of the tree. Node 3 connects to taxon A and node 2. Node 2 connects to taxon B and node 1. Node 1 connects to taxa C and D. Point 5 is located on the branch segment leading to taxon E."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram featuring a vertical Y-axis labeled \"Time\" with an upward arrow pointing to the text \"Present\" at the top, and a horizontal baseline labeled \"5 Million Years\" at the bottom; the tree originates from a vertical line rising from the baseline to a node labeled \"4\", which branches right to a terminal taxon \"E\" (marked with a number \"5\" and a small upward arrow along the branch) and branches left-upward to a node labeled \"3\"; from node \"3\", a branch extends left-upward to terminal taxon \"A\" while the main lineage continues left-upward to a node labeled \"2\"; from node \"2\", a branch extends left-upward to terminal taxon \"B\" while the main lineage continues upward to a node labeled \"1\"; finally, node \"1\" splits into two branches leading to terminal taxa \"C\" on the left and \"D\" on the right."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis labeled \"Time\" pointing upward to the word \"Present\" at the top and a horizontal axis labeled \"5 Million Years\" at the bottom left; the tree structure originates from a root junction labeled \"4\" near the 5 million years mark, which diverges into a rightward branch containing a marker \"5\" that leads to the terminal taxon \"E\", and a leftward/main lineage that ascends to a junction labeled \"3\" (where a branch leads to taxon \"A\"), continues to a junction labeled \"2\" (where a branch leads to taxon \"B\"), and finally reaches a junction labeled \"1\" which splits into the terminal taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "text": "In a document marked \"Q106\" at the top left and \"Page 5\" at the bottom right, a hand-drawn phylogenetic tree diagram is displayed against a white background, featuring a vertical Y-axis on the left axis labeled \"Time\" with an upward arrow pointing to \"Present\" at the top and a horizontal baseline at the bottom labeled \"5 Million Years\"; the tree originates from a single vertical stem rising from the baseline to a junction labeled \"4\", which bifurcates into a rightward branch labeled \"5'\" that terminates at taxon \"E\" and a leftward branch leading to a junction labeled \"3\", where the lineage splits into a branch leading left/down to taxon \"A\" and a branch leading right/up to a junction labeled \"2\", which in turn splits into a branch leading left/up to taxon \"B\" and a branch leading right/up to a junction labeled \"1\", from which the tree finally bifurcates into two terminal branches leading to taxa \"C\" and \"D\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "text": "A hand-drawn phylogenetic tree is plotted on a graph with a vertical axis labeled \"Time\" pointing upward from \"5 Million Years\" on the horizontal axis to \"Present\" at the top, where the main trunk rises from the bottom center, branches at node '4' into a rightward lineage leading to leaf 'E' (marked with label '5') and a leftward lineage that proceeds to node '3', which splits into leaf 'A' and the branch leading to node '2'; node '2' then splits into leaf 'B' and the branch leading to node '1', which finally separates into leaves 'C' and 'D'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "text": "The image displays a hand-drawn phylogenetic tree with a vertical axis on the left labeled \"Time\" featuring an upward arrow and the label \"Present\" at the top, positioned above a horizontal axis labeled \"5 Million Years\" at the bottom; the tree's structure originates from a base and ascends to a node labeled '4', which branches rightward along a line with a label '5' to tip 'E' and leftward/upward to node '3', which branches up-left to tip 'A' and continues upward to node '2', which branches up-left to tip 'B' and continues rightward to node '1', where the final branch splits to tips 'C' and 'D'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "text": "The image displays a hand-drawn phylogenetic tree situated on a graph featuring a vertical axis labeled \"Time\" with an upward-pointing arrow and the word \"Present\" at the top, alongside a horizontal axis label reading \"5 Million Years\"; the tree originates from a base vertical line leading to node 4, which branches into a rightward line containing a tick mark labeled \"5'\" terminating at tip E, and a leftward branch leading to node 3, which splits into a branch to tip A and an upper branch to node 2, which splits into a branch to tip B and an upper branch to node 1, which finally splits into two branches leading to tips C and D."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis labeled \"Time\" with an arrow pointing up to \"Present\" and a horizontal baseline labeled \"5.Million Years\"; the tree structure originates from a base junction labeled \"4\" which splits into a rightward branch containing the label \"5\" leading to tip \"E\" and a leftward branch leading to junction \"3\", from which a branch extends to the left to tip \"A\" and another extends right to junction \"2\"; junction \"2\" splits into a leftward branch to tip \"B\" and a rightward branch to junction \"1\"; junction \"1\" is the common parent node for the final two tips, \"C\" and \"D\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "text": "A hand-drawn phylogenetic tree diagram features a vertical axis on the left labeled \"Time\" with an upward arrow and the word \"Present\" at the top, and a horizontal baseline at the bottom labeled \"5, Million Years\"; the tree is rooted at a central point labeled \"4\" and branches into a right arm ending at tip \"E\" containing a marker \"5'\" and a left arm that passes through a sequence of nodes. At node \"3\" the left arm branches to tip \"A\", continues to node \"2\" where it branches to tip \"B\", and proceeds to node \"1\" where it bifurcates into tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "text": "The image shows a hand-drawn phylogenetic tree with a vertical Y-axis labeled \"Time\" with an upward arrow and the word \"Present\" at the top, while \"5 Million Years\" is written below the axis near the origin; the tree structure originates from a vertical stem leading to a node labeled 4, which branches into a lineage marked with a tick and the label 5' leading to tip E, and a lineage extending left to node 3, from which a branch leads to tip A and the main trunk continues to node 2, where a branch leads to tip B and the trunk continues to node 1, which finally bifurcates into tips C and D."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "text": "A hand-drawn phylogenetic tree diagram is presented with a vertical Y-axis labeled 'Time' featuring an upward arrow and the word 'Present' at the top, and a horizontal axis labeled '5 Million Years' at the bottom; the tree structure originates from the bottom axis leading to node '4', which branches rightward to a marker/nodal point labeled '5'' leading to terminal taxon 'E', and branches leftward/upward to node '3'; node '3' branches leftward to taxon 'A' and rightward/upward to node '2'; node '2' branches leftward/upward to taxon 'B' and rightward/upward to node '1'; and node '1' branches leftward to taxon 'C' and rightward to taxon 'D'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "text": "A hand-drawn phylogenetic tree diagram is oriented with a vertical y-axis on the left labeled \"Present\" at the top and \"Time\" with an upward-pointing arrow, and a label \"5 Million Years\" at the bottom left corner. The tree originates from a vertical trunk at the bottom meeting a central node labeled \"4\". From node \"4\", a branch extends diagonally up and to the right, passing a mark labeled \"5'\" to terminate at taxon \"E\". Also from node \"4\", a branch extends diagonally up and to the left to node \"3\". From node \"3\", a branch extends up and to the left to taxon \"A\", while another branch extends up and to the right to node \"2\". From node \"2\", a branch extends up and to the left to taxon \"B\", while another branch extends up and to the right to node \"1\". From node \"1\", the tree bifurcates into two terminal branches, one leading to taxon \"C\" on the left and one leading to taxon \"D\" on the right."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "text": "The image displays a hand-drawn phylogenetic tree diagram set against a coordinate system with a vertical axis labeled \"Time\" featuring an upward-pointing arrow and the word \"Present\" at the top, and a horizontal axis at the bottom labeled \"5 Million Years\"; the tree structure originates from a node labeled \"4\" which splits into a rightward branch leading to tip \"E\" (marked with a small arrow and the number \"5\") and a leftward-ascending branch leading to node \"3\"; from node \"3\", a branch extends leftward to tip \"A\" and another extends rightward to node \"2\"; from node \"2\", a branch extends leftward to tip \"B\" and another extends rightward to node \"1\"; finally, node \"1\" splits into two upward branches leading to tips \"C\" and \"D\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "text": "The image presents a hand-drawn vertical phylogenetic tree with the Y-axis labeled \"Time\" and an arrow pointing upward to the text \"Present,\" and an X-axis at the bottom labeled \"5 Million years,\" depicting a tree rooted at a central node labeled \"4\" that bifurcates into a right branch leading to a mark labeled \"5'\" and terminal taxon \"E,\" and a left branch that ascends sequentially through nodes \"3,\" \"2,\" and \"1,\" where node \"3\" gives rise to terminal taxon \"A,\" node \"2\" gives rise to terminal taxon \"B,\" and node \"1\" bifurcates into terminal taxa \"C\" and \"D.\""
+    }
+  ]
+}

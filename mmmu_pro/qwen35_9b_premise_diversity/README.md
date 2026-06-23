@@ -1,49 +1,68 @@
-# eidos — Visual-premise diversity vs. correctness (Qwen3.5-9B on MMMU-Pro)
+# Comprehensive visual-premise vs. correctness (Qwen3.5-9B on MMMU-Pro)
 
-Does **sampling diversity** predict **correctness** when a vision-language model reads a
-single *visual premise* (one fact read directly from an image) off an MMMU-Pro question?
+Does **sampling diversity** predict **perception correctness** when a vision-language
+model writes ONE *comprehensive* visual premise — a single statement that incorporates
+EVERY fact it can read off the image (not solve the question)? Each comprehensive
+premise is judged true/false against the image under a **strict-binary** rule: correct
+only if every fact in it is accurate.
 
-## Experiment (v6)
+## Experiment
 
-- **Model:** Qwen/Qwen3.5-9B via vLLM, **thinking ON**, **4096-token cap**, prompt that
-  encourages a short premise.
-- **Examples:** 24 MMMU-Pro questions (one per subject), all drawn from baseline *failures*.
-- **Sweep:** 5 `top_p` (0.5, 0.7, 0.9, 0.95, 1.0) × **16 samples** = **1920 generations**.
-  Generations that hit the 4096-token cap before emitting a premise (`finish_reason='length'`,
-  **232 = 12%**) are **truncated runs and are removed from every part of the analysis**, leaving
-  **1688 samples** (mean **14.1** per (example, top_p) cell, range 4–16). All 24 questions are kept.
-- The **extracted premise** (the single visual fact on the model's `Premise:` line, parsed by
-  `extract_premises.py`) is the unit of analysis: both the diversity embedding and the
-  correctness judge operate on it, not on the `<think>` trace, so the two measure the same object.
-- Each extracted premise is judged true/false **against the image** (vision LLM-as-judge): true =
-  an accurate reading of the image, false = a misread value/label/location/identity/relation.
-  Overall premise accuracy is **85.6%** (1445/1688 judged correct).
-- **Diversity** per (example, top_p) cell: **Vendi score** and mean pairwise cosine distance
-  over MiniLM embeddings of the extracted premise. **Correctness** = fraction of premises judged correct.
+- **Model:** Qwen/Qwen3.5-9B via vLLM, thinking ON, 16384-token budget, temperature 1.0,
+  top_k off.
+- **Examples (6):** `outputs/questions.json` — test_Biology_259, test_Chemistry_400,
+  test_Clinical_Medicine_302, test_Electronics_137, test_Physics_61,
+  validation_Clinical_Medicine_16.
+- **Prompt (comprehensive):** "write ONE comprehensive visual premise that incorporates
+  EVERY fact you can read directly from the image … read labels character-by-character …
+  Do NOT answer or solve." Output is a single `Premise: <long statement>`. See
+  `PREMISE_HEADER` in `premise_gen_comp.py`.
+- **Sweep:** 5 `top_p` (0.5, 0.7, 0.9, 0.95, 1.0) × 16 samples = 480. Truncated
+  generations (finish_reason≠'stop') removed → **408 clean premises** (mean 94 words),
+  30 (example,top_p) cells, ~13.6/cell.
+- **Judge:** vision LLM-as-judge (Claude), one verdict per premise, **strict binary** —
+  a premise is correct only if EVERY fact in it is accurate; any single misread fails it.
 
-## Key findings
+## Key results
 
-- **Diversity ↔ correctness is negative**: more scattered premises → more of them wrong.
-  With truncated runs removed and both the embedding and the judge operating on the extracted
-  premise, vendi↔correct Pearson ≈ **−0.32** (Spearman **−0.49**), rising to **−0.56** when the 3
-  image-hallucination questions are dropped (those are *low* diversity *and* low correctness, so
-  they sit off the trend). *(Leaving truncated runs in had inflated the raw figure to −0.51 — about
-  half of it a truncation artifact — which is why they are excluded everywhere here.)*
-- **top_p barely moves correctness** (~0.81–0.86, a mild decline across the range); it mainly
-  raises diversity. Correctness is modestly best at **low top_p (≈0.5–0.7)**.
+- **Overall premise accuracy 56.1%** (229/408) — low because each ~94-word premise packs
+  ~13 facts and one misread fails the whole statement.
+- **Diversity ↔ correctness is strongly negative** (strongest of the premise variants):
+  vendi↔correct Pearson **−0.56**, Spearman **−0.59**; cosine **−0.66 / −0.70**.
+- **top_p barely moves correctness** (−0.15; 0.591→0.510 across 0.5→1.0) while raising
+  diversity (top_p↔vendi +0.26).
+- Per-example accuracy: Biology 98%, Physics 64%, Chemistry 50%, Electronics 49%
+  (~half misread the j20Ω inductor as j120Ω), Clinical_Medicine_302 32%,
+  validation_Clinical_Medicine_16 29%.
 
-## Layout
+|  top_p | Vendi | cos_dist | frac_correct |
+|-------:|------:|---------:|-------------:|
+|    0.5 |  1.85 |    0.144 |        0.591 |
+|    0.7 |  1.85 |    0.131 |        0.586 |
+|    0.9 |  2.09 |    0.157 |        0.470 |
+|   0.95 |  2.12 |    0.162 |        0.506 |
+|    1.0 |  2.12 |    0.159 |        0.510 |
 
-| Path | What |
-|------|------|
-| `run_mmmupro.py` | Baseline MMMU-Pro inference (full 1730-question run) |
-| `premise_gen_v6.py` | v6 premise sweep (thinking on, 4096, short-premise prompt) → raw full text |
-| `extract_premises.py` | Parse the `Premise:` line out of each raw generation → extracted premise |
-| `judge_prep.py` / `judge_merge.py` | Build judge packets (premise-only) / merge verdicts |
-| `premise_analyze.py` | Diversity (Vendi, cosine) + correctness correlations |
-| `plot_harmonic_per_example.py` | Per-example harmonic-mean plot |
-| `analysis_v6.ipynb` | Self-contained Colab notebook (clean set, embedded data) |
-| `outputs/` | premises / verdicts / reports / figures |
-| `logs/` | run logs |
+## Pipeline
 
-The vLLM virtualenv (`vllm-env/`) is intentionally git-ignored.
+| script | what |
+|--------|------|
+| `premise_gen_comp.py` | Comprehensive single-premise sweep → `outputs/premises_comp.jsonl` |
+| `extract_comp.py` | Extract the one `Premise:` statement per sample → `outputs/premises_comp_extracted.jsonl` |
+| `judge_prep_comp.py` | One judge packet per question → `outputs/judge_comp/<id>.json` |
+| (vision judge) | Claude scores each premise strict-binary → `outputs/judge_comp/<id>.verdicts.json` |
+| `merge_comp.py` | Flatten verdicts → `outputs/verdicts_comp.jsonl` |
+| `analyze_comp.py` | Diversity (Vendi, cosine over MiniLM) + correctness → `outputs/premise_report_comp.json` |
+| `plot_comp.py` | Scatter + per-example accuracy + harmonic-mean figures |
+
+## Reproduce
+
+```bash
+python premise_gen_comp.py                      # generate (GPU)
+python extract_comp.py
+python judge_prep_comp.py
+# vision-judge each outputs/judge_comp/<id>.json -> <id>.verdicts.json  (Claude, per image)
+python merge_comp.py
+python analyze_comp.py
+python plot_comp.py
+```

@@ -1,0 +1,124 @@
+{
+  "test_Biology_259": {
+    "subject": "Biology",
+    "question": "Use the phylogenetic tree in <image 1>. Notice that the tree is not a true cladogram based on shared, derived characters, but on the time of divergence from a common ancestor. Which of the following statements about the above cladogram is the most accurate?",
+    "options": {
+      "A": "It depicts an unrooted phylogenetic tree.",
+      "B": "This is an example of an ultrametric tree.",
+      "C": "D is most likely extinct.",
+      "D": "The tree shows that A and B share the most recent common ancestor.",
+      "E": "Traits formed at 3 and 4 are considered plesiomorphies.",
+      "F": "D is the most primitive organism on the tree.",
+      "G": "A trait that formed at 5 is considered an autapomorphy.",
+      "H": "A and B are more closely related to each other than either is to C or D.",
+      "I": "The tree shows that C and D have the same evolutionary distance from A.",
+      "J": "B is as evolutionarily distant from C as A is from D."
+    },
+    "gold": "G",
+    "image_paths": [
+      "outputs/images/test_Biology_259_img1.png"
+    ],
+    "source": "MMMU_Pro/standard(10 options)/test"
+  },
+  "test_Chemistry_400": {
+    "subject": "Chemistry",
+    "question": "The figures shown below are particulate (submicroscopic) representations of various states of matter. <image 1>  Which drawing represents submicroscopic particles in a sample of an element?",
+    "options": {
+      "A": "(c)",
+      "B": "(a)",
+      "C": "(d)",
+      "D": "(f)",
+      "E": "(e)",
+      "F": "(b)"
+    },
+    "gold": "B",
+    "image_paths": [
+      "outputs/images/test_Chemistry_400_img1.png"
+    ],
+    "source": "MMMU_Pro/standard(10 options)/test"
+  },
+  "test_Clinical_Medicine_302": {
+    "subject": "Clinical_Medicine",
+    "question": "What person's name is associated with the fracture shown below? <image 1> ",
+    "options": {
+      "A": "Hangman",
+      "B": "Bennett",
+      "C": "Galeazzi",
+      "D": "Colles",
+      "E": "Le Fort",
+      "F": "Pott",
+      "G": "Monteggia",
+      "H": "Jones",
+      "I": "Greenstick",
+      "J": "Smith"
+    },
+    "gold": "H",
+    "image_paths": [
+      "outputs/images/test_Clinical_Medicine_302_img1.png"
+    ],
+    "source": "MMMU_Pro/standard(10 options)/test"
+  },
+  "test_Electronics_137": {
+    "subject": "Electronics",
+    "question": "Use nodal analysis on the circuit shown in  <image 1> to evaluate the phasor voltage $V_2$. Return the answer (in terms of V) in the complex number form like 2 + j3.",
+    "options": {
+      "A": "90 + j120",
+      "B": "90 + j140",
+      "C": "85 + j130",
+      "D": "90 + j125",
+      "E": "80 + j120",
+      "F": "30 + j120",
+      "G": "95 + j120",
+      "H": "90 + j190",
+      "I": "90 + j110",
+      "J": "100 + j130"
+    },
+    "gold": "A",
+    "image_paths": [
+      "outputs/images/test_Electronics_137_img1.png"
+    ],
+    "source": "MMMU_Pro/standard(10 options)/test"
+  },
+  "test_Physics_61": {
+    "subject": "Physics",
+    "question": "<image 1>After the switch S is closed, the initial current through resistor R_2 is",
+    "options": {
+      "A": "fluctuating in direction",
+      "B": "from point * to point Z",
+      "C": "from point Y to point *",
+      "D": "from point Z to point Y",
+      "E": "impossible to determine without additional information",
+      "F": "zero at all times",
+      "G": "from point Z to point *",
+      "H": "from point Y to point Z",
+      "I": "impossible to determine its direction",
+      "J": "from point * to point Y"
+    },
+    "gold": "J",
+    "image_paths": [
+      "outputs/images/test_Physics_61_img1.png"
+    ],
+    "source": "MMMU_Pro/standard(10 options)/test"
+  },
+  "validation_Clinical_Medicine_16": {
+    "subject": "Clinical_Medicine",
+    "question": "A 45-year-old man complains of a severe, constant headache for the past 2 days. He is noted on physical examination to have papilledema on the right. He becomes obtunded. The representative gross pathologic appearance of a complication in this man is shown here. Which of the following conditions is most likely to produce this gross finding? <image 1>",
+    "options": {
+      "A": "Alzheimer's disease",
+      "B": "Meningococcemia",
+      "C": "Berry aneurysm rupture",
+      "D": "Parkinson disease",
+      "E": "Multiple sclerosis",
+      "F": "Stroke",
+      "G": "Huntington's disease",
+      "H": "Epilepsy",
+      "I": "Brain abscess",
+      "J": "Glioblastoma"
+    },
+    "gold": "J",
+    "image_paths": [
+      "outputs/images/validation_Clinical_Medicine_16_img1.png"
+    ],
+    "source": "notebook(10-opt)+MMMU/Clinical_Medicine/validation image"
+  }
+}

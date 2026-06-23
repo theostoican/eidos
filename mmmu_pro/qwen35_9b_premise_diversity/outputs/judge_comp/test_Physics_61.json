@@ -1,0 +1,386 @@
+{
+  "id": "test_Physics_61",
+  "subject": "Physics",
+  "gold": "J",
+  "question": "<image 1>After the switch S is closed, the initial current through resistor R_2 is",
+  "options": {
+    "A": "fluctuating in direction",
+    "B": "from point * to point Z",
+    "C": "from point Y to point *",
+    "D": "from point Z to point Y",
+    "E": "impossible to determine without additional information",
+    "F": "zero at all times",
+    "G": "from point Z to point *",
+    "H": "from point Y to point Z",
+    "I": "impossible to determine its direction",
+    "J": "from point * to point Y"
+  },
+  "image_path": "outputs/images/test_Physics_61_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "text": "The image displays a physics diagram featuring two circuits, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right, which are connected via two loops, \"Loop 1\" and \"Loop 2\", arranged coaxially around a vertical dashed line. Circuit 1 consists of a switch labeled \"S\", a resistor labeled \"R_1\", and a voltage source labeled \"V\". Circuit 2 consists of a resistor labeled \"R_2\" connected between terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "text": "The image displays a physics diagram illustrating electromagnetic induction. On the left, labeled \"Circuit 1\", there is a loop containing an open switch 'S', a resistor 'R_1', and a battery 'V'. This loop is connected to a larger loop labeled \"Loop 1\". In the center, a vertical dashed line passes through two loops: the top one is \"Loop 1\" and the bottom one is \"Loop 2\". On the right, labeled \"Circuit 2\", there is a circuit with a resistor 'R_2' and terminals 'Y' and 'X'. The loop \"Loop 2\" is connected to this circuit."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "text": "Circuit 1, labeled on the left, contains a switch S, resistor R_1, and voltage source V connected to a loop labeled Loop 1, which is coaxial with a second loop labeled Loop 2 along a vertical dashed line; Circuit 2, labeled on the right, is connected to Loop 2 and contains a resistor R_2 with open terminals Y and X."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "text": "The image displays a physics diagram featuring two circuits linked by two loops; on the left, 'Circuit 1' includes a switch 'S', a resistor 'R_1', and a voltage source 'V' arranged in a loop that connects to the upper loop labeled 'Loop 1', while below a central vertical dashed line, the lower loop labeled 'Loop 2' connects to the right side where 'Circuit 2' is shown containing a resistor 'R_2' connected between points 'Y' and 'X'."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "text": "The image displays a physics diagram with 'Circuit 1' on the left containing a battery labeled 'V', a switch labeled 'S', and a resistor labeled 'R_1', connected to 'Loop 1', and 'Circuit 2' on the right containing a resistor labeled 'R_2' and terminals labeled 'Y' and 'X', connected to 'Loop 2', with a vertical dashed line passing through the center of both vertically aligned loops."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "text": "The image displays a physics diagram featuring two circuits, labeled 'Circuit 1' on the left and 'Circuit 2' on the right, which are coupled by two loops, 'Loop 1' and 'Loop 2', arranged vertically along a central dashed line. Circuit 1 consists of a switch labeled 'S', a resistor labeled 'R_1', and a voltage source labeled 'V' connected to Loop 1. Circuit 2 consists of a resistor labeled 'R_2' and terminals labeled 'Y' and 'X' connected to Loop 2."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "text": "The image displays a physics diagram featuring two circuits, labeled \"Circuit 1\" and \"Circuit 2\", connected to two loops, \"Loop 1\" and \"Loop 2\"; on the left, \"Circuit 1\" contains a switch \"S\", a resistor \"R_1\", and a voltage source \"V\" connected to \"Loop 1\", while on the right, \"Circuit 2\" contains a resistor \"R_2\" with terminals \"Y\" and \"X\" connected to \"Loop 2\", and a vertical dashed line passes through the center of both loops."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "text": "The image displays a physics schematic featuring two circuits, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right. Circuit 1 contains a battery labeled \"V\", a switch labeled \"S\", and a resistor labeled \"R_1\". A wire extends from Circuit 1 to connect to a loop labeled \"Loop 1\". Circuit 2 contains a resistor labeled \"R_2\" connected between terminals \"Y\" and \"X\". A wire extends from a loop labeled \"Loop 2\" to connect to Circuit 2. A vertical dashed line passes through the center of both Loop 1 and Loop 2, which are positioned one above the other."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "text": "The image displays a physics diagram showing two circuits, labeled \"Circuit 1\" and \"Circuit 2\", separated by a vertical dashed line; \"Circuit 1\" on the left contains a switch \"S\", a resistor \"R_1\", and a voltage source \"V\" connected to a loop labeled \"Loop 1\", while \"Circuit 2\" on the right contains a resistor \"R_2\" and open terminals \"Y\" and \"X\" connected to a loop labeled \"Loop 2\", with both loops positioned vertically adjacent along a shared central vertical dashed axis."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "text": "The image displays a circuit diagram featuring two distinct setups: on the left, \"Circuit 1\" consists of a switch labeled \"S\", a resistor labeled \"R1\", and a voltage source labeled \"V\" connected to a wire that forms a loop labeled \"Loop 1\"; on the right, \"Circuit 2\" consists of a resistor labeled \"R2\" with terminals labeled \"Y\" and \"X\" connected to a wire that forms a loop labeled \"Loop 2\"; a vertical dashed line passes through the center of both \"Loop 1\" and \"Loop 2\", which are arranged vertically."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "text": "The image displays a schematic diagram featuring a left section labeled \"Circuit 1\" containing a switch 'S', a resistor 'R_1', and a voltage source 'V', connected to an upper loop labeled \"Loop 1\". Below Loop 1 is another loop labeled \"Loop 2\", with a dashed vertical line passing through the center of both loops indicating they are coaxial. To the right of Loop 2 is a section labeled \"Circuit 2\" containing a resistor 'R_2' connected between terminals 'Y' and 'X', which forms a loop with the right side of Loop 2."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "text": "The image displays a physics diagram featuring a vertical dashed line passing through the centers of two loops, labeled \"Loop 1\" (top) and \"Loop 2\" (bottom). On the left side, \"Circuit 1\" consists of a switch labeled 'S', a resistor labeled 'R_1', and a voltage source labeled 'V', which connects to Loop 1. On the right side, \"Circuit 2\" consists of a resistor labeled 'R_2' and terminals labeled 'Y' and 'X', which connects to Loop 2."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "text": "The image displays a physics schematic featuring two circuits and two loops; on the left, \"Circuit 1\" consists of a switch labeled 'S', a resistor labeled 'R_1', and a voltage source labeled 'V' connected to a loop labeled \"Loop 1\", while on the right, \"Circuit 2\" consists of a resistor labeled 'R_2' and terminals labeled 'Y' and 'X' connected to a second loop labeled \"Loop 2\", with both loops arranged vertically along a central dashed line."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "text": "The image displays a schematic diagram of two circuits, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right; Circuit 1 contains a switch labeled S, a resistor labeled R1, and a voltage source labeled V connected to a wire that forms a large loop labeled \"Loop 1\", while Circuit 2 contains a resistor labeled R2 and open terminals labeled Y and X connected to a wire that forms a large loop labeled \"Loop 2\", where Loop 1 is positioned vertically above Loop 2 and a vertical dashed line passes through the center of both loops indicating they share a common axis."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "text": "The image displays a physics diagram featuring two circuits, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right, situated around two coaxial loops labeled \"Loop 1\" (top) and \"Loop 2\" (bottom) which are separated by a vertical dashed line; Circuit 1 contains a switch labeled \"S\", a resistor labeled \"R1\", and a voltage source labeled \"V\" connected to Loop 1, while Circuit 2 contains terminals labeled \"Y\" and \"X\" and a resistor labeled \"R2\" connected to Loop 2."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "text": "The image displays a physics diagram featuring two electrical circuits, labeled 'Circuit 1' on the left and 'Circuit 2' on the right, connected to two wire loops, 'Loop 1' (top) and 'Loop 2' (bottom), which are aligned along a central vertical dashed line. Circuit 1 consists of a switch 'S', a resistor 'R1', and a battery 'V' connected to the left side of Loop 1. Circuit 2 consists of a resistor 'R2' with terminals labeled 'Y' and 'X' connected to the right side of Loop 2. The switch 'S' is shown in an open position."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "text": "The image displays a physics diagram showing two circuits, 'Circuit 1' on the left and 'Circuit 2' on the right, linked by two coaxial elliptical loops labeled 'Loop 1' (top) and 'Loop 2' (bottom) intersected by a vertical dashed line; 'Circuit 1' includes a switch 'S', a resistor 'R1', and a voltage source 'V', while 'Circuit 2' includes a resistor 'R2' with open terminals 'Y' and 'X'."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "text": "The image shows a schematic diagram of two coupled circuits: on the left, \"Circuit 1\" consists of a switch labeled 'S', a resistor labeled 'R1', and a battery labeled 'V' connected in a loop that extends into a shape labeled \"Loop 1\"; on the right, \"Circuit 2\" consists of terminals labeled 'Y' and 'X' and a resistor labeled 'R2' connected to a shape labeled \"Loop 2\"; the two loops are positioned vertically one above the other and are separated by a vertical dashed line."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "text": "The image displays a physics diagram featuring two circuits connected by two loops, where \"Circuit 1\" on the left contains a switch \"S\", a resistor \"R1\", and a battery \"V\", connected to a top loop labeled \"Loop 1\" and a bottom loop labeled \"Loop 2\" which are intersected by a vertical dashed line, and further connected to \"Circuit 2\" on the right containing a resistor \"R2\" and terminals \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "text": "The image displays a physics diagram featuring two electrical circuits, labeled 'Circuit 1' on the left and 'Circuit 2' on the right, connected by a central structure containing two vertically aligned loops labeled 'Loop 1' (top) and 'Loop 2' (bottom) which are intersected by a vertical dashed line; 'Circuit 1' consists of a switch 'S', a resistor 'R_1', and a voltage source 'V' connected in series, while 'Circuit 2' features a resistor 'R_2' connected between terminals 'Y' and 'X', and small arrowheads are visible on the wire segments within both loops."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "text": "The image displays a physics diagram featuring two circuits separated by a vertical dashed line. The left section, labeled \"Circuit 1,\" contains a battery labeled $V$, a switch labeled $S$, and a resistor labeled $R_1$ connected in a loop that extends into a structure labeled \"Loop 1.\" The right section, labeled \"Circuit 2,\" shows a loop labeled \"Loop 2\" connected to a resistor labeled $R_2$ situated between terminals labeled $Y$ and $X$."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "text": "The image displays a physics diagram with Circuit 1 on the left containing a switch labeled S, a resistor labeled R1, and a voltage source labeled V connected to an elliptical loop labeled Loop 1, which is vertically aligned with a second elliptical loop labeled Loop 2 via a dashed vertical line, and connected to Circuit 2 on the right which contains a resistor labeled R2 connected between terminals labeled Y and X."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "text": "The image displays a physics schematic featuring two electrical circuits, labeled \"Circuit 1\" and \"Circuit 2\", connected via two loops, \"Loop 1\" and \"Loop 2\", which are aligned vertically along a central dashed line. \"Circuit 1\" on the left consists of a switch labeled \"S\", a resistor labeled \"R_1\", and a battery labeled \"V\" connected in a loop that extends to form the upper loop, \"Loop 1\". Below it is \"Loop 2\", which connects to \"Circuit 2\" on the right, containing a resistor labeled \"R_2\" and two terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "text": "The image displays a circuit diagram featuring 'Circuit 1' on the left, which includes a switch labeled 'S', a resistor labeled 'R1', and a voltage source labeled 'V' connected in a loop; this circuit connects via a wire to the left side of 'Loop 1', which is positioned above 'Loop 2', with a dashed vertical line passing through the center of both loops indicating they are coaxial; 'Loop 2' connects via a wire to the left side of 'Circuit 2' on the right, which contains a resistor labeled 'R2' and is marked with terminals 'Y' and 'X'."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "text": "The image displays a physics diagram featuring two circuits and two loops arranged along a central vertical dashed line; on the left is \"Circuit 1\" containing a switch labeled 'S', a resistor labeled 'R_1', and a voltage source labeled 'V' connected to a wire forming \"Loop 1\", while on the right is \"Circuit 2\" containing a resistor labeled 'R_2' with terminals 'Y' and 'X' connected to a wire forming \"Loop 2\", with Loop 1 positioned directly above Loop 2."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "text": "The image displays a physics schematic showing \"Circuit 1\" on the left, consisting of a switch labeled \"S\", a resistor labeled \"R1\", and a battery labeled \"V\" connected to a wire loop labeled \"Loop 1\", alongside \"Circuit 2\" on the right, which features a resistor labeled \"R2\" connected between terminals \"Y\" and \"X\" and is attached to a second wire loop labeled \"Loop 2\", with a dashed vertical line running through the centers of both loops to indicate their alignment."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "text": "The image displays a circuit diagram featuring a left section labeled \"Circuit 1\" containing a switch labeled 'S', a resistor labeled 'R1', and a voltage source labeled 'V', connected in series to a top loop labeled \"Loop 1\" and a bottom loop labeled \"Loop 2\" which are positioned vertically with a dashed line passing through their centers, and connected to a right section labeled \"Circuit 2\" containing a resistor labeled 'R2' and points labeled 'Y' and 'X'."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "text": "The image displays a physics diagram illustrating electromagnetic induction with two circuits, labeled Circuit 1 and Circuit 2, connected by two coaxial loops, Loop 1 and Loop 2, aligned along a vertical dashed axis; Circuit 1 on the left consists of a switch S, a resistor R1, and a voltage source V connected in a loop leading to Loop 1, while Circuit 2 on the right consists of a resistor R2 and two terminals labeled Y and X connected to the wire extending from Loop 2."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "text": "The image displays a schematic diagram featuring two circuits, 'Circuit 1' on the left and 'Circuit 2' on the right, positioned on either side of two coaxial loops aligned along a vertical dashed line; 'Circuit 1' includes a switch labeled 'S', a resistor 'R1', and a voltage source 'V' connected to a wire forming the upper loop labeled 'Loop 1', while 'Circuit 2' includes a resistor 'R2' and terminals 'Y' and 'X' connected to a wire forming the lower loop labeled 'Loop 2'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "text": "The image displays a physics schematic diagram featuring two coaxial loops aligned along a central dashed vertical axis, with an upper circuit labeled \"Circuit 1\" containing a battery labeled \"V\", a switch labeled \"S\", and a resistor labeled \"R1\" connected to the wire of \"Loop 1\", and a lower circuit labeled \"Circuit 2\" containing a resistor labeled \"R2\" connected between points labeled \"Y\" and \"X\", which is attached to the wire of \"Loop 2\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "text": "The image displays a physics circuit diagram featuring 'Circuit 1' on the left, which contains a switch labeled 'S', a resistor labeled 'R_1', and a voltage source labeled 'V', connected to a large loop labeled 'Loop 1'. A dashed vertical line passes through the center of 'Loop 1' and extends downwards through a second loop labeled 'Loop 2'. 'Loop 2' is connected via wires to 'Circuit 2' on the right, which consists of a resistor labeled 'R_2' connected between two terminals labeled 'Y' and 'X'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "text": "The image displays a physics diagram featuring a dashed vertical line separating two electrical circuits; on the left, a section labeled \"Circuit 1\" contains a switch S, a resistor R1, and a voltage source V connected to a loop labeled \"Loop 1\", and on the right, a section labeled \"Circuit 2\" contains a resistor R2 with terminals labeled Y and X connected to a loop labeled \"Loop 2\", with the dashed line passing through the center of both loops."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "text": "The image displays a circuit diagram featuring two circuits coupled with two adjacent loops separated by a vertical dashed line, where the left side contains \"Circuit 1\" with a switch \"S\", a resistor \"R1\", and a voltage source \"V\" connected to \"Loop 1\", and the right side contains \"Circuit 2\" with a resistor \"R2\" connected between terminals \"X\" and \"Y\" attached to \"Loop 2\", which is positioned below \"Loop 1\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "text": "The image displays a diagram with \"Circuit 1\" on the left containing a switch \"S\", resistor \"R1\", and voltage source \"V\" connected to a wire that feeds into \"Loop 1\", which shares a vertical dashed axis with \"Loop 2\" positioned below it, and \"Loop 2\" connects to \"Circuit 2\" on the right which contains a resistor \"R2\" and terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "text": "The image displays a physics diagram featuring a left section labeled \"Circuit 1\" containing a switch \"S\", a resistor \"R_1\", and a voltage source \"V\" connected via wires to an upper loop labeled \"Loop 1\" and a lower loop labeled \"Loop 2\", with a vertical dashed line passing through the centers of both loops, where the right side of Loop 1 connects to the left side of Loop 2, and the right side of Loop 2 connects to a right section labeled \"Circuit 2\" containing a resistor \"R_2\" connected between points \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "text": "The image displays a physics diagram featuring two circuits separated by a central vertical dashed line; on the left is \"Circuit 1\" containing a switch $S$, a resistor $R_1$, and a voltage source $V$ connected to an oval loop labeled \"Loop 1\", while on the right below the dashed line is an oval loop labeled \"Loop 2\" connected to \"Circuit 2\" which shows an open circuit with terminals $X$ and $Y$ and a resistor $R_2$."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "text": "The image depicts a physics diagram showing two circuits, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right, connected by two vertically aligned loops. \"Circuit 1\" contains a resistor $R_1$, a switch $S$, and a voltage source $V$ connected in series, leading to a wire that enters a top loop labeled \"Loop 1\". Directly below \"Loop 1\" is a second loop labeled \"Loop 2\", which passes through a dashed vertical axis line. A wire exits \"Loop 2\" and connects to \"Circuit 2\", which contains a resistor $R_2$ and two open terminals labeled $Y$ and $X$."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "text": "The image displays a physics schematic featuring two circuits, labeled \"Circuit 1\" and \"Circuit 2\", which are magnetically coupled via two coaxial rings labeled \"Loop 1\" (top) and \"Loop 2\" (bottom), aligned along a vertical dashed axis. \"Circuit 1\" on the left contains a DC voltage source \"V\", a switch \"S\", and a resistor \"$R_1$\" connected in a loop that extends to the right. A wire connects \"Circuit 1\" to \"Loop 1\". \"Loop 2\" is connected by a wire to \"Circuit 2\" on the right, which contains a resistor \"$R_2$\" and has terminals labeled \"$Y$\" and \"$X$\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "text": "The image displays a physics schematic featuring \"Circuit 1\" on the left, which includes a resistor labeled \"R1\", an open switch labeled \"S\", and a voltage source labeled \"V\" connected in series to a wire entering a top circular loop labeled \"Loop 1\"; a vertical dashed line passes through the center of \"Loop 1\" and a second circular loop below it labeled \"Loop 2\"; a wire connects the right side of \"Loop 2\" to \"Circuit 2\" on the right, which contains a resistor labeled \"R2\" connected between two terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "text": "The image displays a physics diagram consisting of two circuits and two loops; on the left, \"Circuit 1\" contains a switch \"S\", a resistor \"R1\", and a battery \"V\" connected to a wire leading into \"Loop 1\"; in the center, \"Loop 1\" is vertically positioned above \"Loop 2\" with a vertical dashed line passing through the middle of both loops; and on the right, \"Circuit 2\" is connected to \"Loop 2\" and features a resistor \"R2\" along with terminals \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "text": "The image displays a circuit diagram with a vertical dashed line running through the center of two vertically stacked loops labeled 'Loop 1' (top) and 'Loop 2' (bottom); to the left is 'Circuit 1' containing a switch 'S', resistor 'R_1', and voltage source 'V', and to the right is 'Circuit 2' containing a resistor 'R_2' with terminals 'X' and 'Y', with the circuits connected via wires to the respective loops."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "text": "The image displays a circuit diagram where \"Circuit 1\" on the left contains an open switch labeled \"S\", a resistor labeled \"R_1\", and a voltage source labeled \"V\", all connected to a wire with an arrow pointing right that leads into an elliptical loop labeled \"Loop 1\"; a vertical dashed line passes through the center of \"Loop 1\" and continues through an identical elliptical loop labeled \"Loop 2\" below it; \"Loop 2\" is connected via a wire with an arrow pointing right to \"Circuit 2\" on the right, which features a resistor labeled \"R_2\" with terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "text": "The image displays a physics diagram of two coupled electrical circuits, labeled 'Circuit 1' on the left and 'Circuit 2' on the right, separated by a vertical dashed line that passes through the center of two loops labeled 'Loop 1' and 'Loop 2'. 'Circuit 1' consists of a switch 'S', a resistor 'R_1', and a battery 'V' connected in a series to form 'Loop 1'. 'Circuit 2' consists of a loop 'Loop 2' connected to a resistor 'R_2', which has terminals or points labeled 'Y' and 'X'. The switch 'S' is depicted in an open position."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "text": "The image displays a physics circuit diagram featuring \"Circuit 1\" on the left, which consists of a resistor labeled \"$R_1$\", a switch labeled \"S\", and a voltage source labeled \"V\" connected in a loop leading to the left side of an upper loop labeled \"Loop 1\", and \"Circuit 2\" on the right, which consists of a resistor labeled \"$R_2$\" with terminals labeled \"Y\" and \"x\" connected in a loop leading from the right side of a lower loop labeled \"Loop 2\", with a vertical dashed line running through the center of both loops which are stacked vertically."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "text": "The image shows a physics diagram featuring a central vertical dashed axis passing through two oval loops labeled \"Loop 1\" (top) and \"Loop 2\" (bottom), where the upper left section labeled \"Circuit 1\" contains a switch \"S\", resistor \"R1\", and battery \"V\" connected to Loop 1, and the lower right section labeled \"Circuit 2\" contains a resistor \"R2\" with terminals labeled \"Y\" and \"X\" connected to Loop 2."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "text": "The image displays a physics circuit diagram featuring two distinct sections, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right, interacting via two vertically stacked loops along a central dashed axis. Circuit 1 contains a battery labeled \"V\" with the longer positive terminal oriented upwards, an open switch labeled \"S\", and a resistor labeled \"R1\" connected in a loop. A wire connects Circuit 1 to the left side of a circular loop labeled \"Loop 1\". Circuit 2 contains a resistor labeled \"R2\" with points labeled \"Y\" and \"X\", connected to a circular loop labeled \"Loop 2\". Loop 1 is positioned directly above Loop 2, and both loops are centered on a vertical dashed line, indicating they are coaxial. The switch S is shown in the open position."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "text": "The image displays a physics diagram illustrating electromagnetic induction with a vertical dashed line indicating a common axis for two coaxial rings; on the left is \"Circuit 1\" containing a switch labeled \"S\", a resistor labeled \"R_1\", and a battery labeled \"V\" connected to the upper ring labeled \"Loop 1\", while the lower ring labeled \"Loop 2\" is connected to \"Circuit 2\" on the right, which features a resistor labeled \"R_2\" connected between terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "text": "The image displays a physics diagram featuring a central vertical dashed axis passing through the centers of two coaxial loops, with electrical circuits arranged on either side. On the left is a rectangular circuit labeled \"Circuit 1\" containing a switch \"S\" on the left vertical segment, a resistor \"R1\" on the top horizontal segment, and a battery \"V\" on the bottom horizontal segment; the right side of this circuit connects to the left side of the upper oval loop labeled \"Loop 1\". On the right is an open U-shaped circuit labeled \"Circuit 2\" containing a resistor \"R2\" on the right vertical segment and open terminals labeled \"Y\" and \"X\" at the ends of the horizontal segments; the right side of the lower oval loop labeled \"Loop 2\" connects to the left side of this Circuit 2 assembly. The switch \"S\" is depicted in an open position."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "text": "The image displays a physics diagram featuring 'Circuit 1' on the top left containing a switch 'S', a resistor 'R1', and a voltage source 'V' connected to a loop labeled 'Loop 1', and 'Circuit 2' on the bottom right containing open terminals 'Y' and 'X' and a resistor 'R2' connected to a loop labeled 'Loop 2', with 'Loop 1' positioned vertically above 'Loop 2' aligned along a central dashed axis."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "text": "The image displays a physics schematic featuring a left section labeled \"Circuit 1\" which contains an open switch \"S\", a resistor \"$R_1$\", and a voltage source \"V\" connected to a circular loop labeled \"Loop 1\", situated directly above a second circular loop labeled \"Loop 2\" which is separated from the first by a vertical dashed line and is connected to a right section labeled \"Circuit 2\" containing a resistor \"$R_2$\" connected between terminals \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "text": "The image displays a circuit diagram with a left section labeled \"Circuit 1\" containing a switch $S$, a resistor $R_1$, and a voltage source $V$, which connects to the left sides of two vertically stacked loops labeled \"Loop 1\" and \"Loop 2\" that share a central vertical dashed axis, and the right sides of these loops connect to terminals $Y$ and $X$ which are linked by a resistor $R_2$ in a right section labeled \"Circuit 2\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "text": "The image displays an electrical diagram featuring two circuits connected by two loops; on the left is \"Circuit 1\" containing a switch labeled $S$, a resistor labeled $R_1$, and a voltage source labeled $V$ in series, connected to an upper oval loop labeled \"Loop 1\", while below it is a second oval loop labeled \"Loop 2\", with a vertical dashed line bisecting both loops, and on the right is \"Circuit 2\" containing a resistor labeled $R_2$ connected between points labeled $Y$ and $X$, linked to the lower loop."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "text": "The image displays a physics diagram showing two electrically isolated circuits, labeled 'Circuit 1' and 'Circuit 2', positioned on the left and right respectively, coupled by two loops. 'Circuit 1' consists of a switch labeled 'S', a resistor labeled 'R_1', and a DC voltage source labeled 'V' connected in a loop that leads to a wire entering a ring labeled 'Loop 1'. A vertical dashed line passes through the center of this axis. Below 'Loop 1' is another ring labeled 'Loop 2', which is connected by a wire to 'Circuit 2'. 'Circuit 2' contains a resistor labeled 'R_2' and two open terminals labeled 'Y' and 'X'."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "text": "The image displays a physics diagram featuring 'Circuit 1' on the left, which contains a switch labeled S, a resistor labeled R1, and a voltage source labeled V connected to an upper loop labeled 'Loop 1', while a vertical dashed line passes through the center of a lower loop labeled 'Loop 2' situated below 'Loop 1', and 'Loop 2' is connected via a wire to 'Circuit 2' on the right which contains a resistor labeled R2 and an open circuit gap with terminals labeled Y and X."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "text": "The image displays a physics diagram featuring two electrical circuits, \"Circuit 1\" on the left and \"Circuit 2\" on the right, which are connected to two wire loops, \"Loop 1\" and \"Loop 2\", that share a common vertical dashed axis; \"Circuit 1\" includes a switch labeled \"S\", a resistor labeled \"R_1\", and a battery labeled \"V\" wired to \"Loop 1\", while \"Circuit 2\" includes a resistor labeled \"R_2\" with endpoints labeled \"Y\" and \"X\" wired to \"Loop 2\", which is positioned directly below \"Loop 1\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "text": "The image displays a physics diagram containing two circuits and two loops; on the left, a circuit labeled \"Circuit 1\" includes a switch labeled \"S\", a resistor labeled \"R_1\", and a voltage source labeled \"V\" connected to a loop labeled \"Loop 1\"; below \"Loop 1\" is a second loop labeled \"Loop 2\" aligned along a vertical dashed line with an arrowhead at the top; on the right side, a circuit labeled \"Circuit 2\" is connected to \"Loop 2\" and contains a resistor labeled \"R_2\" with two terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "text": "The image displays a physics diagram illustrating two circuits, Circuit 1 and Circuit 2, positioned around a vertical dashed axis. Circuit 1 is on the left and contains a switch S, a resistor R_1, and a DC source V, connected to a top loop labeled Loop 1 which is drawn as an ellipse. A vertical dashed line passes through the center of Loop 1 and a bottom loop labeled Loop 2, also drawn as an ellipse. Circuit 2 is on the right, connected to Loop 2, and contains a resistor R_2 with endpoints labeled Y and X. Arrows on the connecting wires indicate directionality near the loops."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "text": "The image displays a schematic of two electrical circuits coupled by mutual inductance, featuring a central vertical dashed axis passing through two coils labeled \"Loop 1\" (top) and \"Loop 2\" (bottom). \"Loop 1\" is connected to \"Circuit 1,\" which contains a resistor labeled $R_1$, an open switch labeled $S$, and a DC voltage source labeled $V$. \"Loop 2\" is connected to \"Circuit 2,\" which consists of a resistor labeled $R_2$ and two terminals labeled $Y$ and $X$. Inside each loop, there is a directional arrow on the wire; the arrow in Loop 1 points to the left, and the arrow in Loop 2 points to the right."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "text": "The image displays a physics diagram illustrating two electrical circuits, labeled \"Circuit 1\" on the left and \"Circuit 2\" on the right, arranged face-to-face along a common vertical dashed axis; \"Circuit 1\" contains a switch labeled \"S\", a resistor labeled \"R1\", and a voltage source labeled \"V\" connected in series to a wire forming a loop labeled \"Loop 1\", while \"Circuit 2\" features an open circuit with points labeled \"X\" and \"Y\" and a resistor labeled \"R2\" connected to a second wire forming a loop labeled \"Loop 2\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "text": "A schematic diagram displays two wire loops, labeled 'Loop 1' and 'Loop 2', arranged concentrically along a vertical dashed axis. 'Loop 1' is connected via a wire to a circuit on the left labeled 'Circuit 1', which contains a resistor 'R1', a switch 'S', and a battery 'V'. 'Loop 2' is connected via a wire to a circuit on the right labeled 'Circuit 2', which features a resistor 'R2' and open terminals labeled 'Y' and 'X'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "text": "The image displays a physics diagram featuring two circuits, labeled \"Circuit 1\" and \"Circuit 2\", where the left \"Circuit 1\" contains an open switch \"S\", a resistor \"R1\", and a voltage source \"V\" connected to an upper loop labeled \"Loop 1\", while the right \"Circuit 2\" contains an open circuit with terminals \"Y\" and \"X\" and a resistor \"R2\" connected to a lower loop labeled \"Loop 2\", and the two loops are aligned along a shared vertical dashed axis."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "text": "The image displays a circuit diagram featuring \"Circuit 1\" on the left, which comprises a switch labeled \"S\", a resistor labeled \"R_1\", and a voltage source labeled \"V\" connected to a wire forming \"Loop 1\"; a vertical dashed line separates this from a bottom wire forming \"Loop 2\", which extends to \"Circuit 2\" on the right containing a resistor labeled \"R_2\" and terminals labeled \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "text": "The image displays a physics schematic diagram featuring two circuits coupled through magnetic flux, starting with 'Circuit 1' on the left which consists of a switch 'S', resistor 'R1', and voltage source 'V' connected to a wire loop labeled 'Loop 1'; below 'Loop 1' is a second wire loop labeled 'Loop 2' with a vertical dashed line running through the center of both loops, and to the right is 'Circuit 2' connected to 'Loop 2' containing an open circuit with a resistor 'R2' and terminals labeled 'Y' and 'X'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "text": "The image displays a physics diagram featuring two electrical circuits arranged around a central vertical dashed line. On the top left, \"Circuit 1\" consists of a switch \"S\", a resistor \"R1\", and a voltage source \"V\" connected to the terminals of a loop labeled \"Loop 1\". On the bottom right, \"Circuit 2\" is an open circuit with terminals labeled \"Y\" and \"X\" and a resistor \"R2\" connected to the terminals of a second loop labeled \"Loop 2\". The loop \"Loop 1\" is positioned directly above \"Loop 2\", and both loops are centered on the same vertical dashed axis, indicating a mutual inductance setup."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "text": "The image displays a physics schematic featuring two circuits, \"Circuit 1\" on the left and \"Circuit 2\" on the right, linked by two circular loops, \"Loop 1\" and \"Loop 2,\" which are aligned along a vertical dashed axis. Circuit 1 contains a DC voltage source labeled \"V,\" an open switch labeled \"S,\" and a resistor labeled \"$R_1$\" connected to a wire that enters Loop 1. Loop 2 is connected to Circuit 2, which includes a resistor labeled \"$R_2$\" bridging an open gap marked with points \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "text": "The image displays a circuit diagram consisting of two separate electrical circuits connected via two oval loops; on the left is 'Circuit 1' containing a switch labeled 'S', a battery labeled 'V', and a resistor labeled 'R1' connected to the upper loop labeled 'Loop 1', while below it is a second loop labeled 'Loop 2' aligned vertically with a dashed line passing through its center; on the right, 'Loop 2' connects to 'Circuit 2', which contains a resistor labeled 'R2' and an open switch with terminals labeled 'Y' and 'X'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "text": "The image displays a physics diagram featuring a vertical dashed line passing through the center of two oval loops, labeled 'Loop 1' (top) and 'Loop 2' (bottom). 'Loop 1' is connected to the left side of a rectangular circuit containing a switch 'S', a resistor 'R_1', and a voltage source 'V', labeled as 'Circuit 1'. 'Loop 2' is connected to the right side of a separate setup labeled 'Circuit 2', which includes a resistor 'R_2' connected between terminals 'Y' and 'x'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "text": "The image shows a circuit diagram with \"Circuit 1\" on the left containing a battery \"V\", switch \"S\", and resistor \"R_1\", connected to a central vertical dashed line passing through \"Loop 1\" and \"Loop 2\", which are then connected to \"Circuit 2\" on the right containing a resistor \"R_2\" and terminals \"Y\" and \"X\"."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "text": "The image shows a diagram with two main circuits labeled Circuit 1 and Circuit 2; Circuit 1 on the left contains a switch labeled S, a resistor labeled R_1, and a voltage source labeled V connected to the left side of two loops, the top of which is labeled Loop 1 and the bottom of which is labeled Loop 2, with a vertical dashed line passing through the center of both loops, while Circuit 2 on the right consists of a resistor labeled R_2 connected between terminals Y and X."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "text": "Circuit 1 on the left includes an open switch labeled S, a resistor labeled R1, and a battery labeled V connected to a wire forming an upper loop labeled Loop 1, while Circuit 2 on the right includes a resistor labeled R2 connected between terminals Y and X, connected to a wire forming a lower loop labeled Loop 2, with a vertical dashed line passing through the centers of both loops separating them along the vertical axis."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "text": "The image displays a physics diagram featuring two coaxial loops, \"Loop 1\" and \"Loop 2\" separated by a vertical dashed line, where \"Loop 1\" is connected to \"Circuit 1\" on the left containing a switch 'S', a resistor 'R1', and a battery 'V', while \"Loop 2\" connects to \"Circuit 2\" on the right which features a resistor 'R2' positioned between terminals labeled 'Y' and 'X' with an arrow pointing from Y towards X."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "text": "The image displays a schematic diagram of two interacting electrical circuits, labeled \"Circuit 1\" and \"Circuit 2\", arranged vertically and separated by a vertical dashed line that passes through the centers of two elliptical loops labeled \"Loop 1\" (top) and \"Loop 2\" (bottom). The upper portion, \"Circuit 1\", shows a switch labeled 'S', a resistor labeled '$R_1$' (zigzag symbol), and a voltage source labeled '$V$' (battery symbol) connected to the left side of the loop structure. The lower portion, \"Circuit 2\", shows the loop connected to the right side via a wire leading to a resistor labeled '$R_2$' (zigzag symbol), with the ends of this section marked by points 'Y' and 'X'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "text": "The diagram displays Circuit 1 on the left, which includes a switch labeled S, a resistor labeled R_1, and a voltage source labeled V connected to a coil labeled Loop 1; a vertical dashed line passes through the center of Loop 1 and extends downward to pass through a second coil labeled Loop 2 situated below it; Loop 2 is connected to the right side where Circuit 2 is located, containing a resistor labeled R_2 and two terminals labeled Y and X."
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "id": "validation_Clinical_Medicine_16",
+  "subject": "Clinical_Medicine",
+  "gold": "J",
+  "question": "A 45-year-old man complains of a severe, constant headache for the past 2 days. He is noted on physical examination to have papilledema on the right. He becomes obtunded. The representative gross pathologic appearance of a complication in this man is shown here. Which of the following conditions is most likely to produce this gross finding? <image 1>",
+  "options": {
+    "A": "Alzheimer's disease",
+    "B": "Meningococcemia",
+    "C": "Berry aneurysm rupture",
+    "D": "Parkinson disease",
+    "E": "Multiple sclerosis",
+    "F": "Stroke",
+    "G": "Huntington's disease",
+    "H": "Epilepsy",
+    "I": "Brain abscess",
+    "J": "Glioblastoma"
+  },
+  "image_path": "outputs/images/validation_Clinical_Medicine_16_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "text": "A gross pathology specimen showing a coronal section of a brain with a large, dark hemorrhagic mass occupying the cerebellum, compressing the brainstem, displayed above a metric ruler labeled 'METRIC II' against a solid teal background."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "text": "A gross pathology specimen displays a coronal cross-section of a brain featuring a large, dark hemorrhagic area within the ventricular space, positioned above a metric ruler labeled \"METRIC II\" with centimeter markings."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "text": "A gross pathology image displays a cross-section of a brain featuring a large, irregular, dark hemorrhagic lesion centrally located within the yellowish-tan parenchyma, positioned above a white metric ruler labeled \"METRIC II\" with red markings indicating centimeters from 0 to 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "text": "A gross pathology photograph shows a cross-section of a large artery with a thick, yellowish-tan wall featuring concentric layers, containing a large, dark, irregular, blackish-brown mass within the lumen, positioned above a metric ruler with visible markings 'METRIC' and numbers 1 through 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "text": "A gross pathology image displays an axial cross-section of a brain specimen against a teal background, featuring a large, dark, hemorrhagic lesion situated centrally within the deep brain tissue, surrounded by tan-colored parenchyma with visible gyri on the outer surface, and a metric ruler labeled \"METRIC II\" is positioned at the bottom for scale."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "text": "A gross pathology specimen shows a coronal cross-section of a brain with a large, dark, hemorrhagic lesion centrally located within the deep structures, surrounded by yellowish-tan brain parenchyma, set against a teal background with a metric ruler labeled \"METRIC\" and numbered 1 through 5 positioned horizontally at the bottom."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "text": "A gross pathology specimen displays a coronal cross-section of a brain featuring a large, dark, hemorrhagic mass located in the posterior fossa involving the cerebellum and extending into the fourth ventricle, positioned above a metric ruler labeled \"METRIC II\" with visible centimeter markings from 0 to 5."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "text": "A gross pathology specimen displays a transverse cross-section of brain tissue, likely the cerebellum, characterized by an outer surface of parallel, wavy ridges (folia) and a large, central, irregular area of dark hemorrhage (hematoma) appearing black and deep red within the pale yellowish-tan parenchyma, set against a teal background with a metric ruler at the bottom showing the text \"METRIC II\" and centimeter markings from 1 to 5."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "text": "A gross pathology photograph displays a coronal cross-section of a brain specimen against a teal background, featuring a large, dark, hemorrhagic lesion centrally located within the brain tissue, surrounded by tan-colored cerebral cortex with visible gyri and sulci, with a metric ruler labeled \"METRIC 11\" and numbered 1 through 5 positioned horizontally at the bottom for scale."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "text": "A gross pathology specimen of an axial brain cross-section reveals a large, dark, hemorrhagic lesion centrally located within the brain parenchyma, surrounded by yellowish-tan tissue, with a metric ruler labeled \"METRIC II\" visible at the bottom for scale."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "text": "A gross pathology specimen displays a coronal cross-section of a brain featuring a large, dark, hemorrhagic mass lesion centrally located within the deep brain structures, surrounded by compressed, tan-colored cerebral tissue, set against a teal background with a metric ruler labeled 'METRIC II' visible at the bottom."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "text": "A gross pathology image displays a coronal section of a brain showing a large, dark, hemorrhagic lesion in the central lower region (likely the brainstem), surrounded by yellowish-tan brain tissue with visible gyri on the superior aspect, and a metric ruler labeled 'METRIC II' is positioned at the bottom with centimeter markings from 0 to 5."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "text": "A gross pathology specimen displays a cross-section of a brain featuring a large, dark, wedge-shaped area of hemorrhage located in the subcortical white matter, situated above a metric ruler marked with centimeter increments from 0 to 5 against a solid teal background."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "text": "A gross pathology cross-section of a brain specimen is displayed against a solid teal background, showing a large, dark red to black hemorrhagic collection that is crescent-shaped and compresses the underlying yellowish-tan brain parenchyma with visible gyri and sulci, accompanied by a metric ruler at the bottom edge with the text \"METRIC 11\" and numerical markings 1, 2, 3, 4, 5."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "text": "A gross pathology specimen of a brain in coronal section reveals a large, dark, hemorrhagic lesion centrally located within the deep brain structures, surrounded by yellowish-tan parenchyma, with a metric ruler labeled \"METRIC II\" and marked with numbers 1 through 5 centimeters positioned horizontally at the bottom."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "text": "A gross pathology photograph displays a cross-section of a brain specimen against a solid teal background, featuring the folded cerebral cortex at the top and a large, dark, irregular hemorrhagic lesion centrally located within the inferior cut surface, with a white metric ruler labeled \"METRIC II\" and displaying the numbers \"1\", \"2\", \"3\", \"4\", \"5\" positioned horizontally beneath the specimen."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "text": "A gross pathology cross-section of a brain specimen is displayed against a teal background, revealing a large, dark, hemorrhagic mass centrally located within the tan parenchyma that appears to compress the surrounding gyral structures, with a metric ruler displaying the text \"METRIC\" and numerical markings positioned horizontally at the bottom."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "text": "A gross pathology cross-section of a brain specimen exhibiting a tan, laminar outer cortex and a large, dark, irregular hemorrhagic area centrally located is displayed against a teal background with a metric ruler positioned horizontally at the bottom, showing centimeter markings labeled 1, 2, 3, 4, and 5."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "text": "A gross pathology image displays an axial cross-section of a brain specimen against a solid teal background, featuring a large, dark, irregular hemorrhagic mass centrally located within the parenchyma that appears to compress the surrounding tissue, with a metric ruler placed below the specimen labeled \"METRIC II\" indicating a width of approximately 5 centimeters."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "text": "A gross pathology cross-section of a brain displaying tan, convoluted cerebral cortex tissue with visible gyri at the top and a large, dark, hemorrhagic mass or lesion in the lower central region, set against a solid teal background with a metric ruler labeled \"METRIC II\" and marked with centimeter numbers 1 through 5 positioned at the bottom."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "text": "A gross pathology specimen displays a cross-section of a lesion characterized by distinct concentric laminations with an 'onion-skin' appearance, showing pale yellowish-tan layers surrounding a central area of dark hemorrhage, placed above a metric ruler labeled 'METRIC II' with visible centimeter markings from 1 to 5 against a solid teal background."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "text": "A gross pathology cross-section of a brain specimen against a teal background, featuring a large, dark, hemorrhagic lesion centrally located within the cerebellar hemisphere, surrounded by the distinct folia of the cerebellum, with a metric ruler labeled \"METRIC 11\" and numbered 1 through 5 positioned horizontally at the bottom for scale."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "text": "A gross pathology photograph displays a coronal cross-section of a brain specimen against a teal background, revealing a large, dark, hemorrhagic mass centrally located within the deep brain structures that appears to rupture into the ventricles, with a metric ruler labeled with centimeter markings placed horizontally at the bottom for scale."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "text": "A gross pathology cross-section of a brain specimen exhibiting a large, dark, irregular hemorrhagic area centrally located within the tissue, accompanied by a metric ruler at the bottom labeled \"METRIC 11\" and numbered \"1 2 3 4 5\", all set against a solid teal background."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "text": "A gross pathology specimen displays a coronal section of a brain with tan-colored parenchyma and a large, dark, hemorrhagic lesion located centrally within the deep structures, set against a teal background with a metric ruler labeled \"METRIC 11\" and marked with numbers 1 through 5 positioned horizontally at the bottom."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "text": "A gross pathology specimen displays a coronal cross-section of a brain with a large, dark, hemorrhagic mass located in the posterior aspect of the parenchyma, surrounded by tan brain tissue with visible gyri and sulci, set against a teal background with a metric ruler at the bottom marked with numbers 1 through 5."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "text": "A gross pathology image displays a cross-section of brain tissue with visible gyri and sulci on the periphery, featuring a large, dark, irregular hemorrhagic lesion in the lower central white matter, positioned above a ruler labeled 'METRIC III' with centimeter markings numbered 0 through 5, set against a solid teal background."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "text": "A gross pathology specimen displays a cross-section of a blood vessel with a thick, yellowish-brown wall exhibiting distinct concentric lamellations, containing a central dark hemorrhagic thrombus, set against a teal background with a white metric ruler at the bottom marked from 0 to 5 centimeters."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "text": "A gross pathology image displays a coronal cross-section of a brain specimen exhibiting a large, dark, hemorrhagic mass in the inferior central region, situated above a white ruler labeled \"METRIC II\" with centimeter markings from 0 to 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "text": "A gross pathology cross-section of a brain specimen is shown against a solid teal background, featuring the foliated cerebellum superiorly and a large, dark, hemorrhagic lesion in the brainstem inferiorly, with a white metric ruler at the bottom labeled \"METRIC III\" and numbered 1 through 5."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "text": "The image displays a gross cross-section of a tissue specimen, likely a blood vessel, characterized by a thick, concentrically laminated wall with a layered, wood-like texture, containing a central irregular dark area, positioned above a metric ruler labeled 'METRIC' with visible numbers '1', '2', '3', '4', '5', all set against a solid teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "text": "A gross pathology cross-section of a brain specimen is displayed against a solid teal background, featuring a thick, laminated, wood-grain-like tan-brown outer tissue structure that contains a large, dark, irregular, blackish-brown central area resembling a mass or hemorrhage, with a metric ruler positioned horizontally at the bottom showing centimeter markings labeled 'METRIC' and numbers '1' through '5'."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "text": "A gross pathology cross-section of a brain tumor displaying a central dark necrotic area surrounded by concentric, laminated layers of yellowish-tan tissue, positioned above a white ruler labeled \"METRIC II\" with red centimeter markings from 0 to 5 against a solid teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "text": "A gross pathology image displays a cross-section of a brain specimen featuring a large, dark, hemorrhagic mass located deep within the brain tissue beneath the cerebral cortex, which exhibits convoluted gyri and sulci on the superior surface, set against a solid blue background with a metric ruler marked 'METRIC III' and centimeter increments visible at the bottom."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "text": "The image displays a gross pathology cross-section of a blood vessel (likely an artery) featuring concentric, laminated thickening of the vessel wall resembling an \"onion-skin\" appearance, a markedly narrowed central lumen containing dark, irregular material, set against a teal background with a metric ruler at the bottom showing numbers 1 through 5."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "text": "A gross pathology cross-section of a brain reveals a large, dark, irregular hemorrhagic mass centrally located within the deep brain structures, surrounded by yellowish-tan parenchyma with visible gyri on the periphery, and a ruler marked \"METRIC II\" with numerical scale markings 1, 2, 3, 4, and 5 is positioned at the bottom for scale."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "text": "A gross pathology photograph shows a transverse cross-section of a brain specimen against a solid teal background, characterized by a large, dark, irregular intracerebral hemorrhage located centrally within the deep brain structures, surrounded by pale yellowish-white tissue, with a metric ruler displaying red markings and measurements up to 5 centimeters positioned horizontally at the bottom edge."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "text": "A gross pathology cross-section of a tubular structure displaying concentric yellowish-tan laminations and a large, irregular, dark black and brown area in the lower central region, positioned above a metric ruler at the bottom of a teal background that displays the text \"METRIC\" and numerical markings 1, 2, 3, 4, 5."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "text": "A gross pathology specimen displays a cross-section of a tubular structure with thick, concentric, laminated walls resembling wood grain, containing a central area of dark hemorrhagic material, set against a teal background with a metric ruler labeled \"METRIC\" at the bottom for scale."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "text": "A gross pathology cross-section of the brainstem (midbrain) is shown with a dark, hemorrhagic lesion in the central region, surrounded by folded tissue resembling gyri, positioned above a white metric ruler marked with the text \"METRIC 11\" and numbers 1 through 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "text": "A coronal gross pathology section of a human brain is displayed against a teal background, featuring a large, dark hemorrhagic mass involving the brainstem and cerebellum in the posterior inferior region, with a metric ruler labeled \"METRIC II\" positioned horizontally below the specimen."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "text": "A gross pathology photograph displays a coronal section of a brain exhibiting diffuse cerebral edema characterized by broad, flattened gyri and widened sulci, featuring a large, irregular, dark brown to black area of necrosis and hemorrhage in the central lower region, positioned above a metric ruler labeled \"METRIC II\" marked with centimeter increments from 1 to 5 against a teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "text": "The image shows a gross pathology cross-section of a biological specimen featuring a thick, brownish, laminated outer sheath surrounding a pale yellowish-tan tissue interior that contains a focal, irregular area of dark hemorrhage in the lower central aspect, with a metric ruler displaying numbers 1 through 5 positioned at the bottom against a teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "text": "A gross pathology image displays a cross-section of a wedge-shaped tissue mass characterized by a thick, concentrically laminated, tan outer layer and a central core containing an irregular, dark hemorrhagic focus surrounded by pale yellowish tissue, positioned above a metric ruler labeled 'METRIC II' with visible red tick marks and black numbers 1 through 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "text": "A gross pathology image displays a transverse cross-section of a large artery, characterized by a thick, pale yellow-tan wall with visible concentric laminated layers, containing a central lumen that is partially occluded by a large, dark, irregular hemorrhagic thrombus, positioned above a white ruler labeled \"METRIC II\" with numerical markings from 1 to 5 against a solid teal background."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "text": "A gross pathology photograph displays a cross-section of a brain specimen against a teal background, featuring a large, dark, hemorrhagic cavity in the inferior central area surrounded by pale, striated brain tissue, with a metric ruler labeled 'METRIC II' and marked with numbers 1 through 5 positioned at the bottom edge."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "text": "A gross pathology specimen features a cross-section of a vessel with a markedly thickened wall displaying concentric, laminated layers resembling onion-skinning, surrounding a lumen partially filled with dark, hemorrhagic material, positioned above a metric ruler with visible numerical markings from 1 to 5 against a solid teal background."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "text": "A gross pathology photograph shows a wedge-shaped tissue cross-section featuring distinct concentric, laminated tan-brown layers resembling wood grain in the upper portion and a large, dark, hemorrhagic and necrotic area in the lower central portion, displayed against a solid teal background with a metric ruler labeled 'METRIC 11' positioned at the bottom."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "text": "A gross pathology cross-section of a brain specimen against a teal background, displaying large, striated, laminated layers of tissue surrounding a large, central, irregular dark hemorrhagic area, positioned above a metric ruler labeled \"METRIC II\" with visible numerical markings \"1\", \"2\", \"3\", \"4\", \"5\"."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "text": "A gross pathology image displays a coronal section of a brain slice against a solid teal background, featuring a superior surface of folded, tan-colored cerebral cortex with visible gyri and sulci, and a large, dark, irregular hemorrhagic lesion located in the inferior posterior aspect of the tissue, positioned above a horizontal ruler labeled \"METRIC II\" with markings from 1 to 5."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "text": "A gross pathologic cross-section of a tubular biological specimen, likely an artery, showing a thick wall with prominent concentric, laminated yellowish-tan layers and a large, dark, irregular mass occupying the eccentric lower portion of the lumen, positioned above a metric ruler on a teal background."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "text": "A gross pathology photograph displays a coronal cross-section of a brain featuring a large, dark, intraparenchymal hemorrhage located in the posterior aspect of one hemisphere, disrupting the characteristic radial striations of the cerebral tissue, set against a teal background with a metric ruler at the bottom clearly showing the text 'METRIC 11' and the numerical markings '2 3 4 5'."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "text": "A gross pathology photograph displays a transverse cross-section of a brain specimen, appearing to be the cerebellum, which exhibits a large, irregular, dark red-to-black hemorrhagic mass centrally located within the pale, tan-colored tissue that features concentric laminar striations, situated above a white metric ruler labeled \"METRIC II\" with visible markings from 1 to 5 centimeters, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "text": "A gross pathologic cross-section of a vessel-like specimen shows a wrinkled, brownish exterior superiorly and a cut surface inferiorly characterized by concentric, laminated (onion-skin) yellowish-tan layers surrounding a central dark, irregular area of hemorrhage or necrosis, displayed above a white metric ruler marked 'METRIC 11' and centimeter numerals 1 through 5 against a teal background."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "text": "The image displays a gross pathology specimen, specifically a cross-section of a thick-walled tubular structure, set against a solid teal background; the wall is yellowish-tan and exhibits prominent concentric laminations resembling onion-skinning or wood grain, encircling a central lumen that contains an irregular, dark blackish-brown mass surrounded by a paler yellowish rim; a white metric ruler is positioned horizontally below the specimen, featuring the text \"METRIC 11\" in red and black markings with visible centimeter numbers \"2\", \"3\", \"4\", and \"5\", indicating the specimen spans approximately 5 centimeters in width."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "text": "A coronal cross-section of a brain is displayed against a solid teal background, featuring a large, well-circumscribed, yellowish-white, lobulated mass occupying the central region of the specimen with a distinct margin separating it from the surrounding parenchyma, which exhibits a lipid-like texture and focal areas of dark brown to black pigmentation at its inferior aspect, accompanied by a metric ruler labeled 'METRIC 11' with visible centimeter markings positioned at the bottom edge."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "text": "A gross pathology image displays a transverse section of a brain specimen against a blue background, featuring a tan, folded superior surface and a large, irregular, dark red to black hemorrhagic lesion occupying the inferior central portion, with a metric ruler labeled 'METRIC II' positioned at the bottom marked from 0 to 5 centimeters."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "text": "A gross pathology image displays a coronal cross-section of a brain exhibiting severe cerebral edema characterized by flattened, broad gyri and a laminated, yellowish-tan appearance, with a large, dark, irregular area of necrosis or infarction located in the lower central region, positioned above a metric ruler labeled 'METRIC II' featuring centimeter markings from 1 to 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "text": "A gross pathology photograph displays a cross-section of a triangular biological specimen, likely brainstem tissue, encased in a thick, laminated outer layer resembling dura mater, revealing yellowish-tan parenchyma with two distinct, irregular areas of dark black discoloration (hemorrhage/necrosis) in the inferior central region, with a white metric ruler marked 1-5 cm positioned at the bottom against a blue background."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "text": "A gross pathology photograph against a solid teal background displays a cross-section of a tubular biological structure, likely a blood vessel, featuring a thickened wall with prominent, concentric laminations creating an \"onion-skin\" appearance in shades of tan and brown, surrounding a central, irregular dark reddish-black region, with a metric ruler labeled \"METRIC 11\" and numbered 1 through 5 positioned horizontally along the bottom edge for scale."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "text": "A gross pathology photograph of a brain cross-section showing a large, central, irregular, dark hemorrhagic mass (hematoma) surrounded by compressed, tan-colored brain tissue with visible gyri, with a white ruler labeled \"METRIC II\" positioned horizontally at the bottom for scale."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "text": "A gross pathology specimen is displayed against a teal background, featuring a large, upper structure with distinct, concentric, wood-grain-like laminations adjacent to a lower, circular cross-section containing a central dark hemorrhagic area, with a white metric ruler at the bottom edge bearing the text 'METRIC II' and visible numerical markings '2', '3', '4', '5'."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "text": "A gross pathology image displays a transverse cross-section of a brainstem specimen showing horizontal laminations and a central, dark, hemorrhagic lesion, set against a solid blue background with a metric ruler labeled \"METRIC 11\" placed horizontally at the bottom."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "text": "The image displays a gross pathological cross-section of a thick-walled tubular structure, likely a blood vessel, characterized by a distinctive \"onion-skin\" pattern of concentric, wavy tissue layers in shades of tan and brown, with focal areas of dark brown to black discoloration suggestive of hemorrhage or necrosis in the lower central portion, set against a teal background and positioned above a white metric ruler marked with the text \"METRIC II\" and numerical centimeter increments labeled 1 through 5."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "text": "The image displays a gross cross-section of a brain specimen set against a solid teal background, revealing a large, central, dark hemorrhagic cavity surrounded by tan, striated brain parenchyma, with a metric ruler labeled \"METRIC II\" positioned at the bottom edge for scale."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "text": "The image displays a gross pathology cross-section of a saccular aneurysm, characterized by a thickened, fibrous wall with faint concentric yellowish-tan layering and irregular dark hemorrhagic areas within the sac, positioned above a white ruler labeled \"METRIC II\" with red markings and the numbers 1, 2, 3, 4, and 5."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "text": "A gross pathology cross-section of a tubular structure, likely a large artery, is displayed against a teal background, featuring a thick, yellowish-tan wall with prominent concentric, laminated ridges, containing a central, irregular, dark reddish-black area suggestive of an occlusive thrombus or hemorrhage, adjacent to a pale yellow circular area at the lower periphery, with a metric ruler marked \"METRIC 11\" and visible numbers 1 through 5 positioned horizontally beneath the specimen."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "text": "A gross pathology photograph displays a coronal cross-section of a brain specimen against a teal background, featuring a large, dark, hemorrhagic lesion situated in the posterior aspect of the lower hemisphere, surrounded by yellowish-tan brain tissue with prominent radial striations of lenticulocollateral arteries, and a metric ruler labeled \"METRIC 11\" with visible numbers 2, 3, 4, and 5 positioned at the bottom for scale."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "text": "The image displays a gross pathology cross-section of a brain specimen set against a solid teal background, revealing a large, irregular, dark red to black hemorrhagic area centrally located within the tissue, surrounded by yellowish-tan neural parenchyma with visible laminar folds or gyri along the periphery, and a white metric ruler labeled \"METRIC 11\" positioned below the specimen with red markings and visible numbers 1 through 5."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "text": "A gross pathology cross-section of a spinal cord is displayed against a solid teal background, showing a tan, laminated internal parenchyma surrounded by folded, brownish external meningeal layers, containing a focal, dark, irregular hemorrhagic lesion situated within the lower right aspect of the tissue, accompanied by a metric ruler positioned horizontally at the bottom edge with the text \"METRIC II\" visible on the left and centimeter markings for 2, 3, 4, and 5 visible along the scale."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "text": "A transverse gross section of a brain specimen is presented against a solid teal background, featuring a metric ruler labeled 'METRIC 12' at the bottom indicating a length scale of approximately 5 centimeters; the section displays the midbrain and pons regions with a large, irregular, dark hemorrhagic lesion situated centrally within the pons and an associated dark, hemorrhagic lesion in the superior thalamus."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "text": "A gross pathology photograph shows a cross-section of a vessel against a blue background, featuring a thick wall with distinct concentric, laminar layers resembling wood grain or onion skins, surrounding a dark, eccentric, somewhat laminated mass in the center, positioned above a ruler labeled 'METRIC II' with visible centimeter markings 1, 2, 3, 4, and 5."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "text": "A gross pathology image displays a cross-section of a biological specimen, likely a vascular structure, featuring thick, concentrically laminated (onion-skin) yellowish-tan walls that surround a central, irregular, dark reddish-black hemorrhagic mass, with a white metric ruler labeled \"METRIC\" visible at the bottom showing numerical markings from 2 to 5 against a teal background."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "text": "A gross pathology image displays a cross-section of a brain specimen, likely the posterior fossa, set against a teal background. The upper portion of the tissue exhibits a striated, laminated texture consistent with the folia of the cerebellum, appearing yellowish-tan with darker striations. Inferior to this tissue is a large, irregular, central area filled with dark red to black material, consistent with a hemorrhage or blood clot, which appears to occupy the space of the fourth ventricle or adjacent brainstem. A metric ruler is positioned at the bottom edge of the image, displaying centimeter markings from 1 to 5, indicating the specimen measures approximately 4 to 5 centimeters in width."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "text": "A gross pathology photograph displays a cross-section of a tissue specimen featuring a thick, yellowish-brown wall with distinct concentric laminations resembling an onion-skin pattern, surrounding a central, irregular, dark blackish-red area, positioned above a white metric ruler labeled \"METRIC 11\" with red markings and visible centimeter numbers 1 through 5, all set against a solid teal background."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "text": "A gross pathology image displays a coronal cross-section of a human brain against a teal background, featuring a large, dark, hemorrhagic lesion located in the posterior region consistent with the right cerebellar hemisphere, accompanied by a metric ruler labeled 'METRIC 11' at the bottom with markings extending from 1 to 5."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "text": "The image displays a gross pathology cross-section of a brainstem specimen characterized by concentric, tan-brown, striated neural tissue layers containing a large, irregular, dark black-and-brown hemorrhagic area located centrally within the lower portion of the tissue, positioned above a metric ruler with numerical markings from 1 to 5 centimeters against a teal background."
+    }
+  ]
+}

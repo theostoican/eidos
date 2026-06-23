@@ -1,0 +1,421 @@
+{
+  "id": "test_Electronics_137",
+  "subject": "Electronics",
+  "gold": "A",
+  "question": "Use nodal analysis on the circuit shown in  <image 1> to evaluate the phasor voltage $V_2$. Return the answer (in terms of V) in the complex number form like 2 + j3.",
+  "options": {
+    "A": "90 + j120",
+    "B": "90 + j140",
+    "C": "85 + j130",
+    "D": "90 + j125",
+    "E": "80 + j120",
+    "F": "30 + j120",
+    "G": "95 + j120",
+    "H": "90 + j190",
+    "I": "90 + j110",
+    "J": "100 + j130"
+  },
+  "image_path": "outputs/images/test_Electronics_137_img1.png",
+  "premises": [
+    {
+      "top_p": 0.5,
+      "sample_idx": 0,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ positioned above a common bottom reference line; connected to node $\\vec{v}_1$ are a $60\\Omega$ resistor and a $j120\\Omega$ inductor leading to the bottom line, a $-j30\\Omega$ capacitor leading to node $\\vec{v}_2$, and a $60\\Omega$ resistor leading to node $\\vec{v}_3$; connected to node $\\vec{v}_2$ are a $j30\\Omega$ inductor leading to node $\\vec{v}_3$ and a current source labeled $3+j4$ A pointing upward from the bottom line; connected to node $\\vec{v}_3$ are a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor leading to the bottom line."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 1,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three top nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ above a common bottom reference line. Node $\\vec{V}_1$ connects to a $60\\Omega$ resistor and a $j120\\Omega$ impedance in parallel with ground, a $-j30\\Omega$ impedance to node $\\vec{V}_2$, and a $60\\Omega$ resistor to node $\\vec{V}_3$. Node $\\vec{V}_2$ connects to a $3+j4$ A current source pointing upward from ground, a $-j30\\Omega$ impedance to node $\\vec{V}_1$, and a $j30\\Omega$ impedance to node $\\vec{V}_3$. Node $\\vec{V}_3$ connects to a $-j20\\Omega$ impedance and a $60\\Omega$ resistor in parallel with ground, a $j30\\Omega$ impedance to node $\\vec{V}_2$, and a $60\\Omega$ resistor to node $\\vec{V}_1$."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 2,
+      "text": "Fig. 1 shows an electrical circuit diagram with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ from left to right, where node $\\vec{v}_1$ connects to the bottom reference node via a parallel combination of a 60 $\\Omega$ resistor and a $j120 \\Omega$ inductor, connects to node $\\vec{v}_2$ via a $-j30 \\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a top 60 $\\Omega$ resistor; node $\\vec{v}_2$ connects to node $\\vec{v}_3$ via a $j30 \\Omega$ inductor and connects to the bottom reference node via an upward-pointing current source labeled $3+j4$ A; and node $\\vec{v}_3$ connects to the bottom reference node via a parallel combination of a $-j20 \\Omega$ capacitor and a 60 $\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 3,
+      "text": "Fig. 1 shows an electrical circuit with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line; node $\\vec{v}_1$ connects to the reference line via a $60\\Omega$ resistor and a $j20\\Omega$ inductor in parallel, and also connects to node $\\vec{v}_2$ via a capacitor labeled $-j30\\Omega$ and to node $\\vec{v}_3$ via a top resistor labeled $60\\Omega$; node $\\vec{v}_2$ connects to the reference line via a current source labeled $3+j4A$ pointing upward and to node $\\vec{v}_3$ via an inductor labeled $j30\\Omega$; node $\\vec{v}_3$ connects to the reference line via a capacitor labeled $-j20\\Omega$ and a resistor labeled $60\\Omega$ in parallel."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 4,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$; a $60\\Omega$ resistor connects node $\\vec{v}_1$ to node $\\vec{v}_3$; a capacitor with impedance $-j30\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_2$; an inductor with impedance $j30\\Omega$ connects node $\\vec{v}_2$ to node $\\vec{v}_3$; a current source labeled $3+j4\\text{A}$ with an upward arrow is connected between the bottom reference line and node $\\vec{v}_2$; at node $\\vec{v}_1$, a $60\\Omega$ resistor and an inductor labeled $j20\\Omega$ are connected in parallel to the bottom reference line; at node $\\vec{v}_3$, a capacitor labeled $-j20\\Omega$ and a $60\\Omega$ resistor are connected in parallel to the bottom reference line."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 5,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three top nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference line. Node $\\vec{V}_1$ is connected to ground via a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel, connected to node $\\vec{V}_2$ via a $-j30\\Omega$ capacitor, and connected to node $\\vec{V}_3$ via a $60\\Omega$ resistor. Node $\\vec{V}_2$ is connected to ground via an upward-pointing current source labeled $3+j4$ A, and connected to node $\\vec{V}_3$ via a $j30\\Omega$ inductor. Node $\\vec{V}_3$ is connected to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 6,
+      "text": "Fig. 1 depicts an electrical circuit with nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common bottom rail, where a $60\\Omega$ resistor and an inductor $j20\\Omega$ connect $\\vec{v}_1$ to the bottom rail, a capacitor $-j30\\Omega$ connects $\\vec{v}_1$ to $\\vec{v}_2$, a $60\\Omega$ resistor connects $\\vec{v}_1$ to $\\vec{v}_3$, a current source of $3+j4$ A points upward from the bottom rail to $\\vec{v}_2$, an inductor $j30\\Omega$ connects $\\vec{v}_2$ to $\\vec{v}_3$, and a capacitor $-j20\\Omega$ along with a $60\\Omega$ resistor connect $\\vec{v}_3$ to the bottom rail."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 7,
+      "text": "Fig. 1 displays an electrical circuit diagram with three labeled nodes $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference line, where node $\\vec{v}_1$ connects to the reference line via a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ connects to the reference line via an upward-pointing current source labeled $3+j4A$ and connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor; and node $\\vec{v}_3$ connects to the reference line via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 8,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$; connected between $\\vec{v}_1$ and $\\vec{v}_2$ is a capacitor with impedance $-j30\\Omega$; connected between $\\vec{v}_2$ and $\\vec{v}_3$ is an inductor with impedance $j30\\Omega$; a resistor of $60\\Omega$ bridges $\\vec{v}_1$ and $\\vec{v}_3$ at the top; at node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected in parallel to the bottom reference line; at node $\\vec{v}_2$, a current source of $3+j4$ A is connected pointing upwards from the bottom reference line; and at node $\\vec{v}_3$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor are connected in parallel to the bottom reference line."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 9,
+      "text": "Fig. 1 shows an electrical circuit diagram with three labeled nodes $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference line, where node $\\vec{v}_1$ connects to the reference via a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connects to node $\\vec{v}_3$ via a top $60\\Omega$ resistor, and connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor; node $\\vec{v}_2$ connects to the reference via an upward-pointing current source labeled $3+j4\\text{A}$, connects to node $\\vec{v}_1$ via the $-j30\\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor; and node $\\vec{v}_3$ connects to the reference via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 10,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line. Node $\\vec{v}_1$ is connected to the bottom line via a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connected to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connected to node $\\vec{v}_3$ via a $60\\Omega$ resistor. Node $\\vec{v}_2$ is connected to node $\\vec{v}_1$ via the $-j30\\Omega$ capacitor, connected to node $\\vec{v}_3$ via a $j30\\Omega$ inductor, and connected to the bottom line via a current source labeled $3+j4A$ with an arrow pointing upward. Node $\\vec{v}_3$ is connected to node $\\vec{v}_1$ via the $60\\Omega$ resistor, connected to node $\\vec{v}_2$ via the $j30\\Omega$ inductor, and connected to the bottom line via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 11,
+      "text": "Fig. 1 shows an electrical circuit with three labeled nodes $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line, where node $\\vec{v}_1$ connects to a $60\\Omega$ resistor and a $j20\\Omega$ inductor to ground, a $-j30\\Omega$ capacitor to node $\\vec{v}_2$, and a $60\\Omega$ resistor to node $\\vec{v}_3$; node $\\vec{v}_2$ connects to a $j30\\Omega$ inductor to node $\\vec{v}_3$ and a current source labeled $3+j4A$ pointing upward to ground; and node $\\vec{v}_3$ connects to a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor to ground."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 12,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three labeled nodes $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line; at node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are in parallel with the ground, a $-j30\\Omega$ capacitor connects $\\vec{v}_1$ to $\\vec{v}_2$, and a $60\\Omega$ resistor connects $\\vec{v}_1$ to $\\vec{v}_3$ across the top; at node $\\vec{v}_2$, a current source of $3+j4$A points upward from ground, and a $j30\\Omega$ inductor connects $\\vec{v}_2$ to $\\vec{v}_3$; at node $\\vec{v}_3$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor are in parallel with the ground."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 13,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" containing three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference wire. Node $\\vec{v}_1$ connects to the reference wire via a $60\\Omega$ resistor and a $j20\\Omega$ inductor in parallel, connects to node $\\vec{v}_3$ via a top $60\\Omega$ resistor, and connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor. Node $\\vec{v}_2$ connects to the reference wire via an upward-pointing current source labeled $3+j4\\text{A}$, connects to node $\\vec{v}_1$ via the $-j30\\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor. Node $\\vec{v}_3$ connects to the reference wire via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel, connects to node $\\vec{v}_1$ via the top $60\\Omega$ resistor, and connects to node $\\vec{v}_2$ via the $j30\\Omega$ inductor."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 14,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ along the top rail and a common bottom reference rail; connected to node $\\vec{v}_1$ is a vertical branch to ground containing a $60\\Omega$ resistor and a $j20\\Omega$ inductor in series, a capacitor labeled $-j30\\Omega$ to node $\\vec{v}_2$, and a $60\\Omega$ resistor to node $\\vec{v}_3$; connected to node $\\vec{v}_2$ are the capacitor from $\\vec{v}_1$, an inductor labeled $j30\\Omega$ to node $\\vec{v}_3$, and an upward-pointing current source labeled $3+j4A$ to ground; connected to node $\\vec{v}_3$ are the resistor from $\\vec{v}_1$, the inductor from $\\vec{v}_2$, and a vertical branch to ground containing a capacitor labeled $-j20\\Omega$ and a $60\\Omega$ resistor in series."
+    },
+    {
+      "top_p": 0.5,
+      "sample_idx": 15,
+      "text": "Fig. 1 depicts an electrical circuit with three labeled nodes $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference line, where node $\\vec{V}_1$ connects to ground via a $60\\Omega$ resistor and a $j120\\Omega$ inductor, connects to node $\\vec{V}_2$ via a $-j30\\Omega$ capacitor, and connects to node $\\vec{V}_3$ via a top $60\\Omega$ resistor; node $\\vec{V}_2$ connects to ground via an upward-pointing current source labeled $3+j4A$ and connects to node $\\vec{V}_3$ via a $j30\\Omega$ inductor; and node $\\vec{V}_3$ connects to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 0,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common ground reference line. At node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected in parallel to ground. A capacitor labeled $-j30\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_2$. A resistor labeled $60\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_3$ along the top wire. At node $\\vec{v}_2$, a current source labeled $3+j4A$ with an upward arrow connects to ground, and an inductor labeled $j30\\Omega$ connects node $\\vec{v}_2$ to node $\\vec{v}_3$. At node $\\vec{v}_3$, a capacitor labeled $-j20\\Omega$ and a resistor labeled $60\\Omega$ are connected in parallel to ground."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 1,
+      "text": "Fig. 1 displays an electrical circuit with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected above a common bottom reference line. Node $\\vec{V}_1$ is connected to the bottom line via a $60\\Omega$ resistor and a $j20\\Omega$ inductor in parallel, is connected to node $\\vec{V}_3$ via a top $60\\Omega$ resistor, and is connected to node $\\vec{V}_2$ via a $-j30\\Omega$ capacitor. Node $\\vec{V}_2$ is connected to the bottom line via an upward-pointing current source labeled $3+j4\\text{A}$, is connected to node $\\vec{V}_1$ via the $-j30\\Omega$ capacitor, and is connected to node $\\vec{V}_3$ via a $j30\\Omega$ inductor. Node $\\vec{V}_3$ is connected to the bottom line via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 2,
+      "text": "Fig. 1 displays an electrical circuit diagram with three primary nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ situated above a common bottom reference line. At node $\\vec{V}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor connect vertically to the reference line. A $60\\Omega$ resistor spans horizontally from node $\\vec{V}_1$ to node $\\vec{V}_3$. Between node $\\vec{V}_1$ and $\\vec{V}_2$, a capacitor with impedance $-j30\\Omega$ is connected. Between node $\\vec{V}_2$ and $\\vec{V}_3$, an inductor with impedance $j30\\Omega$ is connected. At node $\\vec{V}_2$, a current source labeled $3+j4A$ points upward from the reference line. At node $\\vec{V}_3$, a capacitor with impedance $-j20\\Omega$ and a $60\\Omega$ resistor connect vertically to the reference line."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 3,
+      "text": "The image displays a circuit diagram labeled \"Fig. 1\" with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$, where node $\\vec{V}_1$ is connected to ground via a $60\\Omega$ resistor and a $j120\\Omega$ inductor, connected to node $\\vec{V}_3$ via a top $60\\Omega$ resistor, and connected to node $\\vec{V}_2$ via a $-j30\\Omega$ capacitor; node $\\vec{V}_2$ is connected to ground via an upward-pointing current source labeled $3+j4$ A and connected to node $\\vec{V}_3$ via a $j30\\Omega$ inductor; and node $\\vec{V}_3$ is connected to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 4,
+      "text": "The image displays a circuit diagram labeled \"Fig. 1\" featuring three primary nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference line. At node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j20\\Omega$ inductor are connected in parallel to the bottom rail. A capacitor with impedance $-j30\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_2$. A resistor with value $60\\Omega$ spans the top of the circuit, connecting node $\\vec{v}_1$ to node $\\vec{v}_3$. Between nodes $\\vec{v}_2$ and $\\vec{v}_3$, an inductor with impedance $j30\\Omega$ is connected. At node $\\vec{v}_2$, a current source with value $3+j4$ A is connected to the bottom rail, with the arrow pointing upwards. At node $\\vec{v}_3$, a capacitor with impedance $-j20\\Omega$ and a resistor with value $60\\Omega$ are connected in parallel to the bottom rail."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 5,
+      "text": "The image displays a circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\tilde{V}_1$, $\\tilde{V}_2$, and $\\tilde{V}_3$ situated above a common bottom reference line, where $\\tilde{V}_1$ connects to ground via a $60\\Omega$ resistor and a $j20\\Omega$ inductor in parallel, $\\tilde{V}_2$ connects to ground via a current source labeled $3+j4$A with an upward arrow, and $\\tilde{V}_3$ connects to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel, with horizontal branches connecting $\\tilde{V}_1$ to $\\tilde{V}_2$ via a $-j30\\Omega$ capacitor, $\\tilde{V}_2$ to $\\tilde{V}_3$ via a $j30\\Omega$ inductor, and $\\tilde{V}_1$ to $\\tilde{V}_3$ via a top $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 6,
+      "text": "Fig. 1 displays an electrical circuit diagram with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common ground reference, where node $\\vec{v}_1$ is connected to ground via a parallel combination of a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor and is connected to ground via an upward-pointing current source labeled $3+j4A$; and node $\\vec{v}_3$ is connected to ground via a parallel combination of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 7,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three primary nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ arranged horizontally above a common bottom reference line. Node $\\vec{V}_1$ is connected to ground via a parallel combination of a $60\\Omega$ resistor and an inductor with impedance $j120\\Omega$. Node $\\vec{V}_1$ is connected to node $\\vec{V}_2$ via a capacitor with impedance $-j30\\Omega$. Node $\\vec{V}_2$ is connected to node $\\vec{V}_3$ via an inductor with impedance $j30\\Omega$. Additionally, a $60\\Omega$ resistor connects node $\\vec{V}_1$ directly to node $\\vec{V}_3$ along the top wire. At node $\\vec{V}_2$, a current source labeled $3+j4\\text{A}$ points upward from the reference line. Finally, node $\\vec{V}_3$ is connected to ground via a parallel combination of a capacitor with impedance $-j20\\Omega$ and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 8,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" containing three main nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ from left to right, with a common bottom reference line. A $60\\Omega$ resistor is connected horizontally between node $\\vec{v}_1$ and node $\\vec{v}_3$. A capacitor with impedance $-j30\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_2$. An inductor with impedance $j30\\Omega$ connects node $\\vec{v}_2$ to node $\\vec{v}_3$. At node $\\vec{v}_1$, a $60\\Omega$ resistor and an inductor with impedance $j20\\Omega$ are connected in parallel to the bottom reference line. At node $\\vec{v}_2$, a current source with value $3+j4$A points upward from the bottom reference line. At node $\\vec{v}_3$, a capacitor with impedance $-j20\\Omega$ and a $60\\Omega$ resistor are connected in parallel to the bottom reference line."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 9,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected above a common bottom reference line, where the left vertical branch at node $\\vec{v}_1$ contains a $60\\Omega$ resistor in parallel with a $j120\\Omega$ inductor, a horizontal branch between node $\\vec{v}_1$ and $\\vec{v}_2$ contains a $-j30\\Omega$ capacitor, a top horizontal branch connects node $\\vec{v}_1$ and $\\vec{v}_3$ via a $60\\Omega$ resistor, the middle vertical branch at node $\\vec{v}_2$ contains an upward-pointing current source labeled \"$3+j4$A\", a horizontal branch between node $\\vec{v}_2$ and $\\vec{v}_3$ contains a $j30\\Omega$ inductor, and the right vertical branch at node $\\vec{v}_3$ contains a $-j20\\Omega$ capacitor in parallel with a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 10,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common bottom reference line. Node $\\vec{v}_1$ is connected to the reference line via a $60\\Omega$ resistor and a $j20\\Omega$ inductor, and is connected to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor. Node $\\vec{v}_2$ is connected to node $\\vec{v}_3$ via a $j30\\Omega$ inductor and is connected to the reference line via an upward-pointing current source labeled $3+j4$ A. Node $\\vec{v}_3$ is connected to node $\\vec{v}_1$ via a top $60\\Omega$ resistor and is connected to the reference line via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 11,
+      "text": "Fig. 1 displays a circuit with three nodes labeled $\\tilde{V}_1$, $\\tilde{V}_2$, and $\\tilde{V}_3$ connected to a common reference ground, where node $\\tilde{V}_1$ connects to ground via a $60\\Omega$ resistor and an impedance of $j120\\Omega$, connects to node $\\tilde{V}_3$ via a $60\\Omega$ resistor, and connects to node $\\tilde{V}_2$ via an impedance of $-j30\\Omega$; node $\\tilde{V}_2$ connects to ground via a current source of $3+j4$ A and connects to node $\\tilde{V}_3$ via an impedance of $j30\\Omega$; and node $\\tilde{V}_3$ connects to ground via an impedance of $-j20\\Omega$ and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 12,
+      "text": "Fig. 1 displays an electrical circuit diagram with three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ from left to right, and a bottom reference line. At node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected in parallel to the bottom reference line. Between node $\\vec{v}_1$ and node $\\vec{v}_2$, a capacitor with impedance $-j30\\Omega$ is connected. Between node $\\vec{v}_2$ and the bottom reference line, a current source pointing upwards with value $3+j4\\text{A}$ is connected. Between node $\\vec{v}_2$ and node $\\vec{v}_3$, an inductor with impedance $j30\\Omega$ is connected. A resistor with value $60\\Omega$ connects node $\\vec{v}_1$ and node $\\vec{v}_3$ via the top branch. At node $\\vec{v}_3$, a capacitor with impedance $-j20\\Omega$ and a resistor with value $60\\Omega$ are connected in parallel to the bottom reference line."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 13,
+      "text": "Fig. 1 displays an AC circuit diagram with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common reference line, where node $\\vec{v}_1$ connects to ground via a $60\\Omega$ resistor and a $j120\\Omega$ inductor, connects to node $\\vec{v}_3$ via a $60\\Omega$ resistor, and connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor; node $\\vec{v}_2$ connects to node $\\vec{v}_1$ via the $-j30\\Omega$ capacitor, connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor, and connects to ground via an upward-pointing current source labeled $3+j4\\text{ A}$; and node $\\vec{v}_3$ connects to node $\\vec{v}_1$ via the $60\\Omega$ resistor, connects to node $\\vec{v}_2$ via the $j30\\Omega$ inductor, and connects to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 14,
+      "text": "The image displays a circuit diagram labeled \"Fig. 1\" featuring three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line; a $60\\Omega$ resistor connects node $\\vec{v}_1$ directly to node $\\vec{v}_3$; at node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are in parallel connecting to the bottom line; between $\\vec{v}_1$ and $\\vec{v}_2$ lies a $-j30\\Omega$ capacitor; between $\\vec{v}_2$ and $\\vec{v}_3$ lies a $j30\\Omega$ inductor; at node $\\vec{v}_2$, a current source labeled $3+j4$A points upward from the bottom line; at node $\\vec{v}_3$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor are in parallel connecting to the bottom line."
+    },
+    {
+      "top_p": 0.7,
+      "sample_idx": 15,
+      "text": "Fig. 1 displays an electrical circuit with three labeled nodes $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ situated above a common bottom reference node, where Node $\\vec{V}_1$ is connected to the reference node via a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel, connects to Node $\\vec{V}_2$ via a $-j30\\Omega$ capacitor, and connects to Node $\\vec{V}_3$ via a $60\\Omega$ resistor; Node $\\vec{V}_2$ is connected to the reference node via an upward-pointing current source labeled $3+j4\\text{A}$ and connects to Node $\\vec{V}_3$ via a $j30\\Omega$ inductor; and Node $\\vec{V}_3$ is connected to the reference node via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 0,
+      "text": "Fig. 1 displays an electrical circuit with three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common bottom reference wire; connected to the reference at node $\\vec{v}_1$ are a $60\\Omega$ resistor and a $j120\\Omega$ inductor; a $-j30\\Omega$ capacitor connects node $\\vec{v}_1$ to node $\\vec{v}_2$; an upward-pointing current source labeled $3+j4A$ connects node $\\vec{v}_2$ to the reference; a $j30\\Omega$ inductor connects node $\\vec{v}_2$ to node $\\vec{v}_3$; a $60\\Omega$ resistor connects node $\\vec{v}_1$ to node $\\vec{v}_3$ along the top branch; and at node $\\vec{v}_3$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor are connected in parallel to the reference."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 1,
+      "text": "Fig. 1 displays an electrical circuit diagram with three main nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$, and a common bottom reference node; connected between node $\\vec{V}_1$ and the reference node are a $60\\Omega$ resistor and a $j20\\Omega$ inductor in parallel; connected between node $\\vec{V}_3$ and the reference node are a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel; bridging the top of the circuit is a $60\\Omega$ resistor connecting node $\\vec{V}_1$ and node $\\vec{V}_3$; connecting node $\\vec{V}_1$ and node $\\vec{V}_2$ is a capacitor with impedance $-j30\\Omega$; connecting node $\\vec{V}_2$ and node $\\vec{V}_3$ is an inductor with impedance $j30\\Omega$; and connected between node $\\vec{V}_2$ and the reference node is an upward-pointing current source labeled $3+j4$ A."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 2,
+      "text": "Fig. 1 shows an electrical circuit with a bottom reference node and three top nodes labeled $\\tilde{v}_1$, $\\tilde{v}_2$, and $\\tilde{v}_3$. At node $\\tilde{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected vertically to the reference node. A capacitor with impedance $-j30\\Omega$ connects node $\\tilde{v}_1$ to node $\\tilde{v}_2$. A resistor with value $60\\Omega$ connects node $\\tilde{v}_1$ to node $\\tilde{v}_3$ via the top wire. At node $\\tilde{v}_2$, a current source of $3+j4$A pointing upwards connects to the reference node. An inductor with impedance $j30\\Omega$ connects node $\\tilde{v}_2$ to node $\\tilde{v}_3$. At node $\\tilde{v}_3$, a capacitor with impedance $-j20\\Omega$ and a resistor with value $60\\Omega$ are connected vertically to the reference node."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 3,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference line. At node $\\vec{V}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor connect to the reference line, while a $60\\Omega$ resistor connects to node $\\vec{V}_3$ and a $-j30\\Omega$ capacitor connects to node $\\vec{V}_2$. At node $\\vec{V}_2$, a $3+j4$ A current source (with the arrow pointing upward) connects to the reference line, a $-j30\\Omega$ capacitor connects to node $\\vec{V}_1$, and a $j30\\Omega$ inductor connects to node $\\vec{V}_3$. At node $\\vec{V}_3$, a $j30\\Omega$ inductor connects to node $\\vec{V}_2$, and both a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor connect to the reference line."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 4,
+      "text": "Fig. 1 shows an electrical circuit diagram labeled \"Fig. 1\" at the bottom left, featuring three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference node, where node $\\vec{V}_1$ connects to a parallel combination of a $60\\Omega$ resistor and a $j120\\Omega$ inductor to ground, a capacitor of $-j30\\Omega$ to node $\\vec{V}_2$, and a top resistor of $60\\Omega$ to node $\\vec{V}_3$, node $\\vec{V}_2$ connects to the $-j30\\Omega$ capacitor, an upward-pointing current source labeled $3+j4\\text{A}$, and a $j30\\Omega$ inductor to node $\\vec{V}_3$, and node $\\vec{V}_3$ connects to the top $60\\Omega$ resistor, the $j30\\Omega$ inductor, and a parallel combination of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor to ground."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 5,
+      "text": "Fig. 1 shows an electrical circuit diagram with three nodes labeled $\\vec{v}_1, \\vec{v}_2, \\vec{v}_3$ and a common bottom reference line; connected to node $\\vec{v}_1$ are a $60\\Omega$ resistor and a $j120\\Omega$ inductor going to the reference line, a $60\\Omega$ resistor connecting to node $\\vec{v}_3$, and a $-j30\\Omega$ capacitor connecting to node $\\vec{v}_2$; connected to node $\\vec{v}_2$ is an upward-pointing current source labeled $3+j4\\text{A}$ going to the reference line, the aforementioned $-j30\\Omega$ capacitor from node $\\vec{v}_1$, and a $j30\\Omega$ inductor connecting to node $\\vec{v}_3$; connected to node $\\vec{v}_3$ are a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor going to the reference line, the aforementioned $60\\Omega$ resistor from node $\\vec{v}_1$, and the aforementioned $j30\\Omega$ inductor from node $\\vec{v}_2$."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 6,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ along a horizontal line above a common bottom reference wire. Connected to node $\\vec{V}_1$ are a parallel pair of a $60\\Omega$ resistor and a $j20\\Omega$ inductor to the bottom wire, a $-j30\\Omega$ capacitor to node $\\vec{V}_2$, and a $60\\Omega$ resistor to node $\\vec{V}_3$. Node $\\vec{V}_2$ is connected to node $\\vec{V}_3$ via a $j30\\Omega$ inductor and to the bottom wire via an upward-pointing current source labeled $3+j4$ A. Node $\\vec{V}_3$ is connected to the bottom wire via a parallel pair of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 7,
+      "text": "Fig. 1 depicts an electrical circuit containing three non-reference nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where node $\\vec{v}_1$ connects to ground via a $60\\Omega$ resistor and a $j120\\Omega$ inductor, connects to node $\\vec{v}_3$ via a $60\\Omega$ resistor, and connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor; node $\\vec{v}_2$ connects to ground via an independent current source labeled $3+j4$ A pointing upward and connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor; and node $\\vec{v}_3$ connects to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 8,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference line. At node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j20\\Omega$ inductor are connected in parallel to the bottom reference line. A capacitor with impedance $-j30\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_2$. A resistor with resistance $60\\Omega$ connects node $\\vec{v}_1$ to node $\\vec{v}_3$. Between node $\\vec{v}_2$ and node $\\vec{v}_3$, an inductor with impedance $j30\\Omega$ is connected. At node $\\vec{v}_2$, a current source with value $3+j4A$ points upwards towards the node from the bottom reference line. At node $\\vec{v}_3$, a capacitor with impedance $-j20\\Omega$ and a resistor with resistance $60\\Omega$ are connected in parallel to the bottom reference line."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 9,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring a top node rail with nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common bottom reference line; connected to node $\\vec{v}_1$ is a parallel combination of a $60\\Omega$ resistor and a $j120\\Omega$ inductor to ground, a $-j30\\Omega$ capacitor to node $\\vec{v}_2$, and a $60\\Omega$ resistor to node $\\vec{v}_3$; connected to node $\\vec{v}_2$ is a current source labeled $3+j4\\text{A}$ pointing upwards to ground and a $j30\\Omega$ inductor to node $\\vec{v}_3$; connected to node $\\vec{v}_3$ is a parallel combination of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor to ground."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 10,
+      "text": "Fig. 1 depicts an electrical circuit with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ situated above a common bottom reference line; connected between $\\vec{V}_1$ and the reference line are a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel; connected between $\\vec{V}_2$ and the reference line is an upward-pointing current source labeled $3+j4$A; connected between $\\vec{V}_3$ and the reference line are a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel; connecting the nodes horizontally, a $-j30\\Omega$ capacitor links $\\vec{V}_1$ to $\\vec{V}_2$, a $j30\\Omega$ inductor links $\\vec{V}_2$ to $\\vec{V}_3$, and a $60\\Omega$ resistor links $\\vec{V}_1$ to $\\vec{V}_3$ via a top wire."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 11,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three primary nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference wire. At node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j20\\Omega$ inductor are connected in parallel to the bottom reference. Node $\\vec{v}_1$ connects to node $\\vec{v}_2$ via a capacitor labeled $-j30\\Omega$. Node $\\vec{v}_1$ also connects to node $\\vec{v}_3$ via a top resistor labeled $60\\Omega$. At node $\\vec{v}_2$, a current source labeled $3+j4\\text{A}$ with an upward-pointing arrow connects to the bottom reference. Node $\\vec{v}_2$ connects to node $\\vec{v}_3$ via an inductor labeled $j30\\Omega$. At node $\\vec{v}_3$, a capacitor labeled $-j20\\Omega$ and a resistor labeled $60\\Omega$ are connected in parallel to the bottom reference."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 12,
+      "text": "Fig. 1 displays a circuit diagram with three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line; at node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor connect to the reference, a $-j30\\Omega$ capacitor connects to node $\\vec{v}_2$, and a $60\\Omega$ resistor connects to node $\\vec{v}_3$; at node $\\vec{v}_2$, a $j30\\Omega$ inductor connects to node $\\vec{v}_3$ and a current source labeled $3+j4A$ with an upward arrow connects to the reference node; at node $\\vec{v}_3$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor connect to the reference node."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 13,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ positioned above a common bottom reference line. At node $\\vec{v}_1$, two parallel vertical branches connect to the bottom line: one containing a $60\\Omega$ resistor and the other containing a $j20\\Omega$ inductor. Node $\\vec{v}_1$ connects to node $\\vec{v}_2$ via a horizontal capacitor labeled $-j30\\Omega$. Node $\\vec{v}_1$ also connects to node $\\vec{v}_3$ via a top horizontal resistor labeled $60\\Omega$. Node $\\vec{v}_2$ connects to node $\\vec{v}_3$ via a horizontal inductor labeled $j30\\Omega$. Node $\\vec{v}_2$ connects to the bottom line via a vertical current source labeled $3+j4\\text{A}$ with an arrow pointing upwards. Node $\\vec{v}_3$ connects to the bottom line via two parallel vertical branches: one containing a capacitor labeled $-j20\\Omega$ and the other containing a resistor labeled $60\\Omega$."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 14,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\bar{V}_1$, $\\bar{V}_2$, and $\\bar{V}_3$ referenced to a common ground rail. Node $\\bar{V}_1$ is connected to ground via a parallel combination of a $60 \\Omega$ resistor and a $j20 \\Omega$ inductor, connects to Node $\\bar{V}_2$ via a capacitor labeled $-j30 \\Omega$, and connects to Node $\\bar{V}_3$ via a top resistor labeled $60 \\Omega$. Node $\\bar{V}_2$ is connected to ground via a current source labeled $3+j4$A pointing upwards, and connects to Node $\\bar{V}_3$ via an inductor labeled $j30 \\Omega$. Node $\\bar{V}_3$ is connected to ground via a parallel combination of a capacitor labeled $-j20 \\Omega$ and a resistor labeled $60 \\Omega$."
+    },
+    {
+      "top_p": 0.9,
+      "sample_idx": 15,
+      "text": "Fig. 1 depicts an electrical circuit with three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where node $\\vec{v}_1$ is connected to the bottom reference rail via a parallel combination of a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connected to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connected to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ is connected to the bottom reference rail via a current source labeled \"$3+j4\\text{A}$\" pointing upwards and is connected to node $\\vec{v}_3$ via a $j30\\Omega$ inductor; and node $\\vec{v}_3$ is connected to the bottom reference rail via a parallel combination of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 0,
+      "text": "Fig. 1 displays an electrical circuit diagram with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference line, where node $\\vec{V}_1$ connects to the reference via a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connects to node $\\vec{V}_2$ via a $-j30\\Omega$ capacitor, and connects to node $\\vec{V}_3$ via a $60\\Omega$ resistor on the top branch; node $\\vec{V}_2$ connects to the reference via an upward current source of $3+j4$ A, connects to node $\\vec{V}_1$ via the $-j30\\Omega$ capacitor, and connects to node $\\vec{V}_3$ via a $j30\\Omega$ inductor; and node $\\vec{V}_3$ connects to the reference via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 1,
+      "text": "Fig. 1 displays a circuit diagram with three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference line, where a $60\\Omega$ resistor connects $\\vec{v}_1$ directly to $\\vec{v}_3$; connected to the bottom rail at node $\\vec{v}_1$ are parallel components consisting of a $60\\Omega$ resistor and a $j120\\Omega$ inductor; between nodes $\\vec{v}_1$ and $\\vec{v}_2$ is a capacitor with impedance $-j30\\Omega$; at node $\\vec{v}_2$, a current source labeled $3+j4$ A points upward from the bottom rail; between nodes $\\vec{v}_2$ and $\\vec{v}_3$ is an inductor with impedance $j30\\Omega$; and connected to the bottom rail at node $\\vec{v}_3$ are parallel components consisting of a capacitor labeled $-j30\\Omega$ and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 2,
+      "text": "The image displays a circuit diagram labeled \"Fig. 1\" containing three main nodes labeled $\\tilde{v}_1$, $\\tilde{v}_2$, and $\\tilde{v}_3$ at the top, and a common ground reference at the bottom. At node $\\tilde{v}_1$, there are two parallel vertical branches connecting to ground: a $60\\Omega$ resistor and an inductor with impedance $j120\\Omega$. Node $\\tilde{v}_1$ is connected to node $\\tilde{v}_2$ via a horizontal capacitor with impedance $-j30\\Omega$. Node $\\tilde{v}_1$ is also connected to node $\\tilde{v}_3$ via a top horizontal resistor with resistance $60\\Omega$. Node $\\tilde{v}_2$ is connected to node $\\tilde{v}_3$ via a horizontal inductor with impedance $j30\\Omega$. Between node $\\tilde{v}_2$ and the ground, there is a vertical current source with value $3+j4$ A pointing upwards. At node $\\tilde{v}_3$, there are two parallel vertical branches connecting to ground: a capacitor with impedance $-j20\\Omega$ and a resistor with resistance $60\\Omega$."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 3,
+      "text": "Fig. 1 displays a circuit diagram with three principal nodes labeled $\\vec{V}_1, \\vec{V}_2, \\vec{V}_3$ from left to right above a common bottom reference line; node $\\vec{V}_1$ is connected to the reference line by parallel branches containing a $60\\,\\Omega$ resistor and a $j20\\,\\Omega$ inductor, is connected to node $\\vec{V}_2$ by a $-j30\\,\\Omega$ capacitor, and is connected to node $\\vec{V}_3$ by a top $60\\,\\Omega$ resistor; node $\\vec{V}_2$ is connected to node $\\vec{V}_3$ by a $j30\\,\\Omega$ inductor and is connected to the reference line by an upward-pointing current source labeled $3+j4\\text{ A}$; node $\\vec{V}_3$ is connected to the reference line by parallel branches containing a $-j20\\,\\Omega$ capacitor and a $60\\,\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 4,
+      "text": "Fig. 1 depicts an AC circuit diagram with three primary nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ along a top branch and a common reference line at the bottom; at node $\\vec{V}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected in parallel to the reference line, while a capacitor of $-j30\\Omega$ connects $\\vec{V}_1$ to $\\vec{V}_2$; between nodes $\\vec{V}_2$ and $\\vec{V}_3$, an inductor of $j30\\Omega$ is connected; a $60\\Omega$ resistor connects node $\\vec{V}_1$ to node $\\vec{V}_3$ via a top wire; at node $\\vec{V}_2$, a current source of $3+j4$ A points upward from the reference line; at node $\\vec{V}_3$, a capacitor of $-j20\\Omega$ and a $60\\Omega$ resistor are connected in parallel to the reference line."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 5,
+      "text": "The image displays a circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where node $\\vec{v}_1$ is connected to the bottom reference line via a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel, connected to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connected to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ is connected to node $\\vec{v}_3$ via a $j30\\Omega$ inductor and connected to the bottom reference line via an upward-pointing current source labeled $3+j4\\text{A}$; and node $\\vec{v}_3$ is connected to the bottom reference line via a parallel combination of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 6,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three nodes labeled $\\vec{V_1}$, $\\vec{V_2}$, and $\\vec{V_3}$ positioned along a top horizontal wire segment connected to a common bottom reference line; at node $\\vec{V_1}$, a parallel combination of a vertical resistor labeled \"60$\\Omega$\" and an inductor labeled \"j20$\\Omega$\" connects to the reference line, while a capacitor labeled \"-j30$\\Omega$\" connects $\\vec{V_1}$ to $\\vec{V_2}$; at node $\\vec{V_2}$, an inductor labeled \"j30$\\Omega$\" connects to $\\vec{V_3}$ and an independent current source labeled \"3+j4A\" points upward from the reference line; a resistor labeled \"60$\\Omega$\" bridges the top wire between $\\vec{V_1}$ and $\\vec{V_3}$; and at node $\\vec{V_3}$, a parallel combination of a capacitor labeled \"-j20$\\Omega$\" and a resistor labeled \"60$\\Omega$\" connects to the reference line."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 7,
+      "text": "Fig. 1 displays an AC circuit with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where the left branch connected to node $\\vec{v}_1$ has a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel to ground, a top branch connects $\\vec{v}_1$ to $\\vec{v}_3$ with a $60\\Omega$ resistor, a middle branch connects $\\vec{v}_1$ to $\\vec{v}_2$ with a $-j30\\Omega$ capacitor, a central branch connected to node $\\vec{v}_2$ has an independent current source of $3+j4\\text{A}$ pointing upward to ground, a right middle branch connects $\\vec{v}_2$ to $\\vec{v}_3$ with a $j30\\Omega$ inductor, and the rightmost branch connected to node $\\vec{v}_3$ has a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel to ground."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 8,
+      "text": "The image shows a circuit diagram labeled \"Fig. 1\" with three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected by impedances: a $60\\Omega$ resistor spans the top between $\\vec{v}_1$ and $\\vec{v}_3$, a $-j30\\Omega$ capacitor connects $\\vec{v}_1$ and $\\vec{v}_2$, and a $j30\\Omega$ inductor connects $\\vec{v}_2$ and $\\vec{v}_3$. At node $\\vec{v}_1$, a parallel branch containing a $60\\Omega$ resistor and a $j20\\Omega$ inductor connects to the bottom reference line. At node $\\vec{v}_2$, a current source with value $3+j4$ A points upwards from the reference line. At node $\\vec{v}_3$, a parallel branch containing a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor connects to the bottom reference line."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 9,
+      "text": "The image displays an electrical circuit diagram labeled 'Fig. 1' containing three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference line, where node $\\vec{v}_1$ is connected to ground via a $60\\Omega$ resistor and a $j20\\Omega$ inductor, is connected to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and is connected to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ is connected to node $\\vec{v}_3$ via a $j30\\Omega$ inductor and is connected to ground via a current source labeled '$3+j4$A' with an upward arrow; and node $\\vec{v}_3$ is connected to ground via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 10,
+      "text": "Fig. 1 displays an electrical circuit with three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ connected to a common bottom reference rail, where node $\\vec{v}_1$ connects to the rail via a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel, connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a $60\\Omega$ resistor in the top branch; node $\\vec{v}_2$ connects to node $\\vec{v}_1$ via the $-j30\\Omega$ capacitor, to node $\\vec{v}_3$ via a $j30\\Omega$ inductor, and to the rail via a current source labeled $3+j4\\text{A}$ pointing upwards; and node $\\vec{v}_3$ connects to the rail via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel, while also connecting to the other nodes via the described top and middle components."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 11,
+      "text": "Fig. 1 depicts an electrical circuit diagram with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ and a common reference node at the bottom, where node $\\vec{v}_1$ is connected to the reference node via a parallel combination of a $60\\Omega$ resistor and a $j20\\Omega$ inductor, node $\\vec{v}_1$ is connected to node $\\vec{v}_2$ by a capacitor labeled $-j30\\Omega$ and to node $\\vec{v}_3$ by a top resistor labeled $60\\Omega$, node $\\vec{v}_2$ is connected to node $\\vec{v}_3$ by an inductor labeled $j30\\Omega$ and to the reference node by an upward-pointing current source labeled $3+j4A$, and node $\\vec{v}_3$ is connected to the reference node by a series combination of a capacitor labeled $-j20\\Omega$ and a resistor labeled $60\\Omega$."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 12,
+      "text": "Fig. 1 displays an electrical circuit diagram with three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ situated above a common bottom reference line, where node $\\vec{v}_1$ connects to the reference via a $60\\Omega$ resistor and a $j120\\Omega$ inductor, node $\\vec{v}_2$ connects to the reference via an upward-pointing current source labeled $3+j4\\text{A}$, and node $\\vec{v}_3$ connects to the reference via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor; additionally, node $\\vec{v}_1$ connects to $\\vec{v}_2$ via a $-j30\\Omega$ capacitor and to $\\vec{v}_3$ via a top $60\\Omega$ resistor, while node $\\vec{v}_2$ connects to $\\vec{v}_3$ via a $j30\\Omega$ inductor."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 13,
+      "text": "Fig. 1 displays an electrical circuit with three top nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference wire; node $\\vec{V}_1$ is connected to a $60\\Omega$ resistor and a $j20\\Omega$ inductor going to the reference wire, a $60\\Omega$ resistor going to node $\\vec{V}_3$, and a $-j30\\Omega$ capacitor going to node $\\vec{V}_2$; node $\\vec{V}_2$ is connected to an independent current source labeled $3+j4\\text{A}$ (arrow pointing up) going to the reference wire, the $-j30\\Omega$ capacitor coming from $\\vec{V}_1$, and a $j30\\Omega$ inductor going to node $\\vec{V}_3$; and node $\\vec{V}_3$ is connected to a $60\\Omega$ resistor and a $-j20\\Omega$ capacitor going to the reference wire, a $60\\Omega$ resistor coming from $\\vec{V}_1$, and the $j30\\Omega$ inductor coming from $\\vec{V}_2$."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 14,
+      "text": "The image shows an electrical circuit diagram labeled \"Fig. 1\" with three primary nodes defined as $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$. A current source of magnitude $3+j4$A points upward and is connected to node $\\vec{V}_2$. Between nodes $\\vec{V}_1$ and $\\vec{V}_2$, a capacitor with impedance $-j30\\Omega$ is connected. Between nodes $\\vec{V}_2$ and $\\vec{V}_3$, an inductor with impedance $j30\\Omega$ is connected. A resistor with resistance $60\\Omega$ connects nodes $\\vec{V}_1$ and $\\vec{V}_3$ at the top of the circuit. At node $\\vec{V}_1$, a resistor of $60\\Omega$ and an inductor of $j120\\Omega$ are connected in parallel to the bottom reference line. At node $\\vec{V}_3$, a capacitor of $-j20\\Omega$ and a resistor of $60\\Omega$ are connected in parallel to the bottom reference line."
+    },
+    {
+      "top_p": 0.95,
+      "sample_idx": 15,
+      "text": "Figure 1 displays an electrical circuit diagram with three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common reference wire, where node $\\vec{v}_1$ connects to the reference wire via a $60\\Omega$ resistor and a $j20\\Omega$ inductor in parallel, connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and connects to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor and connects to the reference wire via an upward-pointing current source labeled $3+j4\\text{A}$; and node $\\vec{v}_3$ connects to the reference wire via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor in parallel."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 0,
+      "text": "Fig. 1 depicts an electrical circuit with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$; connected to the bottom common reference line are a $60\\Omega$ resistor and a $j20\\Omega$ inductor at node $\\vec{V}_1$, a $60\\Omega$ resistor and a $-j20\\Omega$ capacitor at node $\\vec{V}_3$; connections between the nodes include a $60\\Omega$ resistor between $\\vec{V}_1$ and $\\vec{V}_3$, a $-j30\\Omega$ capacitor between $\\vec{V}_1$ and $\\vec{V}_2$, a $j30\\Omega$ inductor between $\\vec{V}_2$ and $\\vec{V}_3$, and a current source labeled $3+j4$A connected to node $\\vec{V}_2$ pointing upwards."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 1,
+      "text": "The image displays a circuit diagram labeled Fig. 1 containing three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$; a capacitor of $-j30\\Omega$ connects node $\\vec{v}_1$ to $\\vec{v}_2$, an inductor of $j30\\Omega$ connects node $\\vec{v}_2$ to $\\vec{v}_3$, and a resistor of $60\\Omega$ bridges the top connections between node $\\vec{v}_1$ and $\\vec{v}_3$; connected to the bottom reference line from node $\\vec{v}_1$ are a $60\\Omega$ resistor and a $j20\\Omega$ inductor, connected from node $\\vec{v}_2$ is an upward-pointing current source labeled $3+j4\\text{A}$, and connected to the bottom reference line from node $\\vec{v}_3$ are a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 2,
+      "text": "Fig. 1 depicts an electrical circuit diagram with a common ground line at the bottom and three principal nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ from left to right; at node $\\vec{v}_1$, a $60\\Omega$ resistor and a $j20\\Omega$ inductor are connected in parallel to the ground, while this node connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor and to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; at node $\\vec{v}_2$, which acts as a central junction, a $j30\\Omega$ inductor connects to node $\\vec{v}_3$ and a current source with an upward-pointing arrow inside a circle and the label $3+j4$A below it connects to the ground; at node $\\vec{v}_3$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor are connected in parallel to the ground."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 3,
+      "text": "Fig. 1 shows a circuit diagram with three nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ above a common bottom reference line, where a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected in parallel between the node labeled $\\vec{V}_1$ and the reference line, a $60\\Omega$ resistor connects $\\vec{V}_1$ to the node labeled $\\vec{V}_3$ at the top, a $-j30\\Omega$ capacitor connects $\\vec{V}_1$ to $\\vec{V}_2$, a current source labeled $3+j4A$ points upward from the reference line to $\\vec{V}_2$, a $j30\\Omega$ inductor connects $\\vec{V}_2$ to $\\vec{V}_3$, and at node $\\vec{V}_3$ there are two parallel vertical branches connected to the reference line consisting of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 4,
+      "text": "Fig. 1 displays a circuit diagram featuring three nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where node $\\vec{v}_1$ is connected to a parallel $60\\Omega$ resistor and $j20\\Omega$ inductor leading to the bottom reference line, a $-j30\\Omega$ capacitor connecting to node $\\vec{v}_2$, and a top $60\\Omega$ resistor connecting to node $\\vec{v}_3$; node $\\vec{v}_2$ connects to the $-j30\\Omega$ capacitor from $\\vec{v}_1$, a $(3+j4)A$ current source pointing upwards to the reference line, and a $j30\\Omega$ inductor connecting to node $\\vec{v}_3$; and node $\\vec{v}_3$ connects to the top $60\\Omega$ resistor from $\\vec{v}_1$, the $j30\\Omega$ inductor from $\\vec{v}_2$, and a parallel $-j20\\Omega$ capacitor and $60\\Omega$ resistor leading to the reference line."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 5,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three principal nodes with phasor voltages $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where node $\\vec{v}_1$ is connected to the bottom reference line via a $60\\Omega$ resistor and a $j120\\Omega$ inductor in parallel, node $\\vec{v}_1$ connects to node $\\vec{v}_3$ via a top $60\\Omega$ resistor, node $\\vec{v}_1$ connects to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, node $\\vec{v}_2$ connects to node $\\vec{v}_3$ via a $j30\\Omega$ inductor, node $\\vec{v}_2$ connects to the bottom reference line via an upward-pointing current source labeled $3+j4\\text{A}$, and node $\\vec{v}_3$ connects to the bottom reference line via a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor connected in parallel."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 6,
+      "text": "Fig. 1 displays a circuit diagram with three top nodes labeled $\\vec{V_1}$, $\\vec{V_2}$, and $\\vec{V_3}$ from left to right, connected to a common bottom reference line; at node $\\vec{V_1}$, a $60\\Omega$ resistor and a $j20\\Omega$ inductor are connected in parallel vertically to the bottom line; a capacitor labeled $-j30\\Omega$ connects node $\\vec{V_1}$ to node $\\vec{V_2}$; a current source labeled $3+j4$A (with an upward arrow) connects node $\\vec{V_2}$ to the bottom line; an inductor labeled $j30\\Omega$ connects node $\\vec{V_2}$ to node $\\vec{V_3}$; a $60\\Omega$ resistor connects node $\\vec{V_1}$ to node $\\vec{V_3}$ horizontally above the other components; at node $\\vec{V_3}$, a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor are connected in parallel vertically to the bottom line."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 7,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" containing three principal nodes labeled with phasor voltages $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ above a common bottom reference rail, where node $\\vec{v}_1$ connects a $60\\Omega$ resistor and a $j120\\Omega$ inductor to the bottom rail as well as a $-j30\\Omega$ capacitor to node $\\vec{v}_2$ and a top $60\\Omega$ resistor to node $\\vec{v}_3$; node $\\vec{v}_2$ connects to node $\\vec{v}_1$ via the $-j30\\Omega$ capacitor and to node $\\vec{v}_3$ via a $j30\\Omega$ inductor while also connecting to a $3+j4 \\text{A}$ current source pointing upwards from the ground rail; and node $\\vec{v}_3$ connects to the top $60\\Omega$ resistor, the $j30\\Omega$ inductor, and two parallel vertical branches to the bottom rail consisting of a $-j20\\Omega$ capacitor and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 8,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" featuring three primary nodes labeled with phasor voltages $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ (indicated by arrows), connected via various passive components and an independent current source. Node $\\vec{v}_1$ is connected to a common bottom reference line via parallel components: a resistor labeled $60\\Omega$ and an inductor labeled $j20\\Omega$. Node $\\vec{v}_1$ is connected to node $\\vec{v}_2$ via a capacitor labeled $-j30\\Omega$ and to node $\\vec{v}_3$ via a top resistor labeled $60\\Omega$. Node $\\vec{v}_2$ is connected to node $\\vec{v}_3$ via an inductor labeled $j30\\Omega$ and is connected to the bottom reference line via an upward-pointing current source labeled $3+j4\\text{A}$ (with a small $\\Omega$ symbol adjacent to the ampere unit). Node $\\vec{v}_3$ is connected to the bottom reference line via parallel components: a capacitor labeled $-j20\\Omega$ and a resistor labeled $60$."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 9,
+      "text": "Fig. 1 displays an electrical circuit diagram with three top nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ positioned above a common bottom reference rail. At node $\\vec{v}_1$, a resistor labeled $60\\Omega$ and an inductor labeled $j20\\Omega$ are connected in parallel to the reference rail. A capacitor labeled $-j30\\Omega$ is connected between node $\\vec{v}_1$ and node $\\vec{v}_2$. An inductor labeled $j30\\Omega$ is connected between node $\\vec{v}_2$ and node $\\vec{v}_3$. Between node $\\vec{v}_1$ and node $\\vec{v}_3$, there is a top horizontal branch containing a resistor labeled $60\\Omega$. At node $\\vec{v}_2$, a current source labeled $3+j4A$ with an upward-pointing arrow is connected to the reference rail. At node $\\vec{v}_3$, a capacitor labeled $-j20\\Omega$ and a resistor labeled $60\\Omega$ are connected in parallel to the reference rail."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 10,
+      "text": "In Fig. 1, a circuit diagram is displayed featuring a common bottom reference wire and three top nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ from left to right; at node $\\vec{V}_1$, a $60\\Omega$ resistor and a $j120\\Omega$ inductor are connected in parallel to the reference wire, while a $60\\Omega$ resistor connects node $\\vec{V}_1$ horizontally to node $\\vec{V}_3$ at the top; between $\\vec{V}_1$ and $\\vec{V}_2$, a capacitor labeled $-j30\\Omega$ is connected, and between $\\vec{V}_2$ and $\\vec{V}_3$, an inductor labeled $j30\\Omega$ is connected; at node $\\vec{V}_2$, a current source labeled $3+j4\\text{A}$ is connected vertically with its arrow pointing upward from the reference wire, and at node $\\vec{V}_3$, a capacitor labeled $-j20\\Omega$ and a resistor labeled $60\\Omega$ are connected in parallel to the reference wire."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 11,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three primary nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$ positioned above a common bottom reference line; at node $\\vec{v}_1$, there are two parallel vertical branches connected to ground—consisting of a resistor labeled \"$60\\Omega$\" and an inductor labeled \"$j20\\Omega$\"—while node $\\vec{v}_1$ connects horizontally to node $\\vec{v}_2$ via a capacitor labeled \"$-j30\\Omega$\" and connects horizontally to node $\\vec{v}_3$ via a top resistor labeled \"$60\\Omega$\"; at node $\\vec{v}_2$, a vertical branch connects to the ground via an independent current source labeled \"$3+j4A$\" with an upward arrow, and a horizontal branch connects to node $\\vec{v}_3$ via an inductor labeled \"$j30\\Omega$\"; at node $\\vec{v}_3$, there are two parallel vertical branches connected to ground—consisting of a capacitor labeled \"$-j20\\Omega$\" and a resistor labeled \"$60\\Omega$\"—completing the circuit structure."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 12,
+      "text": "Fig. 1 displays a circuit diagram horizontally aligned with nodes labeled $\\vec{v}_1$, $\\vec{v}_2$, and $\\vec{v}_3$, where node $\\vec{v}_1$ is connected to the bottom reference line via a vertical $60\\Omega$ resistor and a $j20\\Omega$ inductor, is connected to node $\\vec{v}_2$ via a $-j30\\Omega$ capacitor, and is connected to node $\\vec{v}_3$ via a top $60\\Omega$ resistor; node $\\vec{v}_2$ is connected to the bottom reference line via an upward-pointing current source labeled $3+j4A$ and is connected to node $\\vec{v}_3$ via a $j30\\Omega$ inductor; and node $\\vec{v}_3$ is connected to the bottom reference line via a vertical $-j20\\Omega$ capacitor and a vertical $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 13,
+      "text": "Fig. 1 shows an electrical circuit diagram with three labeled nodes $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ connected to a common bottom reference line, where $\\vec{V}_1$ is connected to ground via a $60\\Omega$ resistor and a vertical $j20\\Omega$ inductor, is connected to $\\vec{V}_2$ via a horizontal $-j30\\Omega$ capacitor, and connects to $\\vec{V}_3$ via a top horizontal $60\\Omega$ resistor; $\\vec{V}_2$ is connected to ground via an upward-pointing current source labeled $3+j4$A and connects to $\\vec{V}_3$ via a horizontal $j30\\Omega$ inductor; and $\\vec{V}_3$ is connected to ground via a vertical $-j20\\Omega$ capacitor and a vertical $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 14,
+      "text": "The image displays an electrical circuit diagram labeled \"Fig. 1\" with three main nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$, where node $\\vec{V}_1$ is connected to ground via a parallel combination of a $60\\Omega$ resistor and an inductor with impedance $j120\\Omega$, and also connected to node $\\vec{V}_2$ via a capacitor with impedance $-j30\\Omega$ and to node $\\vec{V}_3$ via a top resistor of $60\\Omega$; node $\\vec{V}_2$ is connected to ground via an upward-pointing current source labeled $3+j4$A and to node $\\vec{V}_3$ via an inductor with impedance $j30\\Omega$; and node $\\vec{V}_3$ is connected to ground via a parallel combination of a capacitor with impedance $-j20\\Omega$ and a $60\\Omega$ resistor."
+    },
+    {
+      "top_p": 1.0,
+      "sample_idx": 15,
+      "text": "Fig. 1 displays a circuit diagram with three top nodes labeled $\\vec{V}_1$, $\\vec{V}_2$, and $\\vec{V}_3$ situated above a common reference line (ground). At node $\\vec{V}_1$, a vertical resistor labeled \"$60\\Omega$\" and a vertical inductor labeled \"$j20\\Omega$\" are connected in parallel to the reference line. A horizontal resistor labeled \"$60\\Omega$\" spans from node $\\vec{V}_1$ to node $\\vec{V}_3$ at the top. A horizontal capacitor labeled \"$-j30\\Omega$\" connects node $\\vec{V}_1$ to node $\\vec{V}_2$. At node $\\vec{V}_2$, a current source labeled \"$3+j4$A\" pointing upwards is connected between the reference line and the node. A horizontal inductor labeled \"$j30\\Omega$\" connects node $\\vec{V}_2$ to node $\\vec{V}_3$. At node $\\vec{V}_3$, a vertical capacitor labeled \"$-j20\\Omega$\" and a vertical resistor labeled \"$60\\Omega$\" are connected in parallel to the reference line."
+    }
+  ]
+}
