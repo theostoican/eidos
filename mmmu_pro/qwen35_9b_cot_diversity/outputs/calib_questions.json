@@ -1,0 +1,16 @@
+{
+  "test_Electronics_247": {
+    "subject": "Electronics",
+    "gold": "I",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 41
+  },
+  "test_Art_Theory_420": {
+    "subject": "Art_Theory",
+    "gold": "H",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 46
+  }
+}

@@ -1,0 +1,9 @@
+datasets==5.0.0
+numpy==2.2.6
+pillow==12.2.0
+qwen-vl-utils==0.0.14
+sentence-transformers==5.6.0
+torch==2.10.0
+torchvision==0.25.0
+transformers==5.13.0
+vllm==0.19.1

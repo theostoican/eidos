@@ -1,0 +1,16 @@
+__pycache__/
+logs/
+# large generated artifacts from the full run (regenerable) — do NOT commit
+outputs/cot_gen.jsonl
+outputs/cot_gen.shard*.jsonl
+outputs/cot_gen_summary.json
+outputs/cot_gen.shard*_summary.json
+outputs/cot_extracted.jsonl
+outputs/questions.json
+outputs/questions.shard*.json
+outputs/cot_report.json
+outputs/verdicts_cot.jsonl
+outputs/images/
+# derived calibration files (regenerable from calib_cot_gen.jsonl)
+outputs/calib_extracted.jsonl
+outputs/calib_report.json
