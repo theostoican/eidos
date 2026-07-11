@@ -14,3 +14,8 @@ outputs/images/
 # derived calibration files (regenerable from calib_cot_gen.jsonl)
 outputs/calib_extracted.jsonl
 outputs/calib_report.json
+# additional regenerable / junk artifacts from the 10% run
+outputs/*.log
+outputs/verdicts_cot.shard*.jsonl
+outputs/cot_extracted_stopped.jsonl
+outputs/verdicts_calib_test.jsonl

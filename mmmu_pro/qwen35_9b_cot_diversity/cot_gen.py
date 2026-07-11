@@ -26,38 +26,35 @@ def b64_image(img, fmt="PNG"):
 
 LETTERS = [chr(ord("A") + i) for i in range(26)]
 
-# --- OFFICIAL MMMU-Pro prompt (identical to qwen35_9b_thinking_full/run_mmmupro.py) ---
-PROMPT_HEADER = (
-    "Answer the following multiple-choice question. The last line of your "
-    "response must be exactly of the form: 'Answer: $LETTER' (without quotes) "
-    "where $LETTER is one of the option letters. Think step by step before answering.\n\n"
+# --- OFFICIAL MMMU-Pro CoT prompt, verbatim from the paper's repo ---
+# MMMU-Benchmark/MMMU  mmmu-pro/prompts.yaml  ->  cot.standard  (fetched, not paraphrased).
+# In the official infer code (mmmu-pro/infer/infer_transformers.py :: construct_prompt) this
+# string is a SUFFIX: prompt = f"{question}\n{parsed_options}\n{cot.standard}", with each
+# "<image N>" marker replaced by the literal text "[image]" and the actual images appended
+# AFTER all text, in the order they were referenced (origin_mmmu_doc_to_visual).
+PROMPT_STANDARD = (
+    "Answer the preceding multiple choice question. The last line of your response should "
+    "be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of "
+    "options. Think step by step before answering."
 )
 
 IMG_MARK = re.compile(r"<image\s+(\d+)>")
 
+def parse_options(options):
+    """Official parse_options: 'A. <opt>\\nB. <opt>\\n...' for len(options) letters."""
+    return "\n".join(f"{LETTERS[i]}. {o}" for i, o in enumerate(options))
+
 def build_content(question, options, images):
-    """OpenAI-style content list, interleaving images at <image N> markers."""
-    content = [{"type": "text", "text": PROMPT_HEADER}]
-    pos = 0
-    for m in IMG_MARK.finditer(question):
-        pre = question[pos:m.start()]
-        if pre.strip():
-            content.append({"type": "text", "text": pre})
-        idx = int(m.group(1))
+    """OpenAI-style content list matching the OFFICIAL MMMU-Pro standard assembly exactly:
+    all text first (question + options + the suffix prompt, with <image N> -> '[image]'),
+    then the referenced images appended after the text in reference order."""
+    text = f"{question}\n{parse_options(options)}\n{PROMPT_STANDARD}"
+    order = [int(n) for n in IMG_MARK.findall(text)]      # image_order (may repeat)
+    text = IMG_MARK.sub("[image]", text)                  # replace_images_tokens
+    content = [{"type": "text", "text": text}]
+    for idx in order:                                     # append referenced images, in order
         if idx in images:
             content.append({"type": "image_url", "image_url": {"url": b64_image(images[idx])}})
-        else:
-            content.append({"type": "text", "text": m.group(0)})
-        pos = m.end()
-    tail = question[pos:]
-    if tail.strip():
-        content.append({"type": "text", "text": tail})
-    referenced = {int(x) for x in IMG_MARK.findall(question)}
-    for idx in sorted(images):
-        if idx not in referenced:
-            content.append({"type": "image_url", "image_url": {"url": b64_image(images[idx])}})
-    opt_lines = "\n".join(f"{LETTERS[i]}. {o}" for i, o in enumerate(options))
-    content.append({"type": "text", "text": "\n" + opt_lines})
     return content
 
 def load_options(row):
