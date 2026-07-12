@@ -76,7 +76,20 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="calibration: cap #questions AFTER sampling (0=all)")
     ap.add_argument("--n-samples", type=int, default=16)
     ap.add_argument("--top-ps", default="0.5,0.7,0.9,0.95,1.0")
+    ap.add_argument("--temps", default="",
+                    help="comma-sep temperatures to SWEEP (2D grid over top_ps x temps). "
+                         "Empty = single --temperature. Generation order is top_p-outer, temp-inner.")
+    # Qwen3.5-9B RECOMMENDED thinking-mode sampling defaults (from the model card, general
+    # tasks): temperature=1.0, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=1.5,
+    # repetition_penalty=1.0. top_p is the SWEPT variable here; the rest use the recommended
+    # values. presence_penalty=1.5 is what prevents the low-top_p repetition-loop degeneration
+    # (the earlier run used top_k=-1 / presence_penalty=0 and got 11% truncation at top_p=0.5).
     ap.add_argument("--temperature", type=float, default=1.0)
+    ap.add_argument("--top-k", type=int, default=20, help="Qwen3.5 thinking default (was -1 in v1)")
+    ap.add_argument("--presence-penalty", type=float, default=1.5,
+                    help="Qwen3.5 thinking default; suppresses repetition loops (was 0 in v1)")
+    ap.add_argument("--min-p", type=float, default=0.0)
+    ap.add_argument("--repetition-penalty", type=float, default=1.0)
     ap.add_argument("--max-tokens", type=int, default=40960)
     ap.add_argument("--max-model-len", type=int, default=49152)
     ap.add_argument("--gpu-mem-util", type=float, default=0.93)
@@ -102,6 +115,7 @@ def main():
     ap.add_argument("--out", default="outputs/cot_gen.jsonl")
     args = ap.parse_args()
     top_ps = [float(x) for x in args.top_ps.split(",")]
+    temps = [float(x) for x in args.temps.split(",")] if args.temps else [args.temperature]
 
     def shard_path(path):
         if args.num_shards <= 1:
@@ -128,7 +142,9 @@ def main():
           f"(shard {args.shard_id}/{args.num_shards}, {args.sample_frac:.0%} of {N}, "
           f"seed={args.sample_seed})" + (f" [LIMIT {args.limit}]" if args.limit else ""), flush=True)
 
-    convs, meta, qmeta = [], [], {}
+    # Build the conversation ONCE per question (prompt is identical across top_p/temp; only
+    # sampling params differ). The 2D grid is applied in the generation loop below.
+    qconvs, qinfo, qmeta = [], [], {}
     for i in sel:
         row = ds[i]
         opts = load_options(row)
@@ -136,16 +152,16 @@ def main():
         content = build_content(row["question"], opts, images)
         qmeta[row["id"]] = {"subject": row.get("subject"), "gold": row["answer"],
                             "n_options": len(opts), "n_images": len(images), "ds_index": i}
-        for p in top_ps:
-            convs.append([{"role": "user", "content": content}])
-            meta.append({"id": row["id"], "subject": row.get("subject"), "gold": row["answer"],
-                         "n_options": len(opts), "top_p": p})
+        qconvs.append([{"role": "user", "content": content}])
+        qinfo.append({"id": row["id"], "subject": row.get("subject"), "gold": row["answer"],
+                      "n_options": len(opts)})
 
     Path(questions_out).parent.mkdir(parents=True, exist_ok=True)
     json.dump(qmeta, open(questions_out, "w"), indent=2)
-    print(f"[sample] wrote {len(qmeta)} question meta -> {questions_out}", flush=True)
+    print(f"[sample] wrote {len(qmeta)} question meta -> {questions_out} | "
+          f"grid = {len(top_ps)} top_p x {len(temps)} temp", flush=True)
 
-    # resume: which (id, top_p) cells are already complete (all n_samples present) in out_path?
+    # resume: which (id, top_p, temp) cells are already complete (all n_samples present)?
     done_cells = set()
     if args.resume and Path(out_path).exists():
         cnt = collections.Counter()
@@ -154,7 +170,7 @@ def main():
                 r = json.loads(line)
             except Exception:
                 continue
-            cnt[(r["id"], r["top_p"])] += 1
+            cnt[(r["id"], r["top_p"], r.get("temperature", args.temperature))] += 1
         done_cells = {c for c, n in cnt.items() if n >= args.n_samples}
         print(f"[resume] {len(done_cells)} complete cells already in {out_path}; will skip them",
               flush=True)
@@ -170,40 +186,44 @@ def main():
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     n_written = n_trunc_total = n_skipped = 0
     with open(out_path, "a" if args.resume else "w") as f:
-        for p in top_ps:
-            idxs = [i for i, m in enumerate(meta)
-                    if m["top_p"] == p and (m["id"], p) not in done_cells]
-            n_skipped += sum(1 for m in meta if m["top_p"] == p and (m["id"], p) in done_cells)
-            if not idxs:
-                print(f"[gen] top_p={p} | all cells already done, skipping", flush=True)
-                continue
-            sp = SamplingParams(n=args.n_samples, temperature=args.temperature, top_p=p,
-                                top_k=-1, max_tokens=args.max_tokens, seed=args.seed)
-            tc = time.time()
-            outs = llm.chat([convs[i] for i in idxs], sp,
-                            chat_template_kwargs={"enable_thinking": True})
-            gen_tok = 0
-            for i, o in zip(idxs, outs):
-                m = meta[i]
-                for s_idx, comp in enumerate(o.outputs):
-                    ntok = len(comp.token_ids)
-                    gen_tok += ntok
-                    f.write(json.dumps({
-                        "id": m["id"], "subject": m["subject"], "top_p": p, "sample_idx": s_idx,
-                        "gold": m["gold"], "n_options": m["n_options"],
-                        "out_tokens": ntok, "finish_reason": comp.finish_reason,
-                        "text": comp.text,
-                    }) + "\n")
-                    n_written += 1
-            f.flush()
-            dt_chunk = time.time() - tc
-            n_trunc = sum(1 for i, o in zip(idxs, outs) for c in o.outputs if c.finish_reason != "stop")
-            n_trunc_total += n_trunc
-            print(f"[gen] top_p={p} | {len(idxs)}x{args.n_samples} gens | trunc={n_trunc} | "
-                  f"chunk={dt_chunk/60:.1f}m | decode={gen_tok/dt_chunk:.0f} tok/s | "
-                  f"elapsed={(time.time()-t0)/60:.1f}m", flush=True)
+        for T in temps:                       # temp-outer, top_p-inner (a temperature's FULL
+            for p in top_ps:                  # top_p sweep completes before the next temperature,
+                                              # so the inverted-U-vs-p can be checked per temp)
+                idxs = [j for j, qi in enumerate(qinfo) if (qi["id"], p, T) not in done_cells]
+                n_skipped += sum(1 for qi in qinfo if (qi["id"], p, T) in done_cells)
+                if not idxs:
+                    print(f"[gen] top_p={p} temp={T} | all cells already done, skipping", flush=True)
+                    continue
+                sp = SamplingParams(n=args.n_samples, temperature=T, top_p=p,
+                                    top_k=args.top_k, min_p=args.min_p,
+                                    presence_penalty=args.presence_penalty,
+                                    repetition_penalty=args.repetition_penalty,
+                                    max_tokens=args.max_tokens, seed=args.seed)
+                tc = time.time()
+                outs = llm.chat([qconvs[j] for j in idxs], sp,
+                                chat_template_kwargs={"enable_thinking": True})
+                gen_tok = 0
+                for j, o in zip(idxs, outs):
+                    qi = qinfo[j]
+                    for s_idx, comp in enumerate(o.outputs):
+                        ntok = len(comp.token_ids)
+                        gen_tok += ntok
+                        f.write(json.dumps({
+                            "id": qi["id"], "subject": qi["subject"], "top_p": p, "temperature": T,
+                            "sample_idx": s_idx, "gold": qi["gold"], "n_options": qi["n_options"],
+                            "out_tokens": ntok, "finish_reason": comp.finish_reason,
+                            "text": comp.text,
+                        }) + "\n")
+                        n_written += 1
+                f.flush()
+                dt_chunk = time.time() - tc
+                n_trunc = sum(1 for j, o in zip(idxs, outs) for c in o.outputs if c.finish_reason != "stop")
+                n_trunc_total += n_trunc
+                print(f"[gen] top_p={p} temp={T} | {len(idxs)}x{args.n_samples} gens | trunc={n_trunc} | "
+                      f"chunk={dt_chunk/60:.1f}m | decode={gen_tok/dt_chunk:.0f} tok/s | "
+                      f"elapsed={(time.time()-t0)/60:.1f}m", flush=True)
     dt = time.time() - t0
-    summary = {"model": args.model, "n_questions": len(qmeta), "top_ps": top_ps,
+    summary = {"model": args.model, "n_questions": len(qmeta), "top_ps": top_ps, "temps": temps,
                "n_samples": args.n_samples, "n_generations": n_written,
                "resumed_skipped": n_skipped, "truncated": n_trunc_total,
                "num_shards": args.num_shards, "shard_id": args.shard_id,

@@ -20,9 +20,8 @@ fig, axL = plt.subplots(figsize=(10, 6))
 axR = axL.twinx()
 
 # left axis: fraction-scale "value" metrics
-series = [("answer_acc",  "overall answer accuracy", "#1b6ca8", "-o"),
-          ("cot_correct", "CoT soundness (self-judge)", "#c85200", "-s"),
-          ("majority_acc","majority-vote accuracy", "#2c8c3c", "-^")]
+series = [("answer_acc",  "per-sample answer accuracy", "#1b6ca8", "-o"),
+          ("cot_correct", "CoT soundness (self-judge)", "#c85200", "-s")]
 for key, lab, col, mk in series:
     axL.plot(x, [e[key] for e in evo], mk, color=col, lw=2.4, ms=8, label=lab)
 
