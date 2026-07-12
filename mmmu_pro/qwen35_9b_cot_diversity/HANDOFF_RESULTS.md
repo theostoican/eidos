@@ -53,6 +53,25 @@ despite a rubric saying "right letter via wrong reasoning is UNSOUND." So `cot_c
 proxy for `answer_correct`, not an independent quality signal. Treat it as soft; prefer the
 judge-free answer-accuracy for the main claim.
 
+### Judge validation — de-anchored re-judge (`--no-gold`, `cot_report_nogold.json`)
+
+Re-judged all 5190 CoTs with `judge_qwen_cot.py --no-gold` (the gold answer is hidden; the judge
+must verify against the image itself). On completed traces:
+
+| judge mode | sound%\|answer-CORRECT | sound%\|answer-WRONG | gap |
+|---|---|---|---|
+| anchored (gold shown) | 96.5% | 70.3% | **+0.262** |
+| de-anchored (no gold) | 97.3% | 91.7% | **+0.056** |
+
+De-anchoring **collapses the anchoring gap (0.26 → 0.06)** — confirming the anchored judge was reading
+soundness off the gold answer. BUT the de-anchored 9B judge then rates **92% of everything sound**
+(incl. 91.7% of wrong-answer traces): without the answer key it cannot tell good visual reasoning from
+bad, so it **rubber-stamps**. **Conclusion: a local Qwen self-judge cannot provide a trustworthy CoT
+soundness signal in EITHER mode** — anchored = circular (reads gold), de-anchored = non-discriminative.
+Both give a flat soundness-vs-top_p (~0.89 anchored / ~0.96 de-anchored), and both give
+diversity↔soundness ≈ 0 on completed traces (+0.01 / +0.004). The predicted monotonic soundness
+decline can NOT be measured with this judge — it needs a stronger external judge (Sonnet).
+
 ## Files (this run)
 
 | file | what | committed? |
@@ -70,14 +89,16 @@ judge-free answer-accuracy for the main claim.
 
 ## Next steps (prioritized)
 
-1. **FIX THE ANALYSIS (do first).** `analyze_cot.py` should exclude `finish_reason != 'stop'` traces
-   (or report both) by default — currently it silently keeps them and reproduces the misleading
-   −0.35. Add a `--completed-only` flag defaulting to True, or drop truncated in `extract_cot.py`.
-   `cot_report_stopped.json` already has the correct completed-only numbers.
-2. **Independent Sonnet-judge validation** (optional, cheap insurance). Use `judge_prep_cot.py` to
-   emit packets and have Sonnet re-judge a **stratified subsample** (balanced correct/wrong, across
-   top_p) with the same strict rubric. Compare agreement with Qwen to quantify the gold-anchoring
-   (expect the 96/62 gap to shrink). Only needed if `cot_correct` will be used downstream.
+1. **DONE — analysis fixed.** `analyze_cot.py` now drops `finish_reason != 'stop'` by default
+   (`--include-truncated` to opt out). `extract_cot.py` still parses everything; the filter is in
+   analyze. `cot_report_stopped.json` = anchored+completed; `cot_report_nogold.json` = de-anchored+completed.
+2. **DONE — local judge validation (de-anchored re-judge), and it settled the question:** a local
+   Qwen self-judge is NOT usable for soundness (circular with gold, rubber-stamps without) — see the
+   Judge-validation section above. If a real soundness-vs-top_p curve is wanted, run an **external
+   Sonnet judge** (use `judge_prep_cot.py` to emit image+CoT packets) on a stratified subsample —
+   this is now the ONLY way to get a trustworthy `cot_correct`. The judge-free findings (diversity
+   rises with top_p; no diversity↔answer-accuracy link; majority-vote inverted-U peaking at top_p=0.7)
+   stand on their own and do not need the judge.
 3. **Mitigate truncation for any future run:** add a repetition penalty or `min_p` floor at low
    top_p (the root cause of the loops); raising `--max-tokens` alone won't help true infinite loops.
 4. **Scale to the full dataset** if the 10% picture is worth confirming: `run_cot_all4.sh 1.0 6`

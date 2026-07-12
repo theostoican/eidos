@@ -42,22 +42,33 @@ def split_cot(text):
         return text.split("<think>", 1)[1].strip()
     return text.strip()
 
-RUBRIC = (
-    "You are a STRICT grader of visual reasoning. Below is a multiple-choice question with "
-    "its image(s), the answer options, the CORRECT answer, and a step-by-step REASONING "
-    "TRACE produced by another model. Judge ONLY whether the reasoning is SOUND.\n\n"
-    "The trace is SOUND only if BOTH of these hold:\n"
-    "  1. Every fact it reads off the image is accurate (no misread value, label, shape, "
-    "connection, axis, or count).\n"
-    "  2. Every inferential / mathematical step that follows is valid.\n\n"
-    "If it misreads the image even once in a way that matters, OR makes an invalid step, it "
-    "is UNSOUND -- EVEN IF it still arrives at the correct letter (reaching the right answer "
-    "by a lucky guess, a compensating error, or wrong reasoning is UNSOUND). A trace that is "
-    "truncated before finishing is UNSOUND unless the reasoning it did produce is fully "
-    "correct and already determines the answer.\n\n"
-    "Give your reasoning in AT MOST 3 short sentences, then end with EXACTLY one final line "
-    "that is either 'VERDICT: SOUND' or 'VERDICT: UNSOUND'. The VERDICT line is mandatory."
-)
+def rubric(reveal_gold):
+    """The grading rubric. With reveal_gold=False the CORRECT answer is NOT shown, so the
+    judge must verify the reasoning against the image on its own merits -- this removes the
+    gold-anchoring confound (Qwen otherwise rates a CoT sound 96% when the answer is right vs
+    62% when wrong). The de-anchored judge must independently check the visual reads."""
+    intro = ("its image(s), the answer options, the CORRECT answer, and" if reveal_gold
+             else "its image(s) and the answer options, and")
+    extra = ("" if reveal_gold else
+             "You are NOT told the correct answer -- verify the reasoning against the IMAGE "
+             "yourself. ")
+    return (
+        "You are a STRICT grader of visual reasoning. Below is a multiple-choice question with "
+        + intro + " a step-by-step REASONING "
+        "TRACE produced by another model. Judge ONLY whether the reasoning is SOUND.\n\n"
+        + extra +
+        "The trace is SOUND only if BOTH of these hold:\n"
+        "  1. Every fact it reads off the image is accurate (no misread value, label, shape, "
+        "connection, axis, or count).\n"
+        "  2. Every inferential / mathematical step that follows is valid.\n\n"
+        "If it misreads the image even once in a way that matters, OR makes an invalid step, it "
+        "is UNSOUND -- EVEN IF it still arrives at the correct letter (reaching the right answer "
+        "by a lucky guess, a compensating error, or wrong reasoning is UNSOUND). A trace that is "
+        "truncated before finishing is UNSOUND unless the reasoning it did produce is fully "
+        "correct and already determines the answer.\n\n"
+        "Give your reasoning in AT MOST 3 short sentences, then end with EXACTLY one final line "
+        "that is either 'VERDICT: SOUND' or 'VERDICT: UNSOUND'. The VERDICT line is mandatory."
+    )
 
 VERDICT_RE = re.compile(r"VERDICT:\s*(SOUND|UNSOUND)", re.IGNORECASE)
 
@@ -71,20 +82,21 @@ def parse_verdict(text):
         return toks[-1].upper() == "SOUND", toks[-1].upper()
     return None, "UNPARSED"
 
-def build_judge_conv(row_cache, qid, gold, cot, max_cot_chars):
+def build_judge_conv(row_cache, qid, gold, cot, max_cot_chars, reveal_gold=True):
     q_text, options, images = row_cache[qid]
     if max_cot_chars and len(cot) > max_cot_chars:            # guard context blowups
         cot = cot[:max_cot_chars] + "\n...[trace truncated for judging]..."
     opt_lines = "\n".join(f"{LETTERS[i]}. {o}" for i, o in enumerate(options))
-    gi = LETTERS.index(gold) if gold in LETTERS else None
-    gold_line = f"{gold}. {options[gi]}" if gi is not None and gi < len(options) else gold
-    content = [{"type": "text", "text": RUBRIC + "\n\n--- QUESTION ---\n" + q_text.strip()}]
+    content = [{"type": "text", "text": rubric(reveal_gold) + "\n\n--- QUESTION ---\n" + q_text.strip()}]
     for im in images:
         content.append({"type": "image_url", "image_url": {"url": im}})
-    content.append({"type": "text", "text":
-        "\n--- OPTIONS ---\n" + opt_lines +
-        f"\n\n--- CORRECT ANSWER ---\n{gold_line}\n\n--- REASONING TRACE TO GRADE ---\n" +
-        cot + "\n\n--- END TRACE ---\nGrade the reasoning now."})
+    tail = "\n--- OPTIONS ---\n" + opt_lines
+    if reveal_gold:
+        gi = LETTERS.index(gold) if gold in LETTERS else None
+        gold_line = f"{gold}. {options[gi]}" if gi is not None and gi < len(options) else gold
+        tail += f"\n\n--- CORRECT ANSWER ---\n{gold_line}"
+    tail += "\n\n--- REASONING TRACE TO GRADE ---\n" + cot + "\n\n--- END TRACE ---\nGrade the reasoning now."
+    content.append({"type": "text", "text": tail})
     return [{"role": "user", "content": content}]
 
 def read_gen_rows(gen_glob):
@@ -111,6 +123,9 @@ def main():
     ap.add_argument("--max-num-seqs", type=int, default=64)
     ap.add_argument("--max-judge-tokens", type=int, default=2048)
     ap.add_argument("--batch", type=int, default=256, help="judge prompts per llm.chat call")
+    ap.add_argument("--no-gold", action="store_true",
+                    help="do NOT show the judge the gold answer (de-anchored judge; removes the "
+                         "gold-anchoring confound so soundness is judged independently)")
     ap.add_argument("--watch", action="store_true", help="stream: keep judging new gens as they appear")
     ap.add_argument("--poll", type=float, default=30.0, help="watch: seconds between rescans")
     ap.add_argument("--stop-file", default="outputs/.judge_stop",
@@ -171,7 +186,7 @@ def main():
                     ensure_row(r["id"])
                     cot = split_cot(r["text"])
                     convs.append(build_judge_conv(row_cache, r["id"], r["gold"], cot,
-                                                  args.max_cot_chars))
+                                                  args.max_cot_chars, reveal_gold=not args.no_gold))
                 outs = llm.chat(convs, sp, chat_template_kwargs={"enable_thinking": False})
                 for r, o in zip(chunk, outs):
                     sound, raw = parse_verdict(o.outputs[0].text)

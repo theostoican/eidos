@@ -85,9 +85,19 @@ def main():
     ap.add_argument("--verdicts", default="outputs/verdicts_cot.jsonl", help="judge verdicts (optional)")
     ap.add_argument("--model", default="sentence-transformers/all-MiniLM-L6-v2")
     ap.add_argument("--out", default="outputs/cot_report.json")
+    ap.add_argument("--include-truncated", action="store_true",
+                    help="keep finish_reason!='stop' traces. DEFAULT drops them: truncated CoTs "
+                         "are repetition-loop outliers whose prevalence is strongly top_p-dependent "
+                         "(11%% at 0.5 -> 0.6%% at 1.0), which otherwise CONFOUNDS every top_p / "
+                         "diversity correlation (manufactured the spurious -0.35).")
     args = ap.parse_args()
 
     rows = [json.loads(l) for l in open(args.extracted)]
+    if not args.include_truncated:
+        n0 = len(rows)
+        rows = [r for r in rows if r.get("finish_reason") == "stop"]
+        print(f"[filter] completed-only: kept {len(rows)}/{n0} traces "
+              f"(dropped {n0 - len(rows)} truncated; pass --include-truncated to keep)")
     # judge verdicts: (id, top_p, sample_idx) -> sound(bool)
     vmap = {}
     try:

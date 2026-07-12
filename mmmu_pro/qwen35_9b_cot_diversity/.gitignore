@@ -19,3 +19,4 @@ outputs/*.log
 outputs/verdicts_cot.shard*.jsonl
 outputs/cot_extracted_stopped.jsonl
 outputs/verdicts_calib_test.jsonl
+outputs/verdicts_cot_nogold*.jsonl
