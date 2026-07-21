@@ -20,10 +20,10 @@ All comparisons are BALANCED (same question ids at every top_p).
 | maj@6 (n=79) | 0.801 | 0.823 | 0.852 | 0.859 | 0.835 | 0.843 | 0.862 | ∩ peak@1.00 edge |
 | maj@16 (n=47) | 0.894 | 0.915 | 0.936 | 0.957 | 0.936 | 0.936 | 0.957 | ∩ peak@0.70 INTERIOR ✅ |
 | per-sample acc (n=84) | 0.783 | 0.786 | 0.808 | 0.793 | 0.779 | 0.783 | 0.788 | ∩ peak@0.5 INTERIOR ✅ |
-| prior run (maj@6) | – | – | 0.765 | 0.780 | 0.763 | 0.740 | 0.746 | ∩ peak@0.7 |
 
 Quadratic curvature: maj@16 a=-0.1076, per-sample a=-0.0804 (**both down-opening ∩ = inverted-U**).
-maj@16 peaks at **top_p=0.7** — the same peak location as the prior run.
+NOTE: at maj@16 the top value is a TIE between top_p=0.7 and 1.0, so the apparent interior
+peak is an argmax tie-break, not a real maximum. See README caveats.
 
 ## 2. Visual-premise soundness — DECREASES with top_p ✅
 
@@ -34,7 +34,7 @@ any single wrong detail fails the trace.
 
 _Methodological note: judging each premise INDIVIDUALLY saturates at ~97% — atomic claims
 ("the waveform is a triangle pulse") are trivially easy, leaving no dynamic range. The
-holistic all-or-nothing form reproduces the sibling experiment's scale (52.2% vs ~56%)._
+holistic all-or-nothing form restores real dynamic range (52.2%)._
 
 | top_p | 0.1 | 0.3 | 0.5 | 0.7 | 0.9 | 0.95 | 1.0 |
 |---|---|---|---|---|---|---|---|
@@ -42,7 +42,7 @@ holistic all-or-nothing form reproduces the sibling experiment's scale (52.2% vs
 
 Balanced on 50 shared questions, n=95/point, SE≈±0.051.
 
-**slope=-0.1503, pearson=-0.908, spearman=-0.893 → soundness falls 0.58 → 0.46** (sibling target: pearson −0.15, ~0.59→0.50).
+**slope=-0.1503, pearson=-0.908, spearman=-0.893 → soundness falls 0.58 → 0.46**
 
 ## 3. Visual-premise diversity — INCREASES with top_p ✅
 

@@ -7,7 +7,6 @@ import numpy as np
 from majk import load_cells, majk_cell
 
 COMPLETE=[0.1,0.3,0.5,0.7,0.9,0.95,1.0]
-PRIOR={0.5:.7647,0.7:.7803,0.9:.7630,0.95:.7399,1.0:.7457}
 def bar(v): return " | ".join(f"{x:.3f}" for x in v)
 
 print("# Inverted-U + Visual-Premise Experiment — Final Summary\n")
@@ -40,11 +39,11 @@ ans=[float(np.mean([sum(a==cells[(q,p)][1] for a in cells[(q,p)][0])/len(cells[(
 apk=COMPLETE[int(np.argmax(ans))]
 print(f"| per-sample acc (n={len(qs)}) | "+bar(ans)+
       f" | ∩ peak@{apk} {'INTERIOR ✅' if apk not in (COMPLETE[0],COMPLETE[-1]) else 'edge'} |")
-print(f"| prior run (maj@6) | "+" | ".join(f"{PRIOR[p]:.3f}" if p in PRIOR else "–" for p in COMPLETE)+" | ∩ peak@0.7 |")
 q16=np.polyfit(COMPLETE,res[16],2)[0]; qa=np.polyfit(COMPLETE,ans,2)[0]
 print(f"\nQuadratic curvature: maj@16 a={q16:+.4f}, per-sample a={qa:+.4f} "
       f"(**both down-opening ∩ = inverted-U**).")
-print(f"maj@16 peaks at **top_p={COMPLETE[int(np.argmax(res[16]))]}** — the same peak location as the prior run.\n")
+print("NOTE: at maj@16 the top value is a TIE between top_p=0.7 and 1.0, so the apparent\n"
+      "interior peak is an argmax tie-break, not a real maximum. See README caveats.\n")
 
 # ---- 2. soundness ----
 V=[json.loads(l) for l in open("outputs/u_verdicts_holistic.jsonl")]
@@ -65,13 +64,13 @@ print("derivation or inference), then judged **holistically**: all of a trace's 
 print("any single wrong detail fails the trace.\n")
 print("_Methodological note: judging each premise INDIVIDUALLY saturates at ~97% — atomic claims")
 print("(\"the waveform is a triangle pulse\") are trivially easy, leaving no dynamic range. The")
-print("holistic all-or-nothing form reproduces the sibling experiment's scale (52.2% vs ~56%)._\n")
+print("holistic all-or-nothing form restores real dynamic range (52.2%)._\n")
 print("| top_p | "+" | ".join(str(p) for p in COMPLETE)+" |")
 print("|---|"+"---|"*len(COMPLETE))
 print("| soundness | "+bar(ys)+" |")
 print(f"\nBalanced on {len(sh)} shared questions, n={n}/point, SE≈±{np.mean([math.sqrt(y*(1-y)/n) for y in ys]):.3f}.")
 print(f"\n**slope={sl:+.4f}, pearson={pe:+.3f}, spearman={spm:+.3f} → soundness falls "
-      f"{ys[0]:.2f} → {ys[-1]:.2f}** (sibling target: pearson −0.15, ~0.59→0.50).\n")
+      f"{ys[0]:.2f} → {ys[-1]:.2f}**\n")
 
 # ---- 3. diversity ----
 D=json.load(open("outputs/u_premise_diversity.json"))["evolution"]
