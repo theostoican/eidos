@@ -52,11 +52,18 @@ def _minilm_encode(chunks, model_name, batch=128):
     import torch
     from transformers import AutoTokenizer, AutoModel
     tok = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModel.from_pretrained(model_name).to("cuda").eval()
+    # GPU if free, else CPU -- MiniLM is tiny; never let a busy GPU kill the analysis
+    dev = "cuda"
+    try:
+        model = AutoModel.from_pretrained(model_name).to(dev).eval()
+    except Exception as e:
+        print(f"[embed] cuda unavailable ({type(e).__name__}); falling back to CPU")
+        dev = "cpu"
+        model = AutoModel.from_pretrained(model_name).to(dev).eval()
     out = []
     for i in range(0, len(chunks), batch):
         enc = tok(chunks[i:i + batch], padding=True, truncation=True, max_length=256,
-                  return_tensors="pt").to("cuda")
+                  return_tensors="pt").to(dev)
         with torch.no_grad():
             h = model(**enc).last_hidden_state            # [B, T, H]
         m = enc["attention_mask"].unsqueeze(-1).float()

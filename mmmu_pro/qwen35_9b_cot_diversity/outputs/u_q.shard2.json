@@ -1,0 +1,198 @@
+{
+  "test_Clinical_Medicine_131": {
+    "subject": "Clinical_Medicine",
+    "gold": "F",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 58
+  },
+  "test_Mechanical_Engineering_62": {
+    "subject": "Mechanical_Engineering",
+    "gold": "C",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 87
+  },
+  "test_Math_170": {
+    "subject": "Math",
+    "gold": "D",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 132
+  },
+  "test_Computer_Science_77": {
+    "subject": "Computer_Science",
+    "gold": "E",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 178
+  },
+  "test_Sociology_102": {
+    "subject": "Sociology",
+    "gold": "B",
+    "n_options": 3,
+    "n_images": 1,
+    "ds_index": 259
+  },
+  "validation_Public_Health_9": {
+    "subject": "Public_Health",
+    "gold": "J",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 278
+  },
+  "test_Basic_Medical_Science_270": {
+    "subject": "Basic_Medical_Science",
+    "gold": "A",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 385
+  },
+  "validation_Pharmacy_8": {
+    "subject": "Pharmacy",
+    "gold": "F",
+    "n_options": 9,
+    "n_images": 1,
+    "ds_index": 483
+  },
+  "test_Marketing_120": {
+    "subject": "Marketing",
+    "gold": "B",
+    "n_options": 9,
+    "n_images": 2,
+    "ds_index": 513
+  },
+  "test_Biology_195": {
+    "subject": "Biology",
+    "gold": "A",
+    "n_options": 3,
+    "n_images": 1,
+    "ds_index": 578
+  },
+  "test_Music_39": {
+    "subject": "Music",
+    "gold": "G",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 635
+  },
+  "validation_Architecture_and_Engineering_26": {
+    "subject": "Architecture_and_Engineering",
+    "gold": "J",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 643
+  },
+  "test_Accounting_13": {
+    "subject": "Accounting",
+    "gold": "F",
+    "n_options": 9,
+    "n_images": 1,
+    "ds_index": 818
+  },
+  "validation_Art_Theory_7": {
+    "subject": "Art_Theory",
+    "gold": "I",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 868
+  },
+  "test_Electronics_91": {
+    "subject": "Electronics",
+    "gold": "A",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 937
+  },
+  "validation_Materials_25": {
+    "subject": "Materials",
+    "gold": "B",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 996
+  },
+  "test_Psychology_149": {
+    "subject": "Psychology",
+    "gold": "E",
+    "n_options": 5,
+    "n_images": 1,
+    "ds_index": 1082
+  },
+  "test_Sociology_245": {
+    "subject": "Sociology",
+    "gold": "D",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1155
+  },
+  "test_Accounting_380": {
+    "subject": "Accounting",
+    "gold": "G",
+    "n_options": 9,
+    "n_images": 1,
+    "ds_index": 1184
+  },
+  "test_Art_121": {
+    "subject": "Art",
+    "gold": "B",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1205
+  },
+  "test_Chemistry_560": {
+    "subject": "Chemistry",
+    "gold": "A",
+    "n_options": 4,
+    "n_images": 4,
+    "ds_index": 1311
+  },
+  "validation_Public_Health_7": {
+    "subject": "Public_Health",
+    "gold": "G",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1386
+  },
+  "test_Agriculture_234": {
+    "subject": "Agriculture",
+    "gold": "C",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1466
+  },
+  "validation_Materials_8": {
+    "subject": "Materials",
+    "gold": "J",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1515
+  },
+  "test_Diagnostics_and_Laboratory_Medicine_104": {
+    "subject": "Diagnostics_and_Laboratory_Medicine",
+    "gold": "G",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1573
+  },
+  "validation_Psychology_16": {
+    "subject": "Psychology",
+    "gold": "D",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1609
+  },
+  "validation_Architecture_and_Engineering_15": {
+    "subject": "Architecture_and_Engineering",
+    "gold": "F",
+    "n_options": 9,
+    "n_images": 1,
+    "ds_index": 1630
+  },
+  "validation_Electronics_14": {
+    "subject": "Electronics",
+    "gold": "F",
+    "n_options": 10,
+    "n_images": 1,
+    "ds_index": 1686
+  }
+}
