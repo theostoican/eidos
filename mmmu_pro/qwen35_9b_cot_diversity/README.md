@@ -16,6 +16,10 @@ Per-sample answer accuracy humps too, peaking at `top_p = 0.5`.
 
 ![summary](outputs/u_final_chart.png)
 
+All four measures on one axis, every point labelled:
+
+![single](outputs/u_single_chart_labeled.png)
+
 ---
 
 ## ⚠️ The sampling parameters matter more than anything else here
@@ -92,7 +96,7 @@ _All `.jsonl` data is gzipped (CoTs compress ~8.5x; raw shards exceed GitHub's 1
 ├── outputs/
 │   ├── FINAL_SUMMARY.md          the three results with full tables
 │   ├── u_final_chart.png         3 panels: soundness | diversity | maj-vote inverted-U
-│   ├── u_single_chart*.png       single-panel variants (indexed / raw / +maj-vote / labeled)
+│   ├── u_single_chart_labeled.png  all four series on one axis, every point labelled
 │   ├── u_verdicts_holistic.jsonl.gz 1,015 holistic judgements (the soundness result)
 │   ├── u_verdicts_atomic_saturated.jsonl.gz  per-premise judging — the saturated control
 │   ├── u_premises.jsonl.gz          extracted visual premises (sample_idx 0-1)
@@ -110,7 +114,7 @@ _All `.jsonl` data is gzipped (CoTs compress ~8.5x; raw shards exceed GitHub's 1
 ├── analyze_cot.py                vendi() / cosd() / corr() / MiniLM embedding helpers
 ├── make_summary.py               writes FINAL_SUMMARY.md
 ├── final_chart.py                writes u_final_chart.png
-├── single_chart*.py              single-panel chart variants
+├── single_chart_labeled.py       writes u_single_chart_labeled.png
 └── run_vpU.sh                    the generation launcher (correct sampling baked in)
 ```
 
