@@ -96,10 +96,8 @@ _All `.jsonl` data is gzipped (CoTs compress ~8.5x; raw shards exceed GitHub's 1
 │   ├── u_verdicts_holistic.jsonl.gz 1,015 holistic judgements (the soundness result)
 │   ├── u_verdicts_atomic_saturated.jsonl.gz  per-premise judging — the saturated control
 │   ├── u_premises.jsonl.gz          extracted visual premises (sample_idx 0-1)
-│   ├── u_premises_s4.jsonl.gz       extracted premises for sample_idx 0-3 (unjudged; to extend n)
 │   ├── u_premise_diversity.json  Vendi / cosine per (question, top_p)
-│   ├── u_q.shard*.json           question metadata (id → subject, gold, ds_index)
-│   └── cot_report_stopped.json   PRIOR run's baseline, cited by FINAL_SUMMARY
+│   └── u_q.shard*.json           question metadata (id → subject, gold, ds_index)
 ├── cot_gen.py                    generation (official prompt + assembly)
 ├── extract_cot.py                split <think> trace, parse "Answer: X"
 ├── extract_premises.py           visual-premise extraction
@@ -109,14 +107,11 @@ _All `.jsonl` data is gzipped (CoTs compress ~8.5x; raw shards exceed GitHub's 1
 ├── holistic_trend.py             soundness vs top_p, balanced
 ├── soundness_trend.py            atomic-verdict trend (pooled / specific / conjunction)
 ├── majk.py                       maj@k, subsampled from the 16 samples, per-k balanced
-├── paired_stats.py               paired tests (same questions at every top_p)
 ├── analyze_cot.py                vendi() / cosd() / corr() / MiniLM embedding helpers
-├── verify_u.py                   fail-fast inverted-U check against the prior run
 ├── make_summary.py               writes FINAL_SUMMARY.md
 ├── final_chart.py                writes u_final_chart.png
 ├── single_chart*.py              single-panel chart variants
-├── run_vpU.sh                    the generation launcher (correct sampling baked in)
-└── orchestrator.sh / watchdog.sh idempotent end-to-end driver + supervisor watchdog
+└── run_vpU.sh                    the generation launcher (correct sampling baked in)
 ```
 
 ## Reproduce
@@ -138,9 +133,6 @@ python make_summary.py > outputs/FINAL_SUMMARY.md
 python final_chart.py               # the figure
 ```
 
-`orchestrator.sh` runs all of it idempotently and is safe to re-run; `watchdog.sh` under
-supervisor keeps it advancing across restarts.
-
 ## Caveats
 
 - **The right arm of the inverted-U is weaker than the prior run's.** maj@16 at `top_p=1.0`
@@ -149,8 +141,7 @@ supervisor keeps it advancing across restarts.
   **vLLM version**: the original result used 0.19.1; this CUDA-13 box requires 0.25.x, and
   sampling internals shifted between them.
 - **The soundness arm uses 2 of the 16 samples per cell** (judging cost). n = 95 per `top_p`
-  after balancing, SE ≈ ±0.05. `u_premises_s4.jsonl.gz` already holds premises for samples 0-3
-  if you want to roughly double that.
+  after balancing, SE ≈ ±0.05. Re-run `extract_premises.py --judge-samples 4` to roughly double that.
 - **`top_p` = 0.4 / 0.6 / 0.8 are partial** (29-57 of 86 questions) — generation was paused to
   free GPUs for judging. They are excluded from every reported number; including them shrinks
   the balanced set from 50 questions to 15.
