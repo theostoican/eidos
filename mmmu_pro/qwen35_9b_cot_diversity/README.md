@@ -118,24 +118,55 @@ _All `.jsonl` data is gzipped (CoTs compress ~8.5x; raw shards exceed GitHub's 1
 └── run_vpU.sh                    the generation launcher (correct sampling baked in)
 ```
 
-## Reproduce
+## Scripts actually run to produce these results
+
+Hardware: 3x A100-40GB (GPUs 0, 2, 3 — GPU 1 was excluded, dead ECC).
 
 ```bash
-# 1. generate (edit GPUS in run_vpU.sh; correct sampling is already baked in)
+# 1. GENERATION — 86 questions x 11 top_p x 16 samples, sharded over 3 GPUs.
+#    The sampling flags are the whole ballgame (see the warning above).
 ./run_vpU.sh
+#    which runs, for shard s=0,1,2 on GPU g=0,2,3:
+#      CUDA_VISIBLE_DEVICES=$g python cot_gen.py \
+#        --sample-frac 0.05 --n-samples 16 \
+#        --top-ps 1.0,0.9,0.95,0.7,0.5,0.3,0.1,0.8,0.6,0.4,0.2 \
+#        --top-k -1 --presence-penalty 0 --min-p 0 --repetition-penalty 1.0 --temperature 1.0 \
+#        --num-shards 3 --shard-id $s --resume \
+#        --kv-cache-dtype auto --max-num-seqs 128 --gpu-mem-util 0.95 \
+#        --out outputs/u_gen.jsonl --questions-out outputs/u_q.json
 
-# 2. premise arm
-python extract_cot.py      --gen outputs/u_gen.jsonl --out outputs/u_extracted.jsonl
-python extract_premises.py --extracted outputs/u_extracted.jsonl --out outputs/u_premises.jsonl --judge-samples 2
-python judge_holistic.py   --premises outputs/u_premises.jsonl --questions outputs/u_q.json \
-                           --out outputs/u_verdicts_holistic.jsonl --tensor-parallel-size 2
+# 2. PARSE the <think> traces and the "Answer: X" lines
+cat outputs/u_gen.shard*.jsonl > outputs/u_gen.jsonl
+python extract_cot.py --gen outputs/u_gen.jsonl --out outputs/u_extracted.jsonl
 
-# 3. results
-python holistic_trend.py            # soundness vs top_p
-python premise_diversity.py         # diversity vs top_p
+# 3. EXTRACT visual premises (Qwen3.5-9B, non-thinking, temp 0) — samples 0-1 only
+CUDA_VISIBLE_DEVICES=3 python extract_premises.py \
+  --extracted outputs/u_extracted.jsonl --out outputs/u_premises.jsonl \
+  --judge-samples 2 --gpu-mem-util 0.90 --max-num-seqs 128 --batch 512
+
+# 4. JUDGE holistically vs the image (InternVL3-38B-AWQ, TP=2, NO gold)  <- the soundness result
+CUDA_VISIBLE_DEVICES=0,2 python judge_holistic.py \
+  --premises outputs/u_premises.jsonl --questions outputs/u_q.json \
+  --out outputs/u_verdicts_holistic.jsonl \
+  --tensor-parallel-size 2 --gpu-mem-util 0.88 --max-num-seqs 16 --max-model-len 16384 --batch 96
+
+# 4b. the per-premise judge, kept as the saturated negative control (~97%, no dynamic range)
+CUDA_VISIBLE_DEVICES=3 python judge_premises_internvl.py \
+  --premises outputs/u_premises.jsonl --questions outputs/u_q.json \
+  --out outputs/u_verdicts_atomic_saturated.jsonl \
+  --tensor-parallel-size 1 --gpu-mem-util 0.90 --max-num-seqs 4 --max-model-len 12288 --batch 64
+
+# 5. ANALYSIS + FIGURES
+python holistic_trend.py                        # soundness vs top_p (balanced)
+python soundness_trend.py                       # the atomic control, for contrast
+python premise_diversity.py                     # Vendi / cosine vs top_p
 python make_summary.py > outputs/FINAL_SUMMARY.md
-python final_chart.py               # the figure
+python final_chart.py                           # outputs/u_final_chart.png
+python single_chart_labeled.py                  # outputs/u_single_chart_labeled.png
 ```
+
+All `.jsonl` outputs were gzipped before committing.
+
 
 ## Caveats
 
