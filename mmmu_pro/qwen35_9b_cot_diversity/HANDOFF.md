@@ -258,10 +258,6 @@ p=0.667.)
 **Multiplicity:** if you report pairwise tests against the peak, Holm-correct across all 6 and
 report both raw and adjusted p. Never report only the winning comparison.
 
-**Seeds:** ≥2 generation seeds. Every number currently in the repo is a single draw with
-`--seed 1234` fixed, so there is no run-to-run variance estimate at all — and the whole
-dispute is over 2–3 pp.
-
 **Power note:** paired SE is ~1.2 pp, so a 3 pp effect is ~2σ at best. If you want the shape
 test to be conclusive rather than suggestive, restrict to **informative items**. On the
 restricted grid (0.5–1.0, ballot rule) 34 of 86 questions are answered correctly by all 16
@@ -305,7 +301,6 @@ write the result down. This decides the question.
 | complete `top_p`=0.8 (29 missing questions) | 464 | 7-point grid above 0.4 |
 | complete `top_p`=0.6 (57 missing questions) | 912 | ditto |
 | add `top_p`=0.98, 0.99 (86 questions each) | 2,752 | density where the right arm must live |
-| second seed on the 5 primary values | 6,880 | the only run-to-run variance estimate you'd have |
 
 `cot_gen.py --resume` handles top-up; use `run_vpU.sh` with `TOPPS` edited so the sampling
 flags stay identical. Do **not** generate 0.1/0.2/0.3/0.4 — excluded by §2.2.
