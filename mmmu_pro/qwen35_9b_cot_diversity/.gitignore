@@ -1,28 +1,8 @@
 __pycache__/
 logs/
-# large generated artifacts from the full run (regenerable) — do NOT commit
-outputs/cot_gen.jsonl
-outputs/cot_gen.shard*.jsonl
-outputs/cot_gen_summary.json
-outputs/cot_gen.shard*_summary.json
-outputs/cot_extracted.jsonl
-outputs/questions.json
-outputs/questions.shard*.json
-outputs/cot_report.json
-outputs/verdicts_cot.jsonl
-outputs/images/
-# derived calibration files (regenerable from calib_cot_gen.jsonl)
-outputs/calib_extracted.jsonl
-outputs/calib_report.json
-# additional regenerable / junk artifacts from the 10% run
-outputs/*.log
-outputs/verdicts_cot.shard*.jsonl
-outputs/cot_extracted_stopped.jsonl
-outputs/verdicts_calib_test.jsonl
-outputs/verdicts_cot_nogold*.jsonl
-outputs/calib.log
-# Sonnet soundness working data (regenerable) — keep only sonnet_verdicts.json
-outputs/sonnet_gen*.jsonl
-outputs/sonnet_q*.json
-outputs/sonnet_judge/
-outputs/sonnet_gen*summary.json
+# Working copies of the generated traces. The committed, gzipped datasets live in cots/;
+# these are the raw per-shard files cot_gen.py appends to during a run.
+outputs/*.jsonl
+outputs/*_summary.json
+outputs/*_q.shard*.json
+outputs/t16_q.shard*.json
