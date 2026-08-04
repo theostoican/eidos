@@ -102,9 +102,10 @@ generation that never produced an answer is a failure that consumed inference bu
 event that did not happen. Every cell has exactly 16 *ballots*; a ballot is valid if the trace
 terminated and an answer parsed, otherwise it is *spoiled* — it consumes budget and does not
 vote. Nothing is silently dropped, every cell has the same denominator, and balancing no
-longer discards 39 of 86 questions. The discredited exclude rule is available only behind
-`--legacy-exclude-artifact`, labelled as a diagnostic, so it cannot quietly become a headline
-again.
+longer discards 39 of 86 questions. **The exclude rule is not implemented in this repo** —
+it cannot be selected, so it cannot quietly become a headline again. The numbers above were
+measured before it was removed and are preserved as data in `outputs/RESULT_T10.json`
+(`exclude_full`), which is also what the figure's panel A is drawn from.
 
 ## 5. Method
 
@@ -151,32 +152,35 @@ invalidated by two flags nobody recorded — that can no longer happen silently.
 
 ## 7. Layout
 
+Three scripts, and the data. Nothing here is scaffolding.
+
 ```
-cots/                                 all 19,200 traces generated here (gzipped)
-  t16_sweep.shard{0,1}.jsonl.gz       T=1.6, 9-point sweep            12,384
-  t10_topup_dense.jsonl.gz            T=1.0, top_p 0.98 / 0.99         2,752
-  t10_topup_grid7.jsonl.gz            T=1.0, top_p 0.6 / 0.8           1,376
-  qwen_recommended.jsonl.gz           top_k=20 / presence_penalty=1.5  2,688
+cots/                              all 19,200 traces generated for this work (gzipped)
+  t16_sweep.shard{0,1}.jsonl.gz    T=1.6, 9-point sweep            12,384
+  t10_topup_dense.jsonl.gz         T=1.0, top_p 0.98 / 0.99         2,752
+  t10_topup_grid7.jsonl.gz         T=1.0, top_p 0.6 / 0.8           1,376
+  qwen_recommended.jsonl.gz        top_k=20 / presence_penalty=1.5  2,688
 outputs/
-  PHASE1_T16_FULL.md/.json            T=1.6, 9-point, 86 questions  <- the result
-  PHASE1_T16.md/.json                 T=1.6, 5-point arm
-  PHASE1_FINAL.md/.json               T=1.0, 9-point grid
-  corrected_topp_result.png           the figure
-cot_gen.py                            generation (config-stamped, resume-guarded)
-majk.py                               ballot-model maj@k + shape tests
-phase1_analysis.py                    the pre-registered analysis
-result_chart.py                       the figure
-run_*.sh chain_*.sh watch_*.sh        launchers actually used
-env_versions.txt                      vLLM / torch / driver versions
+  RESULT_T16.md/.json              T=1.6, 9-point, 86 questions  <- the headline
+  RESULT_T10.md/.json              T=1.0, 9-point (not regenerable, see caveats)
+  corrected_topp_result.png        the figure
+cot_gen.py                         generation (config-stamped, resume-guarded)
+analyze.py                         ballot-model maj@k + the pre-registered tests
+result_chart.py                    the figure
+env_versions.txt                   vLLM / torch / driver versions
 ```
 
 ## 8. Reproduce
 
+The headline (T=1.6) is reproducible end to end from what is committed.
+
 ```bash
 source /venv/main/bin/activate
 
-# T=1.6 sweep (GPU, ~14h on 2x A100-40GB). --sampling-profile is required, no default.
-python cot_gen.py --sampling-profile neutral \
+# 1. GENERATE (GPU, ~14h on 2x A100-40GB). --sampling-profile is required, no default:
+#    the flags that decide this result must never come from an argparse default again.
+#    Run once per GPU with --shard-id 0 and 1.
+CUDA_VISIBLE_DEVICES=0 python cot_gen.py --sampling-profile neutral \
   --min-p 0 --repetition-penalty 1.0 --temperature 1.6 \
   --sample-frac 0.05 --n-samples 16 --top-ps "0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0" \
   --num-shards 2 --shard-id 0 --resume \
@@ -184,13 +188,17 @@ python cot_gen.py --sampling-profile neutral \
   --max-num-batched-tokens 16384 --chunk-questions 8 \
   --out outputs/t16_gen.jsonl --questions-out outputs/t16_q.json
 
-# analysis (CPU, ~1 min). --temperature is mandatory when arms share a directory: cells
-# are keyed on (id, top_p), so two temperatures in one glob would merge into 32-ballot cells.
-python phase1_analysis.py --glob "cots/t16_sweep.shard*.jsonl.gz" --temperature 1.6 \
-  --grid 0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0 --out outputs/PHASE1_T16_FULL.md
+# 2. ANALYSE (CPU, ~1 min). --temperature is mandatory when two arms share a directory:
+#    cells are keyed on (id, top_p), so two temperatures in one glob would merge into
+#    32-ballot cells and blend two experiments into a single curve.
+python analyze.py --glob "cots/t16_sweep.shard*.jsonl.gz" --temperature 1.6 \
+  --grid 0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0 --out outputs/RESULT_T16.md
 
-python result_chart.py --t10 outputs/PHASE1_FINAL.json --t16 outputs/PHASE1_T16_FULL.json
+# 3. FIGURE
+python result_chart.py
 ```
+
+Step 2 on the committed traces reproduces `outputs/RESULT_T16.md` bit-identically.
 
 ## 9. Next
 

@@ -66,12 +66,12 @@ def row(d, arm, k):
 def main():
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("--t10", default="outputs/PHASE1_FINAL.json",
+    ap.add_argument("--t10", default="outputs/RESULT_T10.json",
                     help="T=1.0 analysis json (falls back to the 7-point grid if absent)")
-    ap.add_argument("--t16", default="outputs/PHASE1_T16.json")
+    ap.add_argument("--t16", default="outputs/RESULT_T16.json")
     ap.add_argument("--out", default="outputs/corrected_topp_result.png")
     a = ap.parse_args()
-    d10 = load(a.t10) or load("outputs/PHASE1_GRID7.json")
+    d10 = load(a.t10) or None
     if d10 is None or "grid" not in d10:
         sys.exit("no T=1.0 analysis json with a stamped grid yet "
                  "(re-run phase1_analysis.py; older jsons predate the grid field)")

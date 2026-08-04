@@ -1,10 +1,9 @@
-# HANDOFF Phase 1 -- pre-registered re-analysis (section 4)
+# top_p sweep -- pre-registered analysis
 
-Sources: 2 file(s). Sampling config profile(s) found in data: `['neutral']`.
-Grid (HANDOFF 2.2, top_p > 0.4): [0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 0.95, 1.0]
-Temperature arm: 1.6
+Sources: 2 file(s). Config profile(s) in data: `['neutral']`.
+Temperature arm: 1.6 | grid: [0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 0.95, 1.0]
 
-## Spoil / truncation rates per top_p
+## Spoil rates per top_p
 
 | top_p | generations | truncated | unparseable | spoiled % |
 |---|---|---|---|---|
@@ -22,7 +21,7 @@ Temperature arm: 1.6
 
 ### counting = `spoiled` | full set | n = 86 questions | grid = [0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 0.95, 1.0]
 
-| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | p(omni) | P(2line) | P(joint) | quad a | best raw/Holm p |
+| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | p(omni) | P(shape) | P(joint) | quad a | best raw/Holm p |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 0.7355 | 0.7478 | 0.7464 | 0.7420 | 0.7616 | 0.6170 | 0.1926 | 0.1490 | 0.1221 | 0.5 | 163.76 | 0.000 | 0.916 | 0.916 | -1.5125 | 0.0000 / 0.0000 |
 | 2 | 0.7600 | 0.7736 | 0.7767 | 0.7601 | 0.7766 | 0.6210 | 0.2045 | 0.1618 | 0.1402 | 0.3 | 164.19 | 0.000 | 0.912 | 0.912 | -1.4714 | 0.0000 / 0.0000 |
@@ -32,11 +31,11 @@ Temperature arm: 1.6
 
 optimum vs k: k=1->0.5, k=2->0.3, k=4->0.5, k=8->0.5, k=16->0.3 -- pre-declared non-decreasing in k: **VIOLATED**
 
-## Power: informative subset (HANDOFF 4)
+## Power: informative subset
 
 ### counting = `spoiled` | informative subset | n = 86 questions | grid = [0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 0.95, 1.0]
 
-| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | p(omni) | P(2line) | P(joint) | quad a | best raw/Holm p |
+| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | p(omni) | P(shape) | P(joint) | quad a | best raw/Holm p |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 0.7355 | 0.7478 | 0.7464 | 0.7420 | 0.7616 | 0.6170 | 0.1926 | 0.1490 | 0.1221 | 0.5 | 163.76 | 0.000 | 0.916 | 0.916 | -1.5125 | 0.0000 / 0.0000 |
 | 2 | 0.7600 | 0.7736 | 0.7767 | 0.7601 | 0.7766 | 0.6210 | 0.2045 | 0.1618 | 0.1402 | 0.3 | 164.19 | 0.000 | 0.912 | 0.912 | -1.4714 | 0.0000 / 0.0000 |
@@ -50,7 +49,7 @@ optimum vs k: k=1->0.5, k=2->0.3, k=4->0.5, k=8->0.5, k=16->0.3 -- pre-declared 
 
 ### counting = `sentinel` | full set | n = 86 questions | grid = [0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 0.95, 1.0]
 
-| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | p(omni) | P(2line) | P(joint) | quad a | best raw/Holm p |
+| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | p(omni) | P(shape) | P(joint) | quad a | best raw/Holm p |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 0.7355 | 0.7478 | 0.7464 | 0.7420 | 0.7616 | 0.6170 | 0.1926 | 0.1490 | 0.1221 | 0.5 | 163.76 | 0.000 | 0.916 | 0.916 | -1.5125 | 0.0000 / 0.0000 |
 | 2 | 0.7349 | 0.7470 | 0.7471 | 0.7410 | 0.7607 | 0.6147 | 0.1932 | 0.1485 | 0.1225 | 0.5 | 161.31 | 0.000 | 0.911 | 0.911 | -1.5067 | 0.0000 / 0.0000 |
