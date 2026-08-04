@@ -129,6 +129,10 @@ def main():
                     help="select one temperature arm. REQUIRED once T=1.6 data exists next to "
                          "T=1.0: cells are keyed on (id, top_p), so two arms in one glob would "
                          "merge into 32-ballot cells and blend two experiments into one curve.")
+    ap.add_argument("--legacy-exclude-artifact", action="store_true",
+                    help="ALSO report the discredited exclude-truncated rule, labelled as a "
+                         "diagnostic. Truncated generations are failures; they are never "
+                         "excluded from a reported result. Off by default.")
     ap.add_argument("--out", default="outputs/PHASE1_RESULT.md")
     args = ap.parse_args()
 
@@ -169,9 +173,17 @@ def main():
     out.append("\n## Robustness: sentinel counting (strictly harsher)")
     all_rows["sentinel_full"] = analyse(cells, grid, ks, "sentinel", args.boot,
                                         args.shape_boot, args.seed, False, out)
-    out.append("\n## The old rule, for the delta: exclude-truncated")
-    all_rows["exclude_full"] = analyse(cells, grid, ks, "exclude", args.boot,
-                                       args.shape_boot, args.seed, False, out)
+    # A truncated generation consumed budget and produced no answer. It is a FAILURE, not
+    # an event that did not happen, and it is never excluded from a reported result here.
+    # The exclude rule exists only to reproduce the discredited original analysis, and is
+    # off by default so it can never silently become the headline again.
+    if args.legacy_exclude_artifact:
+        out.append("\n## DIAGNOSTIC ONLY -- exclude-truncated (the discredited original rule)")
+        out.append("\n> Not a result. Truncation is top_p-dependent, so dropping these traces")
+        out.append("> compares different subsets across the swept axis. Shown only to quantify")
+        out.append("> how much of the original reported shape was a filtering choice.\n")
+        all_rows["exclude_full"] = analyse(cells, grid, ks, "exclude", args.boot,
+                                           args.shape_boot, args.seed, False, out)
 
     txt = "\n".join(out) + "\n"
     open(args.out, "w").write(txt)

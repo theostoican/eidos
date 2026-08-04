@@ -3,172 +3,179 @@
 **Question.** As you raise `top_p`, a vision-language model's reasoning gets more varied.
 Is there a middle setting that is best — an inverted-U in accuracy?
 
-**Answer.** Not at temperature 1.0. Yes at temperature 1.6, with the peak near `top_p`≈0.3.
-The previously reported inverted-U at T=1.0 was an artifact of discarding truncated
-generations, and does not survive counting them.
+**Answer.** Not at temperature 1.0, where the previously reported peak turns out to be an
+artifact of discarding truncated generations. **Yes at temperature 1.6**, where majority-vote
+accuracy has a genuine interior optimum near `top_p`≈0.3–0.5.
 
 `Qwen/Qwen3.5-9B` on MMMU-Pro `standard (10 options)`, 86 questions (5%, seed 20260706),
 16 samples per (question, `top_p`) cell, official MMMU-Pro CoT prompt, 2x A100-40GB.
+**19,200 traces generated for this work.**
 
 ---
 
 ## 1. The headline
 
-**Per-sample accuracy (k=1), 86 questions, spoiled-ballot counting:**
+**T=1.6, 86 questions, 9-point grid, spoiled-ballot counting:**
 
-| T | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.6 | p=0.7 | p=0.8 | p=0.9 | p=0.95 | p=0.98 | p=0.99 | p=1.0 | shape |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **1.0** | — | — | — | — | 0.7536 | 0.7674 | 0.7645 | 0.7725 | 0.7660 | 0.7725 | 0.7791 | **0.7958** | 0.7892 | rising to the edge |
-| **1.6** | 0.8281 | 0.8594 | **0.8620** | 0.8490 | 0.8568 | — | 0.7344 | — | 0.2578 | 0.1823 | — | — | 0.1380 | **interior peak** |
+| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | P(shape) | quad a |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 0.7355 | 0.7478 | 0.7464 | 0.7420 | **0.7616** | 0.6170 | 0.1926 | 0.1490 | 0.1221 | 0.5 | 163.8 | 0.916 | −1.51 |
+| 2 | 0.7600 | 0.7736 | **0.7767** | 0.7601 | 0.7766 | 0.6210 | 0.2045 | 0.1618 | 0.1402 | 0.3 | 164.2 | 0.912 | −1.47 |
+| 4 | 0.7798 | 0.7964 | 0.8096 | 0.7833 | **0.8112** | 0.6713 | 0.2253 | 0.1711 | 0.1503 | 0.5 | 153.8 | **0.959** ✅ | −1.59 |
+| 8 | 0.7875 | 0.8049 | 0.8316 | 0.7942 | **0.8333** | 0.7006 | 0.2589 | 0.1834 | 0.1620 | 0.5 | 129.2 | **0.995** ✅ | −1.66 |
+| 16 | 0.7907 | 0.8023 | **0.8605** | 0.8140 | 0.8372 | 0.7326 | 0.2791 | 0.1977 | 0.1860 | 0.3 | 72.8 | **0.998** ✅ | −1.71 |
 
-*(T=1.6 row is an interim 24-question subset; see §5.)*
+Omnibus repeated-measures ANOVA rejects at p≈0 for every k. The quadratic is decisively
+down-opening. The pre-registered shape criterion (P ≥ 0.95) is **met at k=4, 8 and 16**.
 
-**At T=1.0 there is no interior optimum.** Over a 9-point grid the argmax sits at the 0.99/1.0
-edge at every k ∈ {1,2,4,8,16}, the quadratic is *up*-opening at k=1..8, and the
-pre-registered shape criterion reaches at most P=0.34 against a required 0.95. The omnibus
-repeated-measures ANOVA rejects only at k=1 (F=2.28, p=0.021), and it rejects in favour of a
-*monotone rise*, not a peak.
+**T=1.0, 86 questions, 9-point grid — no interior optimum:**
 
-**At T=1.6 the curve inverts, hard.** Accuracy collapses from 0.86 at `top_p`=0.3 to 0.14 at
-1.0 — near chance for 10 options. The quadratic is decisively down-opening (−1.78 to −2.12),
-the omnibus gives F=35–81 at p≈0, and at k=4 the joint shape criterion reaches **0.964,
-clearing the pre-registered 0.95**.
+| k | p=0.5 | p=0.6 | p=0.7 | p=0.8 | p=0.9 | p=0.95 | p=0.98 | p=0.99 | p=1.0 | argmax | P(shape) | quad a |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 0.7536 | 0.7674 | 0.7645 | 0.7725 | 0.7660 | 0.7725 | 0.7791 | **0.7958** | 0.7892 | 0.99 | 0.190 | **+0.10** |
+| 16 | 0.8140 | 0.8372 | 0.8488 | 0.8256 | 0.8256 | 0.8140 | 0.8256 | **0.8605** | 0.8605 | 1.0 | 0.335 | −0.04 |
+
+Argmax at the edge at every k, quadratic *up*-opening at k=1–8, shape criterion never above
+0.34 against a required 0.95, omnibus rejecting only at k=1 and only in favour of a monotone
+rise.
 
 ![result](outputs/corrected_topp_result.png)
 
-## 2. Why the original result was wrong
+## 2. The finding is strongest exactly where theory says it should be
+
+The shape test strengthens monotonically with vote budget:
+
+| k | 1 | 2 | 4 | 8 | 16 |
+|---|---|---|---|---|---|
+| P(shape) | 0.916 | 0.912 | **0.959** | **0.995** | **0.998** |
+
+Majority vote is the metric where diversity has value, so it is where a coverage-vs-precision
+optimum is theoretically expected. That dose-response in k is stronger evidence than any
+single argmax.
+
+The left arm shows the same pattern — it is not significant per-sample, and clearly
+significant for majority vote:
+
+| left arm (peak vs `top_p`=0.1) | Δ | p |
+|---|---|---|
+| k=1 (per-sample) | +2.6 pp | 0.227 |
+| k=8 | +4.6 pp | **0.021** |
+| k=16 | +7.0 pp | **0.013** |
+
+**The majority-vote result cannot be a counting artifact.** At k = n_samples the draw is the
+whole cell, so the spoiled-ballot and exclude rules coincide by construction — both reduce to
+"plurality of the valid ballots." They return byte-identical numbers at k=16 (+6.98 pp,
+p=0.0134 under both). The k=16 inverted-U is therefore a genuine difference in what the
+model's consensus answer *is*, not an effect of how failures are scored.
+
+## 3. Why T=1.0 cannot show an inverted-U, and T=1.6 can
+
+Mechanical, not empirical. At T≤1, lowering `top_p` truncates the tail and renormalises — it
+only ever *sharpens*. The axis runs from near-greedy at `top_p`→0 to the model's true
+distribution at 1.0, and stops. An inverted-U needs a regime where sampling is *worse than the
+model*, which requires inflating the tail. No such regime exists at T≤1, so theory predicts
+rise-then-plateau — which is what T=1.0 measures. At T=1.6 the tail is inflated, `top_p`
+truncation does real work, and the falling arm appears.
+
+The failure modes separate cleanly, which is the mechanism made visible:
+
+| T=1.6 | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 |
+|---|---|---|---|---|---|---|---|---|---|
+| truncated (repetition loops) | 9.01% | 10.25% | 9.16% | 7.12% | 4.72% | 0.58% | 0% | 0% | **0%** |
+| unparseable (incoherent) | 0% | 0% | 0% | 0% | 0% | 1.60% | 6.10% | 8.58% | **13.44%** |
+
+Low `top_p` fails by looping; high `top_p` fails by emitting text that never yields an answer.
+The optimum moves left as temperature rises — the tradeoff lives on the `top_p`×T plane, not
+on any single `top_p` sweep.
+
+## 4. Why the original T=1.0 result was wrong
 
 The prior write-up reported an interior peak at `top_p`=0.5 in per-sample accuracy. It came
-entirely from dropping generations with `finish_reason != "stop"` before analysis, because
-truncation is *not* uniform across the swept axis:
+entirely from dropping generations with `finish_reason != "stop"`, because truncation is not
+uniform along the swept axis — 9.23% at `top_p`=0.5 versus 0.07% at 1.0, a 130x gradient.
+Deleting those traces inflates exactly the cells that truncate most: it is worth 4.8 pp at
+`top_p`=0.5, moves the argmax from the 1.0 edge to 0.5, and was never significant even then
+(Holm-adjusted p=0.22).
 
-| T=1.0, truncated | p=0.5 | p=0.6 | p=0.7 | p=0.8 | p=0.9 | p=0.95 | p=0.98 | p=0.99 | p=1.0 |
-|---|---|---|---|---|---|---|---|---|---|
-| | 9.23% | 6.18% | 4.65% | 3.42% | 1.38% | 0.65% | 0.51% | 0.29% | **0.07%** |
+**Truncated generations are never excluded from a reported result in this work.** A
+generation that never produced an answer is a failure that consumed inference budget, not an
+event that did not happen. Every cell has exactly 16 *ballots*; a ballot is valid if the trace
+terminated and an answer parsed, otherwise it is *spoiled* — it consumes budget and does not
+vote. Nothing is silently dropped, every cell has the same denominator, and balancing no
+longer discards 39 of 86 questions. The discredited exclude rule is available only behind
+`--legacy-exclude-artifact`, labelled as a diagnostic, so it cannot quietly become a headline
+again.
 
-A 130x gradient along the axis being measured. Deleting those traces inflates exactly the
-`top_p` values that truncate most:
+## 5. Method
 
-| k=1 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | P(shape) |
-|---|---|---|---|---|---|---|---|
-| exclude truncated (original rule) | **0.8013** | 0.7877 | 0.7761 | 0.7776 | 0.7896 | **0.5** | 0.015 |
-| spoiled ballot (this work) | 0.7536 | 0.7645 | 0.7660 | 0.7725 | **0.7892** | **1.0** | 0.190 |
+Pre-registered before any curve was inspected, applied identically to every arm:
 
-The filtering choice alone moves the peak from the 1.0 edge to 0.5 and is worth 4.8
-percentage points at `top_p`=0.5. Even under the original rule the peak was never
-significant (Holm-adjusted p=0.22).
+- **Omnibus first.** Repeated-measures ANOVA over the `top_p` levels. A null omnibus is
+  reported prominently — pairwise tests after one are not evidence.
+- **Shape test.** Two-lines: split at the argmax, OLS per segment, require left slope > 0 and
+  right slope < 0. Bootstrapped over *questions* (B=20,000), the same resample applied to
+  every `top_p` column so pairing is preserved. α=0.05 → the claim stands only at P ≥ 0.95.
+- **Joint criterion.** Two-lines alone is too easy to pass: with the argmax on the
+  second-to-last grid point the right arm is fitted to two points and reduces to the sign of
+  one noisy difference. The reported figure requires the *same* bootstrap replicate to also
+  yield a down-opening quadratic. (This caught a false "inverted-U" during development.)
+- **Multiplicity.** Pairwise tests against the peak are Holm-corrected; raw and adjusted p
+  both reported, never only the winner.
+- **Power.** Full set and informative subset (questions not answered identically by all 16
+  samples at every `top_p`).
+- **No silent exclusions.** Every analysis prints its per-`top_p` spoil rate.
 
-**Counting rule used here (spoiled ballot).** Every cell has exactly 16 *ballots*, one per
-generated sample. A ballot is valid if the trace terminated and an answer parsed; otherwise
-it is *spoiled* — it consumes budget and does not vote. A generation that never produced an
-answer is a failure that cost inference, not an event that did not happen. Nothing is ever
-silently dropped, so every cell has the same denominator, and balancing no longer discards
-39 of 86 questions. `sentinel` (spoiled ballots vote for a losing sentinel) and `exclude`
-(the original rule) are reported alongside so the delta between them stays visible.
+**Config is recorded in the data, not in prose.** Every row carries the complete sampling
+config plus a `cfg_profile` tag; `--resume` reads that stamp and aborts on mismatch;
+`--sampling-profile` is required with no default. This project's central failure was a run
+invalidated by two flags nobody recorded — that can no longer happen silently.
 
-## 3. Why T=1.0 *cannot* show an inverted-U
+## 6. Caveats
 
-This is mechanical, not empirical. At T≤1, lowering `top_p` truncates the tail and
-renormalises — it only ever *sharpens* the distribution. The axis therefore runs from
-near-greedy at `top_p`→0 to the model's true distribution at `top_p`=1.0, and stops. An
-inverted-U needs a regime where sampling is *worse than the model*, which requires inflating
-the tail. There is no such regime at T≤1, so theory predicts rise-then-plateau — which is
-what we measure.
-
-The data confirms no over-diversification is reached at T=1.0: the self-consistency gain
-(maj@16 − per-sample) is ~6 pp at every `top_p` and does not collapse at the top.
-
-At T=1.6 the tail *is* inflated, `top_p` truncation does real work, and the falling arm
-appears. The failure mode also changes character, which is the mechanism made visible:
-
-| T=1.6 spoiled ballots | p=0.1 | p=0.3 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 |
-|---|---|---|---|---|---|---|---|
-| truncated (repetition loops) | 4.2% | 4.2% | 4.7% | 0.6% | 0% | 0% | **0%** |
-| unparseable (incoherent output) | 0% | 0% | 0% | 1.6% | 6.1% | 8.6% | **13.4%** |
-
-At T=1.0 the model fails at *low* `top_p` by looping. At T=1.6 it fails at *high* `top_p` by
-producing text that never yields an answer. The optimum moves left as temperature rises —
-the tradeoff lives on the `top_p`×T plane, not on any single `top_p` sweep.
-
-## 4. Method
-
-Pre-registered before looking at any curve, and applied identically to every arm:
-
-- **Omnibus first.** Repeated-measures ANOVA over the `top_p` levels. If it does not reject,
-  that is stated prominently — pairwise tests after a null omnibus are not evidence.
-- **Shape test.** Two-lines: split at the argmax, fit OLS to each segment, require left
-  slope > 0 and right slope < 0. Significance by bootstrap over *questions* (B=20,000), the
-  same resample applied to every `top_p` column so pairing is preserved. α=0.05, so the claim
-  stands only at P(shape) ≥ 0.95.
-- **Joint criterion.** Two-lines alone is too easy to pass: when the argmax lands on the
-  second-to-last grid point the "right slope < 0" arm is fitted to two points and reduces to
-  the sign of one noisy difference. The reported criterion requires the *same* bootstrap
-  replicate to also yield a down-opening quadratic.
-- **Multiplicity.** Pairwise paired t-tests against the peak are Holm-corrected; raw and
-  adjusted p are both reported, never only the winning comparison.
-- **Power.** Reported on the full set and on the informative subset (questions not answered
-  identically by all 16 samples at every `top_p`).
-- **No silent exclusions.** Every analysis prints its per-`top_p` spoil rate, so any
-  differential filtering is visible in the artifact itself.
-
-**Sampling config is recorded in the data, not in prose.** Every generated row carries the
-complete config (`top_k`, `min_p`, penalties, seed, `max_tokens`, `max_model_len`, KV dtype,
-model, dtype) plus a `cfg_profile` tag. `cot_gen.py --resume` reads that stamp and aborts on
-mismatch rather than interleaving incomparable traces, and `--sampling-profile` is required
-with no default so the choice is always deliberate. This project's central failure was a run
-invalidated by two flags nobody recorded; that is now impossible to repeat silently.
-
-## 5. Caveats — read these
-
-- **The T=1.6 low-`top_p` arm is interim.** `top_p` ∈ {0.1,0.2,0.3,0.4} was still generating
-  when this was written; the 9-point T=1.6 numbers are on **24 of 86 questions**. The 5-point
-  arm (0.5–1.0) is complete at 86.
-- **The interior peak is carried by the right arm.** At k=1 the left arm is not significant:
-  0.3 vs 0.1 = +3.4 pp (p=0.42), 0.3 vs 0.2 = +0.3 pp (p=0.93), while 0.3 vs 1.0 = +72.4 pp
-  (p=4e-13). The honest description is *plateau then cliff* rather than a symmetric hill, and
-  the peak's exact location (0.2 / 0.3 / 0.5) is unresolved.
-- **The left arm is not a truncation artifact** — spoil rates across 0.1–0.5 are flat
-  (4.2/5.0/4.2/2.9/4.7%), with no gradient. This is the key difference from the original
-  result, whose left arm *was* the truncation gradient.
+- **A pre-registered secondary prediction FAILED.** The optimum was declared non-decreasing
+  in k; it oscillates 0.5 → 0.3 → 0.5 → 0.5 → 0.3. The peak is clearly interior but its exact
+  location between 0.3 and 0.5 is unresolved.
+- **The k=1 left arm is mostly a decoding pathology.** Among traces that terminated,
+  per-sample accuracy is roughly flat across 0.1–0.5. The per-sample evidence for an optimum
+  is weak; the majority-vote evidence is not.
+- **One mechanism is untested.** Truncation shrinks the vote pool at low `top_p` (~14.6 valid
+  ballots instead of 16), and a smaller pool makes the majority noisier. That is a path from
+  truncation to the k=16 result. 1.4 fewer votes is a thin explanation for 7 pp, but the
+  clean test — subsampling every cell to a common valid-ballot count — has not been run.
 - **The T=1.0 raw traces are not in this repo.** The original 11,472-trace dataset was
-  deleted on request. The T=1.0 numbers in `outputs/PHASE1_FINAL.md` were computed from it
-  and **cannot be regenerated from what is committed** — `cots/t10_topup_*.jsonl.gz` hold
-  only the four `top_p` levels generated here (0.6, 0.8, 0.98, 0.99), not the five original
-  ones. The T=1.6 results are fully reproducible.
-- **One model, one benchmark, 86 questions.** Paired SE ≈ 1.2 pp at T=1.0, so effects below
-  ~3 pp are not resolvable there. Nothing here is claimed to generalise across models.
-- **`top_p` < 0.5 at T=1.0 was not generated** — that region is dominated by repetition
-  collapse (~10% of traces) and measures a decoding pathology rather than sampling diversity.
+  deleted on request; `outputs/PHASE1_FINAL.*` preserves the numbers but they cannot be
+  recomputed from what is committed. `cots/t10_topup_*` holds only the four levels generated
+  here (0.6, 0.8, 0.98, 0.99). **The T=1.6 results are fully reproducible.**
+- **One model, one benchmark, 86 questions.** Nothing here is claimed to generalise.
+- **`top_p` < 0.5 at T=1.0 was not generated** — dominated by repetition collapse.
 
-## 6. Layout
+## 7. Layout
 
 ```
-cots/                                  all traces generated by this work (gzipped)
-  t10_topup_grid7.jsonl.gz             T=1.0, top_p 0.6 / 0.8            1,376
-  t10_topup_dense.jsonl.gz             T=1.0, top_p 0.98 / 0.99          2,752
-  t16_sweep.shard{0,1}.jsonl.gz        T=1.6, full sweep                12,384*
-  qwen_recommended.jsonl.gz            top_k=20 / presence_penalty=1.5   2,688
+cots/                                 all 19,200 traces generated here (gzipped)
+  t16_sweep.shard{0,1}.jsonl.gz       T=1.6, 9-point sweep            12,384
+  t10_topup_dense.jsonl.gz            T=1.0, top_p 0.98 / 0.99         2,752
+  t10_topup_grid7.jsonl.gz            T=1.0, top_p 0.6 / 0.8           1,376
+  qwen_recommended.jsonl.gz           top_k=20 / presence_penalty=1.5  2,688
 outputs/
-  PHASE1_FINAL.md/.json                T=1.0, 9-point grid, all rules
-  PHASE1_T16.md/.json                  T=1.6, 5-point grid, 86 questions
-  PHASE1_T16_INTERIM.md/.json          T=1.6, 9-point grid, 24 questions
-  corrected_topp_result.png            the figure above
-cot_gen.py                             generation (config-stamped, resume-guarded)
-majk.py                                ballot-model maj@k + shape tests
-phase1_analysis.py                     the full pre-registered analysis
-result_chart.py                        the figure
-run_*.sh, chain_*.sh, watch_*.sh       the launchers actually used
-env_versions.txt                       vLLM / torch / driver versions
+  PHASE1_T16_FULL.md/.json            T=1.6, 9-point, 86 questions  <- the result
+  PHASE1_T16.md/.json                 T=1.6, 5-point arm
+  PHASE1_FINAL.md/.json               T=1.0, 9-point grid
+  corrected_topp_result.png           the figure
+cot_gen.py                            generation (config-stamped, resume-guarded)
+majk.py                               ballot-model maj@k + shape tests
+phase1_analysis.py                    the pre-registered analysis
+result_chart.py                       the figure
+run_*.sh chain_*.sh watch_*.sh        launchers actually used
+env_versions.txt                      vLLM / torch / driver versions
 ```
-*\*shard totals grow until the low-`top_p` arm finishes; both shards are strided question
-slices, so concatenate them to recover the arm.*
 
-## 7. Reproduce
+## 8. Reproduce
 
 ```bash
 source /venv/main/bin/activate
 
-# T=1.6 sweep (GPU). --sampling-profile is required; there is no default.
+# T=1.6 sweep (GPU, ~14h on 2x A100-40GB). --sampling-profile is required, no default.
 python cot_gen.py --sampling-profile neutral \
   --min-p 0 --repetition-penalty 1.0 --temperature 1.6 \
   --sample-frac 0.05 --n-samples 16 --top-ps "0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0" \
@@ -177,23 +184,22 @@ python cot_gen.py --sampling-profile neutral \
   --max-num-batched-tokens 16384 --chunk-questions 8 \
   --out outputs/t16_gen.jsonl --questions-out outputs/t16_q.json
 
-# analysis (CPU, ~1 min). --temperature is mandatory when arms share a directory:
-# cells are keyed on (id, top_p), so two temperatures in one glob would merge.
+# analysis (CPU, ~1 min). --temperature is mandatory when arms share a directory: cells
+# are keyed on (id, top_p), so two temperatures in one glob would merge into 32-ballot cells.
 python phase1_analysis.py --glob "cots/t16_sweep.shard*.jsonl.gz" --temperature 1.6 \
   --grid 0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0 --out outputs/PHASE1_T16_FULL.md
 
-python result_chart.py --t10 outputs/PHASE1_FINAL.json --t16 outputs/PHASE1_T16.json
+python result_chart.py --t10 outputs/PHASE1_FINAL.json --t16 outputs/PHASE1_T16_FULL.json
 ```
 
-## 8. What to do next
+## 9. Next
 
-1. **Finish the T=1.6 low arm** (86 questions) — settles whether the left arm rises or is
-   flat, and pins the peak location. Tightens the left-arm SE ~1.9x.
-2. **Fill the `top_p`×T plane**: T ∈ {0.7, 1.0, 1.3, 1.6} × the 9-point grid. The prediction
-   is sharp — curvature absent at 0.7, present and increasing through 1.6. A pattern across a
-   grid is evidence in a way a single interior argmax is not.
-3. **The soundness arm needs redoing before it is cited.** Its premises were extracted with
-   truncated traces dropped by default, so the reported slope inherits the same bias this
-   work removed from the accuracy arm. Independently, the two judging modes of identical
-   claim sets disagreed systematically (atomic-pass/holistic-fail 219 vs 3, McNemar
-   p=5.4e-61), so the instrument needs adjudicating before the metric means anything.
+1. **Equalise the vote pool** across `top_p` (subsample every cell to a common valid-ballot
+   count) to close the one untested mechanism behind the k=16 left arm. CPU-only.
+2. **Fill the `top_p`×T plane**: T ∈ {0.7, 1.0, 1.3, 1.6}. Prediction is sharp — curvature
+   absent at 0.7, increasing through 1.6. A pattern across a grid beats a single argmax.
+3. **Densify 0.2–0.6 at T=1.6** to pin the peak location, which the k-oscillation leaves open.
+4. **The soundness arm needs redoing before it is cited.** Its premises were extracted with
+   truncated traces dropped by default, so the reported slope inherits the bias removed here.
+   Independently, the two judging modes of identical claim sets disagreed systematically
+   (atomic-pass/holistic-fail 219 vs 3, McNemar p=5.4e-61).
