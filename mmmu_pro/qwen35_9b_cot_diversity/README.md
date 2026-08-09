@@ -3,30 +3,33 @@
 **Question.** As you raise `top_p`, a vision-language model's reasoning gets more varied.
 Is there a middle setting that is best — an inverted-U in accuracy?
 
-**Answer.** Not at temperature 1.0, where the previously reported peak turns out to be an
-artifact of discarding truncated generations. **Yes at temperature 1.6**, where majority-vote
-accuracy has a genuine interior optimum near `top_p`≈0.3–0.5.
+**Answer.** Not at temperature 1.0 — accuracy rises to the edge of the grid and flattens, at
+every vote budget. **Yes at temperature 1.6**, where majority-vote accuracy has a genuine
+interior optimum near `top_p`≈0.3–0.5.
 
 `Qwen/Qwen3.5-9B` on MMMU-Pro `standard (10 options)`, 86 questions (5%, seed 20260706),
 16 samples per (question, `top_p`) cell, official MMMU-Pro CoT prompt, 2x A100-40GB.
 **19,200 traces generated for this work.**
 
+**Counting.** One rule, not selectable. Every (question, `top_p`) cell has exactly 16
+**ballots**, one per generated sample. A ballot is valid if the trace terminated and an
+answer parsed; otherwise it is **spoiled** — it consumes inference budget and does not vote.
+Nothing is ever dropped, so every cell has the same denominator and no result can be
+manufactured by discarding failures on an axis that fails unevenly.
+
 ---
 
 ## 1. The headline
 
-**T=1.6, 86 questions, 9-point grid, spoiled-ballot counting:**
+**T=1.6, 86 questions, 9-point grid:**
 
 | k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | P(shape) | quad a |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 0.7355 | 0.7478 | 0.7464 | 0.7420 | **0.7616** | 0.6170 | 0.1926 | 0.1490 | 0.1221 | 0.5 | 163.8 | 0.916 | −1.51 |
-| 2 | 0.7600 | 0.7736 | **0.7767** | 0.7601 | 0.7766 | 0.6210 | 0.2045 | 0.1618 | 0.1402 | 0.3 | 164.2 | 0.912 | −1.47 |
-| 4 | 0.7798 | 0.7964 | 0.8096 | 0.7833 | **0.8112** | 0.6713 | 0.2253 | 0.1711 | 0.1503 | 0.5 | 153.8 | **0.959** ✅ | −1.59 |
-| 8 | 0.7875 | 0.8049 | 0.8316 | 0.7942 | **0.8333** | 0.7006 | 0.2589 | 0.1834 | 0.1620 | 0.5 | 129.2 | **0.995** ✅ | −1.66 |
 | 16 | 0.7907 | 0.8023 | **0.8605** | 0.8140 | 0.8372 | 0.7326 | 0.2791 | 0.1977 | 0.1860 | 0.3 | 72.8 | **0.998** ✅ | −1.71 |
 
 Omnibus repeated-measures ANOVA rejects at p≈0 for every k. The quadratic is decisively
-down-opening. The pre-registered shape criterion (P ≥ 0.95) is **met at k=4, 8 and 16**.
+down-opening. The pre-registered shape criterion (P ≥ 0.95) is **met at k=16**.
 
 **T=1.0, 86 questions, 9-point grid — no interior optimum:**
 
@@ -35,23 +38,28 @@ down-opening. The pre-registered shape criterion (P ≥ 0.95) is **met at k=4, 8
 | 1 | 0.7536 | 0.7674 | 0.7645 | 0.7725 | 0.7660 | 0.7725 | 0.7791 | **0.7958** | 0.7892 | 0.99 | 0.190 | **+0.10** |
 | 16 | 0.8140 | 0.8372 | 0.8488 | 0.8256 | 0.8256 | 0.8140 | 0.8256 | **0.8605** | 0.8605 | 1.0 | 0.335 | −0.04 |
 
-Argmax at the edge at every k, quadratic *up*-opening at k=1–8, shape criterion never above
+Argmax at the edge at every k, quadratic *up*-opening at k=1, shape criterion never above
 0.34 against a required 0.95, omnibus rejecting only at k=1 and only in favour of a monotone
 rise.
 
 ![result](outputs/corrected_topp_result.png)
 
+*Panel A is the T=1.0 arm; B and C carry T=1.6. C is the headline — note the y-range: the left
+arm is a few pp and the right arm is a 65 pp cliff, so on B's full scale the interior peak is a
+flat smear. The "inverted-U" is asymmetric, not a symmetric hump.*
+
 ## 2. The finding is strongest exactly where theory says it should be
 
-The shape test strengthens monotonically with vote budget:
+The shape test is decisively stronger under majority vote than per-sample:
 
-| k | 1 | 2 | 4 | 8 | 16 |
-|---|---|---|---|---|---|
-| P(shape) | 0.916 | 0.912 | **0.959** | **0.995** | **0.998** |
+| k | 1 | 16 |
+|---|---|---|
+| P(shape) | 0.916 | **0.998** |
 
 Majority vote is the metric where diversity has value, so it is where a coverage-vs-precision
-optimum is theoretically expected. That dose-response in k is stronger evidence than any
-single argmax.
+optimum is theoretically expected — and k=16 is the only budget reported here that clears the
+pre-registered criterion. Two points cannot establish a dose-response; this is a contrast
+between the two ends of the vote budget, not a trend in k.
 
 The left arm shows the same pattern — it is not significant per-sample, and clearly
 significant for majority vote:
@@ -59,14 +67,13 @@ significant for majority vote:
 | left arm (peak vs `top_p`=0.1) | Δ | p |
 |---|---|---|
 | k=1 (per-sample) | +2.6 pp | 0.227 |
-| k=8 | +4.6 pp | **0.021** |
 | k=16 | +7.0 pp | **0.013** |
 
 **The majority-vote result cannot be a counting artifact.** At k = n_samples the draw is the
-whole cell, so the spoiled-ballot and exclude rules coincide by construction — both reduce to
-"plurality of the valid ballots." They return byte-identical numbers at k=16 (+6.98 pp,
-p=0.0134 under both). The k=16 inverted-U is therefore a genuine difference in what the
-model's consensus answer *is*, not an effect of how failures are scored.
+whole cell, so the rule reduces to "plurality of the valid ballots" and how spoiled ballots
+are scored stops mattering at all — no counting convention can move the k=16 numbers
+(+6.98 pp, p=0.0134). The k=16 inverted-U is therefore a genuine difference in what the
+model's consensus answer *is*.
 
 ## 3. Why T=1.0 cannot show an inverted-U, and T=1.6 can
 
@@ -88,24 +95,17 @@ Low `top_p` fails by looping; high `top_p` fails by emitting text that never yie
 The optimum moves left as temperature rises — the tradeoff lives on the `top_p`×T plane, not
 on any single `top_p` sweep.
 
-## 4. Why the original T=1.0 result was wrong
+## 4. Why the counting rule matters
 
-The prior write-up reported an interior peak at `top_p`=0.5 in per-sample accuracy. It came
-entirely from dropping generations with `finish_reason != "stop"`, because truncation is not
-uniform along the swept axis — 9.23% at `top_p`=0.5 versus 0.07% at 1.0, a 130x gradient.
-Deleting those traces inflates exactly the cells that truncate most: it is worth 4.8 pp at
-`top_p`=0.5, moves the argmax from the 1.0 edge to 0.5, and was never significant even then
-(Holm-adjusted p=0.22).
+Truncation is not uniform along the swept axis — 9.23% of generations at `top_p`=0.5 versus
+0.07% at 1.0, a 130x gradient (spoil table in `outputs/RESULT_T10.md`). Every analysis prints
+its per-`top_p` spoil rate. Any rule that drops failed generations therefore
+inflates exactly the cells that fail most, and compares different subsets of samples across
+the very axis under test. At T=1.0 that is worth 4.8 pp at `top_p`=0.5 — on its own enough to
+move the argmax off the 1.0 edge and produce an interior peak that is not there.
 
-**Truncated generations are never excluded from a reported result in this work.** A
-generation that never produced an answer is a failure that consumed inference budget, not an
-event that did not happen. Every cell has exactly 16 *ballots*; a ballot is valid if the trace
-terminated and an answer parsed, otherwise it is *spoiled* — it consumes budget and does not
-vote. Nothing is silently dropped, every cell has the same denominator, and balancing no
-longer discards 39 of 86 questions. **The exclude rule is not implemented in this repo** —
-it cannot be selected, so it cannot quietly become a headline again. The numbers above were
-measured before it was removed and are preserved as data in `outputs/RESULT_T10.json`
-(`exclude_full`), which is also what the figure's panel A is drawn from.
+A generation that never produced an answer is a failure that consumed inference budget, not
+an event that did not happen. It stays in the denominator.
 
 ## 5. Method
 
@@ -122,8 +122,9 @@ Pre-registered before any curve was inspected, applied identically to every arm:
   yield a down-opening quadratic. (This caught a false "inverted-U" during development.)
 - **Multiplicity.** Pairwise tests against the peak are Holm-corrected; raw and adjusted p
   both reported, never only the winner.
-- **Power.** Full set and informative subset (questions not answered identically by all 16
-  samples at every `top_p`).
+- **Every question, no subsetting knob.** All the tests are paired, so a question answered
+  identically at every `top_p` already contributes nothing to either the effect or the error
+  term. Dropping such questions cannot sharpen a within-subject test, only spend df.
 - **No silent exclusions.** Every analysis prints its per-`top_p` spoil rate.
 
 **Config is recorded in the data, not in prose.** Every row carries the complete sampling
@@ -134,7 +135,7 @@ invalidated by two flags nobody recorded — that can no longer happen silently.
 ## 6. Caveats
 
 - **A pre-registered secondary prediction FAILED.** The optimum was declared non-decreasing
-  in k; it oscillates 0.5 → 0.3 → 0.5 → 0.5 → 0.3. The peak is clearly interior but its exact
+  in k; it falls, 0.5 at k=1 to 0.3 at k=16. The peak is clearly interior but its exact
   location between 0.3 and 0.5 is unresolved.
 - **The k=1 left arm is mostly a decoding pathology.** Among traces that terminated,
   per-sample accuracy is roughly flat across 0.1–0.5. The per-sample evidence for an optimum

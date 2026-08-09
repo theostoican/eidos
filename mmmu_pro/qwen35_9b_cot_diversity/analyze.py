@@ -1,19 +1,15 @@
 #!/usr/bin/env python
 """top_p sweep analysis: ballot-model maj@k + the pre-registered shape tests.
 
-COUNTING. Every (question, top_p) cell has exactly n_samples BALLOTS, one per generated
-sample. A ballot is VALID if the trace terminated and an answer parsed; otherwise it is
-SPOILED. A spoiled ballot consumes vote budget and does not vote. Truncated generations
-are FAILURES -- they consumed inference and produced no answer -- and are never excluded
-from a reported result. That is not a preference: truncation is strongly top_p-dependent
-(9.2% at top_p=0.5 vs 0.07% at 1.0 for T=1.0), so dropping those traces compares different
-subsets of samples across the very axis being swept, and on its own manufactured the
-interior peak this work set out to check.
-
-  spoiled  (primary)  spoiled ballots consume budget, do not vote; a draw with zero valid
-                      ballots is a failure.
-  sentinel (harsher)  spoiled ballots all vote for a sentinel that can never equal gold,
-                      so a heavily-spoiled cell can lose to it. Brackets the primary.
+COUNTING. There is exactly one counting rule and it is not selectable. Every
+(question, top_p) cell has exactly n_samples BALLOTS, one per generated sample. A ballot is
+VALID if the trace terminated and an answer parsed; otherwise it is SPOILED: it consumes
+vote budget and does not vote, and a draw with zero valid ballots is a failure. Truncated
+generations are FAILURES -- they consumed inference and produced no answer -- and are never
+excluded from a reported result. That is not a preference: truncation is strongly
+top_p-dependent (9.2% at top_p=0.5 vs 0.07% at 1.0 for T=1.0), so dropping those traces
+compares different subsets of samples across the very axis being swept, and on its own
+manufactured the interior peak this work set out to check.
 
 TESTS (pre-registered, applied identically to every arm):
   omnibus first    repeated-measures ANOVA over the top_p levels. A null omnibus is
@@ -28,15 +24,18 @@ TESTS (pre-registered, applied identically to every arm):
                    quadratic.
   multiplicity     pairwise tests against the peak are Holm-corrected; raw and adjusted
                    p both reported, never only the winning comparison.
-  power            full set and informative subset (questions not answered identically by
-                   all 16 samples at every top_p).
+
+Every question is analysed, and there is no subsetting knob. Every test here is paired --
+repeated-measures ANOVA, paired t-tests, and a bootstrap that applies the same question
+resample to every top_p column -- so a question answered identically at every top_p already
+contributes nothing to the treatment effect and nothing to the error term. Dropping such
+questions cannot sharpen a within-subject test; it only spends degrees of freedom.
 """
 import argparse, collections, glob, gzip, json, random, re
 import numpy as np
 from scipy import stats
 
-KS = [1, 2, 4, 8, 16]
-SENTINEL = "<spoiled>"
+KS = [1, 16]
 LETTERS = [chr(ord("A") + i) for i in range(26)]
 ANS_RE = re.compile(r"Answer:\s*\(?\s*([A-J])\b", re.IGNORECASE)
 
@@ -94,9 +93,8 @@ def load_cells(pattern, temperature=None):
     return cells, spoil, sorted(cfgs), files
 
 
-def majk_cell(ballots, gold, k, B, rng, counting):
-    pool = [a if a is not None else SENTINEL for a in ballots] if counting == "sentinel" \
-        else list(ballots)
+def majk_cell(ballots, gold, k, B, rng):
+    pool = list(ballots)
     if k == 1:                                   # spoiled ballots count as wrong
         return sum(a == gold for a in pool) / len(pool)
     if k >= len(pool):
@@ -109,14 +107,14 @@ def majk_cell(ballots, gold, k, B, rng, counting):
     return hits / B
 
 
-def build_matrix(cells, ks, B, seed, counting):
+def build_matrix(cells, ks, B, seed):
     """-> (top_ps, questions, {k: ndarray[n_questions, n_top_ps]}). Balanced by
     construction: only questions present at every top_p contribute, and under the ballot
     rule every such question contributes at every k."""
     rng = random.Random(seed)
     top_ps = sorted({p for _, p in cells})
     qs = sorted(set.intersection(*({q for q, pp in cells if pp == p} for p in top_ps)))
-    return top_ps, qs, {k: np.array([[majk_cell(*cells[(q, p)], k, B, rng, counting)
+    return top_ps, qs, {k: np.array([[majk_cell(*cells[(q, p)], k, B, rng)
                                       for p in top_ps] for q in qs]) for k in ks}
 
 
@@ -163,22 +161,16 @@ def holm(p):
     return adj
 
 
-def analyse(cells, grid, ks, counting, boot, shape_boot, seed, informative_only, out):
+def analyse(cells, grid, ks, boot, shape_boot, seed, out):
     top_ps, qs, mats = build_matrix({k: v for k, v in cells.items() if k[1] in set(grid)},
-                                    ks, boot, seed, counting)
-    keep = np.arange(len(qs))
-    if informative_only:
-        M1 = mats[1]
-        keep = np.where(~(np.all(M1 == 1.0, 1) | np.all(M1 == 0.0, 1)))[0]
-    out.append(f"\n### counting = `{counting}`"
-               f"{' | informative subset' if informative_only else ' | full set'}"
-               f" | n = {len(keep)} questions | grid = {top_ps}\n")
+                                    ks, boot, seed)
+    out.append(f"\n### n = {len(qs)} questions | grid = {top_ps}\n")
     out.append("| k | " + " | ".join(f"p={p}" for p in top_ps)
                + " | argmax | F | p(omni) | P(shape) | P(joint) | quad a | best raw/Holm p |")
     out.append("|" + "---|" * (len(top_ps) + 8))
     rows, optima = [], {}
     for k in ks:
-        M = mats[k][keep]
+        M = mats[k]
         F, p_om = rm_anova(M)
         st = shape_test(top_ps, M, shape_boot, seed)
         imax = int(np.argmax(st["means"]))
@@ -226,12 +218,8 @@ def main():
                    f"{100*(s['trunc']+s['unparsed'])/s['n']:.2f}% |")
     res = {"grid": grid, "ks": ks, "temperature": a.temperature or 1.0, "cfg_profiles": cfgs,
            "spoil": {str(p): dict(spoil[p]) for p in sorted(spoil) if p in grid}}
-    out.append("\n## Primary: spoiled-ballot counting")
-    res["spoiled_full"] = analyse(cells, grid, ks, "spoiled", a.boot, a.shape_boot, a.seed, False, out)
-    out.append("\n## Power: informative subset")
-    res["spoiled_info"] = analyse(cells, grid, ks, "spoiled", a.boot, a.shape_boot, a.seed, True, out)
-    out.append("\n## Robustness: sentinel counting (strictly harsher)")
-    res["sentinel_full"] = analyse(cells, grid, ks, "sentinel", a.boot, a.shape_boot, a.seed, False, out)
+    out.append("\n## Results")
+    res["results"] = analyse(cells, grid, ks, a.boot, a.shape_boot, a.seed, out)
 
     open(a.out, "w").write("\n".join(out) + "\n")
     json.dump(res, open(a.out.replace(".md", ".json"), "w"), indent=1, default=float)

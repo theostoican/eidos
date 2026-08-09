@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 """The corrected top_p result, as one figure.
 
+One counting rule throughout: spoiled-ballot. Every panel states its temperature arm in the
+title, because the two arms are easy to confuse and the answer differs between them.
+
 Deliberately NOT built like combined_chart.py, which puts premise soundness (a fraction),
 Vendi diversity (an index >= 1) and accuracy (a fraction) on ONE shared y-axis and then
 annotates the legend with "not a fraction" to explain why one series cannot be compared to
@@ -8,12 +11,15 @@ the others. Different measures get different panels here; nothing shares an axis
 something it is not commensurable with.
 
 Panels:
-  A  per-sample accuracy vs top_p under the two counting rules. This is the whole finding:
-     the "interior peak at 0.5" exists under `exclude` and vanishes under the ballot rule.
-  B  the spoil rate that causes A -- the differential the exclude rule silently applies.
-  C  maj@k, to show the same flatness is not an artifact of the k=1 metric.
-  D  T=1.0 vs T=1.6 at k=1, once the T-sweep lands (HANDOFF 8): the test of whether the
-     falling arm appears once temperature can inflate the tail.
+  A  maj@k at T=1.0: flat, argmax at the edge. No interior optimum at this temperature.
+  B  T=1.0 vs T=1.6 at k=1: the falling arm appears only once temperature can inflate the
+     tail, which is the whole prediction.
+  C  the headline itself -- maj@k at T=1.6, where the interior optimum lives. Earlier
+     versions of this figure never plotted it, so the strongest arm of the claim (curvature
+     rising with k, P(shape) 0.916 -> 0.998) was the one arm with no panel.
+
+Per-top_p spoil rates are printed by analyze.py into RESULT_T*.md and are not plotted. They
+are a diagnostic, not a result: nothing here is computed by dropping them.
 """
 import json, sys
 from pathlib import Path
@@ -60,8 +66,8 @@ def callout(ax, x, y, text, color, dy, grid, fontsize=8, bold=True):
 def load(p):
     return json.load(open(p)) if Path(p).exists() else None
 
-def row(d, arm, k):
-    return next(r for r in d[arm] if r["k"] == k)
+def row(d, k):
+    return next(r for r in d["results"] if r["k"] == k)
 
 def main():
     import argparse
@@ -80,47 +86,54 @@ def main():
         d16 = None
     grid = d10["grid"]
 
-    n = 4 if d16 else 3
-    fig, axes = plt.subplots(1, n, figsize=(5.0 * n, 4.4))
+    n = 3 if d16 else 1
+    fig, axes = plt.subplots(1, n, figsize=(5.0 * n, 4.4), squeeze=False)
+    axes = axes[0]
     fig.patch.set_facecolor(SURF)
 
-    # --- A: the artifact -----------------------------------------------------
-    ax = axes[0]; style(ax, "A. Per-sample accuracy (k=1)", "fraction correct")
-    line(ax, grid, row(d10, "exclude_full", 1)["means"], ORANGE,
-         "exclude truncated (original rule)", "s")
-    line(ax, grid, row(d10, "spoiled_full", 1)["means"], BLUE,
-         "spoiled ballot (corrected)", "o")
-    ex, sp = row(d10, "exclude_full", 1), row(d10, "spoiled_full", 1)
-    callout(ax, ex["argmax"], max(ex["means"]), f"argmax {ex['argmax']}", ORANGE, 12, grid)
-    callout(ax, sp["argmax"], max(sp["means"]), f"argmax {sp['argmax']}", BLUE, -20, grid)
-    ax.margins(y=0.22)
-    ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower right")
-
-    # --- B: the cause --------------------------------------------------------
-    ax = axes[1]; style(ax, "B. Spoiled ballots (why A differs)", "% of generations")
-    sr = [100 * (d10["spoil"][str(p)]["trunc"] + d10["spoil"][str(p)]["unparsed"])
-          / d10["spoil"][str(p)]["n"] for p in grid]
-    line(ax, grid, sr, AQUA, "truncated or unparseable", "^")
-    for x, y in zip(grid, sr):                       # direct labels = contrast-WARN relief
-        callout(ax, x, y, f"{y:.1f}%", INK2, 9, grid, fontsize=7.5, bold=False)
-    ax.margins(y=0.20)
-    ax.legend(frameon=False, fontsize=8, labelcolor=INK2)
-
-    # --- C: not a k=1 artifact ----------------------------------------------
-    ax = axes[2]; style(ax, "C. Majority vote (spoiled ballot)", "fraction correct")
-    for k, c, m in ((1, BLUE, "o"), (4, ORANGE, "s"), (16, AQUA, "^")):
-        r = row(d10, "spoiled_full", k)
+    # --- A: no interior optimum at T=1.0, at any k ---------------------------
+    ax = axes[0]; style(ax, "A. Majority vote (T=1.0)", "fraction correct")
+    for k, c, m in ((1, BLUE, "o"), (16, AQUA, "^")):
+        r = row(d10, k)
         line(ax, grid, r["means"], c, f"maj@{k}", m)
-    ax.margins(x=0.12, y=0.14)
+        if c is AQUA:                    # direct label = the contrast-WARN relief for aqua
+            callout(ax, grid[-1], r["means"][-1], "maj@16", AQUA, 10, grid, fontsize=7.5)
+    ax.margins(x=0.12, y=0.16)
     ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower right")
 
-    # --- D: the temperature test --------------------------------------------
+    # --- B: the temperature test ---------------------------------------------
     if d16:
-        ax = axes[3]; style(ax, "D. T=1.0 vs T=1.6 (k=1)", "fraction correct")
+        ax = axes[1]; style(ax, "B. T=1.0 vs T=1.6 (k=1)", "fraction correct")
+        line(ax, grid, row(d10, 1)["means"], BLUE, "T = 1.0", "o")
+        line(ax, d16["grid"], row(d16, 1)["means"], ORANGE, "T = 1.6", "s")
+        # T=1.6 ends in the lower right and T=1.0 runs along the top, so both right-hand
+        # corners are occupied; the lower left is empty because T=1.0 starts at top_p=0.5.
+        ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower left")
+
+    # --- C: the headline, which no earlier version of this figure plotted -----
+    # The right arm of the inverted-U is a 65 pp cliff and the left arm is a few pp, so on
+    # the full y-range (panel B) the interior peak is a flat smear. This panel is therefore
+    # the 0.1-0.7 detail; B carries the full range so the cliff is never hidden.
+    if d16:
+        ax = axes[2]
+        style(ax, "C. Inverted-U at T=1.6 (maj@k, 0.1-0.7 detail)", "fraction correct")
         g16 = d16["grid"]
-        line(ax, grid, row(d10, "spoiled_full", 1)["means"], BLUE, "T = 1.0", "o")
-        line(ax, g16, row(d16, "spoiled_full", 1)["means"], ORANGE, "T = 1.6", "s")
-        ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower right")
+        keep = [i for i, p in enumerate(g16) if p <= 0.7]
+        xs = [g16[i] for i in keep]
+        # three argmax labels in this little space collide; the claim is a peak REGION
+        # (argmax oscillates 0.3/0.5 with k), so band it once instead of labelling each.
+        ax.axvspan(0.3, 0.5, color=GRID, alpha=0.55, lw=0, zorder=0)
+        for k, c, m in ((1, BLUE, "o"), (16, AQUA, "^")):
+            r = row(d16, k)
+            ys = [r["means"][i] for i in keep]
+            line(ax, xs, ys, c, f"maj@{k}", m)
+            if c is AQUA:                # direct label = the contrast-WARN relief for aqua
+                callout(ax, xs[-1], ys[-1], "maj@16", AQUA, 10, xs, fontsize=7.5)
+        ax.margins(x=0.12, y=0.20)
+        ax.annotate("argmax 0.3-0.5\nat every k", (0.4, 1.0), xycoords=("data", "axes fraction"),
+                    textcoords="offset points", xytext=(0, -14), ha="center",
+                    color=INK2, fontsize=8, fontweight="bold")
+        ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower left")
 
     fig.tight_layout()
     out = a.out
