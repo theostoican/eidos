@@ -23,38 +23,38 @@ manufactured by discarding failures on an axis that fails unevenly.
 
 **T=1.6, 86 questions, 9-point grid:**
 
-| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | P(shape) | quad a |
+| k | p=0.1 | p=0.2 | p=0.3 | p=0.4 | p=0.5 | p=0.7 | p=0.9 | p=0.95 | p=1.0 | argmax | F | P(joint) | quad a |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 0.7355 | 0.7478 | 0.7464 | 0.7420 | **0.7616** | 0.6170 | 0.1926 | 0.1490 | 0.1221 | 0.5 | 163.8 | 0.916 | −1.51 |
 | 16 | 0.7907 | 0.8023 | **0.8605** | 0.8140 | 0.8372 | 0.7326 | 0.2791 | 0.1977 | 0.1860 | 0.3 | 72.8 | **0.998** ✅ | −1.71 |
 
 Omnibus repeated-measures ANOVA rejects at p≈0 for every k. The quadratic is decisively
-down-opening. The pre-registered shape criterion (P ≥ 0.95) is **met at k=16**.
+down-opening. The pre-registered joint criterion (P ≥ 0.95) is **met at k=16**.
 
 **T=1.0, 86 questions, 9-point grid — no interior optimum:**
 
-| k | p=0.5 | p=0.6 | p=0.7 | p=0.8 | p=0.9 | p=0.95 | p=0.98 | p=0.99 | p=1.0 | argmax | P(shape) | quad a |
+| k | p=0.5 | p=0.6 | p=0.7 | p=0.8 | p=0.9 | p=0.95 | p=0.98 | p=0.99 | p=1.0 | argmax | P(joint) | quad a |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 0.7536 | 0.7674 | 0.7645 | 0.7725 | 0.7660 | 0.7725 | 0.7791 | **0.7958** | 0.7892 | 0.99 | 0.190 | **+0.10** |
-| 16 | 0.8140 | 0.8372 | 0.8488 | 0.8256 | 0.8256 | 0.8140 | 0.8256 | **0.8605** | 0.8605 | 1.0 | 0.335 | −0.04 |
+| 16 | 0.8140 | 0.8372 | 0.8488 | 0.8256 | 0.8256 | 0.8140 | 0.8256 | 0.8256 | **0.8605** | 1.0 | 0.335 | −0.04 |
 
-Argmax at the edge at every k, quadratic *up*-opening at k=1, shape criterion never above
+Argmax at the edge at every k, quadratic *up*-opening at k=1, joint criterion never above
 0.34 against a required 0.95, omnibus rejecting only at k=1 and only in favour of a monotone
 rise.
 
 ![result](outputs/corrected_topp_result.png)
 
 *Panel A is the T=1.0 arm; B and C carry T=1.6. C is the headline — note the y-range: the left
-arm is a few pp and the right arm is a 65 pp cliff, so on B's full scale the interior peak is a
+arm is a few pp and the right arm is a 64 pp cliff, so on B's full scale the interior peak is a
 flat smear. The "inverted-U" is asymmetric, not a symmetric hump.*
 
 ## 2. The finding is strongest exactly where theory says it should be
 
-The shape test is decisively stronger under majority vote than per-sample:
+The joint criterion is decisively stronger under majority vote than per-sample:
 
 | k | 1 | 16 |
 |---|---|---|
-| P(shape) | 0.916 | **0.998** |
+| P(joint) | 0.916 | **0.998** |
 
 Majority vote is the metric where diversity has value, so it is where a coverage-vs-precision
 optimum is theoretically expected — and k=16 is the only budget reported here that clears the
@@ -98,11 +98,14 @@ on any single `top_p` sweep.
 ## 4. Why the counting rule matters
 
 Truncation is not uniform along the swept axis — 9.23% of generations at `top_p`=0.5 versus
-0.07% at 1.0, a 130x gradient (spoil table in `outputs/RESULT_T10.md`). Every analysis prints
+0.07% at 1.0, a 127x gradient (spoil table in `outputs/RESULT_T10.md`). Every analysis prints
 its per-`top_p` spoil rate. Any rule that drops failed generations therefore
 inflates exactly the cells that fail most, and compares different subsets of samples across
-the very axis under test. At T=1.0 that is worth 4.8 pp at `top_p`=0.5 — on its own enough to
-move the argmax off the 1.0 edge and produce an interior peak that is not there.
+the very axis under test. At T=1.0 that is worth 4.8 pp at `top_p`=0.5 (0.8013 dropping
+truncated vs 0.7536 counting them) — on its own enough to move the argmax off the 1.0 edge and
+produce an interior peak that is not there. That comparison is not reproducible from this
+tree: the drop-truncated numbers were removed with the rule, and are in git history at
+`7cb13f0` as `exclude_full` in `outputs/RESULT_T10.json`.
 
 A generation that never produced an answer is a failure that consumed inference budget, not
 an event that did not happen. It stays in the denominator.
@@ -145,8 +148,8 @@ invalidated by two flags nobody recorded — that can no longer happen silently.
   truncation to the k=16 result. 1.4 fewer votes is a thin explanation for 7 pp, but the
   clean test — subsampling every cell to a common valid-ballot count — has not been run.
 - **The T=1.0 raw traces are not in this repo.** The original 11,472-trace dataset was
-  deleted on request; `outputs/PHASE1_FINAL.*` preserves the numbers but they cannot be
-  recomputed from what is committed. `cots/t10_topup_*` holds only the four levels generated
+  deleted on request; `outputs/RESULT_T10.md/.json` preserves the numbers but they cannot
+  be recomputed from what is committed. `cots/t10_topup_*` holds only the four levels generated
   here (0.6, 0.8, 0.98, 0.99). **The T=1.6 results are fully reproducible.**
 - **One model, one benchmark, 86 questions.** Nothing here is claimed to generalise.
 - **`top_p` < 0.5 at T=1.0 was not generated** — dominated by repetition collapse.
