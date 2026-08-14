@@ -73,6 +73,16 @@ def main():
     ap.add_argument("--model", default="Qwen/Qwen3.5-9B")
     ap.add_argument("--sample-frac", type=float, default=0.05)
     ap.add_argument("--sample-seed", type=int, default=20260706)
+    # NESTED SAMPLING. A plain sample() at a larger --sample-frac is NOT a superset of the
+    # smaller one (CPython's sample() is not prefix-stable in k), so scaling 5% -> 20% would
+    # discard every committed trace and leave the two runs non-comparable question-for-question.
+    # --nest-from draws the smaller fraction FIRST with the identical call, then tops up from
+    # the complement on a derived seed: the pilot's questions are retained exactly, its cells
+    # stay reusable via --resume, and its numbers become a literal subset of the new run's.
+    ap.add_argument("--nest-from", type=float, default=0.0,
+                    help="draw this fraction FIRST with --sample-seed, then top up to "
+                         "--sample-frac, making the question set a strict SUPERSET of the "
+                         "smaller run's (0 = plain independent sample)")
     ap.add_argument("--limit", type=int, default=0, help="calibration: cap #questions AFTER sampling (0=all)")
     ap.add_argument("--n-samples", type=int, default=16)
     ap.add_argument("--top-ps", default="0.5,0.7,0.9,0.95,1.0")
@@ -152,12 +162,26 @@ def main():
     from datasets import load_dataset
     from vllm import LLM, SamplingParams
 
+    MAX_IMAGES = 8          # must match limit_mm_per_prompt passed to LLM() below
+
     print("[load] MMMU/MMMU_Pro standard (10 options) test ...", flush=True)
     ds = load_dataset("MMMU/MMMU_Pro", "standard (10 options)", split="test")
     N = len(ds)
     k = max(1, round(args.sample_frac * N))
-    rng = random.Random(args.sample_seed)
-    sel = sorted(rng.sample(range(N), k))
+    if args.nest_from:
+        k0 = max(1, round(args.nest_from * N))
+        if k0 > k:
+            raise SystemExit(f"[abort] --nest-from {args.nest_from} selects {k0} questions, "
+                             f"more than --sample-frac {args.sample_frac} selects ({k}).")
+        # identical call to the --nest-from run, so its exact question set is reproduced
+        base = random.Random(args.sample_seed).sample(range(N), k0)
+        seen = set(base)
+        pool = [i for i in range(N) if i not in seen]
+        sel = sorted(base + random.Random(args.sample_seed + 1).sample(pool, k - k0))
+        print(f"[sample] nested: {k0} questions retained from the "
+              f"{args.nest_from:.0%} run + {k - k0} new = {k}", flush=True)
+    else:
+        sel = sorted(random.Random(args.sample_seed).sample(range(N), k))
     if args.limit:
         sel = sel[:args.limit]
     full_k = len(sel)
@@ -169,17 +193,39 @@ def main():
 
     # Build the conversation ONCE per question (prompt is identical across top_p/temp; only
     # sampling params differ). The 2D grid is applied in the generation loop below.
+    # build_content appends ONE image per <image N> reference, and references may repeat
+    # (image_order, per the official assembly). A question that references its images more
+    # than MAX_IMAGES times therefore exceeds the engine's limit_mm_per_prompt and makes
+    # llm.chat() raise, killing the whole chunk -- and on restart it fails identically, so
+    # supervisor's autorestart turns it into a crash loop. Such a question cannot be
+    # represented under this engine config at all (35 images is ~35k prompt tokens, which
+    # will not fit alongside max_tokens=40960 in max_model_len=49152 either), so it is
+    # SKIPPED and named in the log. De-duplicating instead would silently alter prompt
+    # construction for every question with repeated references -- including pilot questions
+    # whose 0.6/0.8/0.99 cells are already generated -- leaving one question's cells built
+    # two different ways across the swept axis. An excluded question is honest; a silently
+    # re-rendered one is not.
     qconvs, qinfo, qmeta = [], [], {}
+    over_limit = []
     for i in sel:
         row = ds[i]
         opts = load_options(row)
         images = collect_images(row)
         content = build_content(row["question"], opts, images)
+        n_img = sum(1 for c in content if c.get("type") == "image_url")
+        if n_img > MAX_IMAGES:
+            over_limit.append((row["id"], n_img))
+            continue
         qmeta[row["id"]] = {"subject": row.get("subject"), "gold": row["answer"],
                             "n_options": len(opts), "n_images": len(images), "ds_index": i}
         qconvs.append([{"role": "user", "content": content}])
         qinfo.append({"id": row["id"], "subject": row.get("subject"), "gold": row["answer"],
                       "n_options": len(opts)})
+
+    if over_limit:
+        print(f"[skip] {len(over_limit)} question(s) exceed limit_mm_per_prompt="
+              f"{MAX_IMAGES} and are EXCLUDED from this run: "
+              + ", ".join(f"{qid} ({n} images)" for qid, n in over_limit), flush=True)
 
     Path(questions_out).parent.mkdir(parents=True, exist_ok=True)
     json.dump(qmeta, open(questions_out, "w"), indent=2)
@@ -249,7 +295,7 @@ def main():
               max_num_seqs=args.max_num_seqs, max_model_len=args.max_model_len,
               kv_cache_dtype=args.kv_cache_dtype,
               tensor_parallel_size=args.tensor_parallel_size,
-              limit_mm_per_prompt={"image": 8, "video": 0}, trust_remote_code=True,
+              limit_mm_per_prompt={"image": MAX_IMAGES, "video": 0}, trust_remote_code=True,
               enable_prefix_caching=True, disable_log_stats=False,
               seed=args.seed, **engine_kwargs)
 

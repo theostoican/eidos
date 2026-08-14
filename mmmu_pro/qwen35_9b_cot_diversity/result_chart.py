@@ -23,6 +23,7 @@ are a diagnostic, not a result: nothing here is computed by dropping them.
 """
 import json, sys
 from pathlib import Path
+import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -76,6 +77,11 @@ def main():
                     help="T=1.0 analysis json (falls back to the 7-point grid if absent)")
     ap.add_argument("--t16", default="outputs/RESULT_T16.json")
     ap.add_argument("--out", default="outputs/corrected_topp_result.png")
+    # Opt-in so the committed 3-panel figure regenerates byte-for-byte unchanged. Only useful
+    # when the T=1.0 arm was swept densely above 0.9 (the 20% re-run), where the question is
+    # local curvature and the full-range panel A renders it as a flat smear.
+    ap.add_argument("--zoom", action="store_true",
+                    help="add a T=1.0 detail panel over top_p >= 0.9")
     a = ap.parse_args()
     d10 = load(a.t10) or None
     if d10 is None or "grid" not in d10:
@@ -86,7 +92,11 @@ def main():
         d16 = None
     grid = d10["grid"]
 
-    n = 3 if d16 else 1
+    zoom = [i for i, p in enumerate(grid) if p >= 0.9] if a.zoom else []
+    if a.zoom and len(zoom) < 4:
+        sys.exit(f"--zoom needs >=4 T=1.0 grid points at top_p>=0.9, found {len(zoom)}: "
+                 f"{[grid[i] for i in zoom]}")
+    n = (3 if d16 else 1) + bool(zoom)
     fig, axes = plt.subplots(1, n, figsize=(5.0 * n, 4.4), squeeze=False)
     axes = axes[0]
     fig.patch.set_facecolor(SURF)
@@ -133,6 +143,26 @@ def main():
         ax.annotate("argmax 0.3-0.5\nat every k", (0.4, 1.0), xycoords=("data", "axes fraction"),
                     textcoords="offset points", xytext=(0, -14), ha="center",
                     color=INK2, fontsize=8, fontweight="bold")
+        ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower left")
+
+    # --- D: the T=1.0 detail the 20% re-run exists to resolve ------------------
+    # Panel A carries the full y-range; across 0.9-1.0 the whole effect under test is ~1 pp,
+    # which on that scale is invisible. Same counting rule, same data -- only the window moves.
+    if zoom:
+        ax = axes[n - 1]
+        style(ax, "D. T=1.0 detail (top_p >= 0.9)", "fraction correct")
+        xs = [grid[i] for i in zoom]
+        for k, c, m in ((1, BLUE, "o"), (16, AQUA, "^")):
+            r = row(d10, k)
+            ys = [r["means"][i] for i in zoom]
+            line(ax, xs, ys, c, f"maj@{k}", m)
+            if r.get("sem"):
+                es = [r["sem"][i] for i in zoom]
+                ax.errorbar(xs, ys, yerr=es, fmt="none", ecolor=c, elinewidth=1.4,
+                            capsize=3, capthick=1.4, alpha=0.75, zorder=2)
+            callout(ax, xs[int(np.argmax(ys))], max(ys), f"argmax {xs[int(np.argmax(ys))]}",
+                    c, 10, xs, fontsize=7.5)
+        ax.margins(x=0.12, y=0.20)
         ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower left")
 
     fig.tight_layout()

@@ -90,6 +90,22 @@ def load_cells(pattern, temperature=None):
             s["trunc"] += (not stopped)
             s["unparsed"] += (stopped and a is None)
         cells[key] = (ballots, rs[0]["gold"])
+    # Cells are accumulated across every file in the glob, and nothing upstream checks how many
+    # ballots landed in one. A cell present in TWO sources -- a committed trace set and a
+    # re-generated shard covering the same (id, top_p) -- silently becomes a 32-ballot cell and
+    # blends two runs into a single curve, the same failure the temperature guard above refuses.
+    counts = collections.Counter(len(b) for b, _ in cells.values())
+    modal = counts.most_common(1)[0][0]
+    over = {k: len(v[0]) for k, v in cells.items() if len(v[0]) > modal}
+    under = {k: len(v[0]) for k, v in cells.items() if len(v[0]) < modal}
+    if over:
+        ex = ", ".join(f"{k}->{n}" for k, n in sorted(over.items())[:8])
+        raise SystemExit(f"[analyze] {len(over)} cell(s) exceed the modal {modal} ballots: {ex}"
+                         f"{' ...' if len(over) > 8 else ''}\nDe-duplicate the sources or narrow "
+                         f"--glob; merging duplicated cells would blend two runs into one curve.")
+    if under:
+        print(f"[analyze] WARNING: {len(under)} cell(s) below the modal {modal} ballots "
+              f"(incomplete generation). They are analysed as-is, on a smaller denominator.")
     return cells, spoil, sorted(cfgs), files
 
 
@@ -133,7 +149,8 @@ def shape_test(ps, M, B, seed):
     boot = M[np.random.default_rng(seed).integers(0, M.shape[0], (B, M.shape[0]))].mean(1)
     a_boot = np.polyfit(ps, boot.T, 2)[0]
     tl = np.array([_two_lines(ps, boot[b])[0] for b in range(B)])
-    return {"means": obs.tolist(), "argmax": float(ps[imax]),
+    return {"means": obs.tolist(), "sem": (M.std(0, ddof=1) / np.sqrt(M.shape[0])).tolist(),
+            "argmax": float(ps[imax]),
             "p_shape": float(tl.mean()), "p_joint": float((tl & (a_boot < 0)).mean()),
             "quad_a": float(np.polyfit(ps, obs, 2)[0]),
             "p_quad_negative": float((a_boot < 0).mean()),
