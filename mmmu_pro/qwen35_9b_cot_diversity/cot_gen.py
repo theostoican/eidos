@@ -128,6 +128,13 @@ def main():
                          "0 = one single call (max throughput, no intermediate checkpoint).")
     ap.add_argument("--max-num-batched-tokens", type=int, default=0,
                     help="0 = vLLM default. Raise (8192-16384) to speed prefill on a big GPU.")
+    # ENGINE-ONLY, never a sampling parameter: vLLM's async scheduler crashes on Kimi-VL
+    # under TP ("KeyError: <req_id>" in scheduler.update_from_output via
+    # step_with_batch_queue). Off by default so every existing command -- and the committed
+    # Qwen results -- reproduce exactly; it changes scheduling, not what is generated.
+    ap.add_argument("--disable-async-scheduling", action="store_true",
+                    help="run the synchronous scheduler (workaround for a vLLM batch-queue "
+                         "KeyError crash seen with Kimi-VL + tensor parallel)")
     ap.add_argument("--seed", type=int, default=1234)
     # data-parallel sharding for a multi-GPU NODE: launch N processes, each pinned to one
     # GPU via CUDA_VISIBLE_DEVICES=i, with --num-shards N --shard-id i. Each takes a strided
@@ -291,6 +298,8 @@ def main():
     engine_kwargs = {}
     if args.max_num_batched_tokens:
         engine_kwargs["max_num_batched_tokens"] = args.max_num_batched_tokens
+    if args.disable_async_scheduling:
+        engine_kwargs["async_scheduling"] = False
     llm = LLM(model=args.model, dtype="bfloat16", gpu_memory_utilization=args.gpu_mem_util,
               max_num_seqs=args.max_num_seqs, max_model_len=args.max_model_len,
               kv_cache_dtype=args.kv_cache_dtype,
