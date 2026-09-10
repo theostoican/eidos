@@ -36,6 +36,14 @@ manufactured by discarding failures on an axis that fails unevenly.
 The quadratic is decisively down-opening. The pre-registered joint criterion (P ≥ 0.95) is
 **met at k=16**.
 
+![result](outputs/corrected_topp_result.png)
+
+*maj@1 (±1 SEM) and maj@16 vs `top_p` at T=1.6 (86 questions), under the spoiled-ballot rule — both
+exact, read straight from the committed `RESULT_T16.json`. Dotted lines mark each curve's argmax in
+its own colour, and the text above the plot gives each curve's P(joint) against the pre-registered
+0.95 bar: the interior optimum passes at maj@16 (argmax 0.3, P(joint)=0.998) but narrowly misses at
+maj@1 (argmax 0.5, 0.916). The right arm is a 64–67 pp collapse at both k.*
+
 **T=1.0, 345 questions, 10-point grid — no interior optimum:**
 
 | k | p=0.5 | p=0.6 | p=0.7 | p=0.8 | p=0.9 | p=0.925 | p=0.95 | p=0.975 | p=0.99 | p=1.0 | argmax | F | P(joint) | quad a |
@@ -46,14 +54,6 @@ The quadratic is decisively down-opening. The pre-registered joint criterion (P 
 The argmax at k=1 *is* interior, at 0.99. It is not a peak: the joint criterion reaches 0.532
 against a required 0.95, the quadratic is indistinguishable from zero, and k=16 puts its argmax
 at 0.7 with a quadratic of the wrong sign.
-
-![result](outputs/corrected_topp_result.png)
-
-*A: the T=1.0 curve — a rise to 0.99 then flat. B: T=1.0 against T=1.6 at k=1; the falling arm
-exists only at T=1.6. C: the T=1.6 interior optimum (note the y-range — the left arm is a few pp
-and the right arm is a 64 pp cliff, so the "inverted-U" is asymmetric, not a symmetric hump).
-D: the T=1.0 detail over 0.9–1.0 with ±1 SEM. On a zoomed y-range a sub-pp wobble looks like a
-peak, which is exactly why the error bars are drawn: they overlap at every point.*
 
 ## 2. The 0.99 peak replicates in size and fails in significance
 
@@ -194,7 +194,7 @@ outputs/
   RESULT_T16.md/.json              T=1.6, 9-point, 86 questions
   RESULT_T10.md/.json              T=1.0, 10-point, 345 questions  <- the re-run
   RESULT_T10_LOCAL.md/.json        T=1.0 restricted to 0.9-1.0     <- the peak test
-  corrected_topp_result.png        the figure
+  corrected_topp_result.png        the figure: maj@1 + maj@16 at T=1.6
 cot_gen.py                         generation (config-stamped, resume-guarded)
 analyze.py                         ballot-model maj@k + the pre-registered tests
 result_chart.py                    the figure
@@ -235,8 +235,8 @@ python analyze.py --glob "cots/t10_*.jsonl.gz" --temperature 1.0 \
 python analyze.py --glob "cots/t16_sweep.shard*.jsonl.gz" --temperature 1.6 \
   --grid 0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0 --out outputs/RESULT_T16.md
 
-# 3. FIGURE
-python result_chart.py --zoom
+# 3. FIGURE (reads outputs/RESULT_T16.json, written by step 2)
+python result_chart.py
 ```
 
 Step 2 on the committed traces reproduces the `outputs/RESULT_*.md` files bit-identically.

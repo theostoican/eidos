@@ -1,0 +1,30 @@
+# Environment for the InternVL3.5-8B T=1.2 top_p sweep (generation + analysis)
+generated_utc=2026-09-07T15:02:37Z
+vllm==0.28.0
+torch==2.13.0+cu130
+transformers==5.16.1
+datasets==5.0.1
+numpy==2.3.5
+scipy==1.18.1
+PIL==12.3.0
+torch_cuda==13.0
+model==OpenGVLab/InternVL3_5-8B  snapshot=9bb6a56ad9cc69db95e2d4eeb15a52bbcac4ef79
+dataset==MMMU/MMMU_Pro  standard (10 options)  test  N=1730  snapshot=563f3e84bb3b90893083a1f039cfa13077f2302b
+attention_backend==FLASH_ATTN ; sampler==FlashInfer top-p/top-k (JIT)
+note==torchaudio uninstalled (cu128 build clashed with torch cu130 pulled by vllm)
+
+# TWO MACHINES. The arm was generated in two passes on identical software but different GPUs.
+# Nothing that decides a ballot differs: sampling_cfg is byte-identical across both passes
+# (verified), and tensor parallelism is exact up to reduction order. KV cache is bf16 in both.
+# Hardware and TP are NOT stamped into the rows, which is why they are recorded here.
+pass1_questions==162 of 172   2026-09-07..09-08
+pass1_gpu==NVIDIA GeForce RTX 5090 x4 ; nvidia_driver=580.173.02
+pass1_layout==4 data-parallel shards, tensor_parallel_size=1, gpu_mem_util=0.92
+pass1_cuda_toolkit_for_flashinfer_jit==13.0.3 (/usr/local/cuda-13.0, apt cuda-toolkit-13-0); system cuda=12.8
+                                       # required on sm120: system CUDA 12.8 predates the RTX 5090
+
+pass2_questions==the remaining 10      2026-09-10
+pass2_gpu==NVIDIA GeForce RTX 4090 x4 ; nvidia_driver=580.159.03
+pass2_layout==1 engine, tensor_parallel_size=4, gpu_mem_util=0.88
+pass2_note==TP=4 is required on 24GB cards: one 40960-token trace needs 5.62 GiB of bf16 KV and
+            a single 4090 has only ~4.65 GiB free after weights, so vLLM refuses to start at TP=1.

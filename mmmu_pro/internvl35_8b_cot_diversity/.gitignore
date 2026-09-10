@@ -1,0 +1,11 @@
+__pycache__/
+logs/
+# Working copies of the generated traces. The committed, gzipped dataset lives in cots/;
+# these are the raw per-shard files cot_gen.py appends to during a run.
+outputs/*.jsonl
+outputs/*_summary.json
+outputs/*_q.json
+outputs/*_q.shard*.json
+# Smoke-test output: DIFFERENT sampling_cfg (max_tokens 4096). The resume guard refuses it and
+# it must never be merged into cots/.
+outputs/smoke*
