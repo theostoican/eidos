@@ -1,10 +1,11 @@
 #!/usr/bin/env python
-"""Stage 4b: diversity of the extracted visual premises vs top_p (T=1.0).
+"""Stage 4b: diversity of the extracted visual premises vs top_p, for one arm.
 
-THE CONFOUND THAT DECIDES WHETHER THIS MEANS ANYTHING. Premise count rises monotonically
-along the swept axis -- 6.40 per trace at top_p=0.5 to 7.33 at 1.0, +15% -- and Vendi is the
+THE CONFOUND THAT DECIDES WHETHER THIS MEANS ANYTHING. Premise count is not constant along
+the swept axis -- on Qwen T=1.0 it RISES, 6.40 per trace at top_p=0.5 to 7.33 at 1.0 (+15%); on
+Qwen T=1.6 it COLLAPSES, 104 per cell at 0.1 to 11 at 1.0 -- and Vendi is the
 effective NUMBER of distinct items, so it inherits that gradient directly. Unmatched, the
-cell curve rises +15.4% with quadratic a=+0.30; count-matched it rises +9.0% with a=-0.44.
+Qwen T=1.0 cell curve rises +15.4% with quadratic a=+0.30; count-matched it rises +9.0% with a=-0.44.
 The confound is worth ~40% of the effect and flips the curvature sign.
 
 So every measure is COUNT-MATCHED: each cell is subsampled to exactly K items, R times, and
@@ -107,7 +108,7 @@ def main():
     # WORSE (0.185): scale buys topical nuance, not numeral fidelity. fp32, because Qwen3 in
     # bf16 returned 1.0025 for identical pairs and Vendi is an eigenvalue quantity.
     ap.add_argument("--model", default="BAAI/bge-large-en-v1.5")
-    ap.add_argument("--grid", default="0.5,0.6,0.7,0.8,0.9,0.925,0.95,0.975,0.99,1.0")
+    ap.add_argument("--grid", required=True, help="comma-separated top_p levels of the arm")
     ap.add_argument("--layers", type=int, default=8)
     ap.add_argument("--k-premises", type=int, default=4)
     ap.add_argument("--k-cell", type=int, default=20)
@@ -116,6 +117,8 @@ def main():
     ap.add_argument("--batch", type=int, default=256)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", default="outputs/RESULT_VP_DIVERSITY.md")
+    ap.add_argument("--cells-out", default="outputs/vp_diversity_cells.json")
+    ap.add_argument("--label", required=True)
     a = ap.parse_args()
     grid = [float(x) for x in a.grid.split(",")]
     rng = random.Random(a.seed)
@@ -186,13 +189,13 @@ def main():
         return ((float(np.mean(v)), float(np.std(v, ddof=1) / np.sqrt(len(v))), len(v))
                 if v else (None, None, 0))
 
-    out = ["# Diversity of the extracted visual premises vs top_p (T=1.0)", "",
+    out = [f"# Diversity of the extracted visual premises vs top_p ({a.label})", "",
            f"Encoder: `{a.model}` (chosen by vp_embed_probe.py).",
            f"{len(texts)} premises, {len(rows)} traces, {len(cells)} cells, "
            f"{a.layers} samples per cell.", "",
            f"Count-matched: within-trace to {a.k_premises} premises/trace, cell to {a.k_cell} "
            f"premises, across-sample to {a.k_traces} traces; {a.reps} subsamples averaged. "
-           "Premise count rises with top_p, so the unmatched rows are the confound, not the "
+           "Premise count drifts along top_p, so the unmatched rows are the confound, not the "
            "result.", "",
            "| measure | " + " | ".join(str(p) for p in grid) + " |",
            "|---|" + "---|" * len(grid)]
@@ -216,7 +219,8 @@ def main():
         str(col(p, "vendi_set")[2]) for p in grid) + " |")
 
     import sys
-    sys.path.insert(0, ".")
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).parent))
     from analyze import rm_anova, shape_test
     stats_out = {}
     for k in ("vendi_set", "vendi_cell", "cosd_cell", "num_eff_distinct", "num_jaccard",
@@ -234,9 +238,11 @@ def main():
         out.append(f"\n- `{k}`: n={len(qs)} paired questions, RM-ANOVA F={F:.2f}, p={pv:.4g}, "
                    f"argmax {st['argmax']}, quad a={st['quad_a']:+.4f}")
     open(a.out, "w").write("\n".join(out) + "\n")
-    json.dump({"model": a.model, "grid": grid, "stats": stats_out, "per_cell_n": len(per)},
+    json.dump({"model": a.model, "grid": grid, "stats": stats_out, "per_cell_n": len(per),
+               "label": a.label, "n_premises": len(texts), "n_traces": len(rows),
+               "k_cell": a.k_cell, "k_traces": a.k_traces, "k_premises": a.k_premises},
               open(a.out.replace(".md", ".json"), "w"), indent=1)
-    json.dump(per, open("outputs/vp_diversity_cells.json", "w"))
+    json.dump(per, open(a.cells_out, "w"))
     print("\n".join(out))
 
 

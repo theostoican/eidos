@@ -1,12 +1,13 @@
 #!/usr/bin/env python
-"""Stage 1: turn the committed T=1.0 traces into per-sample work layers, and map every
-question id to its MMMU-Pro row.
+"""Stage 1: turn one arm's committed traces into per-sample work layers, and map every
+question id to its MMMU-Pro row. The arm (glob, temperature, grid) is given on the command
+line -- normally by run_vp_arm.sh from the arm directory's vp_arm.sh.
 
 The premise arm needs the <think> reasoning text, which analyze.py never touches (it only
-parses the final letter). This decompresses the 370MB of traces once rather than once per pass.
+parses the final letter). This decompresses the traces once rather than once per pass.
 
 LAYERED OUTPUT: one file per sample_idx. A layer is a COMPLETE, BALANCED dataset over the
-full 345 x 10 grid, so stopping after any layer leaves a curve computed on the same cells at
+full question x top_p grid, so stopping after any layer leaves a curve computed on the same cells at
 every top_p -- never a partial grid deeper at one end of the swept axis.
 
 TRUNCATED TRACES ARE KEPT for premise extraction (they still made visual reads), but they are
@@ -17,7 +18,6 @@ from pathlib import Path
 
 LETTERS = [chr(ord("A") + i) for i in range(26)]
 ANS_RE = re.compile(r"Answer:\s*\(?\s*([A-J])\b", re.IGNORECASE)
-GRID = [0.5, 0.6, 0.7, 0.8, 0.9, 0.925, 0.95, 0.975, 0.99, 1.0]
 
 
 def parse_answer(text, n_options):
@@ -47,9 +47,9 @@ def split_cot(text):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--glob", default="cots/t10_*.jsonl.gz")
-    ap.add_argument("--temperature", type=float, default=1.0)
-    ap.add_argument("--grid", default=",".join(str(p) for p in GRID))
+    ap.add_argument("--glob", required=True, help="the arm's trace files, e.g. 'cots/t16_sweep.shard*.jsonl.gz'")
+    ap.add_argument("--temperature", type=float, required=True)
+    ap.add_argument("--grid", required=True, help="comma-separated top_p levels of the arm")
     ap.add_argument("--outdir", default="outputs/vp_layers")
     ap.add_argument("--questions-out", default="outputs/vp_q.json")
     ap.add_argument("--no-dataset", action="store_true")
@@ -70,7 +70,7 @@ def main():
             # THE BALLOT RULE (analyze.py): a ballot is valid only if the trace TERMINATED.
             # A truncated trace often still contains a stray letter that the bare-letter
             # fallback would read as an answer -- counting those lifts accuracy by up to
-            # 2.6 pp, most of it at low top_p where truncation is 26x commoner, i.e. exactly
+            # 2.6 pp (Qwen T=1.0), most of it at low top_p where truncation is commonest, i.e. exactly
             # the axis-dependent bias the ballot rule exists to prevent.
             stopped = r.get("finish_reason") == "stop"
             pred = parse_answer(r["text"], r.get("n_options", 10)) if stopped else None

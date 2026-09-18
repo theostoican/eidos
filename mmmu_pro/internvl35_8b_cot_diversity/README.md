@@ -156,7 +156,9 @@ sm120 (RTX 5090), so the JIT dies with a misleading `FlashInfer requires GPUs wi
 arm.sh                     the arm's identity (TEMP/TAG/GRID -> trace, log, pid paths)
 cot_gen.py                 generation (InternVL: system-prompt thinking; config-stamped; resume-guarded)
 cot_gen_qwen_reference.py  the Qwen arm's generator, unmodified, for diff
-analyze.py                 the repo's analysis + the mixed-model and endpoint-argmax guards
+../common/analyze.py       the repo's analysis + the mixed-model and endpoint-argmax guards (shared)
+../common/                 visual-premise pipeline + HOWTO_VISUAL_PREMISES.md (shared)
+vp_arm.sh                  which traces the visual-premise analysis runs on (this arm, T=1.2)
 run_sweep.sh               N shards, one engine per TP group, restart-on-crash, --resume  (run|status|stop)
 run_analysis.sh            commit+analyse, or `partial` to analyse mid-run without committing
 result_chart_ivl.py        the A/B/C figure (panel C reads the sibling Qwen arm's cots/)
@@ -168,6 +170,8 @@ env_versions.txt           vLLM / torch / driver / model + dataset snapshots, fo
 cots/ivl35_t12.jsonl.gz    the committed dataset: 13,760 traces, 172 q x 10 top_p x 8
 outputs/RESULT_IVL35_T12.md|.json   the pre-registered analysis
 outputs/ivl35_t12_result.png        the figure
+outputs/topp_correctness_and_diversity.png   premise soundness, maj@8, premise diversity (§11)
+outputs/premise_soundness_vs_topp.png        soundness and maj@1, absolute, +/-1 SEM
 ```
 
 ## 10. Reproduce
@@ -185,3 +189,24 @@ TP=4 ./run_sweep.sh                 # 172 q x 10 top_p x 8 samples = 13,760 gene
 # 3. FIGURE (self-contained: reads only outputs/RESULT_IVL35_T12.json)
 python result_chart_ivl.py --json outputs/RESULT_IVL35_T12.json --out outputs/ivl35_t12_result.png
 ```
+
+## 11. Visual premises
+
+Same question as the Qwen arm's §10: do the *visual reads* change along the axis? Pipeline,
+method and caveats: `../common/HOWTO_VISUAL_PREMISES.md`; run with `../common/run_vp_arm.sh`
+from this directory.
+
+![premises](outputs/topp_correctness_and_diversity.png)
+
+| `top_p` 0.1 → 1.0 | |
+|---|---|
+| premise soundness | 0.953 → 0.951, flat (F=1.49, p=0.15) |
+| maj@8 accuracy | 0.670 → 0.670, flat (F=0.83, p=0.59) — as in §3, on the 97 paired questions |
+| premise diversity (count-matched Vendi, K=20) | 2.79 → 3.48, **+24%** (F=29.3, p=2e-39) |
+
+`top_p` moves how varied the visual claims are, not how often they are right, and not where the
+vote lands. Two caveats specific to this arm: **the judge is a near relative** (InternVL3-8B
+judging InternVL3.5-8B, same vision-encoder lineage), so the soundness *level* is an upper bound;
+and **52% of traces state no extractable visual claim** — the model often reasons from the
+question text — so 97 of 172 questions are paired (47 for diversity).
+

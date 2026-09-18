@@ -4,3 +4,15 @@ mmk12_out/nbconvert*.log
 mmmu_pro_out/nbconvert*.log
 __pycache__/
 *.pyc
+
+# visual-premise pipeline (mmmu_pro/common): regenerable intermediates and run logs.
+# Committed per arm: the two chart PNGs (and RESULT_VP*.md/.json if wanted).
+mmmu_pro/*/logs/
+mmmu_pro/*/outputs/vp_layers/
+mmmu_pro/*/outputs/vp_q.json
+mmmu_pro/*/outputs/vp_premises.jsonl
+mmmu_pro/*/outputs/vp_verdicts.jsonl
+mmmu_pro/*/outputs/vp_diversity_cells.json
+mmmu_pro/*/outputs/RESULT_VP_layer*.log
+mmmu_pro/*/outputs/VP_COMPLETE
+mmmu_pro/*/outputs/VP_FAILURES.txt

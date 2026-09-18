@@ -18,51 +18,72 @@
  "cfg_profiles": [
   "neutral"
  ],
+ "models": [
+  "Qwen/Qwen3.5-9B"
+ ],
  "spoil": {
   "0.1": {
    "n": 1376,
    "trunc": 124,
-   "unparsed": 0
+   "unparsed": 0,
+   "valid": 1252,
+   "valid_correct": 1012
   },
   "0.2": {
    "n": 1376,
    "trunc": 141,
-   "unparsed": 0
+   "unparsed": 0,
+   "valid": 1235,
+   "valid_correct": 1029
   },
   "0.3": {
    "n": 1376,
    "trunc": 126,
-   "unparsed": 0
+   "unparsed": 0,
+   "valid": 1250,
+   "valid_correct": 1027
   },
   "0.4": {
    "n": 1376,
    "trunc": 98,
-   "unparsed": 0
+   "unparsed": 0,
+   "valid": 1278,
+   "valid_correct": 1021
   },
   "0.5": {
    "n": 1376,
    "trunc": 65,
-   "unparsed": 0
+   "unparsed": 0,
+   "valid": 1311,
+   "valid_correct": 1048
   },
   "0.7": {
    "n": 1376,
    "trunc": 8,
-   "unparsed": 22
+   "unparsed": 22,
+   "valid": 1346,
+   "valid_correct": 849
   },
   "0.9": {
    "n": 1376,
    "trunc": 0,
-   "unparsed": 84
+   "unparsed": 84,
+   "valid": 1292,
+   "valid_correct": 265
   },
   "0.95": {
    "n": 1376,
    "trunc": 0,
-   "unparsed": 118
+   "unparsed": 118,
+   "valid": 1258,
+   "valid_correct": 205
   },
   "1.0": {
    "n": 1376,
    "trunc": 0,
-   "unparsed": 185
+   "unparsed": 185,
+   "valid": 1191,
+   "valid_correct": 168
   }
  },
  "results": [

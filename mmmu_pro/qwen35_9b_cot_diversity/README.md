@@ -180,7 +180,8 @@ blend two runs into a single curve.
 
 ## 8. Layout
 
-Three scripts, and the data. Nothing here is scaffolding.
+Two scripts, an arm config, and the data. The analysis and the visual-premise pipeline are
+shared with the InternVL arm and live in `../common/`.
 
 ```
 cots/                              all committed traces (gzipped)
@@ -195,9 +196,13 @@ outputs/
   RESULT_T10.md/.json              T=1.0, 10-point, 345 questions  <- the re-run
   RESULT_T10_LOCAL.md/.json        T=1.0 restricted to 0.9-1.0     <- the peak test
   corrected_topp_result.png        the figure: maj@1 + maj@16 at T=1.6
+  topp_correctness_and_diversity.png   T=1.6: premise soundness, maj@8, premise diversity (§10)
+  premise_soundness_vs_topp.png        T=1.6: soundness and maj@1, absolute, +/-1 SEM
 cot_gen.py                         generation (config-stamped, resume-guarded)
-analyze.py                         ballot-model maj@k + the pre-registered tests
 result_chart.py                    the figure
+vp_arm.sh                          which traces the visual-premise analysis runs on (T=1.6)
+../common/analyze.py               ballot-model maj@k + the pre-registered tests (shared)
+../common/                         visual-premise pipeline + HOWTO_VISUAL_PREMISES.md (shared)
 env_versions.txt                   vLLM / torch / driver versions
 ```
 
@@ -228,11 +233,11 @@ CUDA_VISIBLE_DEVICES=0 python cot_gen.py --sampling-profile neutral \
 
 # 2. ANALYSE (CPU, ~1 min). --temperature is mandatory: cells are keyed on (id, top_p), so
 #    two temperatures in one glob would merge into 32-ballot cells and blend two experiments.
-python analyze.py --glob "cots/t10_*.jsonl.gz" --temperature 1.0 \
+python ../common/analyze.py --glob "cots/t10_*.jsonl.gz" --temperature 1.0 \
   --grid 0.5,0.6,0.7,0.8,0.9,0.925,0.95,0.975,0.99,1.0 --out outputs/RESULT_T10.md
-python analyze.py --glob "cots/t10_*.jsonl.gz" --temperature 1.0 \
+python ../common/analyze.py --glob "cots/t10_*.jsonl.gz" --temperature 1.0 \
   --grid 0.9,0.925,0.95,0.975,0.99,1.0 --out outputs/RESULT_T10_LOCAL.md
-python analyze.py --glob "cots/t16_sweep.shard*.jsonl.gz" --temperature 1.6 \
+python ../common/analyze.py --glob "cots/t16_sweep.shard*.jsonl.gz" --temperature 1.6 \
   --grid 0.1,0.2,0.3,0.4,0.5,0.7,0.9,0.95,1.0 --out outputs/RESULT_T16.md
 
 # 3. FIGURE (reads outputs/RESULT_T16.json, written by step 2)
@@ -241,7 +246,28 @@ python result_chart.py
 
 Step 2 on the committed traces reproduces the `outputs/RESULT_*.md` files bit-identically.
 
-## 10. Next
+## 10. Visual premises at T=1.6
+
+Do the model's *visual reads* degrade along the axis, or only its reasoning? Every trace's
+claims about the image were extracted (Qwen3.5-9B, temp 0) and checked against the image by a
+separate judge (InternVL3-8B-AWQ, gold answer withheld); pipeline, method and caveats are in
+`../common/HOWTO_VISUAL_PREMISES.md`. Run it with `../common/run_vp_arm.sh` from this directory.
+
+![premises](outputs/topp_correctness_and_diversity.png)
+
+| `top_p` | 0.1 | 0.3 | 0.5 | 0.7 | 0.9 | 0.95 | 1.0 |
+|---|---|---|---|---|---|---|---|
+| premise soundness | 0.964 | 0.956 | 0.942 | 0.929 | 0.895 | 0.930 | 0.914 |
+| maj@8 accuracy | 0.780 | 0.826 | **0.844** | 0.660 | 0.238 | 0.221 | 0.153 |
+| premise diversity (Vendi, K=8) | 2.36 | 2.54 | 2.75 | 2.84 | 2.84 | 2.81 | 2.76 |
+
+All 16 samples, 49 of 86 questions paired at every `top_p` (26 for diversity). Accuracy loses
+~69 pp across the collapse; soundness loses ~5 (F=1.99, p=0.046) — the visual claims that still
+get made are mostly still right. What collapses is how many get made: 104 premises per cell at
+`top_p`=0.1, 11 at 1.0. Diversity rises and saturates by 0.7 (F=18.5, p=1e-20). Across the grid
+soundness and accuracy correlate r=+0.84 (p=0.004); within a question, r=+0.08.
+
+## 11. Next
 
 1. **Take the T=1.6 arm to 20%.** It is the arm with a real effect and it is still the arm with
    86 questions. Same nested-superset trick, same grid.
@@ -250,7 +276,7 @@ Step 2 on the committed traces reproduces the `outputs/RESULT_*.md` files bit-id
 3. **Fill the `top_p`×T plane**: T ∈ {0.7, 1.0, 1.3, 1.6}. Prediction is sharp — curvature
    absent at 0.7, increasing through 1.6. A pattern across a grid beats a single argmax.
 4. **Densify 0.2–0.6 at T=1.6** to pin the peak location, which the k-oscillation leaves open.
-5. **The soundness arm needs redoing before it is cited.** Its premises were extracted with
-   truncated traces dropped by default, so the reported slope inherits the bias removed here.
-   Independently, the two judging modes of identical claim sets disagreed systematically
-   (atomic-pass/holistic-fail 219 vs 3, McNemar p=5.4e-61).
+5. **A stronger judge for the soundness arm.** It has been redone under the ballot rule
+   (truncated traces kept, §10), but the 8B judge is noisy (κ=0.36 on re-ordered premises) and
+   a related earlier arm saw its two judging modes disagree systematically (atomic-pass/
+   holistic-fail 219 vs 3, McNemar p=5.4e-61). A 5 pp soundness drift is near its floor.

@@ -6,7 +6,10 @@ trace's premises -- never which option is correct, and never the trace's conclus
 self-judge that did see outcomes scored 96.5% sound on correct-answer traces vs 70.3% on
 wrong-answer ones, which is a judge reading the answer key.
 
-DIFFERENT MODEL FAMILY from the generator (Qwen3.5-9B), so this is not a self-judge. On a
+DIFFERENT MODEL FAMILY from the Qwen3.5-9B generator, so for the Qwen arms this is not a
+self-judge. FOR THE InternVL3.5-8B ARM IT IS A NEAR RELATIVE (same InternViT-300M vision-encoder
+lineage): shared perceptual blind spots would read as SOUND, so that arm's absolute soundness
+level is an upper bound and only its shape across top_p is comparable. On a
 24GB card a 38B judge does not fit; InternVL3-8B-AWQ does, at the cost of a weaker judge.
 The absolute soundness level is judge-dependent; only the SHAPE across top_p is claimed, and
 the judge is identical at every top_p.

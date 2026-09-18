@@ -29,7 +29,7 @@ if [ "${1:-commit}" = partial ]; then
   n=$(cat "$@" | wc -l); q=$(count_q "$@")
   out=outputs/PRELIM_${TAG}_${q}q
   echo "[partial] T=$TEMP  $n traces, $q questions touched -> $out.md"
-  python analyze.py --glob "$OUTP.shard*.jsonl" --temperature "$TEMP" --ks "$KS" --grid "$GRID" --out $out.md
+  python ../common/analyze.py --glob "$OUTP.shard*.jsonl" --temperature "$TEMP" --ks "$KS" --grid "$GRID" --out $out.md
   python result_chart_ivl.py --json $out.json --out $out.png || echo "[partial] chart skipped"
   exit 0
 fi
@@ -50,6 +50,6 @@ elif [ -f "$GZ" ]; then
 else
   echo "neither $OUTP.shard*.jsonl nor $GZ exists -- nothing to analyse"; exit 1
 fi
-python analyze.py --glob "$GZ" --temperature "$TEMP" --ks "$KS" --grid "$GRID" \
+python ../common/analyze.py --glob "$GZ" --temperature "$TEMP" --ks "$KS" --grid "$GRID" \
   --out outputs/RESULT_IVL35_${TAG^^}.md
 python result_chart_ivl.py --json outputs/RESULT_IVL35_${TAG^^}.json --out outputs/ivl35_${TAG}_result.png

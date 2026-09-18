@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Stage 2: extract VISUAL PREMISES from each T=1.0 <think> trace (Qwen3.5-9B, temp 0).
+"""Stage 2: extract VISUAL PREMISES from each <think> trace of an arm (Qwen3.5-9B, temp 0).
 
 A visual premise is an atomic claim about what the model SAW -- "the far-left inductor is
 labelled j20", "the left bar is tallest". Not arithmetic, not inference, not option
