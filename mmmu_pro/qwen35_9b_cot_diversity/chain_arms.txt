@@ -1,0 +1,13 @@
+# Arms of the T=1.2 / model-card study, in the order run_chain.sh ran them (Sep 25-26 2026).
+# Format: <profile> <T> <top_p[,top_p]> <out-stem> [extra client args]. Lines starting with # skip.
+# neutral-penalty = top_k -1, presence_penalty 1.5; qwen-recommended = top_k 20, presence 1.5.
+qwen-recommended 1.0 0.95 baseline_card
+neutral-penalty 1.2 0.95 t12_penalty
+neutral-penalty 1.2 0.7 t12_sweep
+neutral-penalty 1.2 0.8 t12_sweep
+neutral-penalty 1.2 0.75 t12_sweep
+neutral-penalty 1.2 0.85 t12_sweep
+neutral-penalty 1.2 0.6 t12_sweep
+neutral-penalty 1.2 0.5 t12_sweep
+qwen-recommended 1.2 0.95 t12_card
+qwen-recommended 1.1 0.95 t11_card

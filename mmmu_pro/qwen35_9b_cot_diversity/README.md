@@ -280,3 +280,64 @@ soundness and accuracy correlate r=+0.84 (p=0.004); within a question, r=+0.08.
    (truncated traces kept, §10), but the 8B judge is noisy (κ=0.36 on re-ordered premises) and
    a related earlier arm saw its two judging modes disagree systematically (atomic-pass/
    holistic-fail 219 vs 3, McNemar p=5.4e-61). A 5 pp soundness drift is near its floor.
+
+## 12. Against the model card: a T=1.2 top_p sweep on the full benchmark
+
+**Question.** Is there a `top_p` / temperature setting that beats the model card's own
+thinking-mode defaults (`T=1.0, top_p=0.95, top_k=20, presence_penalty=1.5`) at maj@8?
+
+**Answer.** Not by more than a fraction of a point. With `top_k` **off**, the card's presence
+penalty kept and `T=1.2`, the vote sits on a plateau from `top_p` 0.7 to 0.85 that is within
+±0.6 pp of the card; the best point is `top_p`=0.7 at **+0.64 pp maj@8** (+0.15 pp maj@1). Every
+other direction loses: `top_p`≥0.9 collapses (tail tokens, not loops), T≥1.4 loses 2–3 pp even
+with `top_k=20`, and `top_p`=1.0 costs ~3 pp at T=1.2.
+
+All 1,729 generatable questions, 8 samples per cell, official prompt, ballot rule, paired with a
+card-defaults baseline generated on the same questions (`cots/card_t10*`).
+
+![t12](outputs/t12_topp_result.png)
+
+| `top_p` | 0.5 | 0.6 | **0.7** | 0.75 | 0.8 | 0.85 | 0.95 | card |
+|---|---|---|---|---|---|---|---|---|
+| maj@8 | .731 | .729 | **.742** | .734 | .740 | .735 | .567 | .735 |
+| maj@1 | .702 | .704 | .707 | **.709** | .705 | .693 | .457 | .705 |
+| spoiled | 1.8% | 1.0% | 0.5% | 0.4% | 0.3% | 0.4% | 3.1% | 0.2% |
+
+The pre-registered shape test passes (P(joint) 0.98 at k=8) only because of the falling arm at
+0.95; across 0.5–0.85 the differences are under a point. The optimum moves with k (0.75 at k=1,
+0.7 at k=8), so the "non-decreasing in k" prediction is violated again. Card-sampler arms at
+other temperatures (`cots/card_t11*`, `cots/card_t12*`: T=1.1 and T=1.2 with `top_k=20`) tie the
+card: −0.3 and +0.3 pp at maj@8. The full search, including partial arms that were stopped
+once they were clearly losing (T=1.4, `top_p`=1.0, T=1.6 with `top_k=20`), is tabulated in
+`outputs/RESULT_ALL_VS_CARD.md` and summarised in `outputs/RESULT_TP_SEARCH.md`; mixed-temperature
+votes (chains from two samplers in one 8-ballot vote) are in `outputs/RESULT_MIXED_BALLOTS.md`
+(+0.4 pp on a held-out half — not a lever either).
+
+**What differs from the T=1.6 arm above.** Engine: vLLM 0.26 `serve` on 2×H100, **fp8 KV
+cache**, no prefix caching, no speculative decoding, no per-request seed (`env_versions_t12.txt`;
+every row carries `sampling_cfg` and `engine_cfg`). The sampling profile `neutral-penalty` is the
+T=1.6 arm's neutral profile plus the card's `presence_penalty=1.5`, which is what keeps spoilage
+under 2% at low `top_p` (the T=1.6 arm had 9–12%). One request per sample instead of one per
+cell (`cot_gen_stream.py`); the analysis and ballot rule are the shared `../common/analyze.py`.
+
+```
+cots/t12_sweep.shard00..13.jsonl.gz   T=1.2, top_k -1, presence 1.5, top_p {.5,.6,.7,.75,.8,.85}   82,992
+cots/t12_p095.shard00..02.jsonl.gz    same profile, top_p 0.95                                      13,832
+cots/card_t10.shard00..02.jsonl.gz    model-card defaults (the baseline)                            13,832
+cots/card_t11.shard00..02.jsonl.gz    card sampler at T=1.1                                         13,832
+cots/card_t12.shard00..02.jsonl.gz    card sampler at T=1.2 (1,407 questions)                       11,256
+outputs/RESULT_T12_SWEEP_FULL.md/.json   the pre-registered analysis of the curve
+outputs/t12_topp_result.png              the figure
+cot_gen_stream.py, serve.sh, serve_gpu*.env, run_chain.sh, chain_arms.txt   generation
+t12_chart.sh, t12_chart.py               analysis + figure;  pack_cots.py   shards raw traces
+compare_all.py, mix_ballots.py           every arm vs the card; mixed-sampler votes
+```
+
+Reproduce (analysis from the committed shards is bit-identical to the committed result):
+```bash
+# engines: one per GPU (serve_gpu0.env / serve_gpu1.env hold the throughput flags)
+./serve.sh 0 8100 &  ./serve.sh 1 8101 &
+./run_chain.sh                    # runs the arms in chain_arms.txt, resume-safe
+./t12_chart.sh                    # analyze.py on cots/t12_*.jsonl.gz -> RESULT_T12_SWEEP_FULL + the figure
+python compare_all.py --all       # every arm vs the card, paired on all questions
+```
