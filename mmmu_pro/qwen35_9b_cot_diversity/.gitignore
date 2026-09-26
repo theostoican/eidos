@@ -11,3 +11,8 @@ outputs/t16_q.shard*.json
 # because it sat untracked in this gitignored directory. Committed gzipped, like cots/.
 !outputs/vp_premises.jsonl.gz
 !outputs/vp_verdicts.jsonl.gz
+
+# per-run question metadata and preliminary figures (regenerable)
+outputs/*_q.json
+outputs/*_preliminary.png
+logs/

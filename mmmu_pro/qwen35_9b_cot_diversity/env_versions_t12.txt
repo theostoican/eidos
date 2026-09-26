@@ -1,0 +1,14 @@
+# Environment for the T=1.2 / top_k=-1 / presence 1.5 top_p arm and the card-sampler arms (Sep 25-26 2026)
+generated_utc=2026-09-26T22:23:44Z
+vllm==0.26.0
+torch==2.11.0+cu129
+transformers==5.17.0
+datasets==5.0.1
+numpy==2.3.5
+scipy==1.18.1
+PIL==12.3.0
+torch_cuda=12.9
+gpu=NVIDIA H100 80GB HBM3 x2 (data-parallel, one engine per GPU, TP=1)
+nvidia_driver=560.35.05
+engine=vllm serve, fp8 KV cache, no prefix caching, no speculative decoding (serve.sh + serve_gpu*.env), vLLM penalty patch (VLLM_PATCH.md)
+client=cot_gen_stream.py (one request per sample, no per-request seed)
