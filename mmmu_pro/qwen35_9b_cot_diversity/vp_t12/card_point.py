@@ -2,7 +2,9 @@
 """The model-card defaults (T=1.0, top_p .95, top_k 20, presence 1.5) as a reference point for
 this arm's charts: maj@1 / maj@8 of the committed card baseline (../cots/card_t10*), under the
 ballot rule, on EXACTLY the questions the visual-premise curves are paired on (a judged premise
-at every top_p -- the same rule as vp_result.py's `common`). CPU only.
+at every top_p -- the same rule as vp_result.py's `common`). CPU only. Reads the committed
+outputs/vp_verdicts.jsonl.gz and outputs/vp_layers/ (gitignored; rebuilt from ../cots by
+../../common/vp_prep.py, the first step of run_vp_arm.sh).
 
   python card_point.py [--card ../cots/card_t10.shard*.jsonl.gz] [--out outputs/card_point.json]
 """
@@ -16,7 +18,7 @@ from vp_result import cell_table, curve, accuracy_matrix
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--vp", default="outputs/RESULT_VP.json")
-    ap.add_argument("--verdicts", default="outputs/vp_verdicts.jsonl")
+    ap.add_argument("--verdicts", default="outputs/vp_verdicts.jsonl.gz")
     ap.add_argument("--layers", default="outputs/vp_layers/layer*.jsonl.gz")
     ap.add_argument("--card", default="../cots/card_t10.shard*.jsonl.gz")
     ap.add_argument("--k", type=int, default=8)
@@ -25,7 +27,7 @@ def main():
     vp = json.load(open(a.vp))
     top_ps = vp["grid"]
 
-    rows = [json.loads(l) for l in open(a.verdicts)]
+    rows = [json.loads(l) for l in (gzip.open(a.verdicts, "rt") if a.verdicts.endswith(".gz") else open(a.verdicts))]
     _, qs_ok, _, _ = curve(cell_table(rows, True), top_ps)
     _, qs_acc = accuracy_matrix(a.layers, top_ps, layers=set(vp["layers"]))
     common = sorted(set(qs_ok) & set(qs_acc))
